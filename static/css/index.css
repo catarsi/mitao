@@ -1,0 +1,417 @@
+:disabled{
+  opacity: 0.6;
+}
+button,a { cursor: pointer; }
+select {
+  margin-right: 10px;
+}
+
+body {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 14px;
+}
+
+label p{
+  font-size: 80%;
+}
+
+.check-value input{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+#control {
+  position: absolute;
+  width: 350px;
+  height: 300px;
+  top: 95px;
+  padding-top: 20px;
+  padding-left: 20px;
+  border-right: solid 2px #917442;
+}
+#control_head{
+}
+#control_body{
+  width: 100%;
+}
+#control_mid .control-params{
+  width: 80%;
+  margin-top: 25px;
+  padding-top: 5px;
+  color: #917442;
+  font-size: small;
+}
+#control_mid .control-params .input-group{
+  border-left: solid 1.3px #917442;
+}
+#control_mid .control-params .input-group + .input-group{
+  padding-top: 20px;
+}
+
+#control_foot{
+  padding-top: 10%;
+  margin: 0 auto;
+  width: 80%;
+  height: 20%;
+  border-bottom: solid 3px #917442;
+}
+#control_foot .foot-dom{
+  display:inline-block;
+}
+#control_foot button{
+  background-color: transparent;
+}
+#control_foot button:hover{
+ color: #82683b;
+}
+
+.input-group{
+  font-size:120%;
+  margin-left: 50px;
+  padding-left: 5px;
+  max-width: 90%;
+}
+.input-group
+select, .dropdown-toggle{
+  min-width: 120px;
+  max-width: 220px;
+}
+.input-group
+input {
+  min-width: 220px;
+  max-width: 220px;
+}
+.input-group + .input-group{
+  padding-top: 12px;
+}
+#edit_buttons{
+  padding-left: 40%;
+}
+.edit-switch{
+  margin-bottom: 30px;
+}
+
+#cy {
+  border-top: solid 2px #917442;
+  border-bottom: solid 2px #917442;
+  border-right: solid 2px #917442;
+  position: absolute;
+  width: 70%;
+  height: 500px;
+  left: 350px;
+  top: 20px;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #fff9ef;
+}
+#cy_foot{
+  position: absolute;
+  width: 70%;
+  height: 60px;
+  float: left;
+  top: 530px;
+  left: 350px;
+}
+
+
+.timeline-block{
+  display:inline-block;
+  margin: 0 auto;
+  font-size: 20px;
+  vertical-align: middle;
+  padding-top: 100px;
+
+}
+.timeline-block-inner, .timeline-block-inner-text{
+  display:inline-block;
+  min-width:55px;
+  min-height:50px;
+  max-width:350px;
+  max-height:50px;
+  vertical-align: middle;
+  border: solid 2px #917442;
+  margin-right:2px;
+}
+.timeline-block-inner.tool-block{
+  background-color: #eda43a;
+}
+.timeline-block-inner.data-block{
+  background-color: #84bdd7;
+}
+.timeline-block-inner.text-block{
+  border: none;
+}
+.timeline-block-inner.text-block label{
+  padding-top: 5%;
+}
+
+.timeline-block-inner .inner-timeline-block {
+  vertical-align: middle;
+  font-size: 20px;
+  padding: 2px;
+  text-align: center;
+  background-color: white;
+  border-top: solid 0.5px #7a6238;
+  border-bottom: solid 0.5px #7a6238;
+  margin-top: 8%;
+}
+.timeline-block-inner .inner-timeline-block a{
+ color: #7a6238;
+}
+.timeline-block-inner .inner-timeline-block a:hover,
+.timeline-block-inner .inner-timeline-block a:focus {
+  border-bottom: transparent;
+}
+
+
+.timeline-block-inner.error-block{
+  background-color: #b32d00;
+}
+#timeline_container{
+  position: absolute;
+  display:inline-block;
+  min-height: 50px;
+  margin-left:10px;
+}
+#start_block.timeline-block{
+  margin-top: 5px;
+  height: 30px;
+  border: #917442 solid 2px;
+  margin-right: 2px;
+}
+#end_block.timeline-block{
+  margin-top: 5px;
+  height: 30px;
+  border: #917442 solid 2px;
+  margin-left: 0px;
+  margin-left: -3px;
+  visibility: visible;
+}
+#timeline_container .timeline-block{
+  padding-top: 20px;
+}
+.timeline-block + .timeline-block{
+  margin-left: 10px;
+}
+#timeline_text{
+  opacity: 0.4;
+}
+
+#btn_run_workflow{
+  vertical-align: middle;
+  font-size: 18px;
+  margin-right: 2%;
+  border: #917442 solid 2px;
+  width: 200px;
+}
+#btn_run_workflow:hover,
+#btn_run_workflow:focus
+{
+  color: white;
+  background-color: #917442;
+}
+
+
+#btn_load_workflow, #btn_save_workflow{
+  font-size: 18px;
+  border: transparent 1px;
+  color: #917442;
+  background-color: transparent;
+  text-decoration: none;
+}
+#btn_save_workflow{
+  margin-right: 15px;
+}
+#btn_save_workflow:hover{
+  color: black;
+}
+#btn_load_workflow:hover{
+  color: black;
+}
+
+
+#workflow_extra{
+  top: 70px;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  position:absolute;
+  width: 350px;
+  min-height: 50px;
+  border-bottom: #917442 solid 4px;
+  margin-bottom: 20px;
+  visibility: hidden;
+}
+#workflow_extra .input-group{
+  padding-left: 0px;
+}
+#workflow_extra .input-group + .input-group{
+  bottom: 10px;
+}
+.workflow-section-foot{
+  padding-top: 15px;
+  margin: 0 auto;
+  float:right;
+}
+
+
+.node-style{
+  border: transparent;
+}
+.node-style-click{
+  background-color: black;
+}
+
+#control_nav {
+    width: 100%;
+    text-align:center;
+    /*border-top: solid 1px;*/
+    border-top-color: grey ;
+}
+#control_nav li {
+  display:inline-block;
+}
+#control_nav li a{
+  font-size:150%;
+  background-color: transparent;
+  color: black;
+}
+#control_nav > .active > a,
+#control_nav > .active > a:hover,
+#control_nav > .active > a:focus {
+  color: #82683b;
+  border-bottom: solid;
+  border-bottom-color: #82683b;
+  margin-bottom: 25px;
+}
+
+
+
+
+ul + label{
+  margin-left: 8px;
+  padding-top: 10px;
+}
+#lbl_filePath{
+  font-size: 11pt;
+  width: 140px;
+}
+
+#diagram_editor{
+  position: absolute;
+  width: 320px;
+  top: 20px;
+  left: 30px;
+  height: 75px;
+  padding-top: 15px;
+  background-color: #fff9ef;
+  border-bottom: solid 2px #917442;
+  border-top: solid 2px #917442;
+  border-left: solid 2px #917442;
+}
+#diagram_editor_nav li {
+  display:inline-block;
+}
+#diagram_editor_nav li button{
+  font-size:140%;
+}
+
+
+#diagram_editor_left_side{
+  position: absolute;
+  z-index: 1000;
+  min-height: 300px;
+  left: 318px;
+  top: 80px;
+  list-style-type: none;
+  padding-left: 0px;
+}
+#diagram_editor_left_side li{
+  float:left;
+  background-color: #b08c4f;
+  border-radius: 0px 20px 20px 0px;
+}
+#diagram_editor_left_side li + li{
+  margin-top: 40px;
+}
+#diagram_editor_left_side li a:hover,
+#diagram_editor_left_side li a:focus {
+  color: black;
+  text-decoration: none;
+}
+
+#diagram_fit{
+  width:25px;
+  font-size: 16pt;
+  text-align: left;
+  padding-top:5%;
+  padding-left:5%;
+}
+#diagram_fit a{
+  color: white;
+}
+
+
+#diagram_undo_redo{
+  width:30px;
+  padding-left: 5px;
+  padding-right: 0px;
+}
+
+#diagram_undo_redo div a{
+  font-size:150%;
+  color: white;
+  visibility: hidden;
+}
+#diagram_undo_redo *{
+  padding-top: 10px;
+  text-decoration: none;
+}
+
+#diagram_zoom{
+  width:30px;
+  padding-left: 5px;
+  font-size:16pt;
+  color: white;
+}
+#diagram_zoom *{
+  margin: 0 auto;
+  color:white;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.dropdown{
+  max-width: 250px;
+  min-width: 200px;
+}
+
+#null_div{
+  position: absolute;
+  width: 350px;
+  height: 130px;
+  top: 390px;
+  border-right: dotted 2px #917442;
+  z-index: -1;
+}
+
+.timeline-block-inner .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #917442;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  top: 105%;
+  z-index: 1;
+}
+
+.timeline-block-inner:hover .tooltiptext {
+  visibility: visible;
+}

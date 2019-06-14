@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="264px" height="96px" viewBox="0 0 264 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>logov2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-5" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logov2" transform="translate(-1.000000, -37.000000)">
+            <g id="Group-3" fill="#E4A46D" font-family="STSong" font-weight="normal">
+                <text id="D" font-size="107">
+                    <tspan x="0" y="116">D</tspan>
+                </text>
+                <text id="P" font-size="102">
+                    <tspan x="86" y="117">P</tspan>
+                </text>
+                <text id="A" font-size="102">
+                    <tspan x="120" y="113">A</tspan>
+                </text>
+                <text id="M" font-size="102">
+                    <tspan x="180" y="108">M</tspan>
+                </text>
+                <text id="I" font-size="102">
+                    <tspan x="66" y="109">I</tspan>
+                </text>
+            </g>
+            <g id="Group-2" transform="translate(107.000000, 103.000000)" fill="#E4A46D">
+                <circle id="Oval" cx="34.6084521" cy="21" r="5"></circle>
+                <circle id="Oval" cx="116" cy="25" r="5"></circle>
+                <rect id="Rectangle" x="59" y="16" width="18" height="10" rx="5"></rect>
+                <polygon id="Polygon" points="103 0 110.608452 5.52786405 107.702282 14.472136 98.297718 14.472136 95.3915479 5.52786405"></polygon>
+                <polygon id="Polygon" points="147 4 154.608452 9.52786405 151.702282 18.472136 142.297718 18.472136 139.391548 9.52786405"></polygon>
+                <polygon id="Triangle" points="6.5 15 13 27.1333333 0 27.1333333"></polygon>
+            </g>
+            <g id="Group" transform="translate(121.000000, 113.000000)" stroke="#ECDED1" stroke-linecap="square" stroke-width="1.5">
+                <path d="M0,11.5 L13.5,11.5" id="Line-2"></path>
+                <path d="M28.6084521,11.5 L42.1084521,11.5" id="Line-2"></path>
+                <path d="M66,15.5 L91.5,15" id="Line-2"></path>
+                <path d="M64,5.5 L79.3915479,0.5" id="Line-2"></path>
+                <path d="M109.108452,13.5 L124.391548,6.5" id="Line-2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

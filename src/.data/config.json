@@ -1,0 +1,166 @@
+{
+  "data": {
+        "d-topics-table":{
+            "label": "Topic Words table",
+            "data_class": "table",
+            "param": ["p-file"],
+            "file_name": "topics",
+            "class_label": "LDA"
+        },
+        "d-doc-topics":{
+            "label": "Document topics table",
+            "data_class": "table",
+            "param": ["p-file"],
+            "file_name": "doctopics",
+            "class_label": "LDA"
+        },
+        "d-gen-text":{
+            "label": "Textual document/s",
+            "data_class": "text",
+            "param": ["p-file"],
+            "file_name": "doc",
+            "class_label": "General"
+        },
+        "d-gen-pdf":{
+            "label": "PDF document/s",
+            "data_class": "pdf",
+            "param": ["p-file"],
+            "file_name": "pdf_doc",
+            "class_label": "General"
+        },
+        "d-coherence":{
+            "label": "LDA coherence value",
+            "data_class": "text",
+            "param": ["p-file"],
+            "file_name": "coherence",
+            "class_label": "LDA"
+        },
+        "d-perplexity":{
+            "label": "LDA perplexity value",
+            "data_class": "text",
+            "param": ["p-file"],
+            "file_name": "perplexity",
+            "class_label": "LDA"
+        },
+        "d-stopwords":{
+            "label": "List of stopwords",
+            "data_class": "table",
+            "param": ["p-file"],
+            "file_name": "stopwords",
+            "class_label": "LDA"
+        },
+        "d-chartimg":{
+            "label": "A chart image",
+            "data_class": "img",
+            "param": ["p-file"],
+            "file_name": "chart",
+            "class_label": "General"
+        },
+        "d-chartlegend":{
+            "label": "A chart legend",
+            "data_class": "table",
+            "param": ["p-file"],
+            "file_name": "legend",
+            "class_label": "General"
+        }
+  },
+  "tool": {
+        "t-topic-lda": {
+            "label": "Topic modeling with LDA",
+            "class_label": "Text-Analysis",
+            "class": "TextAnalysis",
+            "function": "lda",
+            "param": ["p-topic","p-numwords","p-defstopwords"],
+            "compatible_input": ["d-gen-text","d-stopwords"],
+            "output": ["d-topics-table","d-coherence","d-perplexity","d-doc-topics"]
+        },
+        "t-filter-text": {
+            "label": "Filter the text",
+            "class": "Filter",
+            "class_label": "Filter",
+            "function": "filter_text",
+            "param": ["p-filteropt","p-filterregex"],
+            "compatible_input": ["d-gen-text"],
+            "output": ["d-gen-text"]
+        },
+        "t-save-files": {
+            "label": "Save files",
+            "class": "Terminal",
+            "class_label": "Terminal",
+            "function": "save_file",
+            "compatible_input": ["d-gen-text","d-topics-table","d-coherence","d-perplexity","d-doc-topics","d-chartimg"]
+        },
+        "t-convert-pdftotext": {
+            "label": "Convert PDF document/s to text",
+            "class": "Convert",
+            "class_label": "Converter",
+            "function": "pdf_to_text",
+            "compatible_input": ["d-gen-pdf"],
+            "output": ["d-gen-text"]
+        },
+        "t-doctopics-view": {
+            "label": "Visualize document topics",
+            "class": "Terminal",
+            "class_label": "Terminal",
+            "function": "doc_topics_barchart",
+            "compatible_input": ["d-doc-topics"],
+            "output": ["d-chartimg"]
+        },
+        "t-topics-view": {
+            "label": "Visualize topics words",
+            "class": "Terminal",
+            "class_label": "Terminal",
+            "function": "topics_words_list",
+            "compatible_input": ["d-topics-table"],
+            "output": ["d-chartimg"]
+        }
+  },
+  "param": {
+        "p-file":{
+          "handler": "select-file",
+          "label": "File/s or Directory:",
+          "value": {},
+          "init_value": {}
+        },
+        "p-log":{
+          "handler": "switch-value",
+          "label": "Log scale",
+          "value_label": ["True","False"],
+          "value": [0,1],
+          "init_value": 0
+        },
+        "p-topic":{
+          "handler": "input-text",
+          "label": "Number of topics:",
+          "value": "2",
+          "init_value": 2
+        },
+        "p-numwords":{
+          "handler": "select-value",
+          "label": "Number of words:",
+          "value_label": ["10","15","20","25","30","40","50"],
+          "value": [10,15,20,25,30,40,50],
+          "init_value": 10
+        },
+        "p-filteropt":{
+          "handler": "check-value",
+          "label": "Filter and remove:",
+          "value_label": ["Dates","References","Header"],
+          "value": ["dates","references","header"],
+          "init_value": [0,0,0]
+        },
+        "p-filterregex":{
+          "handler": "input-text",
+          "label": "Specific text <p> (Regular expressions supported, try it on <a target=&quot;_blank&quot; href=https://regex101.com>the online demo</a>) </p>",
+          "value": "",
+          "init_value": ""
+        },
+        "p-defstopwords":{
+          "handler": "select-value",
+          "label": "Stopwwords language:",
+          "value_label": ["None","Arabic","Azerbaijani","Danish","Dutch","English","Finnish","French","German","Greek","Hungarian","Indonesian","Italian","Kazakh","Nepali","Norwegian","Portuguese","Romanian","Russian","Spanish","Swedish","Turkish"],
+          "value": ["none","arabic","azerbaijani","danish","dutch","english","finnish","french","german","greek","hungarian","indonesian","italian","kazakh","nepali","norwegian","portuguese","romanian","russian","spanish","swedish","turkish"],
+          "init_value": "none"
+        }
+  }
+}
