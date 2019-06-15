@@ -1,0 +1,9 @@
+flask
+requests
+regex
+zipfile2
+numpy
+matplotlib
+nltk
+gensim
+pdftotext
