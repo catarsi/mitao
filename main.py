@@ -16,6 +16,8 @@ from src import linker
 from flask import Flask, render_template, request, json, jsonify, redirect, url_for, send_file, after_this_request
 #from flask.ext.cache import Cache
 #cache = Cache()
+import webbrowser
+from threading import Timer
 
 #cache.clear()
 app = Flask(__name__)
@@ -42,6 +44,10 @@ FILE_TYPE["pdf"] = ["pdf"]
 FILE_TYPE["img"] = ["png"]
 FILE_TYPE["text"] = ["txt"]
 FILE_TYPE["table"] = ["csv"]
+
+@app.route('/status')
+def status():
+    return "Online\n"
 
 #example: /dipam?workflow=WW&?config=CC
 @app.route('/')
@@ -411,6 +417,9 @@ def process():
     #print(posted_data["id"]," index is: " ,dipam_linker.get_elem(posted_data["id"]))9
     return "Success:Processing done !"
 
+def open_browser():
+      webbrowser.open_new('http://127.0.0.1:5000/')
+
 if __name__ == '__main__':
     #app.config['TEMPLATES_AUTO_RELOAD'] = True
     CONFIG_DATA = json.load(open(BASE_CONFIG_PATH+"/config.json"))
@@ -419,4 +428,5 @@ if __name__ == '__main__':
     dipam_tool = tool.Tool(CONFIG_DATA["tool"])
     dipam_data = data.Data(CONFIG_DATA["data"])
 
+    Timer(1, open_browser).start();
     app.run()
