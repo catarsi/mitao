@@ -430,7 +430,7 @@ if __name__ == '__main__':
     CONFIG_DATA = json.load(open(BASE_CONFIG_PATH+"/config.json"))
 
     dipam_linker = linker.Linker(BASE_PROCESS_PATH)
-    dipam_tool = tool.Tool(CONFIG_DATA["tool"])
+    dipam_tool = tool.Tool(CONFIG_DATA["tool"], BASE_TMP_PATH)
     dipam_data = data.Data(CONFIG_DATA["data"])
 
     Timer(1, open_browser).start();

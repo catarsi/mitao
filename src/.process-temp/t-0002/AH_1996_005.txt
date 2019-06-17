@@ -1,0 +1,293 @@
+
+
+
+
+
+
+
+The transfer of cost accounting institutions to New Zealand
+
+
+Abstract
+Within the last decade accounting researchers have shown much interest in the professionalisation of accounting. This paper examines the professionalisation of cost accounting in New Zealand and focuses on the Australian influence in theformation of the New Zealand Institute of Cost Accountants ([ 944).
+
+Keywords: Professionalisation; cost accounting; New Zealand Institute of Cost Accountants.
+
+
+
+
+
+Introduction
+
+In recent years, accounting researchers have shown interest in the emergence of accountants as a distinct occupational group across different countries (Willmott, 1986; Richardson, 1987; Lee, 1990, 1995; Chua & Poullaos, 1993). This interest has extended to the concept of social closure and the relationship between social and economic rewards achieved by "professionals" through their contribution to society. Through its institutional form, the accounting profession has sought to achieve market control and exclude outsiders on the basis of specified credentials. While such writings have focused on the accounting profession in general, Loft (1986, 1990) has focused on the development of the cost accounting profession in the United Kingdom. The Institute of Cost and Works Accountants (ICWA) was formed in the United Kingdom in 1919 while the National Association of Cost Accountants was established in the United States in the same year (NACA, 1919). While accounting techniques, institutions and concepts were exported from Britain (Parker, 1989), they could also be imported to countries in the British Empire from other members of the Empire. This paper examines the Australian influence in the formation of the New Zealand Institute of Cost Accountants (NZICA) and the professionalisation of cost accounting in New Zealand.
+Despite the spread of British accounting institutions to British colonies in the last decade of the nineteenth century and the early decades of the twentieth (Johnson & Caygill, 1971; Johnson, 1982; Parker, 1989; Chua & Poullaos, 1993), the ICWA did not establish itself in Australia or New Zealand until many years later (Perry, 1987). Nevertheless, the ICWA's formation influenced accountants in Australia and New Zealand to act, and establish their own professional body of cost accountants. This body, the Australasian Institute of Cost Accountants (AICA), was incorporated in 1921.1 Increasing industrialisation following the First World War (Adamson, 1921) along with pressure on firms to become more efficient brought a focus on cost accounting in the control of manufacturing operations and for product pricing.
+The creation of the AICA could also be viewed as a process of enabling professionalisation, seeking a monopoly of expertise in the market place (Larson, 1977) and the use of closure techniques to achieve this control. Like other professional bodies, the AICA sought closure based on credentials that were granted on meeting examination and practical experience requirements. Further, the specialised nature of the cost accounting profession was argued by Thwaites ( 1953, p.3) to be beyond the scope of public or mercantile accountants when he   stated:
+... it is quite apparent that the Public-Accountant or the Mercantile-Accountant would not have the opportunities or in fact, be able to spare the time to become a Specialised-Cost-Accountant.
+
+
+
+
+81
+
+ 
+ 
+
+
+
+Given this view, it is not surprising that foundation members of the AICA were all practising cost accountants although the formation of this body did reflect a desire to protect self interest. The foreword to a booklist published by the AICA pointed out:
+... all improvements in the conditions of life and social status are brought about by collective strength and unity of purpose of the members of that particular social state and the position of Cost Accountant is no exception to the rule (Thwaites, 1953, p.6).
+While initially acknowledging the role of public interest, through improving organisational efficiency, the latter statement reveals a desire to protect self-interest at the same time.
+The AICA's establishment reflected the close ties at the time between Australia and New Zealand as members of the British Empire and their commonality across military, cultural, sporting and business activities around that period. While all foundation members were initially resident in Australia, by the end of 192l there was a total of 24 members of whom just two resided in New Zealand. Of these 24 members, 16 were engaged in merchandising and manufacturing and eight were in engineering fields (Thwaites,  1953, p.8).
+In like fashion to the spread of British accountancy institutions to Britain's colonies, the chain of influence extended from Australia to New Zealand in 1944 with the formation of the New Zealand Institute of Cost Accountants (NZICA) which developed out of the AICA which itself was controlled from Australia. The NZICA became affiliated with the New Zealand Society of Accountants  (NZSA) in 1960 and was wound up in 1966 to be replaced by a Cost and Management Accounting division which was disbanded in 1988. The purpose of this paper is to rectify the paucity of our knowledge in respect to the NZICA and to document its relationship to the Australian profession and its contribution to the profession in New Zealand. The analysis is tentative and based on limited sources but nevertheless provides a view of the broad contours of historical change. Opportunities for future research are identified.
+
+Background
+
+European settlement in New Zealand began in the late eighteenth century and in 1838 the New Zealand Colonisation Company was formed with the intention of establishing a self-governing colony in New Zealand. The treaty of Waitangi signed with Maori chiefs gave Britain sovereignty in return for the maintenance of law and order. Self-government was granted in 1852 and by 1856 a central government with an elected parliament and cabinet had been established   (Morrell
+& Hall, 1957). In the 1880s and 1890s federation with the Australian colonies was discussed, but little enthusiasm on the part of its government or people meant New
+
+
+82
+
+ 
+ 
+
+
+
+
+
+
+Zealand kept its own identity (Oliver & Williams,  1981, p.308).
+Economic development in New Zealand was predominantly based on agriculture, forestry and fishing (Condliffe, 1959). Early manufacturing development was associated initially with primary processing but local demand encouraged the growth of a variety of industries. By the 1890s, industrial expansion encompassed textiles, processing industries, metal trades, printing, saw-milling, wire-making, electrical supply and fibrous-plaster works (Sinclair, 1959). As Bloomfield (1984) observed, manufacturing was relatively small until the 1930s and this is supported by Table 1 which provides details on the number of establishments, number of persons employed, and also the value of production and added value in pounds for selected years. The statistics support Bloomfield's view and partially explain why there was only a small number of members of the AICA resident in New Zealand. In the period following the NZICA's establishment, there was growing interest in cost methods and techniques partly due to the increased manufacturing activity in the country with an increased emphasis on efficiency and the need to be competitive in world markets.
+Table 1.   Manufacturingactivity in New Zealand
+
+
+
+Year	
+No.of Establ shments	
+No. of Persons	Value of Production
+	Added Value
+
+1877-8	1093	10604	N.A.	N.A.
+1900-1	3 059	38 651	16 485	8 769
+1920-1	3 894	62 972	75 489	22 479
+1930-1	5 047	70 625	71 721	26 407
+1935-6	5 391	78 701	83 766	26 907
+1945-6	6 847	138 886	183 542	66 483
+1950-1	8 113	138 435	380 316	113 316
+1959-60	8 550	171 973	705 617	266 529
+1965-6	9 945	222 851	1 088 317	420 615
+Source: Bloomfield ( 1984, p.210- 11)
+
+According to Thwaites (1953), the early history of the AICA's activities in New Zealand is obscure yet he acknowledged the early years were characterised by a small level of membership and an apparent inability of New Zealand members to administer their own affairs; The latter aspect became a matter of concern to the AICA's General Council which, in 1926, requested its New Zealand members to appoint a council to carry on the business of the Division (AICA General Council Minutes, 3 December, 1926, Folio 13). This request was ignored, and the AICA's General Council requested the New Zealand registrar to write and inform members
+
+
+
+ 
+ 
+f,Jf Ui'f,lf:jHistory  NS Vol 1, No 2  1996
+
+
+that if they did not exercise their rights to form a Divisional Council and conduct their affairs in a progressive manner, they would be required to voluntarily surrender their membership (AICA General Council Minutes, 5 July, 1928, Folio 45). As no response was received to this request, General Council removed 21 non financial members from the membership register while the remaining New Zealand members were attached to the Victorian Division as from l January 1929 (AICA General Council Minutes, 14 June, 1929, Folio 55).
+
+Reorganisation
+
+The low level of New Zealand members of the AICA, numbering 20 in 1935, and the continual lack of progress prompted a member, D.N. Chambers, to visit Australia in 1936 to discuss with General Council the reorganisation of the AICA' s affairs in New Zealand (Thwaites, 1953). Chambers, a public accountant, was born in Auckland in 1904 and after studying at the Auckland University College (now University of Auckland), was admitted to membership of both the NZSA and the AICA. His representations were successful and led to the establishment of the New Zealand Division of the AICA and his appointment as registrar in 1937 (AICA General Council Minutes, 3 June, 1937, Folio 126). Despite their endeavours, the Council of the new division found progress difficult due to the lack of knowledge generally about cost accounting, the small degree of industrialisation, and the lack of facilities for teaching New Zealanders about cost accounting. Yet, despite these obstacles, Chambers and a small group of interested parties persevered and by 1942 the number of members of the Division had increased to 60 (Thwaites, 1953).
+In 1942 the New Zealand members petitioned General Council that they wished to form their own institute while maintaining affiliation with the existing body of the AICA. The reasons underlying this request were stated to be (AICA General Council Minutes, 8 June, 1942, Folio 132):
+(i)	To begin with, it will protect the name "New Zealand Institute of Cost Accountants" without lowering the status of our Institute as all persons having dealing with it will know that it is affiliated with and closely allied to the Australasian Institute.
+(ii)	The use of the name "New Zealand" will encourage young students to take the examinations . In the last month or so we have been using the name New Zealand in place of the name Australian (sic) in our advertising etc., and as a result have received enquiries from all parts of New Zealand for details of the Institute's examinations. At no previous time have we received so many enquiries in so short a space of time. This is evidence that the new Institute is attracting considerable attention . There has always been a tendency for young qualified accountants contemplating further study to consider whether they should take the examination s of other New Zealand Institutes in preference to the more remote Australian Institutes. This probably accounts to a certain extent at least, for the increase in enquiries for copies of our syllabus.
+
+
+ 
+ 
+
+
+
+
+
+
+(iii)	It will make it very difficult for any group of persons to form another Cost Accounting body in New '.Zealand as there is a tendency today for the Registrar of Incorporated Societies to limit the number of bodies which can be formed for any one purpose.
+(iv)	The name New '.Zealand Institute will, we believe, attract considerable notice from Government Departments. Already the Australian Institute (Australasian Institute of Cost Accountants) has appointed a representative to one Government Committee considering Cost Accounting Terminology and the name New :lealand will, we believe, result in future in greater notice being taken of the Institute in official circles.
+The motivation for establishing a separate New Zealand body can be identified with a number of factors including the emergence of a national identity in New Zealand through the arts (Condliffe & Airey, 1960), the influence of the Australian profession on the professionalisation of cost accountants and a desire of cost accountants in New Zealand to preserve their self-interest and status within their country.
+The AICA's General Council acceded to the request of the New Zealand cost accountants in the belief that it was in the best interests of the profession to discourage the formation of a separate, unaffiliated professional body in direct competition with the AICA (AICA General Council Minutes, 8 June, 1942, Folio 132). As part of the affiliation process it was agreed that the AICA act as the examining body for New Zealand candidates and that complete reciprocity should exist between the two bodies in respect of membership.
+
+Education
+
+Membership of the NZICA was available to New Zealand residents following the completion of the examination syllabus of the AICA. At this time the major concern was to provide facilities for the study of cost accounting. Initially, private coaching colleges met existing demand but subsequently technical colleges and universities provided tuition for the AICA's examinations. The teaching of cost accounting by technical colleges in New Zealand commenced in 1943 when a class was conducted by W.D. Barclay at the Seddon Memorial Technical College. The class proved successful and led to the establishment of similar coaching classes in other technical colleges and the universities . Both R.M. Kay and W.G. Rodger were responsible for the teaching of cost accounting at the Auckland University College and Victoria University  College respectively (Thwaites, 1953).
+By 1952 the NZICA's growth in membership was declining. Members of the Auckland branch referred to newly qualified accountants lack of interest in the course and believed this was due to insufficient publicity , the breadth of the examination syllabus and insufficient identification of the subject matter for each examination  paper (Minutes, Annual  Meeting, NZICA,  1954). In the same  year,
+
+
+
+ 
+ 
+tiiitHfrl@History   NS Vol 1, No 2  1996
+
+
+the Education Committee of the AICA revised the syllabus as it believed it had a responsibility to promote educational training, to raise examination standards and enable the cost ,accountant to keep ::ibreast of increasing demands of industrial management (Minutes, General Council, AICA, 1954). This revision of the examination syllabus resulted in the introduction of the subject "Organisation" which addressed the newer requirements of the modem cost accountant in the sphere of factory organisation, plant layout, flow of work, and measurement of efficiency. Under this revision, the final examination comprised three cost accounting papers as previously, together with a new paper on Organisation.
+Council granted exemption from the cost accounting subjects to examination candidates who were holders of a commerce degree and eligible for membership of the NZSA. Such applicants were only required to sit the examination in Organisation, provided they had undertaken "Accounting Stage III", "Cost Accounting" and "Statistical Method", and "Economics I" and "Economics II" (NZICA Annual Report 1956, p.4). This policy decision, together with the greater interest in cost accounting, was reflected in the increase in numbers of examination candidates as shown in Appendix A. However, the annual meetings at both branch level and nationally often expressed concern at the unsatisfactory pass rates achieved although candidates from Australia were not necessarily more successful.
+
+A national contribution
+
+On the basis of this study, it is difficult to assess the contribution of the NZICA to the introduction and development of cost accounting techniques in New Zealand . Kay (1945, p.172) observed that in the early 1930s managers and owners held the attitude that they had nothing to gain from the installation of a cost accounting system. This attitude would suggest that these managers and owners either Jacked knowledge of accounting or believed the introduction of such a system was not economically desirable. Such an attitude would have hindered the introduction of cost accounting techniques and led Kay to observe that it was the responsibility of the cost accountant to ensure sound practices were followed to meet the needs of manufacturers and the country (Kay, 1949).
+Graham   (1960,  p.125)   was  more  positive,   claiming   that  "the Institute
+[NZICA] undoubtedly played an important part in raising the standards of industrial accounting in New Zealand ..." This view may reflect Graham's own knowledge of cost accounting practices within the country but no evidence is provided on the cost accounting practices of New Zealand businesses. Yet Graham believed the NZICA was impeded by a lack of resources in its efforts to promote cost accounting practices (p.125). This was despite the growing interest that was reflected by the increased membership. As shown in Appendix B, the NZICA's membership had increased to 213 by 1950 and the President, R.M. Kay, claimed at the 1950 Annual General Meeting that the Institute was now receiving recognition
+
+86
+
+ 
+ 
+
+
+
+
+
+
+(NZICA, Annual Report 1950). In 1951, the NZICA joined the NZSA as a (minor) partner in the publication of The Accountants' Journal with a separate section devoted to cost and management accounting. This decision was made to improve the field's profile and to assist the NZICA to become better recognised, a decision similar to that made by the AICA in 1936 (Anderson, 1984). An editorial in The Accountant's Journal (l October, 1954, p.81) stated that management accounting's emergence as a recognised branch of the profession can be seen as a post-World War II development and it was observed that the need for greater understanding of the subject in New Zealand had become urgent. Such an observation was a reflection of developments during World War II in respect of maintaining production, cost-plus pricing (Pohlen, 1943), and the need for contractors to be able to verify their figures to government inspectors - a development which had occurred in the United Kingdom following the First World War (Loft, 1990, pp.11-21).
+Two developments  occurred  in  1954 which  would  contribute  to meeting  the need expressed in the editorial. The first was the advent of the publication Modern Manufacturing,  a magazine  comprising  articles written  by  members  to encourage manufacturers  to use costing  as an essential  part  of  their  management  technique. The second development was the announcement  by T.I. Maxwell, the President of the NZICA,  that he would  sponsor an award for the best contribution  in any  year toward  the general  advancing  of  the knowledge  of  cost accounting  or. toward  the encouraging  of  interest  in  the  activities  of  the  NZICA  (NZICA,  Minute  Book 1954). The first  recipient  in  1955 was T.I. Maxwell  himself  in recognition  of  his term as President and his contribution to the affairs of the NZICA (NZICA, Annual Report  1955).
+The NZICA was also actively promoting the role of cost accounting through branch meetings, luncheons, plant visits and other professional development programs (NZICA, Annual Reports, various years). These various programs provided for the dissemination of practice and sharing of experiences and contributed to improved knowledge and understanding of cost accounting in New Zealand. In July 1956, the first Cost Conference held in the country was organised by the NZICA with the co-operation of the Auckland Division of the New Zealand Institute of Management. The objective of the conference was to bring together those interested in cost accounting and management and to discuss common problems. Papers dealt with budgetary control, managerial control of costs, management as an aid to cost reduction, control of overhead, non-financial incentives in cost reduction and a symposium on the presentation of costing information. The conference was highly successful and aroused great interest in the work of the NZICA which was reflected in an increase in examination candidates from Auckland. R.D. Muldoon and W.G. Rodger were joint recipients of the 1956 Maxwell Award for their organisation of this conference (NZICA, Annual Report 1956). Robert  (later Sir Robert)  Muldoon  was also President  in that  year  and in
+
+87
+
+ 
+ 
+CfiitHl:i@JHlstory   NS Vol 1, No 2  1996
+
+
+1960 entered the New Zealand Parliament as member of Tamaki, and held office as Prime Minister during 1975-84. The recipient of the award in 1957 was H.W. Martin for compiling and producing a new Institute handbook (NZICA, Annual Report 1957).
+Affiliation and integration
+
+The early 1950s saw a reorganisation of the accountancy profession in Australia. In 1952, the Australian Society of Accountants (ASA) was formed through the merger of the Commonwealth Institute of Accountants and the Federal Institute of Accountants, to be later joined by the Association of Accountants of Australia. In 1956, the AICA became affiliated with the ASA as part of a further move towards unification of the profession.
+This affiliation agreement did not apply to New Zealand members but again reflecting the Australian influence seems to have made both the NZSA and the NZICA conscious of the need to come together. Also by now, the NZSA was even more aware of the importance of cost accounting and that this field should be given more prominence (Graham, 1960, p.125). However, some months elapsed before tentative discussions commenced on the topic of affiliation between the NZSA and the NZICA. The reasons for affiliation are clearly stated in the presidential address at the annual general meeting of the NZSA, by Stark (1960, p.288):
+In our view both organisations will gain much from the proposed affiliation . In common with most specialist groups, the Cost Institute's membership and resources limit the progress which can be made, and disproportionately increase administrative costs. The assumption by the Society of administrative control , with its ramifications in fields such as education, public relations and research should greatly enhance the prospects of progress in cost accounting.
+For its part, the Society will assume final responsibility for all the Institute' s activities, thereby ensuring a co-ordinated policy for the entire profession. It readily agrees that a scheme of affiliation such as the one proposed, providing as it does for the continuance of the Institute as a separate entity in the meantime, is fair and reasonable to all concerned in present circumstances.
+The affiliation proposal was approved by members of the NZICA and the two bodies became affiliated from 1 December 1960.
+At the following annual general meeting, President Pickles (1961, p.283) stated:
+It will be some years before the full impact of this affiliation is felt, but I am sure that its results cannot be other than most beneficial to all concerned . Freed from administrative problems, the Institute will be able to concentrate on research and education in the field of cost accounting - a segment of the profession which is becoming of still greater importance with the increasing industrial growth in New Zealand. For its part, the Society will gain from its assumption of full policy control over all matters affecting the profession as a whole. Unnecessary
+
+88
+
+ 
+ 
+
+
+
+
+
+
+duplication of facilities will be avoided, and more effective direction provided over such matters as discipline, publicity, publications and library facilities.
+Yet affiliation was seen as a prelude to full integration since at the 1960 annual general meeting of the NZSA, Stark ( 1960, p.288) observed:
+... when the success of the arrangement is assured however, the Society feels that the continuation of the Institute as a separate institute may well prove an administrative extravagance, provided its members are satisfied that the Society's administrative structure gives full weight to the importance of cost accounting.
+The integration of the AICA with the ASA took place in 1966 and was followed by integration shortly after between the NZICA and the NZSA. While both cost institutes ceased to exist, the New Zealand profession unlike the Australian profession established a Cost and Management Accounting division as part of the NZSA (NZICA, Annual Report 1966). As such, it became the first post qualification division of that body and continued to operate until 1988 when it was wound up as part of the NZSA's redefinition of its objectives and restructuring to implement these objectives (NZSA, Annual Report 1988).
+
+Conclusion
+
+This paper has shown that the NZICA's origins can be traced back to the AICA. Despite its separate existence, the NZICA's progress was initially slow, although the level of membership increased each year until 1959 through active promotion. In the interest of unifying the profession in New Zealand, affiliation discussions were held in 1957 with the NZSA and affiliation eventually took place in 1960. In 1966 the NZICA ceased its operations when it became a division of the NZSA. Throughout its operation the NZICA promoted cost accounting and related aspects through branch activities and various professional development programs. These activities and programs contributed to improved dissemination of existent theory and practice, and provided a foundation for continued development after it formally ceased to exist.
+Possible avenues for further research include explanatory investigative studies of the transfer of cost accounting techniques, ideas and concepts to New Zealand through the activities of the AICA and its members. Research of a similar genre into the impact of the NZICA on the development and spread of costing techniques, ideas and concepts in New Zealand is also warranted.
+
+Notes
+1. The term "Australasia" was one used to describe Australia, New Zealand and other countries in the Pacific Ocean.
+
+
+
+ 
+ 
+
+
+
+Appendix A
+Number of Australian and New Zealand candidates entering for examinations of the Australasian Institute of Cost Accountants and their success rate
+Rnal cost accounting
+
+Year	
+N.Z.	Sat	
+Aust.	% Successful
+N.Z.	
+Aust.
+1944	16		157	56.3	47.0
+1945	53		200	66.0	52.0
+1946	65		176	44.6	35.8
+1947	66		151	47.0	53.0
+1948	60		224	35.0	44.0
+1949	57		203	47.3	54.6
+1950	57		177	52.6	49.7
+1951	38		178	63.1	58.4
+1952	30		114	26.7	32.4
+1953	30		91	53.3	37.3
+Cost accounting
+Sat	% Successful
+	Year	N.Z.		Aust.	N.Z.	Aust.	
+	1954	28		111	70.0	54.9	
+	1955	35		135	74.2	78.5	
+				Organisation			
+			Sat		% Successful		
+	Year	N.Z.		Aust.	N.Z.	Aust.	
+	1954	40		141	65.0	41.8	
+	1955	47		180	59.5	57.4	
+	
+
+1	
+2		Paper*
+3	
+4	
+s	
+Year	Sat	% Sue	Sat	% Sue	Sat	% Sue	Sat	% Sue	Sat	% Sue
+1956	67	N.A.	73	N.A.	58	N.A.	55	N.A.	58	N.A.
+1957	43	51.0	49	41.0	32	38.0	27	48.0	51	59.0
+1958	54	37.0	55	53.0	39	56.0	34	38.0	37	78.0
+1959	49	49.0	39	49.0	35	60.0	37	51.0	42	79.0
+* Paper I   Theory of Cost Accounting
+Paper 2  Practice  -Historical  Cost Accounting Paper 3  Practice  - Pre-determined  Cost Accounting Paper 4  Planning, Installation  and Reporting
+Paper 5  Organisation
+
+
+92
+
+ 
+ 
+Anderson:  The transfer of cost accounting institutions to New Zealand
+
+
+
+
+
+
+Appendix B
+
+New Zealand Institute of Cost Accountants Membership statistics 1944-1959 Membership grade
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Source:  New Zealand Institute of Cost Accountants, Annual  Reports.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+93
+
+ 

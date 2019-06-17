@@ -1,0 +1,367 @@
+
+
+
+
+
+
+
+
+
+Production planning in seventeenth century China
+
+
+
+
+
+Abstract
+The purpose of this paper is to draw attention to instances of production yardsticks set down in a seventeenth century compendium of Chinese agricultural and industrial methods. The instances cited from "T'ien-kung k'ai-wu" (The creations of nature and man)  by Sung Ying-hsing show that the Chinese used calculations of actual and potential production for planning and to stimulate investment in technology.
+
+Keywords: China; seventeenth century; investment; planning; technology; production calculations.
+
+
+
+
+
+
+
+
+
+37
+
+ 
+ 
+Ciiil'friPIHlstory   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Acknowledgements: 1be authors acknowledge the assistance of Dr Paul Rule of the School of History at La Trobe University who provided advice regarding the transliteration of Chinese names and technical terms. The authors also acknowledge the assistance of unknown referees who provided leads to previously published works.
+
+ 
+
+Addresses for correspondence:
+Michael E. Scorgie
+Associate Professor, School of Commerce
+La Trobe University Bundoora Victoria 3083 Australia
+Telephone:  +61 3 9479 2721
+Fax:  +61 3 9479 2909
+Email: M.Scorgie@latrobe.edu.au and
+Academic Director (designate) Nilai College
+Malaysia.
+ 
+
+
+
+Xu-Dong Ji Associate  Lecturer
+School of Commerce
+La Trobe University Bundoora Victoria 3083 Australia
+Telephone:  +61 3 9479 3061
+Fax:  +61 3 9479 2909
+ 
+
+
+
+ 
+ 
+5coflle & JI:  Production planning in seventeenth celltury China
+
+
+Introduction
+The emergence of calculative techniques as aids in the management of industrial enterprises has attracted the attention of leading accounting historians. For example, Fleischman and Tyson (1996, p.39) noted:
+In the past two decades researchers in accounting history have continued to push back the chronology for the initial development of purposeful cost accounting techniques. Traditionally, scholars have focused on the 1880s in their search for origins  ..."
+However, as they point out, in recent years other scholars have found much earlier instances of the use of calculative techniques in England, Scotland and Wales (Fleischman & Tyson, 1996). In another paper, Fleischman and Tyson (1993, p.509) cited numerous researchers who have examined archives, they found one instance of the use of calculative techniques in manufacturing, "as early as the late seventeenth century". The researchers cited by Fleischman and Tyson (1993, 1996) reside on both sides of the Atlantic and in the Antipodes; they live in English speaking countries and their attention focused on archives containing records that they can read and understand. Carnegie and Napier (1996, p.27) cited surveys published in English and noted, "A review of historical studies in accounting reveals an emphasis on accounting in specific countries or regions of a country", and called for comparative studies of international accounting history. In order to answer this call, accounting researchers must be able to draw on knowledge of the emergence and use of accounting techniques throughout the world. At present, this is impossible because little attention has been paid by leading accounting researchers to the emergence of calculative techniques in the management of agricultural and manufacturing enterprises in the Orient. This paper seeks to draw open the silk curtain and to create interest in the possibility that researchers will find instances of the early usage of calculative techniques in Oriental archives.
+Hence, the primary aim of this paper is to direct attention to Chinese treatises that indicate the early usage in agriculture and manufacturing of predecessors of contemporary management accounting techniques. The authors of the treatises, and in particular the seventeenth century T'ien-kung k'ai-wu (The creations of nature and man) by Sung Ying-hsing, used production calculations, and in some cases profits, to justify investment in technology. The frequent use of calculative descriptions by the treatise writers suggests that a search of original documents might reveal early actual instances of Chinese managers using calculative techniques, such as production standards or yardsticks for not only planning, but also for control. For example, Elvin (1973, pp.81-2) drew on an early thirteenth century source for evidence of management control over farm workers: "They set up a water clock to determine the time-periods, and strike a drum to mark the intervals. The lazy are fined and the diligent rewarded". Implicit in this description
+
+
+39
+
+ 
+ 
+fjujii,j@)Hlstory   NS Vol 1, No 2 1996
+
+
+
+is the notion that the manager of the farm workers must have had an idea of the amount of work that ought to be performed in a given period of time. Today, we might use the word "standard" to denote the amount of work expected. In order to avoid the charge that we are misapplying modem terminology to the past, we prefer to use the word "yardsticks" where others might choose "standards". The use of rewards and punishments was recommended by followers of Confucius. Han Feizi (c.280-233 B.C.) "believed the only method of maintaining the essential order was through a system of rewards and punishments"; he advised:
+In ruling the world, one must act in accordance with human nature. In human nature there are feelings of liking and disliking, and hence rewards and punishments are effective. When rewards and punishments are effective, interdicts and commands can be established, and the way of government is complete. (Capon, 1983, p.18)
+The support of Confucianism, and Elvin's (1973) citation of the use of a reward and punishment system provides encouragement to Chinese and Japanese accounting academics and other scholars who have access to primary and secondary sources to seek evidence of the early use of predecessors of contemporary management accounting techniques. Perkins (1969, pp.8-9) provided an outline of the materials available. These included: "cultivation acreage data kept for tax purposes by the Ming [1368-1644] and Ch'ing [1644-1911] governments"; local histories or gazetteers compiled for each county [hsien], prefecture [fu] and province in China; and agricultural handbooks "published over the past several centuries by individuals with an interest in farming techniques". Gardella (1992, p.318n) noted the availability of early "land account books" and cited a "multivolume collection of reproductions of privately held historical documents". Evidence, either in the form of original records showing actual usage or in the form of recommendations set down in treatises of the early use of predecessors of contemporary management accounting techniques is of interest to university teachers and students. In the English speaking Western world it is too easy to be ignorant of, or to simply ignore, contributions of those whose works were recorded in exotic languages. Hence, the secondary aim of this synthetical paper is to make available to teachers and students some details of the early use of production measurements in pre industrial China.
+The influence of Chinese technological development in Europe is well known. Singer et al. (1956, Vol.2, pp.770-1) drew on the works of Joseph Needham and constructed a matrix in which they showed inventions and discoveries that had a profound influence on European technological advancement. The inventions, some of which were conceived before the birth of Christ, included methods and machines used in agriculture, metal working, weaving, ship building, navigation, paper making and printing. In contrast, the influence, if any, of Chinese ideas on the development of cost and   management
+
+
+40
+
+ 
+ 
+Scorgie a. JI:  Production planning in seventeenth century China
+
+
+
+accounting techniques is unrecorded. 1 This paper does not suggest that European developments in cost and management accounting drew on Chinese experience, it simply makes clear that those who owned and controlled the means of production of raw materials and finished goods in seventeenth century China had access to treatises that featured some predecessors of contemporary management accounting techniques. The evidence gleaned from a literature search of books published in English enables a good case to be made that agricultural and industrial managers were advised to use production calculations for planning and as yardsticks for the assessment of proposed investments in technology.
+In the main body of this paper we cite four important treatises that featured production measurements. In chronological order, the authors and their treatises are:
+ 
+1st Century B.C.
+A.D. c.535 1313-1530 1637
+ 
+Fan Sheng-chih Chia Ssu-hsieh Wang Chen Sung Ying-hsing
+ 
+
+C'hi min yao shu Nung shu
+T'ien-kung k'ai-wu
+ 
+
+Relatively long excerpts from some treatises, in particular from Sung Ying-hsing, are provided in order that readers can evaluate the usage of the production calculations without recourse to English editions of the original treatises which might only be held in large reference libraries.
+
+Production standards before the publication of "T'ien Kung K'al Wu"
+
+This paper, in the main, draws heavily on E-tu Zen Sun and Shiou-chuan Sun's translation of T'ien-kung k'ai-wu (The creations of nature and man) by Sung Ying hsing (Sun & Sun, 1966). Sung Ying-hsing was not the first Chinese writer to describe Chinese production methods, tools and machinery. Needham (1984, Vol.6, Part 2, pp.621-48) listed a number of early agricultural treatises that were drawn on by Francesca Bray, the compiler of Part 2 of Volume 6 in the series Science and civilisation in China. A similar list was compiled by Deng (1993, p.39) who selected "nine mainstream treatises" dating from 475 B.C. to A.D. 1742.
+Fan Sh@ng-chih
+The third nung shu (agricultural treatise) in Deng's (1993, p.39) list was composed in the first century before Christ by Fan Sheng-chih. In this treatise the agricultural practices of the time were described. The original book is no longer extant "but excerpts are preserved in later agricultural treatises, especially the book", Ch 'i min yao shu of the sixth century (Shih, 1963, p. l ). Fan Sheng-chih linked production calculations to profit. He estimated the profit derived from the cultivation of gourds and conversion of the fruits into utensils:
+
+
+
+ 
+ 
+,.,.,.jifrj@Hlstory 
+
+
+
+Each vine yields 3 fruits, so each pit yields 12 fruits, one mou gives 2,880 fruits, 10 mou produces 57,600 ladles. Each ladle is worth 10 cash, so the total price is 576,000 cash. For the bombyzine excrement used, together with cattle service and man power, the cost is 26,000 cash. Net profit is thus 550,000 cash, exclusive of the benefit of fattening of pigs and flambeaux (Shih, 1963, p.25).2
+
+Chia Ssu-hsleh
+The Ch'i min yao shu published about A.D. 535, "is the earliest Chinese agricultural treatise to have survived in its entirety", and it is noteworthy that eighteenth and nineteenth century authors who quoted Ch 'i min yao shu bewailed the "fall in fanning standards" that had occurred in the intervening period (Needham, 1984, Vol.6, Part 2, p.55). Chia Ssu-hsieh, the author of Ch'i min yao shu, advised farmers when harvesting to determine the amount of seed required for the next planting; "estimate the field to be sown (next year) and get enough to cover the acreage" (Shih, 1962, p.43). He provided estimates of the amount of seed that was needed for crops of soya, lesser beans, barley and wheat, sown at different seasons, on best and on poor ground (Shih, 1962, p.34). It is clear that farmers were advised not to muddle through, instead they were expected to acquire knowledge handed down orally or recorded in agricultural and other treatises. Chia Ssu-hsieh, in common with other writers, considered the profitability of some activities. His estimates of profit were indicative rather than calculative. For example:
+Keep a sharp lookout at the fair and purchase pregnant animals there. Colts and calves 150 days old, and lambs 60 days old, can live by themselves without sucking. Ifthe dam were good for breeding, keep her; if not, sell her again. The original cost may be recovered sooner or later while young animals are now obtained gratis. With the same sum of money, buy pregnant animals again. Within one year's time, cattle, horses and donkeys can be multiplied 2 times, sheep and goats, 4 times. Lambkins born in the last or the first month of the year should be kept for reproduction; kids of other months may be castrated and sold (Shih, 1962, p.66).
+
+Wang Chen
+A later agricultural handbook, the Nung shu by Wang Chen published about 1313, dealt with agricultural methods and concluded with a brief section that described textile machinery and other farm related technology. It was frequently quoted in later state-commissioned compilations. The oldest extant edition of Nung shu was published in 1530 (Needham, 1984, Vol.6, Part 2, p.60).
+In a chapter entitled "Harvest", Wang Chen described different harvest methods for different crops. He suggested that peasants should harvest and polish wheat quickly, not only for avoiding the damage caused by wind and rain, but also for planting autumn crops. He described an innovative tool for gathering wheat:
+In the north, most people use a tool called shan (a kind of sickle with a long handle,  peasants  can tie  it with  a bamboo  cage into their  waist) to  harvest
+
+
+
+ 
+ 
+Scorsle & JI: Production planning in seventeenth century China
+
+
+
+
+
+wheat. When wheat is cut, the ear of wheat drops into a cage behind the waist, which can be sent to the gathering ground when the cage is full. [A person) can harvest more than ten mou a day. It is ten times quicker than people use a sickle to gather wheat in the south. (Wang, 1981, p.47)
+Elvin (1973, p.195) cited Wang Chen's description of a mechanical spinning machine:
+Its thirty-two spindles, he said, could spin a hundred catties (or approximately 130 pounds) of thread in twenty-four hours. This effected a notable saving in labour costs, for the device was "several times cheaper than the women workers it replaces".
+
+Sung Ylng-hslng and T'len Kung K'al Wu
+Sung Ying-hsing, a native of Feng-hsin in the Kiangsi province, was born about the year 1600. In 1615 Sung Ying-hsing and his elder brother, Sung Ying-sheng, became Chu-jen (Master, awarded to those who passed the selection examination for governmental officials at provincial level) with high honours (Sun  & Sun, 1966, p.vii). In 1634 Sung Ying-hsing was appointed as the director of studies in Feng-hsin. It was at this time that he wrote his famous work, T'ien-kung k 'ai-wu. In 1638 Sung was promoted to the post of police magistrate of T'ing-chou-fu, Fukien, and in 1641 to department magistrate of Po-chou, Anhwei. How long he served in the latter post is not clear, but in 1642 and 1643 he was in his native district assisting the authorities financially and collaborating with them in suppressing a local rebellion. He never resumed official life after the change of dynasty, from Ming to Ch'ing in 1644. His brother, Sung Ying-sheng , rose after several promotions to be the Prefect of Canton, but likewise retired at the close of the Ming period and committed suicide soon after (Pan, 1989,  pp.28-49).
+According to Jing and Luo (1978, p.43) the Ch'ing period [1644-1911] saw the emergence of "managerial landlords". They noted that:
+... already long before the Qing [Ch'ing], the basis of the feudal system, the feudal landlord economy, had begun to break up, so that what we are discussion [sic) is, in fact, the early appearance of capitalism in the rural sector.
+Jing and Luo (1978, ch.2) drew on gazetteers that date from as early as the mid sixteenth century for evidence of the commercial production of agricultural products which were transported to "new handicraft trade towns". It is important to note that Jing and Luo ( 1978) dealt with developments in the Shandong province which is to the north of Kiangsi, the native province of Sung Ying-hsing. Their research showed the emergence of markets for grain, coal and manufactured products such as silk goods and the transition from a feudal society to "managerial landlords" and agricultural wage labourers. This outcome is consistent with Sung Ying-hsing's descriptions of the organisation of agriculture and manufacturing .
+
+
+43
+
+ 
+ 
+l'ii..jlhJ@ jHistory    NS Vol 1.No 2  1996
+
+
+The primary source treated in this paper, T'ien-kung k'ai-wu, was first published in the province of Kiangsi in 1637. A second edition was published two years later. E-tu Zen Sun and Shiou-chuan Sun, the editors of the translation cited in this paper, noted the influence of the treatise within China:
+Various portions of the book, however, were preserved in the eighteenth century encyclopaedia Ku-chin t'u-shu chi-ch'eng , in a compendium on agricultural techniques entitled Shou-shih t'ung-k'ao, and in an early nineteenth-century edition of the Gazetteer of Yunnan Province (Sun & Sun, 1966, p.ix).
+Except for part of the text and a few illustrations that were reprinted in the books mentioned above, Sung's original work almost completely disappeared in China, "owing possibly to the fact that some of the processes described, such as coinage, salt-making, and the manufacture of arms, were government monopolies" (Hummel, 1967, pp.690-1). Fortunately, an original copy of his treatise was discovered by scholars in a private family library nearly 300 years after publication (Pan, 1989, p. l 38). In 1959 the three part treatise was reprinted in three volumes at Shanghai. The text provided details about contemporary production methods and, where the author deemed it appropriate, he set down quantitative data regarding production mixes and output per man or machine. Obviously, it was not designed as an accountant's handbook, and information of relevance to the development and use, of what we know today as cost and management accounting techniques, must be gleaned from the text. It follows that the information set down by Sung Ying hsing was not couched in the sense of controlling or auditing the work of others. His treatise was an aid to investing and planning, not controlling. Even so, not infrequent references to profits that might or might not be obtained by the adoption of a particular technology show that the author understood the importance of profit in the minds of those who decided whether or not to invest in planting, tools and machinery. Unlike the gourd example cited above, Sung Ying-hsing did not make detailed calculations of profit. He preferred to indicate yields and profits rather than set down specific standards and targets. This was appropriate given the range of soils and climate with which farmers and officials from northern and southern China had to contend.
+Rawski (l972, p.49) provided support for the argument that production estimates and profits were important to Chinese agriculturalists:
+Tobacco, introduced into Fukien in the late sixteenth century, had an almost immediate impact on cropping. In the coastal areas the introduction of tobacco intensified the competition for land. Even in the interior, tobacco changed the pattern of agricultural economy. A gazetteer of Yung-an hsien records that peasants had abandoned terraced rice cultivation in favor of planting sugar cane or tobacco on the fertile valley plots, because the profits from either were twice those from rice.
+
+
+
+44
+
+ 
+ 
+
+
+
+
+
+Production calculations In agriculture
+
+The first part of Sung Ying-hsing's treatise dealt with agricultural production. For example, in chapter 1, he described how to plant grains:
+Before planting the seeds are wrapped in straw and soaked for a few days until the shoots appear, then they are planted in the fields. When the shoots are about an inch high they are called "young plant". After thirty days the young plants are thinned and transplanted; this should be done, however, if the fields are suffering from drought or flood. When past the [transplanting] time, the young plants will harden and develop sections [in their stalks], and if left thus in the field they will each produce a few grains. One mou of young plants can provide rice plants for twenty-five mou of the transplanted fields ... (Sun & Sun, 1966, p.4).
+Then, he considered growing grains and the relative merits of manual labour and using an ox. He set down a yardstick for the amount of ground that a poor industrious peasant could work. He also considered, albeit without quantification, risk and profit:
+Considering the cost of the ox and the feed, and the risks of sickness, theft and death, I think human labor is more suitable [than cattle] for the poorer peasants. Suppose that a farmer with an ox can work ten mou of land, and that another industrious farmer, using only one hoe, works half that amount. Since the latter has no ox, he need not concern himself with pasturage problems in his fields after the autumn harvest, when such things as legumes, wheat, sesame, and vegetables can all be planted, and the additional harvest will compensate the farmer for that part of the land not planted [that is, the five-mou difference]. This would seem to be a suitable arrangement. (Sun & Sun, 1966, p.8)
+The industrious farmer will plough the field two or three times before using the harrow, thus breaking the soil evenly and finely and distributing the plant foods therein . Those who do not have work oxen attach a pole to plough and place it on [the shoulders of] two men who, walking one behind the other, pull it. The result of one day of such ploughing is equal to that done by one ox. If the farmer has no cattle, a rotary harrow that is pulled by two men can be constructed . The result of one day of such harrowing is equal to that done by three oxen ... (Sun & Sun, 1966, p.8).
+He encouraged farmers to use fertilisers:
+The industrious farmer fertilises his fields and stimulates the [growth of] rice in many ways, ... Commonly used throughout the country as fertilising agents are: human and animal excretions, dry cakes of pressed seeds, grass and tree leaves. In the south where green lentil flour is made, the liquid waste is used in the fields as a very rich fertiliser. When the price of beans is low, soy beans can be cast into the field, each bean enriching an area about  three inches square; the cost is later twice repaid by the grain yield ... (Sun & Sun,  1966, p.6)
+Rawski ( 1972, pp. 44-5) noted the contribution of Sung Ying-hsing and found that,
+
+
+45
+
+ 
+ 
+iiiiHl:l@aHtstory NSVol 1,No 2  1996
+
+
+"Though the application of fertilizers increased the yield, fertilizers were an expensive investment", he also noted that "a full description of these developments awaits further research".
+Sung Ying-hsing described and illustrated irrigation. He suggested that a cylinder wheel set in flowing water "continues its operation day and night and is sufficient for watering 100 mou of land" (Sun & Sun, 1966, p.12). On land where a treadle wheel must be used:
+... one man can generally water five mou of land a day, while the ox wheel doubles the area. Around shallow ponds and small creeks, where lengthy wheels cannot be erected, short [hand cranked] wheels of a few ch 'ih in length are used. Here a man after cranking all day can irrigate only two mou (Sun & Sun, 1966, p.12).
+Rawski (1972, p.117) drew on Sung's estimates and calculated that in places where "dams with viaducts led the water to wheels which were propelled by the strength of the current", irrigated  "over  100 mou in 24 hours".
+Sung Ying-hsing observed depletion of soil:
+Buckwheat absorbs considerable nourishment and thus depletes the soil. Considering yield, however, which would be worth more than half the [regular rice or millet] crop, why should the diligent farmer object to refertilizing the field after it? (Sun & Sun,  1966, p.20)
+Sung Ying-hsing advised farmers to plant sesame for economic reasons. He suggested that, "enormous profits would accrue to the farmers if they devote more of their land to this crop" (Sun & Sun, 1966, p.24). He advised that, "Out of every tan of seeds forty catties ofoil is made" (Sun & Sun,  1966,  p.24).3
+Inchapter 2, Sung Ying-hsing considered the production of silk. He described the best methods of handling and breeding silkworms and advised that, "One moth will produce more than 200 eggs, all adhering naturally to the paper in a single layer across the sheet without the slightest piling up" (Sun & Sun, 1966, p.36). Sung Ying-hsing indicated the standard price for loose silk or floss found on the surfaces of cocoons. He stated that it was usually "bought at a low price (100 cash per catty) by old women in Hu-chou" (Sun & Sun, 1966, p.42). He found that:
+Making silk wadding requires eight times as much labor as silk reeling, the result of [one man's] work for an entire day being only four ounces of wadding. The Hu-chou silk woven from yarn spun from this silk floss fetches a rather high price. A further variety is the stuff woven on draw-looms and called "figured  spun silk" which  is even more costly. (Sun & Sun, 1966, p.48)
+A reeler was able to reel thirty ounces of silk per day. Where the silk was to be used for weaving handkerchiefs, then "the amount is reduced to twenty ounces, because the fibres have to be considerably longer" (Sun & Sun, 1966, p.49). Sung Ying hsing calculated the loss of weight resulting from boiling off gum which bought out the  "dazzling  luster" of  the  material.  Late  silk  lost  three-tenths of  weight after
+
+
+ 
+ 
+Scorsle &JI: Production planning in seventeenth century China
+
+
+
+boiling whereas for early silk "the loss in weight amounts to only two-tenths" (Sun
+& Sun, 1966, p.59).
+Sung Ying-hsing compared the cost of producing ordinary and dragon robes:
+The weaving equipments are actually not different [from those used in ordinary figure weaving], but the special care of the artisans as well as the sums expended [on the dragon robes] are scores of times more than the ordinary (Sun
+& Sun, 1966, p.59).
+He compared the production of women using treadle powered cotton spinning machines to men using hand spindles:
+Those who are skilled workers use treadle-powered wheels for spinning ramie yams, and with this machine one female worker can produce [in one day] as much as that produced by three men [using ordinary hand spindles]. ... The entire day's effort [of one person] will yield only some three or five ounces [of separated fibres] (Sun & Sun, 1966, p.64).
+Rawski (1972, p.47) cited an "early sixteenth century gazetteer" which stated  that:
+... a skilled woman weaver in Hsing-hua could weave a bolt of cotton cloth every four or five days, which would fetch a picul of unhusked rice in the market at Hsien-yu. Since this represented one sixth the annual harvest from a mou of excellent land, the incentives for keeping women at the loom in this area were high, and the profits from intensive cultivation had to be considerable before it was profitable to put these women to work in the fields.
+Sung Ying-hsing made selected quantitative comments about the production of furs, sheep skins and other winter clothing. He considered the resources required to manufacture a garment lined with swansdown: "Tens of thousands of birds have to be killed in order to obtain enough feathers for a single cloak. It isn't worth the trouble" (Sun & Sun, 1966, p.69). As for sheep he reckoned that:
+... each sheep yields enough wool every year for making three pairs of socks. Furthermore, each pair of sheep will produce two lambs in each lambing season. Therefore if a north China household keeps l00 sheep, the income it derives from them will be some 100taels [of silver] per year (Sun & Sun, 1966, p.69).
+Next, Sung Ying-hsing turned to examine cashmere produced using the finest goat hair. He recorded that, "a spinner working for a whole day can produce only  about
+0.1 ounce of yam; and about one bolt of cloth [made of this 'picked wool'] will require half a year to complete" (Sun & Sun, 1966, pp.69-70).
+In chapter 4 of Part I, Sung Ying-hsing turned his attention to the preparation
+of grains. In regard to rice production he noted that in the best crop, nine-tenths of the heads are full of kernels and one-tenth, empty. However, owing to unfavourable weather or improper cultivation, the proportion may be six-tenths to four-tenths (Sun & Sun, 1966, p.82). He compared the inputs and outputs of two different types of production techniques: hand-threshing and ox-drawn stone rolling. He found:
+
+
+47
+ 
+ 
+iiiUJij;j@)Hlstory   NS Vol 1, No 2 1996
+
+
+
+Rolling off the grain with an ox-drawn stone roller requires one-third the human labor required by hand-threshing, but there is the danger that the tips of seed grains may be damaged so greatly that they will not germinate (Sun & Sun, 1966, p.82).
+He stated that a wooden mill is good for hulling over 2,000 tan of grain before it is worn out; in comparison he found that an earthen mill had twice the capacity but, "is worn out after hulling 200 tan of rice" (Sun & Sun, 1966, p.82). Sung Ying hsing compared the production of mills powered by beasts, water and humans. He found that a water powered mill saves ninety per cent of human labour when used in pounding rice and that in a stone hulling mill "the work done by an ox in one day being equal to that of five men" (Sun & Sun, 1966,  pp.93-4).
+Next, Sung Ying-hsing set down yardsticks for flour production, he estimated that "the yield from good wheat is 120 catties of flour per tan of wheat, while that from the inferior kind is less by one-third" and that "an ox-powered mill can grind two tan of wheat in a day; a donkey-driven mill, half that amount; while a strong man is able to grind three pecks [i.e. three-tenths the amount done by an ox], a weaker one can do [only] half as much" (Sun & Sun, 1966, pp.94-5). In regard to the life of millstones used to grind wheat, Sung Ying-hsing estimated that in mills located to the south of the Ch' ang Chiang that the teeth:
+... are worn out after twenty days of use, but those in northern mills will last for six months. Where 100 catties of flour, including the ground-up bran, are obtained in the south, only eighty can be gotten from northern mills . The price of top-grade flour therefore is two-tenths higher [than that of the inferior grade]. However, as this [high quality] flour is also the material out of which gluten of wheat and starch are manufactured, it would seem that in the final balance the profit is even greater (Sun & Sun, 1966, p.95).
+Sung Ying-hsing considered the life of bolting cloths which are used to sieve flour. He found "that which is woven of Hu-chou silk will remain in good condition after bolting some 1,000 tan of flour, but those [screens] made of yellow silk from other places cannot outlast  100 tan"'  (Sun & Sun, 1966, p.95).
+In chapters 5 and 6, Sung Ying-hsing dealt with the production of salt and sugar, respectively . He found that:
+The salt produced at the Huai River and Yang-chou factories is heavy and dark, while that produced in other places is light and white. Compared in terms of density, if one peck of Huai salt weighs ten ounces, [an equal volume of] the product of Kwangtung, Chekiang and Ch'ang-lu will weigh only six or seven (Sun & Sun, 1966, p.115).
+The translators and editors of T'ien-kung k'ai-wu noted that "for historians the real interest attached to Chinese salt lies in its taxation and administration,  as  evidenced by the numerous Chinese records" (Sun & Sun, 1966, p.123). This statement, in conjunction with the evidence cited in this paper, suggests the possibility that accounting  historians  might  develop a "real interest" in Chinese  salt if evidence  can
+
+
+ 
+ 
+
+
+
+
+
+be uncovered that shows the use of progenitors of modem cost and management accounting concepts and techniques by those who controlled the production of salt. The existence of original documents was confirmed by Gardella (1992, p.323n) who noted the "potentiality of public accounting records" held in Beijing archives.
+In the last chapter of Part I, Sung Ying-hsing indicated the minimum acreage needed to sustain fully-equipped sugar production:
+... the entire harvesting process must be accomplished ten days [before the first frost]. Before the ten-day period, the cane will not have matured sufficiently, while after frost the crop may be worthless. For this reason every household that plants ten mou [i.e. I.7 acres or more) of sugar cane is equipped with its own cane crusher and juice boiler in order to carry out the work with dispatch (Sun & Sun, 1966, p.126).
+It is clear that production calculations have been used in China for centuries. The evidence found in Part I of the treatise by Sung Ying-hsing shows that production calculations were used in the seventeenth century to support arguments in favour of farmers adopting new technology. In Part 2, Sung Ying-hsing turned his attention to manufacturing technology. Before examining how Sung Ying-hsing used production calculations to illustrate the advantages of investing in technology and innovation in manufacturing it is worth noting that the example provided by Fan Sheng-chih, in the first century before Christ, dealing with the production of ladles from gourds, linked agricultural practice to nascent manufacturing.
+
+Production calculations in manufacturing
+
+In this section selected examples are cited of Sung Ying-hsing's knowledge of the use of production calculations in manufacturing. At the beginning of Part 2 "Master Sung" drew attention to the importance of earthenware brought about through the use of water and fire on clay:
+... even the daily labor of a thousand workers is not enough to fill the demands of a large country, so numerous are the people's needs for pottery. As shelter against wind and rain, houses are built, and so there is a need for tiles. In order to defend the country the rulers must construct strategic defence works, hence city walls and ramparts are built of bricks, and invaders are kept out. Sturdy earthen crocks preserve wine to a good vintage, while clean pottery vessels are instruments for containing the sacrificial offerings of wines and bean sauces (Sun & Sun, 1966, p.135).
+Sung criticised the excessive expenses on building the imperial houses:
+Tiles used by the Imperial Household, however, are quite different from the above ... Only clay from T'ai-ping prefecture [in Anhui province] is used for [making imperial tiles). This clay must be transported 3,000 Ii to Peking, in the course of which indescribable damage is caused by adulteration with sand, and by the lawless behaviour of the transport labours and boat crews. Even the imperial mausolea are built with such tiles, and no one has dared give advice to the contrary (Sun & Sun, 1966, p.137).
+
+
+ 
+tiiii'f:i@Hlstory  
+
+
+He advised that, "the firing of tiles required 5,000 catties of fuel wood per 100 pieces of tiles" (Sun & Sun , 1966, p.137). Similarly, "the amount of fuel needed is generally 100 catties of wood per 130 catties of pottery" (Sun & Sun, 1966, p.146). He explained why the large "dragon and phoenix jars" used in the Court are so expensive:
+However, the large "dragon and phoenix jars" used in the Court, ... are  made by an entirely different method: the clay is allowed to form very thickly over the body of the jar, in order that figures and designs may be carved on the wares. This is why the price of such jar is fifty or one hundred times [that of ordinary jars]  (Sun & Sun, 1966, p.144).
+Sung dealt with the glazing and firing of bricks, "Forty tan of water are needed per 3,000 catties of bricks" (Sun & Sun, 1966, p.138). He noted the importance of temperature in the firing process. If the amount of heat applied were one degree less than the proper temperature then "the glaze will have no luster''; if the temperature were three degrees less, the finished brick "will disintegrate immediately after exposure to frost and snow" (Sun & Sun, 1966, p.138). Support for the argument that production estimates were an important component in the management of brick-works was found by Jing and Luo (1978, p.52) in the 1784 edition of the Gazetteer of the Independent Sub-Prefecture of Linqing. The Gazetteer described brick-works set up in the Shandong and Henan provinces "that were put under the direction of a branch building bureau of the Board of Works established in Linqing. The annual quota was one million city-wall  bricks."
+Sung Ying-hsing specified a yardstick for the yield from ore of pyrolusite [Mn02], which was used in the production of lazuli tiles for the imperial household and was "the indispensable ingredient for the blue colour in porcelain decoration" (Sun & Sun, 1966, p.148). He estimated that "each catty of untreated ore will produce only seven ounces of top-grade pyrolusite" (Sun & Sun, 1966, p.154). The quantities of fuel, water, clay and glazing materials had been known since at least the T'ang dynasty (A.D.618-916), this is evidenced by specimens  of  bricks and tiles which can be found in many Western museums (Sun & Sun, 1966, p.155n) . Those in charge of kilns did not muddle along, Sung Ying-hsing described the inferior outcome where the amount of heat applied in the firing process was a degree more or less than the proper temperature (Sun & Sun, 1966, p.138). Indisputable evidence of the skill and knowledge of the early Chinese in the organisation of manufacturing pottery on a grand scale was provided in the 1970s by the discovery and unearthing at Lintong of 7,500 life-size terracotta warriors and horses (Capon, 1983).
+In chapter 8, Sung Ying-hsing specified the materials used to manufacture an Audience Bell:
+Bells of high quality are made of copper [alloys]; those of lower quality, of iron. The Audience Bell now used in the North-Star Pavilion is made entirely
+
+
+so
+ 
+ 
+
+
+
+
+
+
+of bell metal. For casting one such bell 47,000 catties of copper are used, together with 4,000 catties of tin, fifty ounces of gold, and 120 ounces of silver. The finished bell weighs 20,000 catties, and measures 1.15 chang high, with a diameter of 8 ch' ih at the mouth. The double-dragon neck of the  bell is 2.7 ch'ih high. Such are the specifications of an Audience Bell. (Sun & Sun, 1966, p.160)
+In this chapter, he also described how to make cooking pots and coins:
+Each furnace contains enough iron for casting ten to twenty pots. The fluid molten iron [in the furnace] is tapped from the spout and poured into the moulds with ladles, which are made of pure iron coated with earthen materials, each ladle holding approximately the amount needed for casting one pot (Sun & Sun, 1966, p.163).
+The approximate proportions of the materials used in minting coins is about six or seven parts of copper to three or four parts of zinc [called "water tin" in Peking]. About one-fourth of the latter is usually lost through heat in the process (Sun & Sun, 1966, p.165).
+In chapter 11 entitled "Calcination of Stones", Sung Ying-hsing illustrated the methods making black vitriol, sulphur, and vermilion. He commented:
+Black vitriol is needed by dyers, and is manufactured in only five or six places in all China. Generally speaking, about 200 catties of black vitriol can be obtained from 500 catties of original stone (Sun & Sun, 1966, p.209) .
+The same method of covering with an inverted bowl is followed as the yellow flame shoots up when coal mine stones are being heated to make black vitriol, in order to obtain sulphur. With each catty of sulphur realised by this method there would be a reduction of 30 catties in the output of black vitriol. When the essence of vitriol has been converted into sulphur, the rest is only waste material (Sun & Sun, 1966, p.210).
+Each catty of mercury will yield 14 ounces of top-grade vermilion plus 3.5 ounces of second-grade. The yield is determined by amount of sulphur added (Sun & Sun, 1966, p.285).
+In chapter 12, Sung Ying-hsing dealt with production yardsticks and qualities of well-known oils:
+The yield of oil per tan of seeds is: sesame, castor, and camphor 40 catties; turnip, 27 catties (this oil is particularly palatable, and is good for the internal organs); rape, [usually] 30 catties but 40 catties can be realised if the crop is planted in a rich field, well cultivated, and if the pressing is skilfully done (after one year's storage the seeds will be completely dry and oilless). The yield of tea or Camellia seeds is 15 catties of oil per tan (the oil tastes like lard and is quite delicious; the residual meal can be used only as kindling or fish poison); [whereas] one tan of t'ung seeds yields 33 catties of wood oil. When the tallow hulls and kernels of the Chinese vegetable-tallow tree seeds are pressed separately, the yield per tan of seeds is 20 catties of "unmixed" tallow
+
+
+
+51
+
+ 
+ 
+t#iC,\1f:ifflH1story   NS Vol 1,No 2  1996
+
+
+fat and 15 catties of kernel oil; but if the seeds are pressed without such a separation, then the yield is 33 catties of "mixed" tallow-seed oil ... (Sun & Sun, 1966, p.216)
+In the last chapter, Sung Ying-hsing observed the limitation of a natural resource and explained the importance of protecting the environment. He said:
+Pearls  in Nature  are limited  in number, and  become  exhausted  if they   are
+gathered too frequently. If left undisturbed for a few decades, the mussels [or oystersJ will have a chance to exist in peace and increase their progeny, and thus be able to create the precious gems in large quantities. This is the reason for the saying, "pearls return where pearls [mussels] are." This is a fixed law of
+the universe and [any increase in pearl output] is not due to the moral suasion of virtuous officials (in the present dynasty, 28,000 ounces were gathered in one expedition in the Hung-chi) reign [1488-1505), but only 3,000 ounces were obtained at one time in the reign of Wag-Ii [1573-1619], which was not worth the cost) (Sun & Sun, 1966, p.298).
+The numerous citations from Sung Ying-hsing's treatise provide ample evidence of the recommended use of calculative techniques by managers of agricultural and manufacturing enterprises . In general the specifications of production yardsticks were designed to be used as the basis on which to encourage use of the technology described in the text. Rawski (1972, pp.54-5) cited two other mid-seventeenth century agricultural handbooks which also provide evidence of the use of calculative techniques:
+The Shen-shih nung-shu (1643) by Shen Ch'i and Chang Lii-hsiang's Pu nung shu (1658) give comprehensive descriptions of a highly commercialized peasant economy. In addition to rice and a supplementary crop of wheat, beans, or oil plants, farmers could grow mulberry leaves to sell to silkworm producers , cultivate silkworms, raise livestock for sale to urban meat markets, make rice wine or soybean products, or weave textiles. The two books present detailed information on market prices for various crops and cost calculations for each.
+According to Rawski (1972, pp.54-5), Shen Ch'i's constructed a model  that showed the calculation of profit from growing rice after taking into account the wages of one helper and rent. He made similar calculations of the profit made by two women weavers and found that the "profits from silk weaving were almost four times the profits obtainable from growing rice".
+
+Conclusion
+The evidence presented in this paper shows that production calculations were used in China as early as the first century before Christ. Fan Sheng-chih used production calculations as the basis on which to calculate the amount of profit that would be derived from a given acreage by growing gourds and converting them into ladles. In the centuries that followed other writers set down production measurements for agricultural activities and indicated  how they could be used for the evaluation   of
+
+52
+
+ 
+ 
+ScOflle JI:  Production planning in seventeenth cerltury China
+
+
+
+investments in technology and for planning . In the seventeenth century the works of Sung Ying-hsing stand out. In his treatise entitled T'ian kung k'ai wu, Sung Ying-hsing showed that production calculations were used by Chinese to justify investments in technology . Both agricultural and manufacturing activities were treated .
+The evidence prompts a call for present day Chinese scholars to seek early, original records kept by those engaged in agriculture and manufacturing . Some of these records ought to reveal additional evidence of actual use of production yardsticks or standards for planning and control, and possibly other predecessors of modem management accounting techniques. When details of this evidence is published, together with descriptions of the historical contexts, then accounting researches will be able to build comparative international accounting histories that embrace both the Westem and Eastern  worlds.
+
+Notes
+1. Aiken and Lu (1993) described innovative practices in the evolution of Chinese financial accounting and auditing. They did not suggest that there was a flow to the West.
+2.	Two thousand years ago, a mou was equal to approximately five acres (Shih, 1963, p.67). Bombyscene excrement is a by-product of silkworms and flambeaux are torches.
+3.	In the seventeenth century one catty was equal to approximately 600 kilograms (Sun
+& Sun, 1966, p.363).
+
+
+
+
+

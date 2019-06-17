@@ -3,8 +3,9 @@ import matplotlib.pyplot as plt
 
 class Terminal(object):
 
-    def __init__(self):
+    def __init__(self, base_tmp_path_base):
         self.MY_DPI = 80
+        self.base_tmp_path = base_tmp_path_base
         pass
 
     def doc_topics_barchart(self, input_files, param):
@@ -69,11 +70,11 @@ class Terminal(object):
                     # see http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.legend for details
                     # on making a legend in matplotlib
                     plt.legend([p[0] for p in plots], topic_names)
-                    plt.savefig('src/.tmp/doctopic_chart.png', dpi = 300)
+                    plt.savefig(self.base_tmp_path+'/doctopic_chart.png', dpi = 300)
                     plt.close()
 
 
-        data_to_return["data"]["d-chartimg"] = {'doctopic_chart.png':'src/.tmp/doctopic_chart.png'}
+        data_to_return["data"]["d-chartimg"] = {'doctopic_chart.png': self.base_tmp_path+'/doctopic_chart.png'}
         data_to_return["data"]["d-chartlegend"] = {'legend': documents_legend}
         return data_to_return
 
@@ -142,11 +143,11 @@ class Terminal(object):
                     plt.text(0.3, num_top_words-i-0.5, word, fontsize= MINFONT + fontsize_base*score)
 
             #plt.figure(figsize=(800/self.MY_DPI, 800/self.MY_DPI), dpi=self.MY_DPI)
-            plt.savefig('src/.tmp/topicswords_chart.png', dpi = 200)
+            plt.savefig(self.base_tmp_path+'/topicswords_chart.png', dpi = 200)
             plt.tight_layout();
             plt.close()
 
-        data_to_return["data"]["d-chartimg"] = {'topicswords_chart.png':'src/.tmp/topicswords_chart.png'}
+        data_to_return["data"]["d-chartimg"] = {'topicswords_chart.png': self.base_tmp_path+'/topicswords_chart.png'}
         return data_to_return
 
     def save_file(self, input_files, param):

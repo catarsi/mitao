@@ -5,7 +5,7 @@ from src.tools import convert
 
 class Tool(object):
 
-    def __init__(self, tool_config):
+    def __init__(self, tool_config, base_tmp_path):
 
         self.tool_index = tool_config
 
@@ -13,7 +13,7 @@ class Tool(object):
         self.tool_handler = {}
         self.tool_handler["TextAnalysis"] = textAnalysis.TextAnalysis()
         self.tool_handler["Filter"] = filter.Filter()
-        self.tool_handler["Terminal"] = terminal.Terminal()
+        self.tool_handler["Terminal"] = terminal.Terminal(base_tmp_path)
         self.tool_handler["Convert"] = convert.Convert()
 
 
