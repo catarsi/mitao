@@ -2,6 +2,7 @@
 import json
 import requests
 import re
+import sys
 import csv
 import os, shutil
 import time
@@ -27,9 +28,13 @@ app.config.update(
     SEND_FILE_MAX_AGE_DEFAULT=True
 )
 
-BASE_PROCESS_PATH = "src/.process-temp"
-BASE_TMP_PATH = "src/.tmp"
-BASE_CONFIG_PATH = "src/.data"
+SCRIPT_PATH = ""
+if (len(sys.argv) > 1):
+    SCRIPT_PATH = str(sys.argv[1])
+
+BASE_PROCESS_PATH = SCRIPT_PATH+"/src/.process-temp"
+BASE_TMP_PATH = SCRIPT_PATH+"/src/.tmp"
+BASE_CONFIG_PATH = SCRIPT_PATH+"/src/.data"
 CONFIG_DATA = {}
 
 #Will store all the FileStorage of the 'data' nodes
@@ -80,7 +85,7 @@ def download(id):
         if(id == "workflow"):
             return send_file(BASE_CONFIG_PATH+"/workflow.json", as_attachment=True)
         else:
-            a_zip_dir = "src/.process-temp/"+id+"/"
+            a_zip_dir = BASE_PROCESS_PATH+"/"+id+"/"
             zipf = zipfile.ZipFile(a_zip_dir+"/"+id+".zip", 'w', zipfile.ZIP_DEFLATED)
             zipdir(a_zip_dir, zipf)
             zipf.close()
@@ -424,7 +429,7 @@ if __name__ == '__main__':
     #app.config['TEMPLATES_AUTO_RELOAD'] = True
     CONFIG_DATA = json.load(open(BASE_CONFIG_PATH+"/config.json"))
 
-    dipam_linker = linker.Linker()
+    dipam_linker = linker.Linker(BASE_PROCESS_PATH)
     dipam_tool = tool.Tool(CONFIG_DATA["tool"])
     dipam_data = data.Data(CONFIG_DATA["data"])
 

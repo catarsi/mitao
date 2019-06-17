@@ -4,8 +4,8 @@ from shutil import copyfile
 
 class Linker(object):
 
-    def __init__(self):
-        self.process_dir = "src/.process-temp/"
+    def __init__(self, base_process_path):
+        self.process_dir = base_process_path+"/"
         self.index = {}
 
     def reset(self):
