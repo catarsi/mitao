@@ -1,0 +1,304 @@
+
+
+
+
+
+
+
+
+
+The professionalisation of accounting
+A review of recent historical research and its implications
+
+
+
+Abstract
+
+This paper reviews and considers the possible implications of a significant body of historical research that has gathered momentum throughout the last decade and challenged co11ventional explanations for accounting's professional status. In place of traditionally espoused professional ideals, such as altruism, ethical behaviour and control of specialised knowledge, this research has drawn attention to the importance of factors such as social class, gender and political acuity in explaining both the closure of the accounting profession and its elevation within the vocational continuum. If such factors are the foundation upon which the profession of accounting was constructed, then observable and persistent discord in accounting practice and theory is perhaps not unexpected. Further, the story told by recent research invites a rethinking of the nature of the accounting profession's privileged status.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Introduction
+
+While ambiguities persist in characterisations of professions (Freidson, 1983; Abbott, 1988, pp.3-9; Dezalay, 1995), there is widespread recognition of accounting as a highly professionalised vocation . The claim to such status by associations of accountants and their representatives is predictable (Roy and MacNeill, 1967; Carey, 1968 and 1969; Windal and Corley, 1980; Jeffery, 1995), but has been confirmed by a wide variety of independent commentators (Carr Saunders,  1928; Carr-Saunders and Wilson,  1933; Wilensky,  1964; Elliott, 1972;
+Johnson, 1972; Larson, 1977; Freidson , 1986; Abbott, 1988).  Other  evidence derives from observations that accountants are the recipients of the privileges conventionally associated with professional status. Within  Australia , for example, the accounting profession is usually described as encompassing the combined memberships of the Australian  Society  of  Certified  Practising  Accountants (ASCPA) and the Institute of Chartered Accou ntants in Australia (ICAA). The privileges that are accessed by membership of  these  organisations  include: monopoly (for example, with respect to company audits under section 1280 of the Australian Corporations Law); self-regulation (specification of admission requirements and disciplinary procedures); and high social standing (reflected , for example, in the right of members to undertake tasks such as witnessing statutory declarations and passport applications) . Even  more  importantly,  there  is evidence of the state having delegated particular regulatory responsibilities to the accounting profession by making various technical statements promulgated by the profession enforceable  by  law. 1
+Indeed, accountants have not  only  achieved professional  status but succeeded to the extent where  their  vocation  has:
+... expanded rapidly worldwide to become one of the leading profession s in terms of the number of people it employs, the quantity and variety of  services it offers and renders, the size and pervasiveness of its public firms, the extent of its provision and use of educational and research resources, the degree of influence it has in relations with the state, and the social status and economic rewards enjoyed by its members (Lee, 1991,  p.193).
+However, in spite of such accomplishments an unease persists over the legitimacy of accounting's professional status (Zeff, 1987; Gerboth , 1987; Briloff , 1990; Willmont, 1990; Mitchell et al., 1991; Most, 1993; Tweedie, 1993; Mitchell et al., 1994; Willmott et al., 1994; Lee, 1995). This apparent contrast, between the success of accou ntants in professionalising their vocation and a persistent questioning of the legitimacy of that status, has prompted a call for researchers to "explore the origins and development of the accountancy profession - that is, to discover the reasons why it came into existence and the means by which it has prospered despite its long-standing problems" (Lee, 1991, p.193). It is the object of
+
+
+
+this paper to contribute to providing such an explanation  by  reviewing  the  findings of recently published empirical studies of the  emergence  of  the  accounting profession and reflecting on their possi ble implications. Of particular concern is the apparent   divergence   between   factors   identified   in   such   research   as   being  of i mportance to the professionalisation of accounting and those  conventionally described in the sociology of professions literature. In addition to providing the customary benefits associated with drawing together  the  findings  of  related research inquiries, the paper seeks to further encourage a rethinking of the nature of accounting's professionalism and so illustrate how studies in accounting history have the capacity to yield substantially more than a benign record of the past. Instead, accounting history is viewed as providing insights to "the conditions of possi bi lity of transformations in accounting  knowledge  and  practice,  the institutional forces that shape actions and outcomes and the rationales that set out the objects  and objectives  of  accounting"  (Miller et al.,  1991,  p.395).
+The next section of the paper discusses theories  of  professionalisation  in general and draws attention to apparent discrepancies concerning their applicability to the profession of accounting. This is followed by a review of recent historical research dealing with the origins of the accounting profession and the contribution made by this research to explaining the discrepancies. Implications arising from the research, for accounting in particular and the sociology of professions  generally, are considered in the succeeding section. The final section contains conclusions and suggestions  for  further research.
+
+The process of professionalisaton
+
+Carr-Saunders and Wilson's seminal 1933 work The Professions is commonly nominated as the starting point for the systematic study of specific professional groups. Indeed, in the preface to their work Carr-Saunders and Wilson lamented that the study of professional associations had been "almost entirely neglected" and that this was "all the more astonishing" on account of the "greater skill and responsibility of professional men" (1933, p.iii). However, the construction of a sound theoretical superstructure upon the foundation stone laid by Carr-Saunders and Wilson has proven elusive. Research in the sociology of professions has been marked  by  "a shifting and diverse range of theoretical  frameworks" (Saks,  1983,
+p. I) and there remains "no single theory of the professions ; rather, there are competing theories, no one of which has become completely hegemonic" (Meiksins and Watson, 1989, p.561 ).
+Similarly, the process by which particular vocational groups become professions remains open to some conjecture. Observing a widespread clamouring for professional status, Wilensky (1964) asked whether "everyone" would become professionalised . He concluded  that  this would  not  be the case, suggesting   that
+
+
+So
+
+ 
+ 
+
+
+
+
+
+
+while aspiring to professionalism might be universal, success in achieving that status is not. "Success" in this context is generally agreed to be revealed by the achievement of community sanction: "Every profession strives to persuade the community to sanction its authority within certain spheres by conferring upon the profession a series of powers and privileges" (Greenwood, 1957, p.13). However, exactly how such community sanction is achieved remains perhaps the most controversial aspect of the sociology of professions and the subject of significant and diverse theorising.
+Conventional trait theories attribute altruistic motives to vocational groups pursuing professionalisation (Benson, 1981; Dyckman, 1974) and suggest that a check-list of particular attributes can be applied in distinguishing professional and non-professional vocations (Greenwood, 1957; Millerson, 1964; Moore, 1970). The functionalist interpretation extends the unilateral perspective of the trait model by acknowledging that professional status delivers benefits to those holding that status. Professionalism is depicted in terms of a mutually beneficial social contract under which professionals undertake to make available and responsibly apply their knowledge and skills in exchange for privileges such as self-regulation, protection from competition by the unqualified and high social status and remuneration (Rueschemeyer, 1983, p.41 ).
+The notion that professionalism can be characterised by the relationship between professionals and other elements of society is also embedded in the interactionist interpretation. Here, however, emerges some consideration of the possibility that professional groups are primarily motivated by self-interest rather than public-interest agendas: "the professional body is regarded as a basic organisational instrument for defining and securing a respectable and valued social identity" (Willmott, 1986, p.557). In turn, the self-interest rationales hinted at in the interactionist model have been vigorously developed in the so-called "critical" frameworks which have now become dominant. Indeed, more than a decade has passed since Saks stated that "The new orthodoxy in the sociology of professions in the contemporary Anglo-American context is now rooted in the contribution of neo-Weberian and Marxist writers" (1983, p.5, emphasis added).
+Adam Smith warned that "People of the same trade seldom meet together, even for merriment and diversion, but the conversation ends in a conspiracy against the public, or in some contrivance to raise prices" (1776, p.55), and it is precisely this kind of sentiment that echoes in the work of the critical theorists such as Johnson (1972), Larson (1977), Freidson (1986) and Abbott (1988). Larson (1977, p.xvii) explains professionalisation as "an attempt to translate one order of scarce resources - special knowledge and skills - into another - social and economic rewards." The key to extracting such rewards is an ability to exert market control: "To maintain scarcity implies a tendency to monopoly: monopoly of expertise in the market, monopoly of status in a system of stratification" (Larson, 1977, p.xvii).
+
+
+81
+
+ 
+ 
+tiiitHhitGA History  NS Vol 1, No 11996
+
+
+Influenced by perspectives such as these, "power became the key word for both academic and nonacademic writers on the professions" (Freidson, 1986, p.29, emphasis in original).2
+While the preceding discussion points to there having been no shortage of theorising concerning the nature of professional groups and the means by which they achieve their elevated status, it is possible to identify an important constant. Virtually without equivocation the  sociology  of  professions  literature  emphasises the importance of "specialised knowledge" in explaining the professionalisation of vocations. It is persistently identified as either a benign but distinguishing trait of professions or, in the more critically-inspired literature, the primary source of professional power. The following examples, drawn from a broad spectrum of the sociology  of  professions  literature,  are illustrative:
+It has emerged that special competence, acquired as the result of intellectual training, is the chief distinguishing feature of the professions (Carr-Saunders and Wilson, 1933, p.307).
+
+The crucial distinction is this: the skills that characterize a profession flow from and are supported by a fund of knowledge that has been organized into an internally consistent system, called a body of theory (Greenwood , 1957, p.11, emphasis in original).
+
+Any occupation wishing to exercise professional authority must find  a technical basis for it ... [and] the success of the claim is greatest where the society evidences strong, widespread consensus regarding the knowledge or doctrine to be applied (Wilensky,  1964, p.138).
+
+The professional group controls a body of expert knowled ge which is applied to specialised tasks (Elliott, 1972, p.11), [and is) already ordered, sorted and interpreted within the theoretical position currently shared within the profession  (p.133).
+
+The main instrument of professional advancement ... is the capacity to claim esoteric and identifiable skills - that is, to create and control a cognitive and technical basis (Larson,  1977, p.180).
+
+[Professionals are) the carriers of formal knowledge (Freidson, 1986, p. 13) [which remains] separated from both common , everyday knowledge and nonformal specialized  knowledge (p.3).
+
+A [profession's] full jurisdictional claim ... is based on the power of the profession 's abstract knowledge to define and solve a certain set of problems  (Abbott, 1988, p.70).
+"Knowledge", typically described in the relevant literature by a range of adulatory adjectives , is deemed to play a twofold role in the professionalisati on process. First, it is deemed to be the agent that binds practitioners together into a distinct group (Larson,  1977, p.40; Goldstein,  1984, p.175). Second, it bestows  an occupational
+
+
+82
+
+ 
+ 
+
+
+
+
+
+
+authority under which state-endowed privileges can be negotiated  (Moore,  1970, p.15; Larson, 1977, p.69; Tuohy and Wolfson, 1978, p.113; Rueschemeyer, 1983, p.41). Such notions are so entrenched as to have prompted the conclusion that "an emphasis on knowledge 'as a core generating trait ' of professionalism is entirely correct"  (Halliday,   1985, p.423).
+However, it is been precisely the technical aspect of accountants' work, their "accounting knowledge", that has persistently been questioned and even alleged to be in disarray. Most (1993, p. l) comments: "Their product, the financial report, is a costly mess; their generally accepted accounting principles in chaos; their signatures on audit reports suspect; and their education and training considered unacceptable".3 Such a conclusion about the state of accounting is not isolated and similar sentiments permeate the accounting literature: "The real difficulty lies in the sophistry, illogic and untruth of accounting princi ples" (MacNeal, !939b, p.178); "accountants do not appear to have any complete system of thought about accounting" (Chambers, 1955, p.17); "Accounting is now in a state of unrest, even turmoil" (Sterling, 1970, p.vii); "this statement cannot provide accounting with an u nequivocally acceptable conceptual superstructure when the underlying foundation has not yet settled" (American Accounting Association, 1977, p. l ); "there is no evidence to suggest that the accounting profession has pursued, in a disciplined manner, the discovery and ongoing refinement of a coherent body of reliable (accounting) knowledge" (Wolnizer, 1987, pp.178-9); "[accounting] still must cope with persistent and intractable problems such as the dubious meaning of reported accounting figures, inconsistencies in accounting rules, education oriented solely to training for current practice, a lack of research influence on practice" (Lee, l 991, p. l 93). Predictions that accounting might eventually emerge from a state of crisis (Wells, 1976) remain unfulfilled.
+The success of accountants in professionalising their vocation and maintaining that status when their knowledge base - the assumed "core generating trait" of professionalism - has alleged to have been in disarray therefore presents a somewhat perplexing problem when viewed from the mainstream perspectives of the sociology of professions literature. Some degree of indeterminacy in professional knowledge has been posited as a potential source of power (famous and Peloille, 1970; Baer, 1986) as it "allows secrecy and means that control over ... professional skills remains in the hands of practitioners" (Perks, 1993, p. J 3). However, the strength of ongoing criticisms of accounting practice suggest that the professionalisation of accounting has been achieved in spite of discord in accounting knowledge rather than because of it. Vague and inconsistent accounting practices have consistently been alleged to have diminished public confidence in accountants, and therefore impeded rather than aided the pursuit and retention of professional status (MacNeal, 1939a; Birkett and Walker, 1971; Feller, 1974; Walker, 1981; Briloff, 1990; Mitchell et al., 1991; Shah, 1996).
+
+
+
+ 
+ 
+l 'i!Cf jlf,jffl History NS Vol 1, No 11996
+
+
+Commencing    particularly    from    the    I970s,    contradictions    between conventional  descriptions  and  the  observed  functioning  of  professional  groups, such as that evident in the case of accounting, prompted  a rethinking of the manner in which  professions  should be studied  (Roth, I974; Freidson,  1983; Saks,  I983). In  particular,  the  lack  of  empirical  work  in  analysing  professional  groups  was criticised: "One conventional  wisdom has been allowed to succeed another without either  being  subjected  to  adequate  empirical  research"  (Saks,  I983,  p. I7).  While the  stagnation  in  progress  towards  a  better  understanding  of  the  professions  was lamented,  the  sustained theorising  had  at least created  "the possibility  of  opening u p   to   rigorous   empirical   analysis   the   historical   conditions   under   which professionalisation   has  occurred"  and  researchers  were  exhorted  to  "grasp  this opportunity  with both hands" (Saks,  I983, p.17). Encouragement  was also given to abandon  the  pursuit  of  a  "general  theory";  professions   were  to  be  studied  "as individual  empirical  cases  rather  than  specimens  of  some  more  general,  fixed concept"   (Freidson,   I 983,   p.34).   The   role   of   vocational   knowledge   in   the professionalisation   process   was  marked   for  special  attention   (Johnston,  I 980; Goldstein,  1984; Halliday,  1985; Baer,  1986; Scott,  1988; Torstendahl,  1990) and a questioning  of the conventional  wisdom  invited:
+... a successful [professionalisation] strategy brings with it authority and status, but what are the sources of power which are mobilized in the struggle? Do all those occupations to which we accord the title "profession" draw on a common battery of resources? If these questions remain unanswered then we are either reduced to the tautology that the "claim" to professionalism is the sole condition for attaining it or, more likely, we are driven back to the view that knowledge is the condition for success and , therefore , the major determinant of occupational authority. (Johnson,  1980, pp.340-1)
+The literature of the last decade reveals that accounting researchers, perhaps motivated by the magnitude of the puzzle their discipline presented , pursued with enthusiasm a re-investigation of the professionalisation of accounting.
+
+The  professionalisation of accounting
+
+Contributions to explaining the professionalisation of accounting can be divided into two main themes. First, attempts have been made to identify the incentives for accountants to organise into associations and pursue professional status. Second, attempts have been made to explain the apparent success of accountants m achieving vocational ascendancy and closure over accounting work.
+Associations of accounting practitioners were first formed in Scotland; in 1853 i n Edinburgh and Glasgow (Carr-Saunders and Wilson, 1933, p.209) and 1867 in Aberdeen (Kam, I 990, p.28). This process of organising into associations continued in England in 1870 (Willmott, 1986, p.566), North America in 1880 (Kam,  I 990, p.29) and Australia  in  1885 (Parker,  1961). Efforts  to identify the
+
+
+ 
+ 
+
+
+
+
+
+
+incentives that prompted accountants to organise into associations appear to have generated little controversy and generally support the notion that "professional formation is a sociopolitical process which may be motivated by the desire for economic rewards and occupational ascendancy" (Walker, 1995, p.287). Expansion of the economic rewards available to providers of accounting services in the mid nineteenth century has been attributed to "industrialization, management information needs, company failures, court actions, regular reporting and auditing requirements and taxation" (Lee, l 990b, p.92). Changes in the legislative environment, in particular, have long been cited as providing a primary impetus for the formation of accounting associations (Brown, 1905, p.209; Carr-Saunders and Wilson, 1933, p.210; Institute of Chartered Accountants of Scotland, 1954, p.25) and this has been reinforced by more recent research: "an impending change in bankruptcy legislation ... prompted the formation, first of the Edinburgh society, and then the Glasgow society" (Briston and Kedslie, 1986, p.124). Similar circumstances are contended to have applied in England and Wales where "the profession derived a large part of its initial rationale from those extensions to the accounting domain which had been created by successive companies and bankruptcy acts and legislation which provided for the regulation of sectors such as railways, building societies and municipal utilities" (Burchell et al., 1980, p.7). In the U.S., excesses associated with a laissez-faire attitude towards business "incited the calls for an independent accounting profession which were so central to the formation of the profession" (Preston  et al., 1995, p.516). Rapid  growth  in  the nu mber and size of corporations has also been nominated as an important environmental change providing a rationale for accou ntants to adopt professionalisation strategies (Moore and Gaffikin, 1994).
+Given the expansion in the market for accounting services during the nineteenth century it is perhaps hardly surprising that self-interested individuals would manoeuvre in order to procure an enhanced share of the consequent economic rewards. This necessitated a strategy of stratification; the creation of an elite by differentiating the "professional accountant" from those who were merely bookkeepers or clerks. This incentive to stratify accounting related work has particularly been associated with attempts by accounting associations to seek Royal Charters: "A Royal Charter denoted some degree of exclusiveness if not sanction" and "marked off a self-selected elite who distinguished themselves from others" (Chua and Pou\laos, 1993, p.700) .
+Opportunities emerging from a changing legislative and economic environment, prompting a desire by some accountants to stratify their vocation, provide cogent rationales for the pursuit of professionalisation . But how and why did the pursuit of professionalisation succeed? Merely organising into associations does not create a profession; the practitioners must achieve "collective mobility" and/or "closure". Larson (1977, p.66) defines collective mobility as the process of
+
+
+85
+
+ 
+ 
+f'iiiulhlftiO History  NS Vol 1, No 1  1996
+
+
+attaching status and social standing to occupational roles. Closure has been defined as "the process of mobilizing power in order to enhance or defend a group's share of rewards or resou rces" (Murphy, I 984, p.548). In endeavouring to explain the success (rather than just the motivation) of early accountants' professionalisation strategies, significant research effort has been expended in identifying the sources of power employed in the pursuit of closure and collective mobility. The majority of recent contributions in this area have been conducted within a critical framework and the parameters of the "new accounting history" under which "scholars reject mainstream economic rationales for accounting's past, and argue that social, political and ideological factors may be chiefly responsible for accounting events" (Tyson, 1995, p. 17). Contrary to conventional depictions of the nature of professionalisation, accounting knowledge has not been emphasised within this research. Instead, attention has been drawn to factors such as the social class, gender and political acuity of aspiring professional accountants.
+Macdonald  ( I 984)  examined  the  social  background  of  Scottish  accountants who  practised  over the  period  1853 to  1879. The conclusion  reached  was  that  the rapid  rise of  the  Scottish  accounting  profession  was explained  by  the fact that  "its leaders   were   associated   with   the   gentry,   the   legal   profession   and   the   more respectable  (commercial,  as  opposed  to  manufacturing)  part  of  the  bourgeoisie" (p.174).  In  reaching  this  conclusion  Macdonald  exami ned  the  education  of  the Scottish   chartered   accountants   and   the   occupations   held   by   their   fathers.   In addition,  other roles u ndertaken  by  members  (such  as church  elder, J.P., company director, stockbroker, and in charity  and education) were identified which served to enhance their status (p.183). The essence of Macdonald's  contribution  is to suggest that   the  customary   claims  of   a  professional   group   (for  example,   of  training, specialised  knowledge  and altruism)  were  more likely to be accepted by  the public and other established  professions  if they  were "made by  men of acceptable  middle class  characteristics,   who  could  vouch  for  the  other  members  admitted  to  the professional   body"  (p. I 87).  Indeed,  Macdonald   has  even  hypothesised  that  the likely  explanation  for the  early  rise  of  the  accountancy  profession  in  Scotland  in comparison  to  England  was  that  the  "English  accou ntants  contained  within  their ranks  far  fewer  of  the  established  middle  class  than  in  Scotland  and  lacked  the connection  with  the  legal  profession  so  important  to  their  Scottish  counterparts" (p.188;  see  also  Walker,   1988,  pp.1 8-20).  Macdonald's   work  has  not  escaped criticism; most notably  from Briston  and Kedslie  (1986) who suggest that "the data which  he  used  are  inappropriate  and that  his  conclusions  are  unjustified"  (p. 122). However, Macdonald  (1987) has in tum sought to counter these criticisms. Despite the stridency  of these  (co-authored)  criticisms  of Macdonald,  Kedslie  nevertheless has  noted  that  "the early  members  of  the  Edinburgh  society  were  predominantly upper  to  upper-middle  class"  (1990b,  p.13)  and  that  the  "legal  profession,   the Church,  and  landowners"  were  present  among the  Glasgow  accou ntants  (although
+
+86
+
+ 
+ 
+
+
+
+
+
+
+to a lesser extent than in Edinburgh) (p.15). In both cases the founders  were "concerned to ensure that the new societies had a recognized status in their respective communities, which they accomplished by inviting  membership  only from men of proven social and professional standing" (p.18). Importantly, the use of a variety of instruments "to ensure that the societies were elitist" (p.15) served not only to establish a power base, but also to perpetuate it as the status "would be imputed to future members" (p. 18). Further support for the social class contention is available from Stewart (1975) who noted that the Glasgow Institute initially expressly excluded accountants engaged in business as merchants or manufacturers from membership. However, "second jobs" with  higher  social status were tolerated and "many of the early members had other occupations , such as stockbroking, banking, insurance or estate factoring" (Stewart,  1975,  p . l 14).  Selective membership is also suggested by the procedures  for admission  to membership  of the Glasgow Institute, with only some applicants being required to sit examinations (Stewart, 1975, p.114), and in Edinburgh where "there  were  for  many  years examples of candidates being examined  in  a  very  informal  manner"  (Kedslie, 1990a, p.196). While there is evidence to suggest that the Edinburgh accountants at least i nitially relied on increasing membership in the pursuit of "occupational pre eminence" (Walker, 1988, p.54), other early associations appeared to favour a strategy of bui lding exclusivity by a tightl y controlled rationi ng of new memberships. This has been alluded to by Preston et al. with reference  to  the United States in the early part of this century: "While established accountants achieved their designation by waiver, potential new entrants faced an examination with  failure  rates  around  90%" (1995, p.516).
+While superior social standing was likely to have been a positive force in the pursuit of professionalisation, there seems little doubt that female membershi p would have been a significant encumbrance . Given that women have traditionally occu pied a subordinate role within western society, an inverse relationship between the power of a vocational group and the extent of female membership could reasonably be anticipated . The intuitive appeal of the argument is supported by the observation that while not all vocations are male dominated, those most commonly described as high status professions traditionally have been (Perks, 1993, p.1 1). For example, while the traditionally female dominated vocations of nursing (Turner 1986) and family day care (Saggers et al., 1994) have struggled to achieve professional status, other vocations in which women were marginalised have readily claimed a position in the highly professionalised section of the vocational continuum (Atkinson and Delamont, 1990). Researchers examining the professionalisation of accou nting have therefore sought to examine whether success i n this endeavour might be at least partly attributable to gender.
+
+
+
+
+87
+
+ 
+ 
+C'i33'jli,f1Gf1 History   NS Vol 1, No t 1996
+
+
+
+Kirkham and Loft (1993) have  undertaken  a  comprehensive  analysis  of the role of gender in the professionalisation of accounting within the U.K. They concluded that in the early years of professional formation (prior to 1870), the tasks undertaken by clerks and accountants were established as  work  that  "was  not  fit work for women" and that "this meant more than the exclusion of women, it was a way of signifying the contribution and social worth of such employments" (p.550). Subsequently, when clerical work became increasingly accessible to women, accountants sought to differentiate their work from that of clerks. The outcome was that the "qualities demanded of a professional accountant were represented as being in opposition to the contemporary construction of what it meant to be a woman" (p.551) and "by 1930 the term 'professional accountant'  had  come  to  be constituted, in part, as something that is 'not a clerk or bookkeeper ' and, in part, as 'something that is not a woman' " (p.507). The view that achieving and maintaining professional status was dependent on the exclusion of women has also been expressed by Roberts and Coutts (I992, p.389): "For an occupation li ke accountancy, which was involved in a complex struggle to achieve professional status, the risk implied by feminization was too large a one to take." That risk was a consequence of perceptions that women "were not regarded as possessing the characteristics that make a good accountant; they were perceived as being too emotional and subjective, and not able to cope with figures" (p.388). It was presumably on these grounds that the Institute of Chartered Accountants in England and Wales, for example, expressly excluded women from membershi p for the first 40 years of its existence. Abandonment  of the policy  was ultimately  forced  only  by a change  in  legislation  (Boys,  1994, p.14 ).
+The extrication of social class and gender as discrete  factors of  importance in the professionalisation of accounting still leaves an extensive and more general literature that depicts professionalisation as a political struggle and emphasises the political acuity of accountants within that struggle. The broad perspective of this literature is epitomised by Willmott 's comment that "professional bodies are primarily but not exclusively , political bodies whose  purpose  is to define, organise and advance the interests of (their most vocal and influential)  members"  (1986, p.556, emphasis in original). As a consequence , the success of a professionalisation project  is dependent  upon :
+... a range of conditions, including the structure of the relationship of professions with consumers of their services; their relationship with the agencies empowered to legitimate and extend their occupational domain and control; and, finally, the sections of their membership whose material position and social identity is affected by the activities of their association (Willmon, 1986, p.561).
+Among the political activities that have been linked with early associations of accountants are the establishment of a positive relationshi p with government and its
+
+
+88
+
+ 
+ 
+
+
+
+
+
+
+related apparatus, the cultivation of strategic alliances with existing powerful social institutions, and actions to denigrate those who sought to tread on the territory that accountants had claimed as their own.
+Success in the pursuit of professional status is likely to be significantly dependent on the state on account of its power to grant status enhancing appurtenances (such as royal charters) and legislatively imposed privileges (such as monopoly). Perhaps the most comprehensive research in this area has been undertaken in connection with the endeavours of Australian accountants to acquire a royal charter (Poullaos, 1993; Chua and Poullaos, 1993; Poullaos, 1994). The narratives contained in this research document a complex and sustained struggle and testify to the importance, and possible complexity, of interactions with the state (which is motivated by its own agenda - see Johnston, 1980 and 1982) in the process of professionalisation. An early attempt (1904) by the Incorporated Institute of Accountants in Victoria to obtain a Royal Charter was motivated by a concern "to protect and expand its territory through an appeal to an Imperial agency" (Chua and Poullaos, 1993, p.722). Ultimately the attempt was defeated by the conspiracy of a complex set of forces:
+... the compromises, detours, shifting alliances, trade-offs and deals that were struck by each group of actors as they sought to do that which was perceived to be feasible and beneficial at a point in time. There wa no stable  intentionality or set of interests that guided the whole affair and determined its outcomes, beyond some vague concept of "acting to protect one's own interests"(Chua and Poullaos, 1993, p.723).
+A subsequent attempt by the Australasian Corporation of Public Accountants to acquire a Royal Charter, "an incontrovertible sign of professional status" (Poullaos, 1993), was characterised by a similar political struggle, lost initially on account of diplomatic considerations, the self-interests of legislators who were concerned to preserve authority, and the opposition of other accounting bodies who were concerned about their "possible loss of status and market positioning" (Poullaos, 1993, pp.225-6). Eventually, however, after a complex set of struggles spanning four decades4 a group of Australian accountants would succeed in acquiring a Royal Charter (in 1928) that was "Born of struggle and compromise, not to mention dangerous and difficult liaisons" (Poullaos, I994, p.219).
+The importance of the state, and its lack of neutrality, in the professionalisation process is also born out, albeit in a vastly different context, in Bailey's study (l992) of an attempt to establish accounting as a profession in Russia. "Lenin had held accounting to be within the grasp of any literate person and not a matter of expert knowledge" (p.14) and the Bolsheviks determined that accounting "would undergo change in response to the new conditions in which there existed socialist means of production" (p.20). The outcome was that over fifty years of struggle to professionalise  accounting  in  Russia  would  be  bought  to  "an ignominious end"
+(p.20).
+
+
+ 
+ 
+C'iiiHfhHGQ History NS Vol 1. No 1 - 1996
+
+
+
+In addition to relations with the state, the importance of "associative strategies" (Selander, 1990) based on alliances with other professions, particularly law, has been identified. Concerning the early Edinburgh accountants, Walker has suggested that their "connections with those in the older professions of established standing threw a lustre of professional and social status over them" (1988, p.15). The point is reinforced by Kedslie' s emphasis that strong links to the legal profession "would be significant in establishing the social status of the members of the new society" (1990b, pp. 13-4). Consistent with this theme, Macdonald has noted that connections with courts and the law were emphasised in the petitions for Royal Charters of the Edinburgh, Glasgow and Aberdeen societies, while accounting skills received only "scant attention" ( t 984, pp.184-5). However, proximity with the legal profession necessitated a careful balancing act. While the early Scottish accountants relied on a close association with the legal profession in order to establish their professional claim, later associations of accountants would downplay such a connection as they sought to emphasise the distinctive nature of their vocation . For example, in the code of ethics promulgated by the Sydney Institute of Public Accountants i n I 896, the sharing of profits, commissions or bonuses with a solicitor was deemed to provide grounds for the forfeiture of membershi p (Parker, 1987, p.123).
+While studies of the kind cited  emphasise  the  importance of  interaction with the state and other influential institutions in the professionalisation process, recent research also drawn attention to internal political struggles within the accou nting profession. Within this context, success in consolidating professional status is dependent on maintaining elitism  by  denigrating  or  excluding  potential competitors. The early Scottish accountants have, again, been subject to analysis (Walker, 1988; Kedslie, l 990a; Walker, 1991; Walker, 1995; Shackleton, 1995), with Walker concluding that "entry to the chartered societies was conditional u pon the ability to surmount exclusionary barriers rather than on individual merit" ( I 991,
+p.271 ).  The eventual  outcome  was that:
+... not only had the chartered societies developed expanding high standing professional organizations, they had also gained domination of the practice of their vocation, secured judgements which provided legal protection for the source of that dominance and, witnessed the demoralization  and ineffectiveness of their competitors who had been weakened by unsuccessful challenges to that domination (Walker,  1991, p.281) .
+As the number of studies  dealing  with  the  professionalisation  of accounting expands, so too, it seems, expands the number of  factors claimed  to have  played a role in the process. In addition to the factors already discussed, the  literature  of the past decade has made reference to the construction of a "mystique" concerning accounti ng knowledge (Moore and Cooper, I 994) and the mechanisms by which accountants    informally   established   their   credentials   i n   the   absence   of    state
+
+
+
+ 
+ 
+
+
+
+
+
+
+registration (Macdonald, 1985). Hines (1989) has emphasised the  importance  of being able to claim (rather than  necessarily  possess)  a body  of knowledge.  During its formative years within the United States it has been  contended  that "the accounting profession sought to legitimize its activities and have conferred upon it the status and privilege of a profession by subscribing to political and moral ideals of the day" (Preston et al., 1995, p.517). Hoskin and Macve have drawn attention to the importance of the examinatorial system in accounting's professionalisation (1986, pp.132-133). According to Sikka and Willmott, accounting's jurisdiction "is rooted in, and parasitical upon, the growth and instability of  capitalism"  (1995, p.552), extending Johnston's thesis (1982) that the professionalisation of vocations contributed to the construction of an imperial state apparatus. Extension of the research to non-western countries has resulted in the identification of even more variables  (for example,  Wallace,  1992).
+While recent contributions to explaining the professionalisation of accounting draw attention to a proliferating array of deliberate strategies and fortuitous circumstances, they are also notable for the factors that are not emphasised. In particular, developments in accounting knowledge are not a feature of this literature. Indeed, Moore and Gaffikin explicitly state that "The  accounting profession's power/knowledge initially did not lie in the formal claims of possession of special knowledge and skills" and, furthermore, "The skills and knowledge claimed by the profession were not unique, they belonged to other professions" (1994, p.63; see also Hines, 1989; Robson and Cooper, 1990, pp.382- 5).
+
+Implications
+
+While the paths travelled by vocational groups to achieve professional status may be numerous and are only partly mapped, there are grounds for suggesting that they define an essentially one-way journey. In the course of the last  two  centuries members of the traditional learned professions of medicine, law and theology have been joined by, among others, engineers, architects, accountants, pharmacists, veterinary surgeons and actuaries. However, examples of vocations that achieved professional status and subsequently lost it are more  difficult  to  find.5 The implication is an important one, while professionalisation may be a complex and arduous project in which  specific  strategies  sometimes  fail  (Macdonald,  1985; Chua and Poullaos, 1993), once it is achieved  it tends to deliver an enduring  status. As a consequence, the influence of the factors contributing to the initial professionalisation of a vocation transcend the particular time frame in which professionalisation occurred through their construction of a power base that ensures that the "ongoing process of negotiating and renegotiating ... status" (Allen, 1991, p.51)  is conducted  from  a  privileged  position.  In  this  context  the  mechanisms by
+
+
+
+ 
+ 
+fiiii-jif,j@j History NS Vol 1. No t  1996
+
+
+
+which professional groups originally succeeded in achieving their status  are  not devoid of implications within the contemporary setting. At the risk of employing triteness, it may well be that the greater part of the explanation for accounting being a profession today is simply that  it became  recognised  as a profession  during  the last  century.
+Conventional perspectives on the professionalisation  of  accounting  have viewed the acquisition of that status as the just reward for attaining certain vocational traits, including a body of specialised knowledge: "as the traditional learned professions depend upon bodies of specialized knowledge, so also does accounting" (Roy and MacNeill, 1967, p.32). The story emerging from recent research is a much less flattering one. The early professional accountants were exclusively male and many were from privileged social backgrounds . They were politically astute, had connections to other powerful institutions such as the legal profession,  and were not averse to denigrating and excluding those who sought to i ntrude on territory they had claimed as their own. Their work was rendered increasingly important by changes in the legislative and economic environment. Collectively these factors, along with a variety of other strategies, were relied upon to construct an aura of elitism that permitted closure and the elevation of accounting within the vocational continuum . Advances in accounting knowledge seem, at best, to have played only a peripheral role. The description is consistent with Willmott's more general contention that "the monopoly and self-regulating privileges granted to 'professions' is more a reflection of their position and role within the  social division of labour than an acknowledgment of any distinctive, politically neutral technical  attributes  or competences  they  may  possess"  (I986,  p.564).
+While recent contributions to explaining the professionalisation of accounting may generally be interpreted as lending credence to the critical interpretation of the professions, the relative unimportance of specialised knowledge is a  confounding factor in connection with virtually all prior theorising on the professions. As noted by Loft, specialised knowledge has typically been "taken as a given factor around which professionalisation takes place" (1986, p.140). While it may be true that "where there is ... power, there must also be knowledge" (Lee, 1990a, vol.I , p.3), the particular kind of knowledge required for the successful construction of professions might well extend beyond the traditionally ascribed  technical knowledge peculiar to individual vocations. While there seems little doubt that such technical knowledge can be a source of power around which an elite vocation can be constructed, accou nting may well be the case that highlights that the pri macy of such   knowledge   in   professionalisation    projects   should   not   be   assu med.  The i mportant general contribution to the sociology of the professions offered by recent research on the professionalisation of accounting is to lend credence to the notion that "professionalism is neither inevitable, universal, nor of any single type" (Crompton ,  1987, p.106).
+
+
+92
+
+ 
+ 
+
+
+
+
+
+
+The evidence offered by recent research suggests an emerging re understanding of how accounting became a profession and, consequently, the nature of such status. Such a re-understanding poses a challenge to the legitimacy of accounting's "professionalism". Changes in social attitudes have meant that gender, social class and political acuity are no longer generally accepted as legitimate means for engineering the receipt of state-endowed privileges.6 If such factors are the source of the elevated vocational status of accounting, then there is an entitlement to challenge their implicit sanctioning by the state apparatus that grants professional privileges, including regulatory roles, to accountants . Such circumstances may well be construed to constitute arrangements of abdication rather than legitimate delegation.
+Such a critique carries particular force in connection with the authority granted to the accounting profession in connection with financial reporting practices. The basics of double entry accounting - universally acknowledged as a great achievement - were established more than 500 years ago and can hardly be offered as the valid justification for a professional claim several centuries later. A theory of financial reporting that was as systematic as accountants' recording processes might have established some justification for accountants' professional status and the extension of their authority beyond mere bookkeeping. But to date accomplishments in this area amount to expensive but inconsequential conceptual framework projects (Solomons, 1986; Hines, 1989 and 1991) and a burgeoning array of technical accounting regulations: "a solution which accountants and their professional organizations have fostered, rather than rely on disciplined observation and reasoning" (Chambers, 1993, p.16). Neither have remedied the problems of "heterogeneous and out-dated valuations ... fallacious aggregation and ... rampant ambiguity" (Chambers, 1991, p.162) that continue to plague financial statements. If professions are to be described as "occupational groups which have gained a social mandate to define what is right and wrong within a specific sphere of activity" (Richardson, 1987, p.341; see also Montagna, 1986), there is perhaps little wonder that accounting's relationship with society has been described as a "covenant desecrated" (Briloff, 1990).
+A final important implication of recent research concerns the way in which accounting is portrayed in professional and academic spheres. It is understandable that publications produced by accounting associations will continue to have recourse to conventional and favourable descriptions of the nature of professional groups (Jeffery, 1995; ASCPA, 1995, pp.1.4-1.11; Leung and Cooper, 1995, p.5). However, accounting academics who persist with such an approach run the risk of not just being accused of inaccuracy, but of being "the dupe of the established professions" and "helping them to justify their dominant position and its payoff ' (Roth, 1974, p.17). The matter is of special concern for textbook writers if they are to be able to defend themselves against allegations that they indoctrinate rather than educate (Chambers, 1994).
+
+93
+
+ 
+ 
+i43+1'hlM1 History NS Vol 1, No t . 1996
+
+
+Conclusions and suggestions for further  research
+This paper has sought to review recent historical research on the professionalisation of accounting in the context of theory development within the sociology of professions literature and to reflect upon possible implications arising from that research. The studies cited have made a significant contribution to the accounting history literature and provided a welcome contrast with earlier "official  histories" which "implicitly seek in their explanations of the past to further the use of the techniques and the  social  status of  the  practitioners  i n the present"  (Loft,  1986, p. 138). While accounting may indeed be a "legitimated institution" (Lee, 1989, p.249), the highlighting of previously underemphasised factors i mportant to accounting's professionalisation i nvites a reassessment of that status and the accounting practices that have been imposed under its authority. In this context the research reviewed has pointed to the potency of studies in accounting history to provide insights to understanding the present and future  direction  of  accou nting rather  than just  describe  its past.
+Further research on  accounting 's  professional  origins  is  encouraged  in order to shed greater light on how accounting came to occupy its privileged  position within the vocational continuum. Suggested areas of inquiry include further examination of the extent to which professionalisation strategies and professional status were able to be transported to different locations within individual countries and across national bou ndaries (Parker, 1989; Carnegie, 1993;  Poullaos,  I  994, p.304; Carnegie and Parker, 1996; see also Johnston, 1982 for a theoretical framework). Efforts to internationalise the accounting profession (Gavens and Gibson, 1992) may well emerge as an  area  of  renewed  importance  as  pressure grows for international rather than national accounting standards. Expanded inquiry might also be undertaken in connection with the biographies of individuals who played important roles in accounting's past. Just as recent  critically-inspired research has challenged the "official" histories of accou nting organisations , new perspectives might also be achieved by revisiting accou nting's past  at  the individual level. The premise for such biographical work is a recognition that "society must be understood as a process constructed historically by  individuals who are constructed historically by society" (Abrams, 1982,  p.227;  see  also Collins,  1990,  p.24). In  addition  to  these  research  opportunities  focussing  on  the i nitial professionalisation of accounting, a potentially fruitful area for  expanded inquiry concerns how such status has been maintained (Allen, 1991; Willmott et al., 1993; Chua and Sinclair, 1994; Radcliffe et al., 1994; Walker and Shackleton, 1995). In particular, such inqui ry might i nclude greater examination of the i mpact of  indeterminacy   i n  technical   accounting  practices  on  accou ntants ' professional
+jurisdiction (Booth and Cocks, 1990, pp.402-3). Finally, as demonstrated by Parker (1994) in connection with ethical codes, the explicit presumption of self-interest rationales in explaining professional behaviour may lead to insights and evaluations beyond  those  currently  contained  in the  accounti ng literature.
+
+94
+
+ 
+ 
+West: The professionalisation  of accounting
+
+
+
+Notes
+
+I. This de facto law-making role is associated with the approval of various accounting standards promulgated by the profession by the Accounting Standards Review Board and its successor, the Australian Accounting Standards Board. The effect of such approval has been to make these standards legally enforceable with respect to companies under section 298(1) of the Australian Corporations Law. Walker (1987) has drawn attention to the privileged role enjoyed by the accounting profession in connection with this process. In addition, standards promulgated by the accounting profession have now achieved similar status with respect to public sector reporting entities. This includes AAS27 "Financial Reporting by Local Governments" which has been made legally enforceable under state legislation.
+2.	While the critical approach has been marked by an overall attachment of private rather than public interest motives to professions, it is underlaid by a variety of more specific theories. Larson ( 1977), for example, emphasises the pursuit of monopoly through collective social mobility. Abbott (1988) draws attention to the importance of interprofessional competition within the "system" of professions. Johnson (1982) explains the success of professionalisation projects as a manifestation of their contribution to the global function of capital, with professional associations functioning as "imperial bodies" (p.207) (see Willmot et al. (1993, p.74) and Chua and Poullaos (1993, p.694) for reservations concerning this theory). Dezalay (1995) reflects on the impact of the internationalisation of markets for professional services and the importance of "social capital" within this environment.
+3.	While Most's comment was made with specific reference to the situation in the United States, he notes that his observation is applicable in a broader context: "accountants in the English-speaking countries are in the most dire straits" (1993, p. I).
+4.	The struggle can be traced back to the first-known Australian accounting association, the Adelaide Society of Accountants, formed in 1885 (Chua and Poullaos, 1983, p.700).
+5.	Abbott (1988, p.29) nominates the railroad professions and psychological mediums as examples of "professional deaths".
+6.	This is not to imply that such factors are unimportant within the contemporary accounting milieu. In particular, there is ample evidence of ongoing political activity (for example, Jeffery, 1995) and gender-based issues ("CPA Women - Taking Up the Challenge", 1996). See also Puxty (1990) for a discussion of the accounting profession and class structure.
+
+
+
+
+
+
