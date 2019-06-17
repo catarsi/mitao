@@ -5,10 +5,12 @@ A web application tool for mashing up automatic text analysis tools and create a
 
 
 ## Requirements
-Python 3.7 programming language (Download and install it from the official website: [python.org/downloads)](https://www.python.org/downloads/)
+1. Python 3.7 programming language, Download and install it from the official website -> [Click here](https://www.python.org/downloads/)
+
+2. The Chrome web browser, download it -> [Click here](https://www.google.com/intl/en/chrome/)
 
 
-##Instalation
+## Instalation
 ### Step (1)
 #### Windows:
 Open the Windows command line.   
@@ -19,15 +21,21 @@ Open the Terminal command line of macOS. ([Follow this link](https://macpaw.com/
 Open Terminal (Shell) of your Linux operating system distribuition.
 ([Follow this link](https://www.ionos.com/help/email-office/glossary-email-terms-explained/troubleshooting-mail-basicmail-business/access-the-command-prompt-or-terminal/) for a guide on how to open the Terminal on Mac)
 
+---
+
 ### Step (2)
 Download the project:  
 ```git clone https://github.com/catarsi/matao.git```   
 And enter its directory:  
 ```cd matao```
 
+---
+
 ### Step (3)
 Enter the following command, in order to install all the libraries needed.  
 ```$ python3.7 -m pip install -r requirements.txt```
+
+---
 
 ### Step (4)
 Run MATAO with by entering this command:  
