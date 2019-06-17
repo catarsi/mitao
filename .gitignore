@@ -1,7 +1,6 @@
 .DS_Store
 __pycache__
 .ipynb_checkpoints
-src/.process-temp
 __local__config_loader
 __local__index.html
 __local__config_loader.js
