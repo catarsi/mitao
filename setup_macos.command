@@ -1,4 +1,4 @@
-BASEDIR=`dirname $0`
+BASEDIR=$(dirname "$0")
 python3.7 -m venv $BASEDIR/_venv
 . $BASEDIR/_venv/bin/activate
 echo "Installing the required python libraries ..."
