@@ -79,7 +79,7 @@ select, .dropdown-toggle{
 }
 .input-group
 input {
-  min-width: 220px;
+  min-width: 20px;
   max-width: 220px;
 }
 .input-group + .input-group{
@@ -353,9 +353,11 @@ ul + label{
   padding-left: 0px;
 }
 #diagram_editor_left_side li{
-  float:left;
   background-color: #b08c4f;
-  border-radius: 0px 20px 20px 0px;
+  border-radius: 0px 5px 5px 0px;
+  padding: 2px;
+  padding-right: 4px;
+  text-align: center;
 }
 #diagram_editor_left_side li + li{
   margin-top: 40px;
@@ -367,14 +369,11 @@ ul + label{
 }
 
 #diagram_fit{
-  width:25px;
-  font-size: 16pt;
-  text-align: left;
-  padding-top:5%;
-  padding-left:5%;
+  font-size: 170%;
 }
 #diagram_fit a{
   color: white;
+  vertical-align: middle;
 }
 
 

@@ -273,7 +273,6 @@ class dipam_interface {
                         <label class="input-group-text">`+param.intro_lbl+`</label>
                       </div>
                       <select data-att-value="`+k_attribute+`" data-id="`+elem.data.id+`" id="`+a_dom_id+`" class="`+a_dom_class+` att-handler save-value custom-select" disabled>`+str_options+`</select>
-
                       <input data-id="`+elem.data.id+`" type="file" id="`+a_dom_id+`_file" style="display: none;" multiple="true"/>
                       <input data-id="`+elem.data.id+`" type="file" id="`+a_dom_id+`_dir" style="display: none;" webkitdirectory directory multiple="false"/>
 
@@ -432,11 +431,12 @@ class dipam_interface {
                   break;
             case 'select-file-trigger':
                   var dom_id = event_dom.getAttribute('id');
-                  $(event_dom).on('change', function(){
+                  $(event_dom).on('change', function(e){
+                      e.preventDefault();
                       var arr_option_selected = $("#"+dom_id+" option:selected");
                       if (arr_option_selected.length > 0) {
                         var opt_value = arr_option_selected[0].value;
-                        $('#'+dom_id+"_"+opt_value).trigger('click');
+                        document.getElementById(dom_id+"_"+opt_value).click();
                       }
                   });
 

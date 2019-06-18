@@ -1,0 +1,10 @@
+flask
+requests
+regex
+zipfile2
+numpy
+matplotlib
+nltk
+gensim
+python-poppler-qt5
+pdftotext

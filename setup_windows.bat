@@ -1,8 +1,7 @@
-BASEDIR=`dirname $0`
-python3.7 -m venv $BASEDIR/_venv
-. $BASEDIR/_venv/Scripts/activate
+python -m venv _venv
+_venv\Scripts\activate
 echo "Installing the required python libraries ..."
-pip install -r $BASEDIR/requirements.txt
+pip install -r requirements.txt
 pip list
 echo "INSTALLATION DONE !"
 deactivate
