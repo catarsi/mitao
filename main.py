@@ -50,6 +50,18 @@ FILE_TYPE["img"] = ["png"]
 FILE_TYPE["text"] = ["txt"]
 FILE_TYPE["table"] = ["csv"]
 
+def shutdown_server():
+    func = request.environ.get('werkzeug.server.shutdown')
+    if func is None:
+        raise RuntimeError('Not running with the Werkzeug Server')
+    func()
+
+@app.route('/shutdown')
+def shutdown():
+    shutdown_server()
+    return 'Server shutting down...'
+
+
 @app.route('/status')
 def status():
     return "Online\n"
