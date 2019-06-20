@@ -6,4 +6,4 @@ numpy
 matplotlib
 nltk
 gensim
-pdftotext
+pdfminer.six

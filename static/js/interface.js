@@ -436,6 +436,7 @@ class dipam_interface {
                       var arr_option_selected = $("#"+dom_id+" option:selected");
                       if (arr_option_selected.length > 0) {
                         var opt_value = arr_option_selected[0].value;
+                        console.log(document.getElementById(dom_id+"_"+opt_value));
                         document.getElementById(dom_id+"_"+opt_value).click();
                       }
                   });

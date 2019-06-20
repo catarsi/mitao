@@ -1,4 +1,3 @@
-import pdftotext
 
 class Convert(object):
 

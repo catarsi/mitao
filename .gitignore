@@ -2,6 +2,7 @@
 __pycache__
 .ipynb_checkpoints
 _venv
+nltk_data
 __local__config_loader
 __local__index.html
 __local__config_loader.js

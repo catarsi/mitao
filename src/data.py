@@ -1,4 +1,4 @@
-import pdftotext
+#import pdftotext
 
 class Data(object):
 
@@ -62,7 +62,8 @@ class Data(object):
     def process_pdf(self, pdf_file_name, a_pdf_file):
         #the other approach
         #a_pdf_file.save(base_tmp_path)
-        a_text_file = pdftotext.PDF(a_pdf_file)
+        #a_text_file = pdftotext.PDF(a_pdf_file)
+        a_text_file = ""
         a_text_file = " ".join(a_text_file)
         return a_text_file
 
