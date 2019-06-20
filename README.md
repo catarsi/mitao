@@ -1,6 +1,6 @@
-<img src="doc/matao.svg" alt="drawing" width="400"/>
+<img src="doc/logov2.svg" alt="drawing" width="400"/>
 
-# A Mashup-app for Automatic Text Analysis Operations
+# A Mashup Interface for Text Analysis Operations
 A web application tool for mashing up automatic text analysis tools and create a customizable visual workflow. This application is linked to the [CATARSI Project](https://centri.unibo.it/dharc/en/research/projects-at-dh-arc#catarsi). It was developed using [DIPAM](https://github.com/ivanhb/dipam): A Dashboard Interface for Python-based Applications Mashup. Which has been configured for the application of text analysis methods based on popular python natural language libraries.
 
 
@@ -25,9 +25,9 @@ Open Terminal (Shell) of your Linux operating system distribuition.
 
 ### Step (2)
 Download the project:  
-```git clone https://github.com/catarsi/matao.git```   
+```git clone https://github.com/catarsi/mitao.git```   
 And enter its directory:  
-```cd matao```
+```cd mitao```
 
 ---
 
@@ -38,7 +38,7 @@ Enter the following command, in order to install all the libraries needed.
 ---
 
 ### Step (4)
-Run MATAO with by entering this command:  
+Run mitao with by entering this command:  
 ```$ python3.7 main.py```  
 Open your internet browser, and enter the URL: [http://127.0.0.1:5000](http://127.0.0.1:5000/)   
 **Note: We recommend the use of [the Chrome browser](https://www.google.com/intl/en/chrome/)**
