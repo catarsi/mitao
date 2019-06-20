@@ -1,9 +1,15 @@
 #import pdftotext
+from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
+from pdfminer.converter import TextConverter
+from pdfminer.layout import LAParams
+from pdfminer.pdfpage import PDFPage
+from io import BytesIO
 
 class Data(object):
 
-    def __init__(self, data_config):
+    def __init__(self, data_config, base_tmp_path):
         # All the type of data in their corresponding data-class
+        self.tmp_folder = base_tmp_path
         self.data_index = {}
         for k_data in data_config:
             self.data_index[k_data] = {}
@@ -16,7 +22,7 @@ class Data(object):
         else:
             return None
 
-    def handle(self, files_list, data_value, file_type = "file", param = None, tmp_folder = None):
+    def handle(self, files_list, data_value, file_type = "file", param = None):
         list_docs_obj = {}
         data_class = None
         if data_value in self.data_index:
@@ -31,7 +37,7 @@ class Data(object):
                         file_name = a_file.filename
 
                     if data_class == 'img':
-                        list_docs_obj[file_name] = self.process_img(file_name, tmp_folder)
+                        list_docs_obj[file_name] = self.process_img(file_name)
                     elif data_class == 'pdf':
                         list_docs_obj[file_name] = self.process_pdf(file_name, a_file)
                     else:
@@ -56,15 +62,38 @@ class Data(object):
             res = a_file
         return res
 
-    def process_img(self, img_file_name, base_tmp_path):
-        return base_tmp_path+"/"+img_file_name
+    def process_img(self, img_file_name):
+        return self.tmp_folder+"/"+img_file_name
 
     def process_pdf(self, pdf_file_name, a_pdf_file):
+
+        def decode_str(_input):
+            return _input.decode("utf-8")
+
+        def pdf_to_text(path):
+            manager = PDFResourceManager()
+            retstr = BytesIO()
+            layout = LAParams(all_texts=True)
+            device = TextConverter(manager, retstr, laparams=layout)
+            filepath = open(path, 'rb')
+            interpreter = PDFPageInterpreter(manager, device)
+
+            for page in PDFPage.get_pages(filepath, check_extractable=True):
+                interpreter.process_page(page)
+
+            text = retstr.getvalue()
+
+            filepath.close()
+            device.close()
+            retstr.close()
+            return text
+
         #the other approach
-        #a_pdf_file.save(base_tmp_path)
+        full_path = self.tmp_folder+"/"+pdf_file_name
+        a_pdf_file.save(full_path)
         #a_text_file = pdftotext.PDF(a_pdf_file)
-        a_text_file = ""
-        a_text_file = " ".join(a_text_file)
+        a_text_file = pdf_to_text(full_path)
+        a_text_file = decode_str(a_text_file)
         return a_text_file
 
     def process_text(self,an_input):

@@ -301,7 +301,7 @@ ul + label{
 
 #dipam_options{
   position: absolute;
-  margin-left: 80%;
+  margin-left: 350px;
   margin-top: 20px;
   z-index: 1000;
   width: 200px;
@@ -310,7 +310,9 @@ ul + label{
   float:right;
   background-color: #b08c4f;
   border-radius: 0px 0px 5px 5px;
-  padding: 6px;
+  padding: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
   font-size: 14pt;
 }
 #dipam_options *{

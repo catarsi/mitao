@@ -1,4 +1,7 @@
 import numpy as np
+
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 class Terminal(object):
@@ -72,6 +75,8 @@ class Terminal(object):
                     plt.legend([p[0] for p in plots], topic_names)
                     plt.savefig(self.base_tmp_path+'/doctopic_chart.png', dpi = 300)
                     plt.close()
+                    plt.clf()
+                    plt.cla()
 
 
         data_to_return["data"]["d-chartimg"] = {'doctopic_chart.png': self.base_tmp_path+'/doctopic_chart.png'}
@@ -117,9 +122,6 @@ class Terminal(object):
             MINFONT = 16
             fontsize_base = MAXFONT/ float(max_score)
 
-            plt.clf()
-            plt.cla()
-            plt.close("all")
             plt.figure(figsize=(NUM_TOPICS*8, NUM_TOPICS*2.5))
 
             for t in range(NUM_TOPICS):
@@ -146,6 +148,8 @@ class Terminal(object):
             plt.savefig(self.base_tmp_path+'/topicswords_chart.png', dpi = 200)
             plt.tight_layout();
             plt.close()
+            plt.clf()
+            plt.cla()
 
         data_to_return["data"]["d-chartimg"] = {'topicswords_chart.png': self.base_tmp_path+'/topicswords_chart.png'}
         return data_to_return

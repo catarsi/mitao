@@ -375,7 +375,7 @@ def process():
                                 for file_k in index_elem_data:
                                     #<file_k> : is the name of the file
                                     file_path = BASE_PROCESS_PATH+"/"+str(id_input)+"/"+file_k
-                                    a_data = dipam_data.handle([file_path], comp_input, file_type = "path", param = None, tmp_folder = BASE_TMP_PATH)
+                                    a_data = dipam_data.handle([file_path], comp_input, file_type = "path", param = None)
 
                                     for a_doc_k in a_data[0]:
                                         input_files[comp_input][file_k] = a_data[0][a_doc_k]
@@ -424,7 +424,7 @@ def process():
         if 'p-file' in elem_param_att:
             files = elem_param_att['p-file']
 
-        a_data = dipam_data.handle(files, elem_value, file_type = "file", param = None, tmp_folder = BASE_TMP_PATH)
+        a_data = dipam_data.handle(files, elem_value, file_type = "file", param = None)
 
         corpus[elem_id] = {}
         corpus[elem_id][elem_value] = {}
@@ -435,7 +435,7 @@ def process():
     return "Success:Processing done !"
 
 def open_browser():
-      webbrowser.open_new('http://127.0.0.1:5000/')
+      webbrowser.get('chrome').open('http://127.0.0.1:5000/')
 
 if __name__ == '__main__':
     #app.config['TEMPLATES_AUTO_RELOAD'] = True
@@ -443,7 +443,7 @@ if __name__ == '__main__':
 
     dipam_linker = linker.Linker(BASE_PROCESS_PATH)
     dipam_tool = tool.Tool(CONFIG_DATA["tool"], BASE_TMP_PATH)
-    dipam_data = data.Data(CONFIG_DATA["data"])
+    dipam_data = data.Data(CONFIG_DATA["data"], BASE_TMP_PATH)
 
     Timer(1, open_browser).start();
     app.run()

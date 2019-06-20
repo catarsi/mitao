@@ -22,7 +22,6 @@ class Convert(object):
         documents = {}
         for file_k in input_files["d-gen-pdf"]:
             a_pdf_in_txt_file = input_files["d-gen-pdf"][file_k]
-            print(a_pdf_in_txt_file)
             documents[file_k] =  a_pdf_in_txt_file
 
         data_to_return["data"]["d-gen-text"] = documents
