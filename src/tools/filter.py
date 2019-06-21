@@ -35,10 +35,13 @@ class Filter(object):
                         if f_opt == "names":
                             pass
                         elif f_opt == "dates":
+                            print("Filter Dates ...")
                             documents = self._filter_dates(documents)
                         elif f_opt == "references":
+                            print("Filter References ...")
                             documents = self._filter_references(documents)
                         elif f_opt == "header":
+                            print("Filter header ...")
                             documents = self._filter_header(documents)
 
             if "p-filterregex" in param:
@@ -49,28 +52,62 @@ class Filter(object):
 
     def _filter_header(self, documents):
         REGEX_list = [
-            "(.+)Abstract"
+            "^Abstract"
         ]
         d_filtered = {}
         for doc_k in documents:
             doc_val = documents[doc_k]
-            for d_reg_i in REGEX_list:
-                a_regex = re.compile(d_reg_i,re.DOTALL)
-                doc_val = re.sub(a_regex,"",doc_val)
-            d_filtered[doc_k] = doc_val
+            doc_arr = doc_val.split("\n")
+            reg_row_index = 0
+            for row in doc_arr:
+                for d_reg_i in REGEX_list:
+                    matches = re.match(d_reg_i,row)
+                if matches:
+                    break
+                else:
+                    reg_row_index = reg_row_index + 1
+
+            fil_d = ""
+            if reg_row_index >= len(doc_arr) - 1:
+                fil_d = doc_val
+            else:
+                for row_index in range(reg_row_index, len(doc_arr)):
+                    if row_index == len(doc_arr) - 1:
+                        fil_d = fil_d + doc_arr[row_index]
+                    else:
+                        fil_d = str(fil_d) + str(doc_arr[row_index]) + "\n"
+
+            d_filtered[doc_k] = fil_d
         return d_filtered
 
     def _filter_references(self, documents):
         REGEX_list = [
-            "References(.+)"
+            "^References"
         ]
         d_filtered = {}
         for doc_k in documents:
             doc_val = documents[doc_k]
-            for d_reg_i in REGEX_list:
-                a_regex = re.compile(d_reg_i,re.DOTALL)
-                doc_val = re.sub(a_regex,"",doc_val)
-            d_filtered[doc_k] = doc_val
+            doc_arr = doc_val.split("\n")
+            reg_row_index = 0
+            for row in doc_arr:
+                for d_reg_i in REGEX_list:
+                    matches = re.match(d_reg_i,row)
+                if matches:
+                    break
+                else:
+                    reg_row_index = reg_row_index + 1
+
+            fil_d = ""
+            if reg_row_index >= len(doc_arr) - 1:
+                fil_d = doc_val
+            else:
+                for row_index in range(reg_row_index, len(doc_arr)):
+                    if row_index == len(doc_arr) - 1:
+                        fil_d = fil_d + doc_arr[row_index]
+                    else:
+                        fil_d = str(fil_d) + str(doc_arr[row_index]) + "\n"
+
+            d_filtered[doc_k] = fil_d
         return d_filtered
 
     def _filter_dates(self, documents):
