@@ -101,8 +101,8 @@ class Filter(object):
             if reg_row_index >= len(doc_arr) - 1:
                 fil_d = doc_val
             else:
-                for row_index in range(0, reg_row_index):
-                    if row_index == len(doc_arr) - 1:
+                for row_index in range(0,reg_row_index):
+                    if row_index == reg_row_index - 1:
                         fil_d = fil_d + doc_arr[row_index]
                     else:
                         fil_d = str(fil_d) + str(doc_arr[row_index]) + "\n"
