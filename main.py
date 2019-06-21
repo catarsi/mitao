@@ -435,7 +435,23 @@ def process():
     return "Success:Processing done !"
 
 def open_browser():
-      webbrowser.get('chrome').open('http://127.0.0.1:5000/')
+    dipam_url = "http://127.0.0.1:5000/"
+    browser_path = [
+        'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s',
+        'chrome',
+    ]
+
+    def rec_open(url,index):
+        print(browser_path[index])
+        browse = webbrowser.get(browser_path[index]).open(dipam_url)
+        if not browse:
+            rec_open(url,index + 1)
+        else:
+            return True
+
+    if not rec_open(dipam_url,0):
+        webbrowser.open(dipam_url)
+
 
 if __name__ == '__main__':
     #app.config['TEMPLATES_AUTO_RELOAD'] = True
