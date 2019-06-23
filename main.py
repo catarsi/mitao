@@ -438,12 +438,17 @@ def open_browser():
     dipam_url = "http://127.0.0.1:5000/"
     browser_path = [
         'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s',
-        'chrome',
+        "chrome"
     ]
 
     def rec_open(url,index):
+        if index >= len(browser_path):
+            return False
         print(browser_path[index])
-        browse = webbrowser.get(browser_path[index]).open(dipam_url)
+        try:
+            browse = webbrowser.get(browser_path[index]).open(dipam_url)
+        except Exception as e:
+            browse = False
         if not browse:
             rec_open(url,index + 1)
         else:
