@@ -53,30 +53,33 @@ class TextAnalysis(object):
 
 
         def clean(doc, p_stopwords, d_stopwords):
-            stop = set()
+            stop = d_stopwords
             if p_stopwords != "none":
-                stop = set(stopwords.words(p_stopwords))
-                stop.union(d_stopwords)
+                stop = stop.union(set(stopwords.words(p_stopwords)))
             stop_free = " ".join([i for i in doc.lower().split() if i not in stop])
+            for s_w in stop_free:
+                if "accounting" in s_w:
+                    print(s_w)
             exclude = set(string.punctuation)
             punc_free = ''.join(ch for ch in stop_free if ch not in exclude)
             lemma = WordNetLemmatizer()
             normalized = " ".join(lemma.lemmatize(word) for word in punc_free.split())
             return normalized
 
-        def read_stopwords_data(list_data):
+        def read_stopwords_data(obj_data):
             res = []
-            for a_tab in list_data:
-                for row in a_tab:
-                    res.append(row[0])
+            for file_name in obj_data:
+                for a_tab in obj_data[file_name]:
+                    for row in a_tab:
+                        res.append(row)
             return res
 
         stopwords_data = set()
         if "d-stopwords" in input_files:
-            if len(input_files["d-stopwords"]):
+            if len(input_files["d-stopwords"]) > 0:
                 stopwords_data = set(read_stopwords_data(input_files["d-stopwords"]))
 
-
+        print(stopwords_data)
         doc_clean = [clean(str(documents[doc_k]), p_stopwords, stopwords_data).split() for doc_k in documents]
         doc_names = [doc_k for doc_k in documents]
 
