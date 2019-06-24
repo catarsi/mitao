@@ -122,7 +122,7 @@ class Filter(object):
             doc_val = documents[doc_k]
             for d_reg_i in DATES_REGEX_list:
                 a_regex = re.compile(d_reg_i, re.IGNORECASE)
-                doc_val = re.sub(a_regex,"",doc_val)
+                doc_val = re.sub(a_regex," ",doc_val)
             d_filtered[doc_k] = doc_val
         return d_filtered
 
