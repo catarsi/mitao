@@ -437,11 +437,11 @@ def process():
 def open_browser():
     dipam_url = "http://127.0.0.1:5000/"
     browser_path = [
-        'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s',
         "chrome",
         "google-chrome",
         "chromium",
-        "chromium-browser"
+        "chromium-browser",
+        'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
     ]
 
     def rec_open(url,index):

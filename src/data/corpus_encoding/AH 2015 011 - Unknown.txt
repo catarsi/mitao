@@ -1,0 +1,976 @@
+579423ACH0010.1177/1032373215579423Accounting HistoryJack
+
+research-article 2015
+
+Accounting History
+
+Article
+
+Accounting History
+
+2015, Vol. 20(2) 158 –182
+
+Future making in farm
+
+© The Author(s) 2015
+
+Reprints and permissions:
+
+sagepub.co.uk/journalsPermissions.nav
+
+management accounting:
+
+DOI: 10.1177/1032373215579423
+
+ach.sagepub.com
+
+The Australian “Blue Book”
+
+Lisa Jack
+
+University of Portsmouth, UK
+
+Abstract
+
+In the late 1960s, an attempt was made to implement throughout Australia an innovative scheme to develop and standardise management accounting in the agricultural sector. Despite enthusiastic support for the proposed scheme, it was not implemented, although elements of it can be found in farm consultancy practice today. The story of the “Blue Book” ( Accounting and Planning for Farm Management) and the Australian Committee for the Coding of Rural Accounts (ACCRA) is analysed in the context of diffusion of innovation frameworks. However, as these frameworks do not adequately capture the visions of the future and the related emotional investment in innovations, the concept of future making is introduced from the work of Barbara Adam on future time in social studies, as a further layer of analysis in this case study. In particular, the problems of embedding management accounting innovations in new software in a time when information technology is changing rapidly affected significantly the diffusion of the innovation in Australia.
+
+Keywords
+
+Business comparative analysis, farming, future time, management accounting, structuration theory While it was once possible to keep a farm through sheer hard work, changing market places and the unpredictability of world trends means versatility is now the key. Farmers know they need to combine the physical work of breaking the soil with the smart work of research, innovation and good financial management. (Davison, 1999: 51)
+
+
+
+
+
+Introduction
+
+
+Accounting and Planning for Farm Management, otherwise known as the “Blue Book”, was first published by Queensland Department of Primary Industries (QDPI) in 1966. The stated aim of the book was to set out uniform methods of farm management accounting for use in Australia. In August 1966, the Blue Book was endorsed by the National Workshop of Standardization of Terminology and Procedures in Farm Management Accounting held at the University of New England, New South Wales (NSW) (UNE, 1967). At this workshop, further development of the Corresponding author:
+
+Lisa Jack, Portsmouth Business School, University of Portsmouth, Richmond Building, Portland Street, Portsmouth, PO1 3DE, UK.
+
+Email: Lisa.Jack@port.ac.uk
+
+Jack
+
+159
+
+uniform system was proposed, in the form of a comprehensive and uniform code and chart of accounts. A steering committee was appointed and named the Australian Committee for Coding Rural Accounts, usually abbreviated to “ACCRA”. The results of their work were included in the second edition of the Blue Book published in 1971, and computerised systems were developed to propagate and diffuse the use of the uniform methods throughout farm advisory service organisations in Australia. The innovation was not successful, but this was a project in which much energy and hope, and many resources, were invested. The ACCRA story adds to our knowledge of management accounting innovations, and, in particular, explores human investment in innovation rather than just the efficiency of the innovative product or its systems of diffusion.
+
+The image of the future driving the standardisation project was one in which primary producers would, in terms of generating profits, have more control over the economic outcome of their own businesses and the industry as a whole, using information generated for them by their advisors. It was expected that farmers would use cheque books with the addition of the code and heading from the chart of accounts added to the stub, from which they (or their accountants) could produce a coded cashbook manually or on a computer. Whichever was used, the accountant could ensure that all data were inputted into a computer database (their own or a central one such as the mainframe based at the University of Queensland) from which comparative reports could be produced for their clients.
+
+The comparative analysis could then be used diagnostically to identify less profitable and loss-making areas of the farm business. It would also provide trends and analysis of local and national factors affecting production and the cost of production, based on a number of “yardsticks”. For accountants, providing this service to farmers on the one hand and benefitting researchers and those working in agricultural extension (that is, professional educationalists working specifically with farmers to promote the application of new scientific and management techniques) on the other, would yield a value-adding commercial service for their clients. Teachers would have a logical and structured framework through which to teach record keeping and farm management accounting, and this in turn would nurture collective practice in the future. A more disciplined and business-like primary industry would result, which would survive the upheavals envisaged if price support and other subsidies were removed.
+
+The ACCRA management accounting system, and related practices of record keeping and comparative analysis, are workable, logical and produce presentable reports. The Blue Book (QDPI, 1966, 1971), the Managerial Service for Cane Growers (Sturgess and Hampson, 1972) manuals accompanying the pilot projects run by the Bureau of Sugar Experimental Stations (BSES, 1973) and the educational games developed from the system (Appendix 2) provide a considered approach to farm accounting that is detailed and usable over many different scenarios. However, ACCRA is not used and it seemed was never taken up entirely, despite the considerable efforts of some practitioners and educationalists to popularise and embed the practices (Mallyon and Neilson, 1986; Longworth, 1981; Makeham and Malcolm, 1993).
+
+There is an interdisciplinary literature on why innovations are successful and why they might be rejected. In accounting, these theories have been applied in the 1990s and early 2000s to understand the apparent successful diffusion internationally of activity based costing (ABC), and balanced scorecards (BSC) (Ax and Bjørnenak, 2007). These are relevant here, in that they analyse the diffusion of accounting practice when it is supply-led, rather than demand-led.
+
+However, theories on diffusion tend to focus on events and actions, and lack analysis of why people become so motivated and animated in their drive to get a technology adopted by others. All innovations and plans are inherently about visions of the future, whether on a grand or more mundane basis. Recently, in highlighting the lack of consideration of time in business history studies, Bátiz-Lazo et al. (2014: 104) claimed that:
+
+160
+
+Accounting History 20(2)
+
+The danger here is that, by discounting this general fascination with the future, historians may fail to appreciate the extent to which organizational adoption of technology, and particularly information technology, was based as much on imagined futures as it was on existing realities.
+
+The innovation of the chart of accounts and its computerisation, and the underlying basis of comparative accounting for management decision-making and the development of extension services, had a serious goal: to make Australian agriculture prosperous and sustainable. Those working on the committee imagined a future in which a partnership between farmers, graziers, accountants, agricultural extension workers, farm management advisors and agricultural economists would find that the integrated, standardised system of accounting would “play a major role in the development of rural industries” and “serve the interests of rural producers and the national welfare” (QDPI, 1971: 10). To understand more fully why the project failed, we have to understand such present futures in the minds of the proponents. The terms present futures and future presents are developed most recently in the work of the acclaimed British sociologist Barbara Adam (2007, 2010, 2011). The present futures are approaches to the future from the standpoint of the present, through which we seek to predict, transform and control the future for the benefit of the present, whilst future presents represent a standpoint which positions us with reference to deeds and processes already underway and which allows us to follow through actions to their potential impacts on future generations (Adam, 2007). Her insights on time, and in particular future time, are introduced here because they provide another analytical layer with which to explore first, the emotive drive of those involved, and second, the temporal context for why innovations might fail despite considerable efforts by their proponents.
+
+In the end, a number of reasons emerge for the apparent rejection of the innovative approach.
+
+The diffusion of the innovation was supply-led, not demand-led: what is apparent from reading the documents about meetings, conferences and working groups is that although a partnership was envisaged, farmers and graziers themselves were not directly evident in the development of the systems and technologies to be used. The propagation of the innovation was not extensive and there were finite resources for development and promotion beyond the BSES pilot project (Longworth, personal correspondence). Technological futures are easily overtaken by new devices, and by the time computer programs had been written, information technology had moved on.
+
+Moreover, agriculture in Australia has thrived without a uniform system of accounting and mass-participation benchmarking (Mallyon and Neilson, 1986).
+
+The apparent rejection was not a complete rejection. Comparative analysis is still the mainstay of farm advisory services in Australia, with a gross margin approach as in the UK (Jack, 2005, 2006). The Blue Book and ACCRA project probably helped to embed the practice, despite the fact that comparative analysis is only a part of these projects. The computer programs developed are still in use for education and research (see Appendix 2).
+
+The uniform system represents an attempt at future making, to adopt another of Adam’s terms, pre-figuring, shaping and foreclosing the future presents of those people who should use the system rather than some other practice. A present future was imagined where primary producers would use the system devised to have more control in an uncertain environment through knowledge of the financial consequences of their operational decisions. Therefore, a contribution of this article, alongside the presentation of the case, is to add to frameworks of diffusion of innovation an emotional, imaginative dimension representing people engaged in future making. The case and discussion is preceded by a review of literature concerning benchmarking in farm accounting, the diffusion of innovations in management accounting and concepts of time in business case studies.
+
+Jack
+
+161
+
+Literature review
+
+Books of model accounts for use by farmers have been designed and promoted over several centuries. Cambridge University Library holds a seventeenth-century document called
+
+“Amphithalami, or, The accountants closet being an abridgement of merchants-accounts kept by debitors and creditors, exactly and accurately shewing how to order, state, and keep account, either of a publick farm or private estate, into a single book” (Liset, 1684).
+
+Hundreds of similar books have been published across the world over the following centuries. In Australia, Carnegie et al. (2006) chart the story of one very influential textbook, FE Vigars’s Station Bookkeeping, first published in 1900. The embedding of double entry bookkeeping in farm accounting in Australia was led by the accounting profession there, whose main sources of income were from farming and mining clients. Single entry bookkeeping in farming is more common in the UK and the USA, where the profession have been less involved in the industry, and where accounting has been more led by economists (Jack, 2005, 2009). Carnegie et al. (2006) identify the book as an accounting technology which facilitated the professionalisation of both farming and accounting in Australia. Similarly, Sturgess and Hampson (1972) identify that the accounting technology of the Blue Book and the ACCRA chart of accounts had the potential to move accounting in the sugar cane industry from amateur to professional status, and to increase the skills of accountants supporting the project to offer management as well as financial and tax accounting to their clients.
+
+In agriculture the use of financial comparative analysis developed separately in the nineteenth century, growing out of the work of agricultural economists who were interested in creating sets of data for their own experimental analyses and for their extension roles as consultants to farmers.
+
+This history is analysed comprehensively by Jack (2009), who explains that the role of agricultural economists in farm benchmarking and management accounting is common throughout Europe and the USA, and can be traced to c.1850 in Germany. In Europe, from the late-nineteenth century, various government-backed schemes required farmers to maintain bookkeeping records. These were collected and converted into financial statements which were used to produce comparative analysis reports complete with ratios (Hinrichs, 1929). The results showing the performance of each farm against the averages were posted back to the participants. There were variations on the idea: in Denmark a peripatetic bookkeeper was issued with a bicycle to tour the farms to collect the data. However, the practice built up into national databases of financial information which, in some cases, are still in operation today (Jack, 2009).
+
+In the late 1940s, the idea of benchmarking took another turn when a group of farmers in New Zealand formed a business improvement group: about 20 farmers collaborated with a facilitator and pooled their accounting data in a specified format; the facilitator compared the farms using absolute data and ratios, and the farmers met to discuss their practices and look for ways to improve performance. It is an unacknowledged precursor of process benchmarking, based on comparative analysis rather than process mapping techniques. The New Zealand model has been copied widely.
+
+Management accounting groups were established in Australia in the 1960s (providing a rival to the system set out in the Blue Book) and much more recently in the 2000s in the UK, Ireland and the USA (Jack, 2009).
+
+Innovations
+
+A small number of papers in accounting have drawn on diffusion of innovation models to explain the popularity of ABC, EVA® and BSC, despite questions concerning the validity of the techniques from academics. Reviewing this literature, Ax and Bjørnenak (2007) identify three approaches to understanding why some innovations are successful and others are rejected. One is a functional, 162
+
+Accounting History 20(2)
+
+economic understanding of diffusion. The innovation is a new solution which has a useful role in planning, control and decision-making, and a demand exists for the solution. The adoption of all or part of the innovation is a rational choice, one that will improve the efficiency of the business. The term expansion innovation is used to explain how use of the innovation is taken up – spreading from business to business perhaps via consultants, or from the top down. Failure might be explained by lack of resources, or perceptions that the costs outweigh benefits, or cultural barriers.
+
+However, the question of diffusion can also be addressed from the supply side and this is very relevant to the case of the Blue Book and ACCRA, which was an attempt to introduce and gain acceptance for a uniform system of farm accounting by the innovators of that system. The two supply-side understandings of diffusion discussed by Ax and Bjørnenak (2007) are the management fashion perspective and the market and infrastructure perspective.
+
+The term “management fashion” is used by Abrahamson (1991, 1996) rather than innovation, and he defines it as: “a relatively transitory collective belief, disseminated by management fashion setters, that a management technique leads rational management progress”. Abrahamson is concerned with consultants, business schools and others who adopt the innovations of others but have a self-interest in the diffusion of the innovation. The process of fashion setting follows four stages – creation, selec-tion, processing and dissemination, and depends heavily on rhetoric to convince people to take up the innovation. In accounting, Malmi (1997) adopts Abrahamson’s framework to study the widespread diffusion of ABC, and concludes that it is best explained as both an efficient choice and a fashion in the early stages but a fad in the later ones. Similarly, with BSC, although companies’ responses suggest an efficient choice of the technique, it becomes clear that they are repeating the rhetoric of efficient choice presented through networks of consultants, articles and business schools. In another study of BSC, Ax and Bjørnenak (2005) find that the technique has been effectively re-packaged and sold for a Swedish market, and that this bundling of ideas (for example, to add in an element explicitly referring to intellectual capital) can popularise the innovation.
+
+The market and infrastructure perspective, in contrast, requires a diffusion agency or a network of diffusion agencies which will propagate the innovation, inducement strategies to establish the innovation in the service area of each diffusion agency and the establishment of an infrastructure to support the innovation (Brown, 1975, 1981; Bjørnenak, 1997; Ax and Bjørnenak, 2007). This stimulates demand, as adopters now have places to go to get information. ABC was found to have been adopted by larger companies who have bigger communication networks and more channels though which their divisions and suppliers can find out information.
+
+A similar type of analysis has been applied to agriculture research and development extension.
+
+The combination of advanced science and technology, often in less educated farming communities, and intermediary extension from government and universities, stimulated Rogers’s (1995) pioneering work in diffusion theory. Hunt et al. (2014), reviewing changes in agricultural extension in Australia now, make use of two models. The Agricultural Knowledge and Innovation Services (AKIS) model (Röling and Engel, 1991; Rivera et al., 2005) sees innovation as a balanced and fluid interchange between research, extension, education and support systems. Bergek et al. (2010) present a seven-step framework for innovations management that is essentially a market and infrastructure model such as that proposed by Brown (1981) and used by Bjørnenak (1997) and Ax and Bjørnenak (2007).
+
+However, all these innovation models lack an emotional, cognitive dimension by having a basis in rational choice or undue influence. The Blue Book carries, albeit in modulated language, a genu-ine desire that Australian agriculture should do a more professional job, that individuals would secure incomes in a very risky industry and that the industry itself would be more prosperous. It would also legitimate both the new profession of private agricultural consultancy that became consolidated in the 1960s and the continuing survival of government-funded extension services Jack
+
+163
+
+(Jack, 2006; Williams, 1968). It was also evident, speaking to those involved in the project, that there was considerable emotional and intellectual investment in the innovation, and a legacy of frustration that the project was not successful. This idea of future making in innovation is important, because it is very much grounded in the human, rather than economic, side of the story. It is not explored yet in the accounting literature, although it is a particular concern of writers such as Adam and more recently Bátiz-Lazo, and their research colleagues in sociology, geography and business history.
+
+Time
+
+Concepts of time are still under-researched in management studies generally (Wiebe, 2010) and in business history (Bátiz-Lazo et al., 2014). There are considerations of temporality: time in business management can be conceived as sequential, cyclical and political and, for example, accounting
+
+“undoubtedly has been one of the factors implicated in the orchestration of organisational life on a temporal dimension” (Hopwood, 1989: 1). Accounting embodies time-consciousness in its technical practices (notions such as invoice-due dates, cut-off dates, labour hours) and in its professional routines (Ezzamel and Robson, 1995). Furthermore, with clock time came visual consciousness of time wasting and the ability to control future destiny by controlling the use of time (Thompson, 1967). Time can be viewed as there, to be colonised in future activity (Adam, 2004). In capitalist systems, “whether this economic engagement with the future operates at the private, commercial or (welfare) state level, it is based on the belief that the future is amenable to human regulation, extractive exploitation and design in the present” (Adam, 2004: 141).
+
+Although Adam has a particular concern about how in the twenty-first century our notions of future time are inextricably bound up in technologies (Adam, 2008, 2010), in a number of works she is also concerned with how we access memories of the future in case studies that by definition, are historic (Adam, 2004, 2010). Adam (2009: 1) observes: “contemporary daily life is conducted in the temporal domain of open pasts and futures, mindful of the lived past while projectively oriented towards the ‘not yet’”. A similar comment is made by Bátiz-Lazo et al. (2014) when they say that “historians leave the future to others, whereas every business decision has a past, present, and future”.
+
+More recently, Adam has termed people’s perceptions of the future as being future as fate, fortune, fact and fiction (Adam, 2009, 2010, 2011). In this article, it is not possible to give a full review of her ideas but this four-part concept is used in the analysis of the case. It applies across what Stones (2005) has termed the ontological sliding scale, from the ontic to the macro, whether the case is very local and concerns a small number of individuals or is about, say, nuclear power that affects the world (Adam, 2008). Her work is grounded in a sociology of the future that has developed since the 1960s and 1970s as part of an anti-positivist movement in the USA and Europe (Adam, 2010, 2011), but is also in a pragmatic tradition of looking to changing how people think of the future in our present in relation to social and environmental futures. Adam sees the future as an aspect of mind and makes the point that it is only recently, in a more industrial age, that the future is a “realm of potential and possibility, an empty vessel to be filled with dreams and desires, plans and projects” (2008: 111). We build fictions of the future and then try to get them acted out. Early societies had more fatalistic states of mind which later turned into the future as fortune, where rewards are available for the industrious, the virtuous, the brave and the lucky, but which cannot otherwise be shaped. Future as fortune though, does represent in our minds the need for future taking.
+
+The future and society as something that can be collectively shaped and re-made has grown more since the Enlightenment, and thus the ideas of future making and future shaping have become more part of our collective psyche. The problem is, of course, that so many people are engaged in 164
+
+Accounting History 20(2)
+
+future making and future shaping, and trying to turn them into realities. When we arrive there, the future is not an empty space as we imagined, but a very crowded place (Adam 2009, 2010) in which many innovations, plans and dreams will simply be unfulfilled.
+
+Sources of data
+
+The narrative of the Blue Book and the ACCRA chart of accounts has been constructed from sec-ondary data (listed in Appendix 1) collected over several years by the author, through libraries, second-hand bookshops and from those involved in the project. The author was also able to talk to several people connected with the project, as a result of networking at the International Agricultural Economists Conference on the Gold Coast in 2007. The original 11 committee members behind the Blue Book and ACCRA have passed away, but the younger members of the project – the Secretary to the committee, extension workers from QDPI and from the BSES pilot project, including one of the programmers (Appendix 1) – came together for a group interview organised by John Longworth of the University of Queensland, and to share the records that they still kept, whilst the author was visiting the University of Queensland in January 2011 (six were invited but one was unable to attend due to extensive flooding in the State). The author has also been in correspondence with four members of this group and with another surviving writer and commentator involved in the ACCRA project (see list of resources and interviewees in Appendix 1). Notes were taken by the author at the meeting and checked in subsequent correspondence. There are, therefore, few direct quota-tions, but the use of indirect citations from this data have been indicated in the text.
+
+The data was collected whilst the author was engaged in a separate project c.2006–2007 examining strategic management accounting in Australia, New Zealand, the UK and the USA, and on two subsequent visits to Australia in 2011 and 2012. As part of that project, the author was able to identify leading consultants and accounting practices, and to carry out four interviews specifically on the subject of the legacy of the Blue Book. Two of these interviews were facilitated by a member of faculty at the University of Queensland. The author was also approached by a former consultant using the “mail in” system at the University of New England who had kept printouts and other records from the 1970–1980s and subsequently interviewed him for this project.
+
+An extensive search of the literature, libraries in Australia, New Zealand, the UK and the USA and correspondence with participants in the projects indicates that all available sources have been considered in compiling the case study. The data was organised firstly, chronologically to establish what happened, where, when and with whom, and secondly, to draw out simple themes that emerged from the interviews: the role of IT, innovation, the way in which future professionalism and prosperity was invoked as a justification for the project and the regret at its lack of success, and the use of ACCRA in education.
+
+The case of the “Blue Book”
+
+Around the time of the publication of the Blue Book in 1966, by the Queensland Department of Primary Industries (QDPI), several commentators noted that Australia lagged behind other countries in developing farm management accounting practices. In 1968, Neilson commented that “The subject is still relatively new in Australia. Overseas countries such as [the] USA and New Zealand have for many years used more sophisticated forms of accounting for farmers than we have been accustomed to in this country” (1968: 205). Responding, Drake (1968: 381) added a number of European countries to the list of those ahead of Australia (Denmark, Holland, France, Northern Ireland and England) and others cited Canada as another more advanced country. In 1970, The Australian Accountant noted that the ACCRA code, developed from the Blue Book, represented Jack
+
+165
+
+progress because “technically, Australia’s primary industry is very little behind the rest of the world” and in the “broader spheres of farm management – in administration and financial control
+
+– considerably less progress has been made” ( The Australian Accountant, Unnamed Editor, 1970: 123). In this context, farm management means the introduction of the principles of farm economics and accounting to the running of a farm.
+
+Background events
+
+Dillon (1965) took the subject of the establishment of farm management as an academic discipline in Australia as the theme of his inaugural lecture at the University of New England in 1965. He saw that Australia was about to enter a third phase of development in this field. The first phase, running from 1900 to 1950, “was characterised by the lack of any specific institutional framework for farm management research and teaching” (Dillon, 1965: 176) and it was left to individual academics to conduct studies and ad hoc teaching in the field. The second phase began to emerge in 1941 with the “establishment of an agricultural economics division in the New South Wales Department of Agriculture, with a major aim of farm management research” (Dillon, 1965: 183). As was the case in England (Jack, 2005), Dillon (1965: 183) notes that “concurrently, stimulated by the pressure of wartime planning, the Australian Institute of Agricultural Science became a strong advocate of the need for training and research in agricultural economics and farm management”. Some early research on cost-accounting appeared in the 1947 edition of Review of Marketing and Agricultural Economics, but articles were sporadic until around the time of the Blue Book when a spate of articles on farm management accounting and efficiency appeared. Finally, Dillon identifies the incursion of farm consultants into the industry – from a “single entrepreneur in 1955 to around 50 in 1963”
+
+(1965: 186) and 120 at the time of his lecture – as being the beginning of a new, more developed phase of farm management in Australia, reflecting “the increasing and never-ending managerial pressures faced by farmers arising from their vulnerability to the vagaries of climate, the inelastic demand for food, advances in farm technology, the pressures of integration and the development of an ever-widening array of synthetics” (Makeham and Malcolm, 1993: 189).
+
+Government agricultural extension services in Australia are charted by Druce (1966), an extensionist with the New South Wales Department of Primary Industries. He states that “it would appear that little thought was given specifically to the provision of farm management extension services by State extension organisations until about 1957 or 1958” (Druce, 1966: 112). By the time of the paper, he identifies 40 agricultural economists who were then employed by State Government Service – 18 in NSW and 12 in Queensland.
+
+The other development at this time was of farm management clubs, based on a model created in New Zealand in 1949 (Jack, 2009). The first of these clubs was established in 1956 but really got underway in Western Australia during 1958 and 1959 (Druce, 1966) and by 1964 “well over 70
+
+groups” were in operation (Druce, 1966: 117), largely in Western Australia and NSW (Murray, 1968). Farm management services centres (or laboratories) based at the University of Western Australia (UWA) and the University of New England (UNE) gradually grew to provide support for these groups and for the client groups of consultants (AAFMC, 1967; Mauldon, et al., 1969).
+
+Mauldon et al. (1969: 47) observed that:
+
+The Queensland Report, and the National Workshop with its chief recommendation to form the Australian Committee for Coding Rural Accounts, together may be seen as culminating a line of thought which has a close parallel in New Zealand. In retrospect the start of this line of thought is marked in Australia by the publication in 1961 of The Principles and Practices of Farm Management Accounting by C.A. Mallyon, and in New Zealand by the 1961 Report of Farm Accounting … by the New Zealand Society of Accountants.
+
+166
+
+Accounting History 20(2)
+
+Cyril Mallyon is best known as the author of The Principles and Practice of Farm Management Accounting, first published in 1961. The first edition represents “a monumental work at a time when farm management accountancy was almost unknown in Australia” (Mallyon and Neilson, 1986: Preface). The second edition (1966) is a work of considerable scholarship, drawing on contemporary ideas from across Europe and the US. The two editions help to place the introduction of gross margin enterprise accounting into Australia reasonably precisely, as it does not appear in the first edition in 1961 but does appear in the second edition in 1966.
+
+Mallyon is an important and seemingly inspirational figure in Australian farm accounting (Neilson, 1968). He was an accountant in public practice, not an economist or academic, working from his own practice in Wagga Wagga, NSW. His name appears on committees for the Australian Agricultural and Economics Society (AAES) and the Institute of Chartered Accountants in Australia (ICAA) in the late 1960s. He appears to have been involved in establishing the National Workshop in 1966 and in encouraging the ACCRA committee (UNE, 1967).
+
+The work of farm management extension in the QDPI was led in the 1960s by Elton Burns. He had made an extensive tour of Europe and especially the UK, as recorded in his paper on comparative analysis (Burns, 1966). Whilst acknowledging the weaknesses inherent in the use of comparative analysis, he saw it as a workable tool for advisory tasks and useful for the mainly broad-brush problems encountered on most farms. He employed extension workers from the UK as well, and by 1967 field workers were using gross margin enterprise analysis and comparative analysis in their advisory visits to producers (QDPI extensionist, personal communication, 2011). Burns was instrumental in persuading the AAES and the ICAA to support the establishment of the Queensland Joint Committee on Standardisation of Farm Management Accounting. This committee developed the Blue Book which in turn led to the development of the ACCRA.
+
+In 1964, the Federation of Farm Management Advisory Services of Western Australia co-organised a conference, which records that the first use of electronic data processing for comparative analysis was in 1963 by two members of the Australian Institute of Applied Science (AAFMC, 1967). This program was developed further by UNE. QDPI established their own version, using the computers at the University of Queensland, and offered comparative analysis. In his presentation at a later conference in Perth, Burns expressed the view that these new developments in comparative analysis were to be welcomed, as it required “a co-operation between persons trained in accountancy, agricultural science and farm management – and a computer” (AAFMC, 1967: 65).
+
+Ironically, it was the latter that produced most of the problems in structuring the efficient future he envisaged.
+
+The publication of the Blue Book and the development of ACCRA
+
+In the preface to the first edition of the Blue Book, Burns (as chairman of the Queensland Joint Committee on Standardisation of Farm Management Accounting) stated that their aim was to devise “a practical system, capable of immediate application, and meaningful alike to accountants, farm management economists, extension officers and primary producers. To achieve this aim, it has been necessary on occasions to balance practical against theoretical considerations” (QDPI, 1966: Preface). The committee comprised two representatives from QDPI, two members from the University of Queensland (from the departments of Agriculture and Accountancy) and six practising accountants (representing three accounting bodies). The book covers the preparation of accounting schedules and reports (profit and loss, statement of assets and liabilities, and sources and use of cash); a rudimentary chart of accounts; ratio and efficiency factor analysis; and budgeting and planning techniques (including gross margin analysis, linear programming, partial budgeting and parametric budgeting).
+
+Jack
+
+167
+
+The problem that the committee faced in developing a coherent system of farm management accounting was that “farming is different in many respects from other businesses” and that accountants fail “to comprehend adequately how the technique of management accounting can be usefully applied” (QDPI, 1966: 5). As the English writer and farmer Adrian Bell said rather hyperbolically:
+
+“Never had I imagined anything so intricate as the keeping of farm accounts” (Bell, 1930: 110).
+
+The committee took the view that the only logical way to provide a cost-effective service to the four user groups was to have a “standardised terminology and a uniform method of preparation and presentation of accounting reports” for the purposes of comparative analysis. For them, “the calculation of financial and efficiency ratios as economic indicators is nothing more than a costly exercise if the factors are not used for comparative purposes” (QDPI, 1971: 8). Nonetheless, they acknowledged the difficulties inherent in interpretation and decision-making based on such comparisons.
+
+Shortly after the publication of the first edition of the Blue Book in 1966, the Australian Agricultural Economics Society held a National Workshop on Standardisation of Terminology and Procedures in Farm Management Accounting, which took place in Armidale at UNE in August of the same year (UNE, 1967). Elton Burns was again on the organising committee. Representatives from 25 different organisations were invited, though no farmers or graziers appear in the list. In fact, in acknowledging those who were present and those who were appointed to the ACCRA, it was clear that “many people and institutions were prepared to support a week of discussion on the problem of farm management accounting and that farmer organisations were not among those represented” (ACCRA, 1970: 3). However, it was felt that as all the other representatives spent most of their time with primary producers and their organisations, a sufficient representation of farming concerns was in place. It is likely that, quite simply, farmers could not spare a whole week for discussion and left the meeting to their representatives and advisors.
+
+A recommendation of the workshop was that ACCRA be created and that the Blue Book be adopted as a basis for farm management accounting. The full report and detailed recommendations were published by UNE (1967). The ACCRA (Appendix 2) did represent accountants, academics, economists, consultants, and State and Commonwealth governments. The terms of reference were: (1) To develop a system of coding farm accounts sufficiently comprehensive to be acceptable generally to the accounting profession;
+
+(2) To develop a detailed glossary of all terms required for farm management accounting; 3) To establish liaison with all other interested bodies in order to keep them informed of progress made and to facilitate their support in the development and introduction of the proposed system of coding into general practice throughout Australia. (ACCRA, 1970: 4) It was envisaged that any code should be usable for any client in an accounting firm (see Figure 1) and be adaptable “to manual, accounting machine or computer operations”. Its primary use would be for income tax accounts, although “at a slightly higher level than the present highly aggregated material presented”. It was hoped that simple enterprise accounts would be produced and then full-cost accounting reports with “detailed specifications of both physical and financial inputs” (ACCRA, 1970: 4). The principle behind the code was enterprise accounting based on gross margin analysis (an enterprise being a division of farm activity concerned with particular crops or animals). The task of creating the code was put out to tender and awarded to Messrs Price Waterhouse and Co. Funding had been received from several sources and £28,000 to develop the code came from the Commonwealth Extension Grants Fund at the National Department of Primary Industries.
+
+168
+
+Accounting History 20(2)
+
+ACCRA MEMO
+
+To: Members Seeking Guidelinesfor Farm Accounting
+
+The ACCRA code is designed to permit easy compliance with accepted accounting practice and all relevant professional recommendations on the treatment of special accounting problems. The statements prepared on the basis of the ACCRA code will also be acceptable to taxation authorities.
+
+For those firms that may still have some hesitancy about ACCRA, it is important to note that the Joint Standing Committee of The Institute of Chartered Accountants in Australia and the Australian Society of Accountants has endorsed the ACCRA code as a basis for rural accounting.
+
+Within an accountancy practice, the code can be effectively used for one client, or all farm clients. Firms interested in testing the application of the code to one client may obtain free assistance during a test period by writing to the ACCRA Secretariat, University of New England, Armidale, N.S.W. Firms with a more general interest may enquire about forthcoming seminars.
+
+Figure 1. Announcement concerning ACCRA, 1973.
+
+Source: Replicated from The Australian Accountant, February 1973, 39.
+
+The task of completing the glossary was delegated to academics and was never completed.
+
+However, other glossaries were in existence by then, including the one first issued in England by the Ministry of Agriculture, Forestry and Fisheries (MAFF) in 1965 entitled “Terms and Procedure used in Farm and Horticultural Management” (the most recent version was issued in 2009).
+
+The full chart of accounts was presented to a National Workshop in February 1970 in Canberra (ACCRA, 1970). The next step was to develop a computerised system that would facilitate the use of the code in producing reports for individual businesses and generating comparative accounting reports. This was led by the QDPI assisted by the University of Queensland Agricultural Economics Department. The primary work was undertaken as a pilot scheme by the BSES in Queensland (Sturgess and Hampson, 1972; Longworth, 1979a). They received funding from the Commonwealth Extension Services Grant (CESG) in 1968, having appointed the Steering Committee on Farm Management Accounting in that year (BSES, 1973).
+
+The committee envisaged that the system would be built on “the co-operative roles to be played by the canegrower, his accountant and the Bureau” (BSES, 1973: Preface). The project leader comments that:
+
+Since the accountant was to be intimately involved in the operation of the System, the computer program has been modified so that it now forms the basis of a package which can be used by any public accountant to provide timely management information for a wide range of his clients in primary industries. (BSES, 1973: Preface)
+
+As sugar cane is grown in blocks, the economists and extensionists working for BSES wanted to be able to compare the performance of one block against others. They wanted to “drill down”
+
+through the data to investigate the agronomic and managerial reasons for poorer performance.
+
+Daily work records were prepared, noting physical data relating to activities such as planting, irri-gation and harvest, along with labour and machinery usage; condition of the crop; and expenditure.
+
+The records were then coded (using a version of the ACCRA code) and processed through the computer using batch processing. The manual provides minute detail on coding and classification of activities and expenditure. Canegrowers had the advantage of the personnel and expertise available at BSES and QDPI. Their role was to complete the daily work records and to submit them using the “mail in” system to clerical staff. A weakness in the system was that for records sent Jack
+
+169
+
+directly to accountants, coding would then be costly in terms of the clerical time required to code and input the data (Sturgess and Hampson, 1972; BSES, 1973; group interview).
+
+Coding and recording was assisted by the use of ACCRA cheque books, which had larger than usual stubs enabling the code to be written against the expenditure. The producer completed the cheque book and sent the stubs in batches to the accountant, who then inputted the details directly into the computer, without the need for intervening cash books. Although a small number of people used the cheque books and the banks recognised and printed them, they were not promoted by accountants.
+
+The computer program for BSES was built by ICL but in non-standard COBOL that could be used only on ICL machines ( programmers present at group interviews). However, in conjunction with QDPI and the University of Queensland, further funding was obtained from the CESG. With the permission of BSES, their program was converted to standard COBOL. Furthermore, another member of the BSES team had developed a suite of BASIC programs which mimicked the COBOL
+
+program on desktop computers (Longworth, 1979a). However, this produced a less-capable system that only gave a transaction listing, budgeted cash-flow statement and trial balance, which the accountant then had to transform into reports (Longworth, 1979b).
+
+The adaptation of the BSES computer program for general use had an educational benefit.
+
+Longworth of the University of Queensland realised its adaptability for management games and the desirability of management games in teaching financial management in farming (Longworth, 1969). He developed the Central Tablelands Farm Management Game in 1969, as a dynamic decision-making and information-processing simulation. A number of prototypes were developed which formed the basis of a computerised version funded by the Australian Wool Board (Longworth, 1981), written in FORTRAN at the University of Sydney. A metric version with enhanced programming was developed with funding from La Trobe University and the University of Queensland, and is still in use. The game is based on a simplified version of the ACCRA code and some sophisticated agricultural economics relating to growth and yields of crops. Longworth (1981) records that hundreds of students played the game over the years, but that very few farmers were known to keep their records in the manner that the game taught them.
+
+The BSES pilot project (and that at QDPI) foundered through lack of continuation funding and lack of commitment from senior management. By the time the programs became generally available, computing in private firms was changing and moving away from large-scale batch processing and coding. Other projects took the attention of the pilot scheme team. Those involved told the author that the opportunity of gaining data allowing diagnosis and analysis of problems in depth had been lost. Had the records and information been processed uniformly, on a block-by-block basis for sugar cane, a significant understanding of farm management efficiency could have been gained. A report (Agnew, 2004) was published that again called for a standardised system of farm management accounting for the sugar industry, indicating that the principles and intentions (if not the practice) developed by the original BSES team and ACCRA were sound.
+
+Remaining traces of the ACCRA project. Other traces of the Blue Book and the ACCRA can be found.
+
+The third edition of Mallyon’s Principles and Practices of Farm Management Accounting was written in 1986 by DG Neilson following the model of the Blue Book. He states in the Preface: Another reason for agreeing to the invitation [to write the new edition] was the disappointing failure of Australian Accountants to maintain the enthusiasm and momentum gained in the 1960s as a result of the first edition, the leadership provided by the staff of the University of New England, the formation of the Australian Committee for the Coding of Rural Accounts and the publication of its code and manual.
+
+170
+
+Accounting History 20(2)
+
+Neilson proceeds to compare the Australian inactivity with the continuing efforts of the Farm Management Committee of the New Zealand Society of Accountants in upgrading services offered to farmers. His edition makes enterprise accounting and gross margins central to the practice of management accounting, despite noting that in New Zealand and some parts of Australia they are regarded as peripheral. Neilson was well placed to embed these ideas because he had been one of the original “ACCRA-bats” (Neilson, personal correspondence, 2007) and his practice had established a farm management accounting and consultancy service in the late 1960s. The last two pages of the third edition are a lament that years have been wasted in not implementing the ACCRA code and that farm management accounting was desultory, with accountants and consultants generally failing farmers. Among the telling comments are:
+
+For far too long, Australian farmers have been “flying blind”, relying on hopelessly inadequate financial information, basing decisions on not much more than intuition or tradition …
+
+Under these circumstances, it is remarkable that Australian agriculture remained reasonably efficient.
+
+(Mallyon and Neilson, 1986: 268)
+
+One popular and simplified book on farm accounting is essentially an amended version of the Blue Book with the same but slightly reworded schedules. The Blue Book carries no copyright notice and the book is published without acknowledgement (Smith, 1991). An accountant interviewed for this study noted that, whilst his firm had not adopted the code, he believed that most accountants at several firms had taken the structured headings and applied them to the formatting of the farm accounts produced, and continue to use them now.
+
+Discussion
+
+From the literature on acceptance or rejection of innovation, three schools of thought on innovation were identified: the functional, the demand-led and the supply-led. Each of these approaches provides an explanation for the lack of success in introducing uniform accounting under the ACCRA model, although there is evidence that the more generic comparative accounting benchmarking model is established as the main tool for management accounting in Australia, as in the UK (Jack, 2005, 2009). However, all models of the diffusion of innovation appear to lack an emotional dimension and this story, in particular, is incomplete without recognising the “the huge waste of effort” (Longworth, personal correspondence, 2014) that went into trying to create a solution for agriculture that would shape more effective, business-led farm management and a more secure, hopefully prosperous, future for Australian agriculture. Following an analysis of the diffusion of the ACCRA code using functional, demand-led and supply-led models, this emotional context is explored using concepts of future time drawn from the work of Barbara Adam.
+
+Functional
+
+For Mallyon, farm management accounting in its entirety (covering budgeting, planning, costing as well as analysis of financial statements) was an essential part of modern farming: The farmer and grazier is relying more and more upon his accounts to guide him in his economic decisions.
+
+He realises that accountancy can put in terms which he can understand the economic forces that affect his property. He realises that without a sound accounting system, he is merely firing an arrow into the air. With such a system, he is at least taking a deliberate aim at the target. (Mallyon, 1966: 2) Jack
+
+171
+
+Burns (1966) and others saw comparative analysis as an integral part of farm management accounting, even whilst acknowledging its flaws. Burns defended it as “a very effective way of producing the awareness which is the first step towards improvement” (1966: 181). He explained: From a practical extension point of view, many farmers are looking firstly for very general guidance, and are perfectly happy to have pointed out that they are below average perhaps in certain technical aspects.
+
+This gives them something to work on. This is useful extension, even if it is not very spectacular. (Burns, 1966: 181)
+
+Some consultants have found comparative analysis useful and produce regular reports for clients showing performance against others in their client group or within a business improvement group.
+
+For their own guidance, consultants feel that the reports enable them to give targeted advice to clients that result in increased income for the client – had it not done, the consultant would be out of business very quickly ( private consultant).
+
+However, the critics of comparative analysis are vehement that it is a prop or, as Burns himself quoted, a “poor man’s farm management”. Makeham and Malcolm (1993) identify the three failings of the ACCRA system as being lack of interest by farmers in bookkeeping, accountants’ concentration on tax accounting, and the existence of alternative systems. Furthermore, they point out: A major fallacy was the belief that historical records, and comparative analysis of technical ratios and average activity gross margins, achieved on different farms were useful for farm management analysis.
+
+They are not very useful. Farm management is about dealing with what might happen. (Makeham and Malcolm, 1993: 352)
+
+Although the aim is to plan for the future and to shape the future actions of farmers, the whole premise of the ACCRA code and comparative analysis generally is that it “has a past, not future, orientation” (Makeham and Malcolm, 1993). A more serious issue is that inter-farm comparisons are open to differing interpretations. This was noted in earlier essays by Candler and Sargent (1962) and Mauldon and Schapper (1970), and later again by Ferris and Malcolm (1999). In particular, the unreliability of the underlying data as recorded on farms (even if kept or cleaned up for use in a uniform system such as ACCRA’s) and the subjectivity of valuations of assets reduced the benchmarking figures produced “to uselessness” (for a full discussion on these points see Makeham and Malcolm, 1993). In the UK, Giles (1993) pointed out that the “least safe use of gross margins” was for comparative analysis rather than the intended use for finding the optimal mix of enterprises on a farm through linear programming and similar techniques. The case for accounting as the basis of farm management – or at least comparative ratio analysis – relies on intuition, functionality and ease of use. The competing arguments for accounting rather than economics to be the core discipline of farm management still need to be formulated.
+
+Demand led
+
+From the findings, it is clear that primary producers were to be the beneficiaries of the ACCRA project but they were not the target audience for the innovation. In the 1960s, the need was for tools that could be used by the fast growing agricultural advisory services consisting of government agricultural extension workers, private consultants and accountants looking for what we would now term “value adding services”. The 1960s were also a time when scientific innovations for farming in the form of chemicals and machinery were proliferating, but alongside these there were pressures to increase the business and managerial skills of farmers. The situation is similar to that 172
+
+Accounting History 20(2)
+
+in the US and in Great Britain at the same time (Williams, 1968; Jack, 2005, 2006). The Australian services were later adopters, behind Great Britain, and the translation of comparative analysis, benchmarking and codes of account to Australia owes much to Elton Burns’s visit to Europe in the early 1960s.
+
+In this context, it is then less surprising that very few farmers were directly engaged in the development of the ACCRA code. Williams (1968) records that “The farming community has become more articulate in expressing its needs for technical services” but he also goes on to point out that the developing structures for giving those services might hinder rather than help the changing attitudes of farm people and their leaders. He identifies a medley of departments of agriculture, universities, primary producer organizations (rather than primary producers), political parties, agricultural scientists, economists and educationalists and observes that “the first rule for all institutions in a political context is survival” (Williams, 1968: 2). Policy makers need to ensure that “such organizations contribute to the national interest while still pursuing their own”, but compromises and delays are inevitable. He delivers this warning:
+
+Farmers beware. There is a need for greater depth of understanding of the structure and purposes of technical services for agriculture in Australia, and how this structure influences the services provided to farmers. Rapid change is under way and the interest of the farmer as the central figure in this change is in danger of being lost in the negotiations and activities of the other participants in agricultural extension.
+
+(Williams, 1968: 5)
+
+This seems to capture part of the issue with the demand for ACCRA: it was meeting a need perceived by advisors and not necessarily by primary producers themselves. In the 1960s it was observed that “farmers are often sceptical about the value of farm management accounting, concerned about the extra clerical work imagined to be necessary, parsimonious about the cost, and modest about their ability to understand the statements provided” (Neilson, 1966: 314).
+
+The consultants practising today all commented on the fact that management accounting reports and benchmarking were difficult to sell to most farmers, who appreciate the value added to the tax accounts or agronomy reports by comparative analysis and budgets, but are less willing to pay for them.
+
+However, to say there was no demand from farmers for this type of management accounting is to misread the situation. Farmers do make use of the management accounting products offered by their accountants and advisors, and do use benchmarking. The more entrepreneurial prepare budgets and know their costs, and engage in strategic management accounting practices and forecasting (Jack, 2008). Some 15 per cent of farmers in Australia are thought to be members of farm management clubs or business improvement groups and these groups are involved with environmental benchmarking as well as the more traditional accounting and production ratio analysis (information provided by practitioners).
+
+Each consultancy and accountancy business, albeit linked to a professional body, offers proprietary services. The appeal of a system which could produce wide-scale comparative accounts was outweighed by the perceived benefits of offering something unique to the customers of each business. The long-term benefits of a mass participation benchmarking system, such as that established in Minnesota in the early twentieth century and still in operation as “Finbin”
+
+(Jack, 2009), were not seen in Australia. In fact, the longevity of the Minnesota scheme is due to the persistence and vision of the Center for Farm Financial Management at the University of Minnesota and ongoing financial support. The mass participation benchmarking service currently exists in a recently updated, online, interactive format (Jack, 2009).
+
+Jack
+
+173
+
+Supply led
+
+The supply-led models developed in an accounting context by Malmi (1997), Ax and Bjørnenak (2007) and others for ABC and BSC are relevant. These authors share the view that both innovations have spread because they were adopted by consultants and business schools, and made fashionable.
+
+The members of the ACCRA committee, the extension services and agricultural economists are all supply side actors under the terms of these models. The innovators and early adopters of the ACCRA code and the Blue Book did all those things that were observed in Scandinavian studies of the diffusion of management accounting (Ax and Bjørnenak, 2007). They held workshops and conferences, put advertisements in The Australian Accountant magazine and elsewhere, published articles, built it into University courses, wrote books, and co-opted other agencies such as the BSES. Is it simply the case then that they failed to make ACCRA fashionable and failed to capitalise on the early momentum of the project? ABC and BSC had the weight and resources of Harvard Business School and David Norton’s consultancy practice, and several major companies who co-developed the concepts with Kaplan, Cooper, Johnson and Norton when they were introduced.
+
+These academics and consultants also had the momentum of the “Relevance Lost” notion in management accounting that they had introduced (Johnson and Kaplan, 1987). For the ACCRA supply-led actors, the resources were constrained, and rather than finding innovative fixes to a broken management accounting system, they were instilling the idea that farmers ought to be doing management accounting when they had done little accounting or record keeping up to that point. They did not only need to sell the idea of ACCRA but sell the idea of management accounting.
+
+At the same time in the 1960s, primary producers were being courted by the supply-side actors of the scientific and machinery communities, who were a similar mix of academics, extension workers, manufacturers (rather than accountants) and consultants. In many ways, innovations aimed at increasing yields and quality scientifically were far more appealing than carrying out – or paying someone else to carry out – management accounting. Whatever the future benefits of knowing your costs, and incrementally increasing your margins, these were probably outweighed by the more immediate and tangible benefits of sprays, fertilisers and sophisticated tractors. This is borne out further in recent findings by Jack (2008) from Australia, New Zealand, the UK and the USA, showing that in more austere times when costs of inputs have risen, environmental concerns have grown and every other avenue to reduce costs is exhausted, then primary producers start to innovate in terms of using forms of target cost management. The needs in the 1960s were much simpler, as discussed under the demand-led analysis above. Moreover, Williams (1968) observes that “the farm community has become more articulate in expressing its needs for technical services”
+
+and that scientists are most adept at channelling the scarce resources of State government departments for their innovations. He hints at internal politics and internecine strife between different extension workers – scientists, economists and social welfare workers. He says (1968: 4) “Implicit in discussions about the role of agricultural scientists is an assumption that their major contribution is one of projecting science into the rural community as a means of increasing the efficiency of production”. In other words, it was not only the ACCRA committee that were engaged in future making.
+
+Supply-side analysis suggests that the supply-led actors failed to create a fashion at that point for management accounting and their innovative approach to taking the hard work of management accounting away from the farmers and into accountancy firms. More importantly, they failed to start a fashion for accountancy firms offering the use of the code as one of their services – a mix of both misunderstanding the trend for proprietary client offerings and the changes in IT, which we will examine next. Using the market-infrastructure arguments, it could also be inferred that the proponents of ACCRA failed to establish successful diffusion agencies and networks. The BSES
+
+pilot project, QDPI “mail in” service and the Queensland management accounting game were, in 174
+
+Accounting History 20(2)
+
+the end, the only practical applications of the code itself. Designating these as the chosen diffusion agencies, they both had networks and infrastructure. However, BSES had its main network within the sugar industry. The University of Queensland had its students, its extension work with QDPI and academic networks. For infrastructure, both had mainframe computers that could process the information on behalf of primary producers via their accountants or consultants, as did the University of New England which was used over a considerable period of time by the private consultant interviewed. However, it appears that neither these networks nor the infrastructure was sufficient to diffuse the innovation any more widely. In terms of the Bergek et al. (2010) model used in Hunt et al. (2014) for agricultural extension, the innovations management partly achieved the first three steps but then faltered after entrepreneurial experimentation with the BSES (Sturgess and Hampson, 1972; Longworth, 1979).
+
+The general disposition of the Australian farmer is the colonising, battling and taming of the Outback into a thriving economy based on primary production (farming and mining). Australian farmers and graziers can take “everything thrown at them and still survive” ( group interview). Do you need the regular cut-off dates and reporting in accounting to deal with these situations? Farmers understand the natural patterns of production, yet, the farm is a business reliant on business lend-ing, government investment and with obligations for taxation, succession planning and national wealth. The natural rhythms of farming with its shorter-term horizons have to co-exist with the forward-looking commercial and government environment. One explanation for the emotional investment of advisors in the management accounting innovations for farming is that they see a future where there is synthesis between the farming and the business notions of time, profitability and sustainability of the industry, through accounting. The problem is that other people were also engaged in future making and competing for the same future space, and this is shown by the role of information technology in this story.
+
+The role of the future
+
+The innovations contained in the ACCRA code and the Blue Book are adaptations of existing practices in the UK and elsewhere in the 1960s. The code in particular is adapted to the Australian environment by concentrating on professional accountants as the main adopters or agents of diffusion. In keeping with Carnegie et al. (2006) this recognises the role professional accountants play in the development of accounting in Australian farming.
+
+Therefore, leaving aside whether or not the ACCRA code, comparative analysis and gross margin enterprise analysis are fit for purpose (as Malcolm (2004) argues that they are not), another obvious obstacle to the dissemination of the practice was embedded in the information technology and advances in computer hardware and software during the 1970s and 1980s.
+
+One participant from QDPI asserts that the whole ACCRA project was a good idea ahead of its time, possibly better suited to an age of internet and cloud technology ( group interviewee). Jones et al. (2004: 322), writing about the work of innovation and technology management scholars, argue that “greater interpretive flexibility enabled organisation members to link technology design and use at multiple levels of action, enhancing their ability to build, deploy and transform their technologies in response to shifting opportunities”. This offers one explanation of why the accounting practice of comparative analysis became embedded – it is a flexible concept, relatively easily transferred to proprietary technologies – whilst the more rigid and inflexible chart of accounts and computer programming that make up the infrastructure, is not.
+
+Comparative analysis is adopted more easily by consultants in proprietary formats than in the ACCRA code and the detail of the Blue Book. Taking a decade to embed the code in a computer program was too slow, and information systems had moved on a long way before the commercial product was ready. The practice was too rigid and complex, requiring inputs in the form of specific Jack
+
+175
+
+coding and analysis. However, this rather mundane observation tallies with the experience of the balanced scorecard from the 1990s onwards. The format and idea of the scorecard is malleable and has been adapted widely by corporations, based largely on the appeal of the rhetoric embedded within it, even where practice delivers less than hoped-for outcomes by the instigators (Ittner et al., 2003: 725–758; Nørreklit, 2003; Quattrone, 2009: 85–118). Results are achieved within a short timescale – that is, organisations can develop, refine, adapt and reproduce a scorecard within months. Furthermore, advances in computer interfaces and the ease of production of visual outputs are now suited to creating the artefact. “Big IT” can constrain and restrict practices which themselves have evolved and developed since the specifications were written (Greenhalgh and Stones, 2010).
+
+The temporality of the project is shown in one pragmatic issue: after the mid-1970s the funding for the projects simply ran out. The BSES abandoned its commitment to developing the computer program that they planned to facilitate use of the ACCRA system, and whilst the management game received funding for a re-write c.1978, no other funding was sought or found. The problem was that the ACCRA code, and its related logic in terms of how the system would operate at farm and accounting-practice level, was developed for mainframe computers just at the point in the 1970s when accounting practices were able to move to using the new personal computers that required different programming. This presented an opportunity for small software houses to develop bespoke programs. In other parts of the world, each computing development has given rise to new methods of mass participation benchmarking, including more recent systems where farmers can enter data online and download filtered comparative reports (Jack, 2009). However, no such developments were established in Australia. In Queensland, the response to the question of why the system was not reprogrammed as newer languages came along was that there was no money available, and that other projects and concerns had superseded the project.
+
+Whilst the ACCRA code was being compiled and programmed, accountancy practices had already become computerised. They had installed their own or proprietary software and charts of accounts to which they had become accustomed and which would be costly to replace. One farmer/
+
+educationalist who did make use of the ACCRA cheque books and coding commented ruefully that the accountants amended the codes to fit their own system ( group interview).
+
+Nationally, the ACCRA code and the Blue Book were not the only approaches to farm management accounting. Although the University of Queensland and the University of New England promoted both, the development of farm business clubs elsewhere led to different approaches and different schemes. The largest number of clubs and larger numbers of consultants and extensionists resided in Western Australia, where the greater numbers of farmers were thought to make use of accounting and consulting services (Cooke-Yarborough, 1968; Murray, 1968). Referring to the Blue Book, Murray (1968: 26) comments that “although this report is wholly a Queensland production, this State can hardly be regarded as being in the forefront of those supplying adequate accounting services to the farming community. Western Australia, without a doubt, holds this distinction”.
+
+Indicative of Western Australia’s leading role are the records of two conferences held in Perth in the mid-1960s (FFMAS, 1964; AAFMC, 1967) featuring Schapper and Burns among various speakers from farming, practice and academe. In the opening address, Schapper is credited with pioneering and settling farm management in Western Australia. In the 1967 conference Schapper promotes the use of comparative accounting by farm clubs in Western Australia (FFMAS, 1964; AAFMC, 1967), despite his later comments (Mauldon and Schapper, 1970; Mauldon et al., 1969) against its misuse elsewhere.
+
+The information technology and the alternative options for management accounting are examples of how innovators and future makers find the future they imagined crowded with the “intended and unintended consequences of our own and predecessors’ dreams and desires” (Adam, 2009: 3).
+
+Patterns of past future making are embedded more and more in information and communication 176
+
+Accounting History 20(2)
+
+technologies, according to Adam (2009). By extension, they are embedded in accounting practices and legal systems too. “The fictional status of the future [is] intensified with a wide range of technologies” (Adam, 2009: 4).
+
+Conclusion
+
+The innovation of the ACCRA system was rejected, although comparative analysis as advocated in the Blue Book (QDPI, 1966, 1971) is still widely used, despite its critics. This can partly be explained by the flexibility and malleability of comparative analysis, which like ABC and the BSC can be adapted to proprietary situations. The code and related systems to manage mainframe input are rigid and embedded in computer codes which were almost obsolete when ready, overtaken by personal computers in private accountancy and consulting firms, and without the resources for further development. However, the rejection of ACCRA can be interpreted as due to its lack of functionality and lack of demand from both the advisors at whom it was aimed and primary producers.
+
+The ACCRA code and the Blue Book are better analysed as supply-led innovations, created and diffused by agricultural advisors. The 1960s were a time when private management consultancy became established in agriculture and agricultural economists in government extension agencies working with colleagues in universities were trying to find new ways to make the Australian agricultural industry and its producers more secure and more prosperous. Using the supply-led models, it seems that the proponents used all the methods available for dissemination and propagation but that the diffusion agencies and networks were not sufficient. No-one else took up the model to make it fashionable and it failed to gain legitimate status as a system of management accounting outside of education.
+
+The models of diffusion though, do not capture the emotional investment put into the development, testing and dissemination of the code. Those that used it knew that it worked and provided useful information in terms of indicating where the producer needed to make decisions on the farm.
+
+However, the future, as Adam says, is not an empty space to be filled with the plans of one group of people. Typically, a fiction is created of the present future and it is in this fiction that the emotional energy is found, even if that energy is expressed in the polite and guarded terms of the Blue Book. Other innovations and technologies though are always underway at the same time, which may meet more strongly voiced demands or be sold more effectively. Inevitably, more innovations and plans are rejected or get lost than are successful, but this “future as fact” does not make the rejection any less painful for the innovators and planners.
+
+The work of Adam on future time has been introduced as a layer of analysis that brings in the more human side of success or failure of innovation, rather than seeing it as a matter of rational choice or systems failure. The need for this future focus emerged from the documentary and aural data collected, which shows that the innovations arose at a time when the future of Australian agriculture was uncertain and visions of a more prosperous future and more business-like agriculture were being sought. The idea that management accounting rather than science or technology would make that difference proved not to be the case immediately: Australian agriculture has prospered in the last few decades. Neilson states in his Preface to Mallyon and Neilson (1986) that he agreed to the invitation to write a new edition of Mallyon’s seminal textbook because of the “disappointing failure of Australian accountants to maintain the enthusiasm and momentum gained in the 1960s as a result of the first edition … the formation of the Australian Committee for the Coding of Rural Accounts and the publication of its code and manual”. This story of the ACCRA code and the Blue Book contributes to the literature in three ways: it adds to our knowledge of the under-researched field of agricultural accounting; it increases our understanding of why more flexible and adaptable management accounting techniques are likely to be diffused; and, finally, it introduces the idea of future time to evaluate the emotional investment in an innovation and the consequences of its rejection.
+
+Jack
+
+177
+
+
+
+
+
+Acknowledgements
+
+
+The author acknowledges the kind help of Malcolm Wegener, John Longworth, Ces Chardon, Wallace Moorhouse, Owen Sturgess, Geoff Neilson, Judith Turnbull, the CFFM at University of Minnesota and the editorial support of Andrew Cartwright. Also Rob Stones, Diane-Laure Arjalies, Russell Craig and others in MCA/MACORG, ABH, AARES and the LSE for their helpful comments. I am also grateful to the two anonymous reviewers for their very helpful comments in shaping the final article.
+
+Funding
+
+The support of the CIMA General Charitable Trust is gratefully acknowledged. Also, the project was internally funded by Portsmouth Business School through its research projects scheme.
+
+References
+
+AAFMC – Australian Association of Farm Management Consultants (1967) Farm Management in Practice: Report of a Conference for Farmers, Investors and Members of Servicing Professions [held at the] South Perth Civic Centre, 19–20 July, 1967. University of Western Australia, Country Extension.
+
+Abrahamson E (1991) Managerial fads and fashions: The diffusion and rejection of innovations. Academy of Management Review 16(3): 586–612.
+
+Abrahamson E (1996) Management fashion. Academy of Management Review 21(1): 254–285.
+
+ACCRA (1970) Australian Committee for the Coding of Rural Accounts: Workshop Manual. Canberra, 13–15 February 1970.
+
+Adam B (2004) Time. Cambridge: Polity Press.
+
+Adam B (2007) Future Matters: Action, Knowledge, Ethics: Supplements to the Study of Time, Volume 3.
+
+Boston: Brill Academic Publishers.
+
+Adam B (2008) Future matters: Futures known, created and minded. Twenty-First Century Society: Journal of the Academy of Social Sciences 3(2): 111–116.
+
+Adam B (2009) Future Matters: Challenge for Social Theory and Social Inquiry. Cardiff School of Social
+
+Sciences. Available at: www.cardiff.ac.uk/socsi/resources/Sardinia.pdf (accessed 15 November 2013).
+
+Adam B (2010) History of the future: Paradoxes and challenges, Rethinking History: The Journal of Theory and Practice 14(3): 361–378.
+
+Adam B (2011) Wendell Bell and the sociology of the future: Challenges past, present and future. Futures 43(4): 590–595.
+
+Agnew J (2004) Coordinated Farm Business Management for the Australian Sugar Industry. Final report, Sugar Research and Development Company. Project BSS217. Queensland: BSES Ltd.
+
+Australian Accountant (1973) Announcement – Progress in Farm Accounting. The Australian Accountant 43(4): 39.
+
+Ax C and Bjørnenak T (2005) Bundling and diffusion of management accounting innovations – the case of the balanced scorecard in Sweden. Management Accounting Research 6(1): 1–20.
+
+Ax C and Bjørnenak T (2007) Management accounting innovations: Origins and diffusion. In: Hopper T, Northcott D and Scapens R (eds) Issues in Management Accounting, 3rd edition. Harlow: FT Prentice Hall, pp.357–376.
+
+Bátiz-Lazo B, Haigh T and Stearns DL (2014) How the future shaped the past: The case of the cashless society. Enterprise and Society 15(1): 103–131.
+
+Bell A (1930) Corduroy. London: Faber and Faber.
+
+Bergek A, Jacobsson S, Hekkert M and Smith K (2010) Functionality of innovation systems as a rationale for and guide to innovation policy. In: Smits RE, Kuhlmann S and Shapira P (eds), The Theory and Practice of Innovation Policy. Cheltenham: Edward Elgar.
+
+Bjørnenak T (1997) Diffusion and accounting: The case of ABC in Norway. Management Accounting Research 8(1): 3–17.
+
+Brown LA (1975) The market and infrastructure context of adoption: A spatial perspective on the diffusion of innovation. Economic Geography, 51(3): 185–216.
+
+Brown LA (1981) Innovation Diffusion: A New Perspective. London: Methuen.
+
+178
+
+Accounting History 20(2)
+
+BSES – Bureau of Sugar Experiment Stations (1973) BSES System Farm Management Accounting Manual.
+
+Brisbane: Bureau of Sugar Experiment Stations.
+
+Burns EO (1966) Comparative analysis of farm accounts. Australian Journal of Agricultural Economics 10(2): 169–182.
+
+Candler W and Sargent D (1962) Farm standards and the theory of production economics. Journal of Agricultural Economics 15(2): 282–290.
+
+Carnegie G, Forman P and West BP (2006) F.E. Vigars’ Station Book-Keeping: A specialist Australian text enabling the adaptation and transfer of accounting technology. Accounting Historians Journal 33(2): 103–130.
+
+Cooke-Yarborough RE (1968) Figures for Farmers – A Comment, The Australian Accountant 38(8): 457–460.
+
+Davison L (1999) The Spirit of Rural Australia. Sydney: New Holland.
+
+Dillon JL (1965) Farm management in Australia as an academic discipline. Review of Marketing and Agricultural Economics 33(4): 175–189.
+
+Drake JW (1968) Compilation of financial statements for farm management – A comment. The Australian Accountant 38(7): 381–384.
+
+Druce PC (1966) Rural extension and the agricultural economist. The Australian Journal of Agricultural Economics 10(2): 97–110.
+
+Ezzamel M and Robson K (1995) Accounting in time: Organizational time-reckoning and accounting practice. Critical Perspectives on Accounting 6(2): 149–170.
+
+FFMAS – Federation of Farm Management Advisory Services of WA (1964) Proceedings of the First Farm Management in Focus Conference, Anzac House, Perth, 11th and 12th February. Perth: Department of Agriculture and Food.
+
+Ferris A and Malcolm B (1999) Sense and nonsense in dairy farm management economic analysis. Paper presented at Australian Agriculture Resource Economics Society Conference, 20–22 January, Christchurch.
+
+Giles AK (1993) Net margins and all that – an essay on management accounting in agriculture. In: Giles AK
+
+Windows on Agricultural Economics and Farm Management. Reading: College of Estate Management, University of Reading.
+
+Greenhalgh T and Stones R (2010) Theorizing big IT programmes in healthcare: Strong structuration theory meets actor network theory. Social Science and Medicine 70(9): 1285–1294.
+
+Hinrichs AF (1929) Swiss studies in farm accounting. Journal of Farm Economics 11(4): 648–651.
+
+Hopwood A (1989) On Time and Accounting. Unpublished working paper, London School of Economics.
+
+Hunt W, Birch C, Vanclay F and Coutts J (2014) Recommendations arising from an analysis of changes to the Australian agricultural research, development and extension system. Food Policy 44(1): 129–141.
+
+Ittner CD, Larcker DF and Meyer MW (2003) Subjectivity and the weighting of performance measures: Evidence from a balanced scorecard. The Accounting Review 78(3): 725–758.
+
+Jack L (2005) Stocks of knowledge, simplification and unintended consequences: The persistence of post-war accounting practices in UK agriculture. Management Accounting Research 16(1): 59–79.
+
+Jack L (2006) Protecting agricultural accounting in the UK. Accounting Forum 30(3): 227–243.
+
+Jack L (2007) Accounting, post-productivism and corporate power in the UK food and agriculture industry.
+
+Critical Perspectives on Accounting 18(8): 905–931.
+
+Jack L (2008) From gate to plate: Towards collaborative target cost management in agriculture and food.
+
+CIMA Discussion Paper, London: CIMA.
+
+Jack L (2009) Benchmarking in Food and Farming: Creating Sustainable Change. London: Gower Publishers.
+
+Johnson HT and Kaplan RS (1987) Relevance Lost: The Rise and Fall of Management Accounting. Boston, MA: Harvard Business School Press.
+
+Jones M, Orlowski W and Munir K (2004) Structuration theory and information systems: A critical reap-praisal. In: Mingers J and Willcocks L (eds) Social Theory and Philosophy for Information Systems.
+
+Chichester: Wiley.
+
+Liset A (1684) Amphithalami, or, the Accountants Closet [microform]. London: Flesher.
+
+Longworth JW (1969) Management games and the teaching of farm management accounting. Australian Journal of Agricultural Economics 13(1): 58–67.
+
+Longworth JW (1979a) Computer Processing of Financial Records Made Easy – Memorandum. Brisbane: Department of Agriculture, University of Queensland.
+
+Jack
+
+179
+
+Longworth JW (1979b) A Simple Computerised Financial Analysis and Cash-flow Management System for Primary Producers (Making Use of the BSES Accounting Package). Agricultural Economics Discussion Paper 3/79, Revised Edition, Department of Agriculture, University of Queensland, Australia.
+
+Longworth JW (1981) The Central Tablelands Farm Management Game Manual, Revised Edition. Brisbane: Department of Agriculture, University of Queensland.
+
+Malmi T (1997) Towards explaining activity-based costing failure: Accounting and control in a decentralized organization. Management Accounting Research 8(4): 459–480.
+
+Makeham J and Malcolm B (1993) The Farming Game Now. Cambridge: Cambridge University Press.
+
+Malcolm B (2004) Where’s the economics? The core discipline of farm management has gone missing. The Australian Journal of Agricultural and Resource Economics 48(3): 395–417.
+
+Mallyon CA (1961) The Principles and Practice of Farm Management Accounting. Sydney: The Law Book Company.
+
+Mallyon CA (1966) The Principles and Practice of Farm Management Accounting, 2nd edition. Sydney: The Law Book Company.
+
+Mallyon CA (1967) Growing crops and the farm inventory. The Australian Accountant 37(2): 105–107.
+
+Mallyon CA and Neilson DG (1986) The Principles and Practice of Farm Management Accounting, 3rd edition. Sydney: The Law Book Company.
+
+Mauldon RG and Schapper H (1970) Random numbers for farmers. Journal of the Australian Institute of Agricultural Science 36: 279–284.
+
+Mauldon RG, Schapper HP and Treloar DWG (1969) Operational accounting for farm management.
+
+Australian Journal of Agricultural Economics 13(1): 47–57.
+
+Murray JHG (1968) Figures for farmers: Practical application of rural accounting. The Australian Accountant 38(1): 26–33.
+
+Neilson DG (1966) Farm accounting. The Australian Accountant 36(6): 314–318.
+
+Neilson DG (1968) Compilation of financial statements for farm management. The Australian Accountant 38(4): 205–212.
+
+Nørreklit H (2003) The Balanced Scorecard: What is the score? A rhetorical analysis of the Balanced Scorecard. Accounting, Organizations and Society 28(6): 591–619.
+
+QDPI (1966) Accounting and Planning for Farm Management (“The Blue Book”). Brisbane: QDPI.
+
+QDPI (1971) Accounting and Planning for Farm Management (“The Blue Book”), 2nd edition. Brisbane: QDPI.
+
+Quattrone P (2009) Books to be practised: Memory, the power of the visual, and the success of accounting.
+
+Accounting, Organizations and Society 34(1): 85–118.
+
+Rivera WM, Qamar MK and Mwandemere HK (2005) Enhancing Coordination Among AKIS/RD Actors: An Analytical and Comparative Review of Country Studies on Agricultural Knowledge and Information Systems for Rural Development (AKIS/RD). Rome: FAO
+
+Rogers EM (1995) Diffusion of Innovations. New York: Simon and Schuster International.
+
+Röling, NG and Engel, PGH (1991) IT from a knowledge system perspective: Concepts and issues. Paper presented at the European Seminar on Knowledge Management and Information Technology, Wageningen.
+
+Scorgie ME (1997) Progenitors of modern management accounting concepts and mensurations in pre-industrial England. Accounting, Business & Financial History 7(1): 31–59.
+
+Shadbolt NM, Newman M and Lines I (2007) Dairy farm business analysis: Current approaches and a way forward. In: Proceedings of the 16th International Farm Management Association Congress: Peer Reviewed Papers, Vol. 1: 125–135.
+
+Shoobridge RG (1965) Farm management accounting. The Australian Accountant 35(4): 168–171.
+
+Smith E (1991) Managing the Farm: Modern Business Management Methods. Melbourne: Business Library.
+
+Stones R (2005) Structuration Theory. London: Palgrave Macmillan.
+
+Sturgess NH (1966) The farmer’s economic decisions. The Australian Accountant 36(9): 500–532.
+
+Sturgess OW and Hampson RJ (1972) A managerial service for canegrowers. In: Proceedings of the Queensland Society of Sugar Cane Technology, Thirty-Ninth Conference, 63–72.
+
+Thompson EP (1967) Time, work-discipline, and industrial capitalism. Past and Present 38: 56–97.
+
+UNE (1967) Farm Management Accounting: A Commentary. Report of the National Workshop on the stand-ardization of terminology and procedures in farm management accounting held at University of New England, 17–21 August 1966, Farm Management Guidebook 4. Armidale: UNE.
+
+180
+
+Accounting History 20(2)
+
+Unnamed Editor (1970) Progress in Farm Accounting. The Australian Accountant 40(4): 123.
+
+Wiebe E (2010) Temporal sensemaking: Managers’ use of time to frame organizational change. In: Hernes T and Maitlis S (eds) Process, Sensemaking, and Organizing. Perspectives in Process Organization Studies, Vol. 1. Oxford UK: Oxford University Press, pp.213–241.
+
+Williams DB (1968) Agricultural Extension: Farm Extension Services in Australia, Britain and the United States of America. Melbourne: Melbourne University Press.
+
+Appendix 1: Sources of Data
+
+Table 1. Articles, books and papers relevant to the ACCRA project (all library documents from personal visits).
+
+Author
+
+Date
+
+Title
+
+Location
+
+QDPI
+
+1966
+
+Accounting and Planning for Farm Management
+
+University of Queensland
+
+1st edition
+
+(UQ) Library, visited 2011
+
+QDPI
+
+1971
+
+Accounting and Planning for Farm Management
+
+Purchased online
+
+2nd edition
+
+ACCRA
+
+1970
+
+Australian Committee for the Coding of Rural
+
+In possession of
+
+Accounts: Workshop Manual
+
+interviewee, UQ
+
+Australian Association of Farm
+
+1967
+
+Farm Management Practice: Report of a Conference
+
+University of Western
+
+Management Consultants
+
+for Farmers, Investors and Members of Servicing
+
+Australia (UWA) Library,
+
+Professions, South Perth Civic Centre, 19–20
+
+visited 2006
+
+July 1967
+
+The Australian Accountant
+
+1945
+
+Monthly periodical of the Australian Society of
+
+University of Western
+
+onwards
+
+Accountants (now CPA Australia)
+
+Sydney Library
+
+collection, visited 2008
+
+BSES
+
+1973
+
+BSES System Farm Management Accounting
+
+In possession of
+
+Manual
+
+interviewee, UQ
+
+Australian Journal of Agricultural
+
+–
+
+Journal of what is now AARES
+
+UQ library; Agecon
+
+Economics
+
+Online
+
+Federation of Farm Management
+
+1964
+
+Proceedings of the first Farm Management in Focus
+
+UWA library
+
+Advisory Services of WA
+
+Conference, Perth
+
+Longworth
+
+–
+
+Papers and manuals relating to Central
+
+The author
+
+Tablelands Farm Management Game; farm
+
+reports from ACCRA system
+
+UNE
+
+–
+
+Report of the National Workshop on the
+
+In possession of retired
+
+Standardization of Terminology and Procedures
+
+lecturer at UQ
+
+in Farm Management Accounting held at the
+
+University of New England, 17–21 August 1966,
+
+Farm Management Guidebook 4. Armidale: UNE
+
+Mallyon
+
+1961
+
+Principles and Practice of Farm Management
+
+UQ Library
+
+Accounting 1st edition
+
+Mallyon
+
+1966
+
+Principles and Practice of Farm Management
+
+University of Minnesota
+
+Accounting 2nd edition
+
+Library, visited 2007
+
+Turnbull
+
+–
+
+Private letter with handwritten biography of
+
+Personal request
+
+Cyril Mallyon by his daughter
+
+Geneaologist
+
+–
+
+Basic data about Cyril Mallyon
+
+Commissioned
+
+Neilson
+
+–
+
+Private correspondence about the origins of
+
+
+
+gross margin accounting
+
+Journal of the Australian Institute
+
+–
+
+Various libraries
+
+of Agricultural Science
+
+Smith
+
+1991
+
+Managing the Farm
+
+Purchased second-hand
+
+copy
+
+Williams DB
+
+1968
+
+Agricultural Extension
+
+Gift
+
+University of New England
+
+1960–80
+
+Series of monographs entitled Farm Management
+
+Various libraries; Agecon
+
+Guidebooks. Includes “No 4: Farm management
+
+Online; in possession of
+
+accounting, a commentary”
+
+interviewee, UQ
+
+Private consultant
+
+1970–90
+
+Examples of computerised comparative analysis
+
+Photos taken
+
+reports for clients produced using “mail in”
+
+service at UNE
+
+Jack
+
+181
+
+Table 2. Interviewees/correspondents.
+
+•  Retired lecturer at UQ; farmer; designer of Central Tablelands game
+
+•   Retired extensionist QDPI/lecturer at UQ; worked with Elton Burns to implement comparative accounting in Queensland
+
+•  Head of BSES projects, commissioned and led BSES pilot study
+
+•   Secretary to the Joint Committee on Standardisation of Farm Accounts. Only surviving member of the committee that published the Blue Book
+
+•  Programmer on BSES pilot in the 1970s
+
+•  Consultant; author; implemented ACCRA principles in own firm
+
+•  Professor of Agricultural Economics; critic of ACCRA/comparative accounting
+
+•  Leading farm management consultant from accounting firm originally set up by Neilson
+
+•  Top agricultural consultant as recommended by UQ
+
+•  Leading farm management consultant in Australia recommended by NZ colleague and several others
+
+•   Leading farm management consultant from Massey University and acknowledged as such by International Farm Management Association
+
+•   Farm management advisor with VDPI, former private consultant who made use of the “mail in” service at QDPI
+
+Appendix 2: Materials Referring to Various Aspects of the Central
+
+Tablelands Farm Management Game (CTFMG), now known as
+
+Australian Farming Systems Model (AFSM), in Teaching and
+
+Research
+
+Published materials
+
+Longworth JW (1969) Management Games and the Teaching of Farm Management. Australian Journal Agricultural Economics 13(1): 58–67.
+
+Longworth JW (1970) From War-Chess to Farm Management Games. Canadian Journal Agricultural Economics 13(2): 1–11.
+
+Longworth JW (1971) Management games in business research and education. The Australian Accountant 41(6): 269–276.
+
+Longworth JW (1973) The Central Tablelands Farm Management Game: Manual for Participants.
+
+Department of Agriculture, University of Queensland.
+
+Longworth JW (1974) The roles of a modern farm business manager. Tropical Grasslands 8(3): 197–200.
+
+Tanner C (1975) A survey of students’ attitudes to methods of teaching farm management. Australian Journal Agricultural Economics 19(1): 52–62.
+
+Menz KM and Longworth JW (1976) An Integrated Approach to Farm Management Education. American Journal Agricultural Economics 58(3): 551–556.
+
+Longworth JW and Menz KM (1977) Training for farm management decision-making. In: Contributed Papers, 16th International Conference of Agricultural Economists. Oxford Institute of Agricultural Economics and International Association of Agricultural Economics, pp.179–190.
+
+Longworth JW (1979) Decision-making: Towards a Central Theme. Proceedings of VIth National Conference, Australian Farm Management Society Paper No. 3.2.2.
+
+Salmon PW (1980) A psychological investigation of farm management education: A personal construct theory approach to agricultural extension. Research Report in Agricultural Extension, School of Agriculture and Forestry, University of Melbourne.
+
+Longworth JW (1981) The Central Tablelands Farm Management Game: Manual for Participants (Metric Version). Department of Agriculture, University of Queensland.
+
+Dumsday RG, Oram D, Da Costa P, Sietz M, Longworth JW and Wegener MK (1994) Australian Farming Systems Model: Manual for Participants. La Trobe University, Bundoora.
+
+182
+
+Accounting History 20(2)
+
+Other materials
+
+Longworth JW (1969) The Central Tablelands Farm Management Game. Unpublished PhD thesis, Department of Agricultural Economics, University of Sydney.
+
+Longworth JW (1972) The Central Tablelands Farm Management Game: Manual for Administrators: Parts IV and V. Department of Agriculture, University of Queensland.
+
+Longworth JW (1972) The Central Tablelands Farm Management Game. FORTRAN IV Computer Program.
+
+(Now available in a metric version.)
+
+Lindner RK (1974) The state of the art: Farm management games currently in use in Australia. Annual Conference of the Australian Agricultural Economics Society, Perth, February.
+
+Salmon PW (1976) A dynamic testing approach to attitude change. Unpublished PhD thesis, School of Agriculture and Forestry, University of Melbourne.
+
+Longworth JW and Menz KM (1976) Information feed-back, accounting and income tax for primary producers. Agricultural Economics Discussion Paper 5/76, Department of Agriculture, University of Queensland.
+
+Menz KM and Gaffney J (1976) The CTFMG – getting started. Agricultural Economics Discussion Paper 3/76. Department of Agriculture, University of Queensland.
+
+Sanderson BA and Dumsday RG (1978) CTFMG price plots. School of Agriculture, La Trobe University.
+
+Longworth JW (1979) A simple computerised financial analysis and cash-flow management system for primary producers. Agricultural Economics Discussion Paper 3/79, Department of Agriculture, University of Queensland.
+
+Gaffney J (1979) Possibly profitable activities for consideration in planning the farm in the CTFMG.
+
+Agricultural Economics Discussion Paper 2/79, Department of Agriculture, University of Queensland.
+
+Gaffney J (1979) A mixed integer LP development model for the CTFMG. Agricultural Economics Discussion Paper 5/79, Department of Agriculture, University of Queensland.
+
+Drynan RG and Longworth JW (1981) The Central Tablelands Farm Management Game: Notes on the new metric version. Department of Agriculture, University of Queensland.
+
+Kessels OA (1991) Using spreadsheets for activity budgeting in the Central Tablelands Farm Management Game. Agricultural Economics Discussion Paper 3/91, Department of Agriculture, University of Queensland.
+
+(List prepared by John Longworth 1 June, 2000.)
+
+
+
+
+

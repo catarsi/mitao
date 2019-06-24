@@ -61,7 +61,7 @@ class Filter(object):
             reg_row_index = 0
             for row in doc_arr:
                 for d_reg_i in REGEX_list:
-                    matches = re.match(d_reg_i,row)
+                    matches = re.match(d_reg_i,row, re.IGNORECASE)
                 if matches:
                     break
                 else:
@@ -91,7 +91,7 @@ class Filter(object):
             reg_row_index = 0
             for row in doc_arr:
                 for d_reg_i in REGEX_list:
-                    matches = re.match(d_reg_i,row)
+                    matches = re.match(d_reg_i,row, re.IGNORECASE)
                 if matches:
                     break
                 else:
@@ -121,14 +121,14 @@ class Filter(object):
         for doc_k in documents:
             doc_val = documents[doc_k]
             for d_reg_i in DATES_REGEX_list:
-                a_regex = re.compile(d_reg_i)
+                a_regex = re.compile(d_reg_i, re.IGNORECASE)
                 doc_val = re.sub(a_regex,"",doc_val)
             d_filtered[doc_k] = doc_val
         return d_filtered
 
     def _filter_by_regex(self, documents, a_regex_str):
         d_filtered = {}
-        a_regex = re.compile(a_regex_str)
+        a_regex = re.compile(a_regex_str, re.IGNORECASE)
         for doc_k in documents:
             doc_val = documents[doc_k]
             d_filtered[doc_k] = re.sub(a_regex,"", doc_val)
