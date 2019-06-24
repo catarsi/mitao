@@ -447,7 +447,7 @@ def open_browser():
     def rec_open(url,index):
         if index >= len(browser_path):
             return False
-        print(browser_path[index])
+
         try:
             browse = webbrowser.get(browser_path[index]).open(dipam_url)
         except Exception as e:
@@ -455,10 +455,29 @@ def open_browser():
         if not browse:
             rec_open(url,index + 1)
         else:
+            print(browser_path[index])
             return True
 
+        return True
+
+    def search_chrome_in_windows(a_root):
+        dir_path = os.path.dirname(a_root)
+        for root, dirs, files in os.walk(dir_path):
+            for file in files:
+                if file.startswith('chrome.exe'):
+                    return root+'/'+str(file)
+        return False
+
     if not rec_open(dipam_url,0):
+        system_root = os.path.abspath(os.sep)
+        if(system_root != "/"):
+            browser_path_win = search_chrome_in_windows(system_root)
+            if browser_path_win != False:
+                webbrowser.get(browser_path_win+" %s").open(dipam_url)
+                return(browser_path_win)
+
         webbrowser.open(dipam_url)
+        return("Default browser")
 
 
 if __name__ == '__main__':
