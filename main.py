@@ -28,7 +28,7 @@ app.config.update(
     SEND_FILE_MAX_AGE_DEFAULT=True
 )
 
-SCRIPT_PATH = ""
+SCRIPT_PATH = "."
 if (len(sys.argv) > 1):
     SCRIPT_PATH = str(sys.argv[1])
 

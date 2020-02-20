@@ -789,6 +789,13 @@ class dipam_interface {
 
             //call the server
             var data_to_post = _gen_form_data(w_elem);
+            //COMMENT if not SERVER TEST
+            if (data_to_post == -1) {
+                instance.add_timeline_block(w_elem.id, w_elem.type, w_elem.name, true, "Data uploaded size limit exceeded (max 2MB)");
+                return -1
+                //---
+            }
+
 
             $.ajax({
               url: "/process",
@@ -844,6 +851,13 @@ class dipam_interface {
                     var val_of_att = list_att[a_k];
                     if (a_k == 'p-file') {
                       Array.prototype.forEach.call(val_of_att, function(file,index) { post_data.append(a_k+'[]', file);});
+                      //COMMENT if not SERVER TEST
+                      var upload_buffer_count = 0;
+                      Array.prototype.forEach.call(val_of_att, function(file,index) { upload_buffer_count = upload_buffer_count + file["size"] });
+                      if (upload_buffer_count > 2000000) {
+                        return -1;
+                      }
+                      //--
                     }else {
                       if (Array.isArray(val_of_att)) {
                         //form_data.append(a_k, JSON.stringify(w_elem[a_k]));
