@@ -1,5 +1,3 @@
-
-import web
 import json
 import requests
 import re
@@ -86,7 +84,7 @@ def index():
     if workflow_path == None:
         workflow_path = BASE_CONFIG_PATH+"/workflow.json"
     workflow_data = json.load(open(workflow_path))
-    return render_template('index.html', workflow=workflow_data, config=CONFIG_DATA)
+    return render_template('index_server.html', workflow=workflow_data, config=CONFIG_DATA)
 
 @app.route('/upload', methods = ['POST'])
 def upload():
