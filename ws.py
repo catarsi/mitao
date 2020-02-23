@@ -500,4 +500,4 @@ if __name__ == '__main__':
     dipam_data = data.Data(CONFIG_DATA["data"], BASE_TMP_PATH)
 
     #Timer(1, open_browser).start();
-    app.run()
+    app.run(host="0.0.0.0")
