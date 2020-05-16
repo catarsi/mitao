@@ -30,10 +30,13 @@ class dipam_interface {
           },
           "WORKFLOW": {
               //buttons
+              "OPT_TRIGGER": document.getElementById('list_options_trigger'),
+              "OPT_LIST": document.getElementById('list_options'),
               "RUN_BTN": document.getElementById('btn_run_workflow'),
               "SAVE_BTN": document.getElementById('btn_save_workflow'),
               "SAVE_BTN_DOWNLOAD": document.getElementById('btn_save_workflow_a'),
               "LOAD_BTN": document.getElementById('btn_load_workflow'),
+              "SHUTDOWN_BTN": document.getElementById('shutdown_btn'),
               //timeline
               "TIMELINE_CONTAINER": document.getElementById('timeline_container'),
               "START_BLOCK": document.getElementById('start_block'),
@@ -159,7 +162,7 @@ class dipam_interface {
         }
       }
       res_str_html = res_str_html + "<div class='control-params'>"+ all_param_doms_str + '</div></div>';
-      console.log(this.temp_dipam_value);
+      //console.log(this.temp_dipam_value);
 
       //now the foot buttons
       var param_btn = {
@@ -231,7 +234,7 @@ class dipam_interface {
 
         case 'check-value':
                   var str_options = "";
-                  console.log(param.value,dom_value);
+                  //console.log(param.value,dom_value);
                   for (var j = 0; j < param.value.length; j++) {
                       var selected_val = "";
                       if (dom_value.indexOf(param.value[j]) != -1) {
@@ -436,7 +439,7 @@ class dipam_interface {
                       var arr_option_selected = $("#"+dom_id+" option:selected");
                       if (arr_option_selected.length > 0) {
                         var opt_value = arr_option_selected[0].value;
-                        console.log(document.getElementById(dom_id+"_"+opt_value));
+                        //console.log(document.getElementById(dom_id+"_"+opt_value));
                         document.getElementById(dom_id+"_"+opt_value).click();
                       }
                   });
@@ -444,7 +447,7 @@ class dipam_interface {
                   var a_dom_obj_lbl = document.getElementById(dom_id+"__lbl");
 
                   $( "#"+dom_id+"_file").on('change', function(){
-                    console.log(this.value);
+                    //console.log(this.value);
                     var data_att_value = this.files;
                     if(data_att_value){
                         var corresponding_lbl = interface_instance.label_handler(dom_id, {value: data_att_value, elem: corresponding_elem} );
@@ -688,9 +691,9 @@ class dipam_interface {
       _disable_divs(this,false);
       new_status = "ready";
       new_lbl_status = "Run workflow";
-
     }
 
+    this.DOMS.WORKFLOW.RUN_BTN.style["pointer-events"] = "auto";
     this.DOMS.WORKFLOW.RUN_BTN.value = new_status;
     this.DOMS.WORKFLOW.RUN_BTN.innerHTML = new_lbl_status;
     return new_status;
@@ -732,7 +735,7 @@ class dipam_interface {
       instance.DOMS.CONTROL.CONTAINER.style["opacity"] = opacity_val;
 
       var control_inputs = document.getElementsByClassName('check-value-trigger');
-      console.log(control_inputs);
+      //console.log(control_inputs);
       for (var i = 0; i < control_inputs.length; i++) {
         control_inputs[i].disabled = true;
       }
@@ -755,7 +758,7 @@ class dipam_interface {
       var workflow_to_process = this.workflow;
       var index_processed = {};
       var terminals = this.DIAGRAM_INSTANCE_OBJ.get_terminal_tools();
-      console.log(terminals);
+      //console.log(terminals);
 
       //process workflow
       $.ajax({
@@ -1014,6 +1017,17 @@ class dipam_interface {
       return 1;
     }
 
+    // List of options
+    $( "#"+this.DOMS.WORKFLOW.OPT_TRIGGER.getAttribute('id')).on({
+      click: function(e) {
+        var display_val = $( "#"+interface_instance.DOMS.WORKFLOW.OPT_LIST.getAttribute('id')).css("display");
+        if (display_val == "none") {
+          $( "#"+interface_instance.DOMS.WORKFLOW.OPT_LIST.getAttribute('id')).css("display", "block");
+        }else {
+          $( "#"+interface_instance.DOMS.WORKFLOW.OPT_LIST.getAttribute('id')).css("display", "none");
+        }
+      }
+    });
 
     //ADD Node and Tool Buttons
     $('#'+this.DOMS.DIAGRAM.ADD_DATA_BTN.getAttribute('id')).on({
@@ -1087,7 +1101,7 @@ class dipam_interface {
           e.preventDefault();
           //interface_instance.click_save_workflow();
           var workflow_data = diagram_instance.get_workflow_data();
-          console.log(workflow_data);
+          //console.log(workflow_data);
           $.post( "/saveworkflow"+"?time="+(new Date().getTime()).toString(), {
             workflow_data: JSON.stringify(workflow_data),
             path: "",

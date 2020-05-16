@@ -220,6 +220,8 @@ def process():
             extension = "png"
         elif file_type == "pdf":
             extension = "pdf"
+        elif file_type == "html":
+            extension = "html"
 
         if file_name:
             res = file_name
@@ -229,7 +231,6 @@ def process():
                     res = res +"."+ extension
             return res
         return extension
-
 
     def write_file(path, file_value, file_type):
 
@@ -251,6 +252,9 @@ def process():
             write_on_file = True
 
         elif file_type == "text":
+            write_on_file = True
+
+        elif file_type == "html":
             write_on_file = True
 
         elif file_type == "img":
@@ -408,7 +412,6 @@ def process():
                     write_file(BASE_PROCESS_PATH+"/"+str(elem_id)+"/"+f_name_normalized, f_val, f_data_type)
                     updated_data_entries[f_name_normalized] = f_val
 
-                #print("updated_data_entries:",updated_data_entries)
                 #And index the new files
                 dipam_linker.add_entry(elem_must_att["id"], d_key ,updated_data_entries)
 

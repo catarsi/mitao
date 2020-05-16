@@ -47,6 +47,8 @@ class Data(object):
                             list_docs_obj[file_name] = self.process_text(a_doc)
                         elif data_class == 'table':
                             list_docs_obj[file_name] = self.process_table(a_doc)
+                        elif data_class == 'html':
+                            list_docs_obj[file_name] = self.process_html(a_doc)
 
         return (list_docs_obj, data_class)
 
@@ -97,6 +99,9 @@ class Data(object):
         return a_text_file
 
     def process_text(self,an_input):
+        return an_input
+
+    def process_html(self, an_input):
         return an_input
 
     def process_table(self,an_input, with_header = False):

@@ -49,6 +49,13 @@
             "file_name": "stopwords",
             "class_label": "LDA"
         },
+        "d-webpage":{
+            "label": "A web page",
+            "data_class": "html",
+            "param": ["p-file"],
+            "file_name": "webpage",
+            "class_label": "General"
+        },
         "d-chartimg":{
             "label": "A chart image",
             "data_class": "img",
@@ -74,6 +81,15 @@
             "compatible_input": ["d-gen-text","d-stopwords"],
             "output": ["d-topics-table","d-coherence","d-perplexity","d-doc-topics"]
         },
+        "t-topic-lda-tfidf": {
+            "label": "LDA-TFIDF Topic modeling ",
+            "class_label": "Text-Analysis",
+            "class": "TextAnalysis",
+            "function": "lda_tfidf",
+            "param": ["p-topic","p-numwords","p-defstopwords"],
+            "compatible_input": ["d-gen-text","d-stopwords"],
+            "output": ["d-topics-table","d-webpage"]
+        },
         "t-filter-text": {
             "label": "Filter the text",
             "class": "Filter",
@@ -88,7 +104,7 @@
             "class": "Terminal",
             "class_label": "Terminal",
             "function": "save_file",
-            "compatible_input": ["d-gen-text","d-topics-table","d-coherence","d-perplexity","d-doc-topics","d-chartimg"]
+            "compatible_input": ["d-gen-text","d-topics-table","d-coherence","d-perplexity","d-doc-topics","d-chartimg","d-webpage"]
         },
         "t-convert-pdftotext": {
             "label": "Convert PDF document/s to text",

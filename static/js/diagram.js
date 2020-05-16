@@ -19,8 +19,8 @@ class dipam_diagram {
 
     this.STYLE = {
       node: {
-        tool: {'shape': 'diamond','background-color': 'orange'},
-        data: {'shape': 'round-rectangle','background-color': '#74beda'},
+        tool: {'shape': 'diamond','background-color': '#E5CE80'},
+        data: {'shape': 'round-rectangle','background-color': '#2E9D99'},
       },
       edge:{
         edge: {'line-color': '#bfbfbf', 'target-arrow-color': '#bfbfbf'}

@@ -1,19 +1,146 @@
 from nltk.corpus import stopwords
-from nltk.stem.wordnet import WordNetLemmatizer
+from nltk.stem import WordNetLemmatizer, SnowballStemmer
+from nltk.stem.porter import *
 import string
 # Importing Gensim
 import gensim
-from gensim import corpora
+from gensim import corpora, models
 from gensim.models.coherencemodel import CoherenceModel
 
+import pandas as pd
+
 # Plotting tools
-#import pyLDAvis
-#import pyLDAvis.gensim  # don't skip this
+import pyLDAvis
+import pyLDAvis.gensim  # don't skip this
+import matplotlib.pyplot as plt
 
 class TextAnalysis(object):
 
     def __init__(self):
         pass
+
+    def lda_tfidf(self, input_files, param):
+
+        data_to_return = {"data":{}}
+        ok_to_process = False
+
+        # Check the tool needs
+        # -----
+        if "d-gen-text" in input_files:
+            if len(input_files["d-gen-text"]):
+                ok_to_process = True
+
+        if not ok_to_process:
+            res_err = {"data":{}}
+            res_err["data"]["error"] = "Input data missing!"
+            return res_err
+        # -----
+
+        # Params
+        # -----
+        p_num_topics = 5 #int number
+        p_num_words = None #int number
+        p_stopwords = None #string e.g. "English"
+        if param != None:
+            if "p-topic" in param:
+                p_num_topics = int(param["p-topic"])
+            if "p-numwords" in param:
+                p_num_words = int(param["p-numwords"])
+            if "p-defstopwords" in param:
+                p_stopwords = str(param["p-defstopwords"])
+
+
+        # Data (Input Documents)
+        # use pandas and convert to DataFrame
+        # -----
+        documents = {}
+        for file_k in input_files["d-gen-text"]:
+            documents[file_k] =  input_files["d-gen-text"][file_k]
+        docs_df = pd.DataFrame.from_dict(documents, orient='index', columns=["content"])
+
+        # Data preprocessing
+        # Tokenization, remove words having fewer than 3 chars, stopwords, lemmatizing, stemming
+        # -----
+        lang = "english"
+        if p_stopwords != "none":
+            lang = p_stopwords.lower()
+        stemmer = SnowballStemmer(lang)
+
+        def read_stopwords_data(obj_data):
+            res = []
+            for file_name in obj_data:
+                for a_tab in obj_data[file_name]:
+                    for row in a_tab:
+                        res.append(row)
+            return res
+
+        stopwords_data = set()
+        if "d-stopwords" in input_files:
+            if len(input_files["d-stopwords"]) > 0:
+                stopwords_data = set(read_stopwords_data(input_files["d-stopwords"]))
+
+        def lemmatize_stemming(text):
+            return stemmer.stem(WordNetLemmatizer().lemmatize(text, pos='v'))
+
+        def preprocess(text):
+            result = []
+            for token in gensim.utils.simple_preprocess(text):
+                stop = stopwords_data
+                if p_stopwords != "none":
+                    stop = stop.union(set(stopwords.words(p_stopwords)))
+                #stop = gensim.parsing.preprocessing.STOPWORDS
+                if token not in stop and len(token) > 3:
+                    result.append(lemmatize_stemming(token))
+            return result
+
+        processed_docs = docs_df['content'].map(preprocess)
+
+        # Bag of words
+        # -> Create the dictionary of words containing the number of times a word appears in the training set
+        # -> Filter out tokens that appear in: (a) less than 15 documents; OR (b) more than 0.5 documents
+        # -> and keep only the first 100000 most frequent tokens.
+        # -----
+        dictionary = gensim.corpora.Dictionary(processed_docs)
+        #dictionary.filter_extremes(no_below=15, no_above=0.5, keep_n=100000)
+        bow_corpus = [dictionary.doc2bow(doc) for doc in processed_docs]
+
+        # TF-IDF
+        # -----
+        tfidf = models.TfidfModel(bow_corpus)
+        corpus_tfidf = tfidf[bow_corpus]
+
+        # Running LDA using Bag of Words
+        # -----
+        try:
+            #lda_model = gensim.models.LdaMulticore(bow_corpus, num_topics=p_num_topics, id2word=dictionary, passes=2, workers=2)
+            ldamodel = gensim.models.LdaMulticore(corpus_tfidf, num_topics=p_num_topics, id2word=dictionary, passes=5, workers=2)
+        except:
+            res_err = {"data":{}}
+            res_err["data"]["error"] = "Incompatible data have been given as input to the LDA algorithm"
+            return res_err
+
+        # HTML plot
+        # -----
+        #pyLDAvis.enable_notebook()
+        vis = pyLDAvis.gensim.prepare(ldamodel, corpus_tfidf, dictionary)
+        html_str = pyLDAvis.prepared_data_to_html(vis)
+
+        # Post analysis
+        # -----
+        topics = {}
+        dict_table = []
+        for idx, topic in ldamodel.print_topics(num_topics= p_num_topics, num_words= p_num_words):
+            topics[idx] = [tuple(w.split("*")) for w in topic.split(" + ")]
+            topics[idx] = [(float(tupla[0]),str(tupla[1]).replace("\"","")) for tupla in topics[idx]]
+            for w in topics[idx]:
+                #dict_table.append({"topic": "Topic #"+str(idx),"word":str(w[1]) ,"score":str(w[0]) })
+                dict_table.append([str(idx),str(w[1]),str(w[0])])
+
+
+        data_to_return["data"]["d-topics-table"] = {"topics": dict_table}
+        data_to_return["data"]["d-webpage"] = {"webpage": html_str}
+        return data_to_return
+
 
     # Each tool defined here must respect the configuration attributes given in the config file
     # the returned output must be same as these defined in the [output] key for the corresponding method
@@ -51,7 +178,6 @@ class TextAnalysis(object):
             #iterate through the array of values given
             documents[file_k] =  input_files["d-gen-text"][file_k]
 
-
         def clean(doc, p_stopwords, d_stopwords):
             stop = d_stopwords
             if p_stopwords != "none":
@@ -79,7 +205,7 @@ class TextAnalysis(object):
             if len(input_files["d-stopwords"]) > 0:
                 stopwords_data = set(read_stopwords_data(input_files["d-stopwords"]))
 
-        print(stopwords_data)
+        #print(stopwords_data)
         doc_clean = [clean(str(documents[doc_k]), p_stopwords, stopwords_data).split() for doc_k in documents]
         doc_names = [doc_k for doc_k in documents]
 

@@ -7,3 +7,5 @@ matplotlib
 nltk
 gensim
 pdfminer.six
+pandas
+pyLDAvis
