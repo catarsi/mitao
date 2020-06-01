@@ -49,6 +49,9 @@ FILE_TYPE["pdf"] = ["pdf"]
 FILE_TYPE["img"] = ["png"]
 FILE_TYPE["text"] = ["txt"]
 FILE_TYPE["table"] = ["csv"]
+FILE_TYPE["series"] = ["json"]
+FILE_TYPE["gensim_dictionary"] = ["gdict"]
+FILE_TYPE["gensim_ldamodel"] = ["glda"]
 
 def shutdown_server():
     func = request.environ.get('werkzeug.server.shutdown')
@@ -212,7 +215,13 @@ def process():
 
     def check_extension(file_type, file_name = None):
         extension = None
-        if file_type == "table":
+        if file_type == "series":
+            extension = "json"
+        elif file_type == "gensim_dictionary":
+            extension = "gdict"
+        elif file_type == "gensim_ldamodel":
+            extension = "glda"
+        elif file_type == "table":
             extension = "csv"
         elif file_type == "text":
             extension = "txt"
@@ -240,15 +249,17 @@ def process():
         write_on_file = False
         #build string according to file type
         if file_type == "table":
-            str_table = ""
-            #file_value is a matrix
-            for row in file_value:
-                for cell in row:
-                    str_table += str(cell) + ","
-                str_table = str_table[:-1]
-                str_table += "\n"
-            str_table = str_table[:-1]
-            file_value = str_table
+            with open(path, "w", newline="") as f:
+                csv.writer(f).writerows(file_value)
+
+        elif file_type == "gensim_dictionary":
+            file_value.save(path)
+
+        elif file_type == "gensim_ldamodel":
+            file_value.save(path)
+
+        elif file_type == "series":
+            file_value = json.dumps(file_value)
             write_on_file = True
 
         elif file_type == "text":

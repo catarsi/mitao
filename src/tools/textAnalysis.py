@@ -19,7 +19,7 @@ class TextAnalysis(object):
     def __init__(self):
         pass
 
-    def lda_tfidf(self, input_files, param):
+    def tokenize(self, input_files, param):
 
         data_to_return = {"data":{}}
         ok_to_process = False
@@ -38,14 +38,8 @@ class TextAnalysis(object):
 
         # Params
         # -----
-        p_num_topics = 5 #int number
-        p_num_words = None #int number
         p_stopwords = None #string e.g. "English"
         if param != None:
-            if "p-topic" in param:
-                p_num_topics = int(param["p-topic"])
-            if "p-numwords" in param:
-                p_num_words = int(param["p-numwords"])
             if "p-defstopwords" in param:
                 p_stopwords = str(param["p-defstopwords"])
 
@@ -94,64 +88,21 @@ class TextAnalysis(object):
             return result
 
         processed_docs = docs_df['content'].map(preprocess)
+        processed_docs_ldict = []
+        for k,doc in processed_docs.items():
+            processed_docs_ldict.append({"index":k,"value":doc})
 
-        # Bag of words
-        # -> Create the dictionary of words containing the number of times a word appears in the training set
-        # -> Filter out tokens that appear in: (a) less than 15 documents; OR (b) more than 0.5 documents
-        # -> and keep only the first 100000 most frequent tokens.
-        # -----
-        dictionary = gensim.corpora.Dictionary(processed_docs)
-        #dictionary.filter_extremes(no_below=15, no_above=0.5, keep_n=100000)
-        bow_corpus = [dictionary.doc2bow(doc) for doc in processed_docs]
-
-        # TF-IDF
-        # -----
-        tfidf = models.TfidfModel(bow_corpus)
-        corpus_tfidf = tfidf[bow_corpus]
-
-        # Running LDA using Bag of Words
-        # -----
-        try:
-            #lda_model = gensim.models.LdaMulticore(bow_corpus, num_topics=p_num_topics, id2word=dictionary, passes=2, workers=2)
-            ldamodel = gensim.models.LdaMulticore(corpus_tfidf, num_topics=p_num_topics, id2word=dictionary, passes=5, workers=2)
-        except:
-            res_err = {"data":{}}
-            res_err["data"]["error"] = "Incompatible data have been given as input to the LDA algorithm"
-            return res_err
-
-        # HTML plot
-        # -----
-        #pyLDAvis.enable_notebook()
-        vis = pyLDAvis.gensim.prepare(ldamodel, corpus_tfidf, dictionary)
-        html_str = pyLDAvis.prepared_data_to_html(vis)
-
-        # Post analysis
-        # -----
-        topics = {}
-        dict_table = []
-        for idx, topic in ldamodel.print_topics(num_topics= p_num_topics, num_words= p_num_words):
-            topics[idx] = [tuple(w.split("*")) for w in topic.split(" + ")]
-            topics[idx] = [(float(tupla[0]),str(tupla[1]).replace("\"","")) for tupla in topics[idx]]
-            for w in topics[idx]:
-                #dict_table.append({"topic": "Topic #"+str(idx),"word":str(w[1]) ,"score":str(w[0]) })
-                dict_table.append([str(idx),str(w[1]),str(w[0])])
-
-
-        data_to_return["data"]["d-topics-table"] = {"topics": dict_table}
-        data_to_return["data"]["d-webpage"] = {"webpage": html_str}
+        data_to_return["data"]["d-processed-corpus"] = {"processed_corpus": processed_docs_ldict}
         return data_to_return
 
-
-    # Each tool defined here must respect the configuration attributes given in the config file
-    # the returned output must be same as these defined in the [output] key for the corresponding method
-    def lda(self, input_files, param):
+    def build_corpus(self, input_files, param):
 
         data_to_return = {"data":{}}
         ok_to_process = False
         #Check the MUST Prerequisite
         # Check Restrictions
-        if "d-gen-text" in input_files:
-            if len(input_files["d-gen-text"]):
+        if "d-processed-corpus" in input_files:
+            if len(input_files["d-processed-corpus"]):
                 ok_to_process = True
 
         if not ok_to_process:
@@ -159,119 +110,233 @@ class TextAnalysis(object):
             res_err["data"]["error"] = "Input data missing!"
             return res_err
 
+        # convert to data series
+        indexes = []
+        values = []
+        # in this case i expect only 1 file
+        for file_k in input_files["d-processed-corpus"]:
+            for d in input_files["d-processed-corpus"][file_k]:
+                indexes.append(d["index"])
+                values.append(d["value"])
+        processed_docs = pd.Series(values, index =indexes)
+
         #The params
-        p_num_topics = 5
-        p_num_words = None
-        p_stopwords = None
+        #---------
+        p_model = None #string e.g. "English"
+        if param != None:
+            if "p-corpusmodel" in param:
+                p_model = str(param["p-corpusmodel"])
+
+
+        # -> Create the dictionary of words containing the number of times a word appears in the training set
+        # -> Filter out tokens that appear in: (a) less than 15 documents; OR (b) more than 0.5 documents
+        # -> and keep only the first 100000 most frequent tokens.
+        # -----
+        dictionary = gensim.corpora.Dictionary(processed_docs)
+        #dictionary.filter_extremes()
+        index_corpus = []
+        vec_corpus = []
+        for k,doc in processed_docs.items():
+            vec_corpus.append(dictionary.doc2bow(doc))
+            index_corpus.append(k)
+
+        # TF-IDF
+        if p_model == "tfidf":
+            tfidf = models.TfidfModel(vec_corpus)
+            vec_corpus = tfidf[vec_corpus]
+
+
+        #The returned data must include a recognizable key and the data associated to it
+        # -----
+        vec_corpus_ldict = []
+        for i in range(0,len(vec_corpus)):
+            vec_corpus_ldict.append({"index":index_corpus[i],"value":vec_corpus[i]})
+
+        data_to_return["data"]["d-model-corpus"] = {"modelled_corpus": vec_corpus_ldict}
+        data_to_return["data"]["d-dictionary-corpus"] = {"dictionary": dictionary}
+        return data_to_return
+
+    def lda(self, input_files, param):
+
+        data_to_return = {"data":{}}
+        ok_to_process = False
+
+        # Check the tool needs
+        # -----
+        if "d-model-corpus" in input_files and "d-dictionary-corpus" in input_files:
+            ok_to_process = len(input_files["d-model-corpus"]) and len(input_files["d-dictionary-corpus"])
+
+        if not ok_to_process:
+            res_err = {"data":{}}
+            res_err["data"]["error"] = "Input data missing!"
+            return res_err
+
+        corpus = []
+        for file_k in input_files["d-model-corpus"]:
+            for d in input_files["d-model-corpus"][file_k]:
+                corpus.append(d["value"])
+
+        dictionary = None
+        for file_k in input_files["d-dictionary-corpus"]:
+            print(input_files["d-dictionary-corpus"][file_k])
+            dictionary = input_files["d-dictionary-corpus"][file_k]
+
+        # Params
+        # -----
+        p_num_topics = 5 #int number
         if param != None:
             if "p-topic" in param:
                 p_num_topics = int(param["p-topic"])
-            if "p-numwords" in param:
-                p_num_words = int(param["p-numwords"])
-            if "p-defstopwords" in param:
-                p_stopwords = str(param["p-defstopwords"])
 
-
-        #Define the set of documents
-        documents = {}
-        for file_k in input_files["d-gen-text"]:
-            #iterate through the array of values given
-            documents[file_k] =  input_files["d-gen-text"][file_k]
-
-        def clean(doc, p_stopwords, d_stopwords):
-            stop = d_stopwords
-            if p_stopwords != "none":
-                stop = stop.union(set(stopwords.words(p_stopwords)))
-            stop_free = " ".join([i for i in doc.lower().split() if i not in stop])
-            for s_w in stop_free:
-                if "accounting" in s_w:
-                    print(s_w)
-            exclude = set(string.punctuation)
-            punc_free = ''.join(ch for ch in stop_free if ch not in exclude)
-            lemma = WordNetLemmatizer()
-            normalized = " ".join(lemma.lemmatize(word) for word in punc_free.split())
-            return normalized
-
-        def read_stopwords_data(obj_data):
-            res = []
-            for file_name in obj_data:
-                for a_tab in obj_data[file_name]:
-                    for row in a_tab:
-                        res.append(row)
-            return res
-
-        stopwords_data = set()
-        if "d-stopwords" in input_files:
-            if len(input_files["d-stopwords"]) > 0:
-                stopwords_data = set(read_stopwords_data(input_files["d-stopwords"]))
-
-        #print(stopwords_data)
-        doc_clean = [clean(str(documents[doc_k]), p_stopwords, stopwords_data).split() for doc_k in documents]
-        doc_names = [doc_k for doc_k in documents]
-
-        # Creating the term dictionary of our courpus, where every unique term is assigned an index.
-        dictionary = corpora.Dictionary(doc_clean)
-
-        # Converting list of documents (corpus) into Document Term Matrix using dictionary prepared above.
-        doc_term_matrix = [dictionary.doc2bow(doc) for doc in doc_clean]
-
-
-        # Creating the object for LDA model using gensim library
-        Lda = gensim.models.ldamodel.LdaModel
-
-        # Running and Trainign LDA model on the document term matrix.
+        # Running LDA
+        # -----
         try:
-            ldamodel = Lda(doc_term_matrix, num_topics= p_num_topics, id2word = dictionary, passes=50)
+            ldamodel = gensim.models.LdaMulticore(corpus, num_topics=p_num_topics, id2word=dictionary, passes=5, workers=2)
         except:
             res_err = {"data":{}}
             res_err["data"]["error"] = "Incompatible data have been given as input to the LDA algorithm"
             return res_err
 
-        res = ldamodel.print_topics(num_topics= p_num_topics, num_words= p_num_words)
+        data_to_return["data"]["d-gensimldamodel"] = {"ldamodel": ldamodel}
+        return data_to_return
 
-        # Get the Perplexity value
-        perplexity = ldamodel.log_perplexity(doc_term_matrix)
-        # Get the Coherence value
-        cm = CoherenceModel(model=ldamodel, corpus=doc_term_matrix, coherence='u_mass')
-        coherence = cm.get_coherence()
+    def ldavis(self, input_files, param):
 
-        # populate the files according to the topics found
-        a_tab = [["topic","word","score"]]
-        for topic_i in res:
-            # 0: is id, 1: str of all words
-            t_id = topic_i[0] + 1
-            t_words_str = topic_i[1]
-            t_words = t_words_str.split(" + ")
-            for a_t_word in t_words:
-                a_t_word_parts = a_t_word.split("*")
-                score = a_t_word_parts[0]
-                the_word = a_t_word_parts[1].replace('"','')
-                a_tab.append([t_id,the_word,score])
+        data_to_return = {"data":{}}
+        ok_to_process = False
 
-        try:
-            all_topics = ldamodel.get_document_topics(doc_term_matrix, minimum_probability=0, per_word_topics=True)
-        except Exception as e:
-            print(e)
+        # Check the tool needs
+        # -----
+        if "d-model-corpus" in input_files and "d-dictionary-corpus" in input_files and "d-gensimldamodel" in input_files:
+            ok_to_process = len(input_files["d-model-corpus"]) and len(input_files["d-dictionary-corpus"]) and len(input_files["d-gensimldamodel"])
 
-        tab_doc_topics = []
-        doc_index = 0
-        for doc_topics, word_topics, phi_values in all_topics:
-            if doc_index == 0:
-                header = ["doc"]
-                for t_i in range(0,len(doc_topics)):
-                    header.append("Topic #"+str(t_i+1))
-                tab_doc_topics.append(header)
+        if not ok_to_process:
+            res_err = {"data":{}}
+            res_err["data"]["error"] = "Input data missing!"
+            return res_err
 
-            doc_topic_val = [doc_names[doc_index]]
-            for d_t in doc_topics:
-                doc_topic_val.append(d_t[1])
+        corpus = []
+        for file_k in input_files["d-model-corpus"]:
+            for d in input_files["d-model-corpus"][file_k]:
+                corpus.append(d["value"])
 
-            tab_doc_topics.append(doc_topic_val)
-            doc_index = doc_index + 1
+        dictionary = None
+        for file_k in input_files["d-dictionary-corpus"]:
+            dictionary = input_files["d-dictionary-corpus"][file_k]
 
-        #The returned data must include a recognizable key and the data associated to it
-        data_to_return["data"]["d-topics-table"] = {"topics": a_tab}
-        data_to_return["data"]["d-coherence"] = {"coherence": str(coherence)}
-        data_to_return["data"]["d-perplexity"] = {"perplexity": str(perplexity)}
-        data_to_return["data"]["d-doc-topics"] = {"doctopics": tab_doc_topics}
+        ldamodel = None
+        for file_k in input_files["d-gensimldamodel"]:
+            ldamodel = input_files["d-gensimldamodel"][file_k]
+
+        # Params
+        # -----
+        # NO PARAMS
+
+        vis = pyLDAvis.gensim.prepare(ldamodel, corpus, dictionary)
+        html_str = pyLDAvis.prepared_data_to_html(vis)
+        data_to_return["data"]["d-webpage"] = {"webpage": html_str}
+        return data_to_return
+
+    def doc_prop_topics(self, input_files, param):
+
+        data_to_return = {"data":{}}
+        ok_to_process = False
+
+        # Check the tool needs
+        # -----
+        if "d-model-corpus" in input_files and "d-gensimldamodel" in input_files:
+            ok_to_process = len(input_files["d-model-corpus"]) and len(input_files["d-gensimldamodel"])
+
+        if not ok_to_process:
+            res_err = {"data":{}}
+            res_err["data"]["error"] = "Input data missing!"
+            return res_err
+
+        corpus = []
+        corpus_doc_index = []
+        for file_k in input_files["d-model-corpus"]:
+            for d in input_files["d-model-corpus"][file_k]:
+                corpus.append(d["value"])
+                corpus_doc_index.append(d["index"])
+
+        ldamodel = None
+        for file_k in input_files["d-gensimldamodel"]:
+            ldamodel = input_files["d-gensimldamodel"][file_k]
+
+        # Params
+        # -----
+
+        def _doc_topics(ldamodel, corpus, corpus_doc_index):
+
+            topic_num_list = []
+            doc_topics_l = []
+            for i, row_list in enumerate(ldamodel[corpus]):
+                row = row_list[0] if ldamodel.per_word_topics else row_list
+                if i == 0:
+                    topic_num_list = [val[0] for i,val in enumerate(row)]
+                row_doc = [round(val[1],4) for i,val in enumerate(row)]
+                doc_topics_l.append(row_doc)
+
+            return pd.DataFrame(doc_topics_l, columns = topic_num_list, index = corpus_doc_index)
+
+        df_doc_topics = _doc_topics(ldamodel,corpus, corpus_doc_index)
+        df_doc_topics.index.names = ['doc']
+        df_doc_topics = df_doc_topics.reset_index()
+        l_doc_topics = [df_doc_topics.columns.values.tolist()] + df_doc_topics.values.tolist()
+
+        data_to_return["data"]["d-doc-topics-table"] = {"doc_topics": l_doc_topics}
+        return data_to_return
+
+    def words_prop_topics(self, input_files, param):
+
+        data_to_return = {"data":{}}
+        ok_to_process = False
+
+        # Check the tool needs
+        # -----
+        if "d-model-corpus" in input_files and "d-gensimldamodel" in input_files:
+            ok_to_process = len(input_files["d-model-corpus"]) and len(input_files["d-gensimldamodel"])
+
+        if not ok_to_process:
+            res_err = {"data":{}}
+            res_err["data"]["error"] = "Input data missing!"
+            return res_err
+
+        corpus = []
+        corpus_doc_index = []
+        for file_k in input_files["d-model-corpus"]:
+            for d in input_files["d-model-corpus"][file_k]:
+                corpus.append(d["value"])
+                corpus_doc_index.append(d["index"])
+
+        ldamodel = None
+        for file_k in input_files["d-gensimldamodel"]:
+            ldamodel = input_files["d-gensimldamodel"][file_k]
+
+        # Params
+        # -----
+        topnum_words = 10 #int number
+        if param != None:
+            if "p-numwords" in param:
+                p_num_topics = int(param["p-numwords"])
+
+        def _word_topics(ldamodel, corpus, corpus_doc_index):
+
+            topics_index = set()
+            topics = []
+            for i, row_list in enumerate(ldamodel[corpus]):
+                row = row_list[0] if ldamodel.per_word_topics else row_list
+                for j, (topic_num, prop_topic) in enumerate(row):
+                    wp = ldamodel.show_topic(topic_num, topn=topnum_words)
+                    topic_keywords = [[topic_num,word,prop] for word, prop in wp]
+                    if not topic_num in topics_index:
+                        topics = topics + topic_keywords
+                    topics_index.add(topic_num)
+
+            return pd.DataFrame(topics, columns = ["topic","word","prop"])
+
+        df_topics = _word_topics(ldamodel,corpus, corpus_doc_index)
+        l_topics = [df_topics.columns.values.tolist()] + df_topics.values.tolist()
+        print(l_topics)
+        data_to_return["data"]["d-word-topics-table"] = {"word_topics": l_topics}
         return data_to_return

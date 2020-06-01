@@ -4,6 +4,9 @@ from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
 from pdfminer.pdfpage import PDFPage
 from io import BytesIO
+import json
+import gensim
+import csv
 
 class Data(object):
 
@@ -40,15 +43,21 @@ class Data(object):
                         list_docs_obj[file_name] = self.process_img(file_name)
                     elif data_class == 'pdf':
                         list_docs_obj[file_name] = self.process_pdf(file_name, a_file)
+                    elif data_class == 'gensim_dictionary':
+                        list_docs_obj[file_name] = self.process_gensim_dict(a_file)
+                    elif data_class == 'gensim_ldamodel':
+                        list_docs_obj[file_name] = self.process_gensim_ldamodel(a_file)
+                    elif data_class == 'table':
+                        list_docs_obj[file_name] = self.process_table(a_file)
                     else:
                         a_doc = self.read_input(a_file, file_type)
                         list_docs_obj[file_name] = None
                         if data_class == 'text':
                             list_docs_obj[file_name] = self.process_text(a_doc)
-                        elif data_class == 'table':
-                            list_docs_obj[file_name] = self.process_table(a_doc)
                         elif data_class == 'html':
                             list_docs_obj[file_name] = self.process_html(a_doc)
+                        elif data_class == 'series':
+                            list_docs_obj[file_name] = self.process_json(a_doc)
 
         return (list_docs_obj, data_class)
 
@@ -98,20 +107,27 @@ class Data(object):
         a_text_file = decode_str(a_text_file)
         return a_text_file
 
+    def process_gensim_dict(self, a_file):
+        return gensim.corpora.Dictionary.load(a_file)
+
+    def process_gensim_ldamodel(self, a_file):
+        return gensim.models.LdaModel.load(a_file)
+
     def process_text(self,an_input):
         return an_input
 
     def process_html(self, an_input):
         return an_input
 
-    def process_table(self,an_input, with_header = False):
-        res_matrix = []
-        rows = an_input.split("\n")
+    def process_json(self, an_input):
+        return json.loads(an_input)
 
-        starting_i = 0
-        if with_header:
-            starting_i = 1
-        for i in range(starting_i,len(rows)):
-            r = rows[i]
-            res_matrix.append(r.split(","))
-        return res_matrix
+    def process_table(self,a_file, with_header = True):
+        matrix = []
+        with open(a_file) as csv_file:
+            csv_reader = csv.reader(csv_file, delimiter=',')
+            if not with_header:
+                next(csv_reader, None)  # skip the headers
+            for row in csv_reader:
+                matrix.append(row)
+        return matrix

@@ -579,8 +579,8 @@ class dipam_interface {
       var editdom = document.getElementById('edit');
       var removedom = document.getElementById('remove');
       var data_elem_id = editdom.getAttribute('data-id');
-      editdom.style.display = 'none';
-      removedom.style.display = 'none';
+      editdom.parentNode.style.display = 'none';
+      removedom.parentNode.style.display = 'none';
 
       var edit_value = editdom.getAttribute('value');
 
@@ -611,8 +611,8 @@ class dipam_interface {
         //finish editing the doms
         //editdom.setAttribute('value','editoff');
 
-        editdom.style.display = 'block';
-        removedom.style.display = 'block';
+        editdom.parentNode.style.display = 'block';
+        removedom.parentNode.style.display = 'block';
 
         //do the corresponding function corresponding to the choice/action made
         switch (action) {
@@ -906,7 +906,7 @@ class dipam_interface {
           a_linker_dom = document.createElement("a");
           a_linker_dom.setAttribute("value",node_id);
           a_linker_dom.target = "_blank";
-          a_linker_dom.innerHTML = "Save";
+          a_linker_dom.innerHTML = '<svg class="bi bi-download" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M.5 8a.5.5 0 01.5.5V12a1 1 0 001 1h12a1 1 0 001-1V8.5a.5.5 0 011 0V12a2 2 0 01-2 2H2a2 2 0 01-2-2V8.5A.5.5 0 01.5 8z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M5 7.5a.5.5 0 01.707 0L8 9.793 10.293 7.5a.5.5 0 11.707.707l-2.646 2.647a.5.5 0 01-.708 0L5 8.207A.5.5 0 015 7.5z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M8 1a.5.5 0 01.5.5v8a.5.5 0 01-1 0v-8A.5.5 0 018 1z" clip-rule="evenodd"/></svg>';
           a_linker_dom.href = "/download/"+node_id+"?time="+(new Date().getTime()).toString();
           last_dom.innerHTML = last_dom.innerHTML + "<div class='inner-timeline-block'>"+a_linker_dom.outerHTML+"</div>";
           break;
@@ -914,7 +914,7 @@ class dipam_interface {
         case "t-doctopics-view":
           a_linker_dom = document.createElement("a");
           a_linker_dom.setAttribute("value",node_id);
-          a_linker_dom.innerHTML = "Show";
+          a_linker_dom.innerHTML = '<svg class="bi bi-display" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5.75 13.5c.167-.333.25-.833.25-1.5h4c0 .667.083 1.167.25 1.5H11a.5.5 0 010 1H5a.5.5 0 010-1h.75z"/><path fill-rule="evenodd" d="M13.991 3H2c-.325 0-.502.078-.602.145a.758.758 0 00-.254.302A1.46 1.46 0 001 4.01V10c0 .325.078.502.145.602.07.105.17.188.302.254a1.464 1.464 0 00.538.143L2.01 11H14c.325 0 .502-.078.602-.145a.758.758 0 00.254-.302 1.464 1.464 0 00.143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.757.757 0 00-.302-.254A1.46 1.46 0 0013.99 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2z" clip-rule="evenodd"/></svg>';
           a_linker_dom.href = "/gettoolfile?id="+node_id+"&type=img&result=file&time="+(new Date().getTime()).toString();
           a_linker_dom.setAttribute("data-lightbox",node_id);
           last_dom.innerHTML = last_dom.innerHTML + "<div class='inner-timeline-block'>"+a_linker_dom.outerHTML+"</div>";

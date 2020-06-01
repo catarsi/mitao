@@ -1,17 +1,45 @@
 {
   "data": {
-        "d-topics-table":{
+        "d-gensimldamodel":{
+            "label": "Gensim LDA model",
+            "data_class": "gensim_ldamodel",
+            "param": ["p-file"],
+            "file_name": "ldamodel",
+            "class_label": "LDA"
+        },
+        "d-dictionary-corpus":{
+            "label": "Gensim Dictionary",
+            "data_class": "gensim_dictionary",
+            "param": ["p-file"],
+            "file_name": "dictionary",
+            "class_label": "LDA"
+        },
+        "d-model-corpus":{
+            "label": "Corpus vectors",
+            "data_class": "series",
+            "param": ["p-file"],
+            "file_name": "modelled_corpus",
+            "class_label": "LDA"
+        },
+        "d-processed-corpus":{
+            "label": "Processed corpus",
+            "data_class": "series",
+            "param": ["p-file"],
+            "file_name": "processed_corpus",
+            "class_label": "LDA"
+        },
+        "d-word-topics-table":{
             "label": "Topic Words table",
             "data_class": "table",
             "param": ["p-file"],
-            "file_name": "topics",
+            "file_name": "word_topics",
             "class_label": "LDA"
         },
-        "d-doc-topics":{
-            "label": "Document topics table",
+        "d-doc-topics-table":{
+            "label": "Dominant topic x document",
             "data_class": "table",
             "param": ["p-file"],
-            "file_name": "doctopics",
+            "file_name": "doc_topics",
             "class_label": "LDA"
         },
         "d-gen-text":{
@@ -72,23 +100,57 @@
         }
   },
   "tool": {
+        "t-topic-words": {
+            "label": "Words X Topic",
+            "class_label": "Text-Analysis",
+            "class": "TextAnalysis",
+            "param": ["p-numwords"],
+            "function": "words_prop_topics",
+            "compatible_input": ["d-model-corpus","d-gensimldamodel"],
+            "output": ["d-word-topics-table"]
+        },
+        "t-topic-docs": {
+            "label": "Doc X Topic",
+            "class_label": "Text-Analysis",
+            "class": "TextAnalysis",
+            "function": "doc_prop_topics",
+            "compatible_input": ["d-model-corpus","d-gensimldamodel"],
+            "output": ["d-doc-topics-table"]
+        },
+        "t-topic-ldavis": {
+            "label": "Visualize with LDAvis",
+            "class_label": "Text-Analysis",
+            "class": "TextAnalysis",
+            "function": "ldavis",
+            "compatible_input": ["d-model-corpus","d-dictionary-corpus","d-gensimldamodel"],
+            "output": ["d-webpage"]
+        },
+        "t-corpus-build": {
+            "label": "Corpus builder",
+            "class_label": "Text-Analysis",
+            "class": "TextAnalysis",
+            "function": "build_corpus",
+            "param": ["p-corpusmodel"],
+            "compatible_input": ["d-processed-corpus"],
+            "output": ["d-model-corpus","d-dictionary-corpus"]
+        },
+        "t-corpus-tokenize": {
+            "label": "Tokenizer",
+            "class_label": "Text-Analysis",
+            "class": "TextAnalysis",
+            "function": "tokenize",
+            "param": ["p-defstopwords"],
+            "compatible_input": ["d-gen-text","d-stopwords"],
+            "output": ["d-processed-corpus"]
+        },
         "t-topic-lda": {
             "label": "Topic modeling with LDA",
             "class_label": "Text-Analysis",
             "class": "TextAnalysis",
             "function": "lda",
-            "param": ["p-topic","p-numwords","p-defstopwords"],
-            "compatible_input": ["d-gen-text","d-stopwords"],
-            "output": ["d-topics-table","d-coherence","d-perplexity","d-doc-topics"]
-        },
-        "t-topic-lda-tfidf": {
-            "label": "LDA-TFIDF Topic modeling ",
-            "class_label": "Text-Analysis",
-            "class": "TextAnalysis",
-            "function": "lda_tfidf",
-            "param": ["p-topic","p-numwords","p-defstopwords"],
-            "compatible_input": ["d-gen-text","d-stopwords"],
-            "output": ["d-topics-table","d-webpage"]
+            "param": ["p-topic"],
+            "compatible_input": ["d-model-corpus","d-dictionary-corpus"],
+            "output": ["d-gensimldamodel"]
         },
         "t-filter-text": {
             "label": "Filter the text",
@@ -104,7 +166,7 @@
             "class": "Terminal",
             "class_label": "Terminal",
             "function": "save_file",
-            "compatible_input": ["d-gen-text","d-topics-table","d-coherence","d-perplexity","d-doc-topics","d-chartimg","d-webpage"]
+            "compatible_input": ["d-dictionary-corpus","d-model-corpus","d-processed-corpus","d-gen-text","d-word-topics-table","d-doc-topics-table","d-coherence","d-perplexity","d-doc-topics","d-chartimg","d-webpage"]
         },
         "t-convert-pdftotext": {
             "label": "Convert PDF document/s to text",
@@ -127,7 +189,7 @@
             "class": "Terminal",
             "class_label": "Terminal",
             "function": "topics_words_list",
-            "compatible_input": ["d-topics-table"],
+            "compatible_input": ["d-word-topics-table"],
             "output": ["d-chartimg"]
         }
   },
@@ -177,6 +239,13 @@
           "value_label": ["None","Arabic","Azerbaijani","Danish","Dutch","English","Finnish","French","German","Greek","Hungarian","Indonesian","Italian","Kazakh","Nepali","Norwegian","Portuguese","Romanian","Russian","Spanish","Swedish","Turkish"],
           "value": ["none","arabic","azerbaijani","danish","dutch","english","finnish","french","german","greek","hungarian","indonesian","italian","kazakh","nepali","norwegian","portuguese","romanian","russian","spanish","swedish","turkish"],
           "init_value": "none"
+        },
+        "p-corpusmodel":{
+          "handler": "select-value",
+          "label": "Corpus model:",
+          "value_label": ["Bag of words","TFIDF"],
+          "value": ["bag_of_words","tfidf"],
+          "init_value": "Bag of words"
         }
   }
 }
