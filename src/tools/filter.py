@@ -5,7 +5,7 @@ class Filter(object):
     def __init__(self):
         pass
 
-    def filter_text(self, input_files, param):
+    def filter_text(self, input_files, param, tool_id):
         data_to_return = {"data":{}}
 
         # Check Restrictions

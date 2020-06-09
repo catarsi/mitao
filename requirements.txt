@@ -9,3 +9,4 @@ gensim
 pdfminer.six
 pandas
 pyLDAvis
+plotly

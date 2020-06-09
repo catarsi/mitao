@@ -4,7 +4,7 @@ class Convert(object):
     def __init__(self):
         pass
 
-    def pdf_to_text(self, input_files, param):
+    def pdf_to_text(self, input_files, param, tool_id):
         data_to_return = {"data":{}}
 
         # Check Restrictions

@@ -1,4 +1,5 @@
 #import pdftotext
+import os
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
@@ -7,6 +8,7 @@ from io import BytesIO
 import json
 import gensim
 import csv
+import pandas as pd
 
 class Data(object):
 
@@ -41,14 +43,16 @@ class Data(object):
 
                     if data_class == 'img':
                         list_docs_obj[file_name] = self.process_img(file_name)
+                    elif data_class == 'html-file':
+                        list_docs_obj[file_name] = self.process_htmlfile(file_name)
                     elif data_class == 'pdf':
                         list_docs_obj[file_name] = self.process_pdf(file_name, a_file)
                     elif data_class == 'gensim_dictionary':
-                        list_docs_obj[file_name] = self.process_gensim_dict(a_file)
+                        list_docs_obj[file_name] = self.process_gensim_dict(a_file,file_type,file_name)
                     elif data_class == 'gensim_ldamodel':
                         list_docs_obj[file_name] = self.process_gensim_ldamodel(a_file)
                     elif data_class == 'table':
-                        list_docs_obj[file_name] = self.process_table(a_file)
+                        list_docs_obj[file_name] = self.process_table(a_file,file_type)
                     else:
                         a_doc = self.read_input(a_file, file_type)
                         list_docs_obj[file_name] = None
@@ -75,6 +79,9 @@ class Data(object):
 
     def process_img(self, img_file_name):
         return self.tmp_folder+"/"+img_file_name
+
+    def process_htmlfile(self, file_name):
+        return self.tmp_folder+"/"+file_name
 
     def process_pdf(self, pdf_file_name, a_pdf_file):
 
@@ -107,8 +114,13 @@ class Data(object):
         a_text_file = decode_str(a_text_file)
         return a_text_file
 
-    def process_gensim_dict(self, a_file):
-        return gensim.corpora.Dictionary.load(a_file)
+    def process_gensim_dict(self, a_file, file_type, filename):
+        if file_type == "file":
+            a_file.save(self.tmp_folder+"/"+filename)
+            a_file = self.tmp_folder+"/"+filename
+        g_dict = gensim.corpora.Dictionary.load(a_file)
+        os.remove(a_file)
+        return g_dict
 
     def process_gensim_ldamodel(self, a_file):
         return gensim.models.LdaModel.load(a_file)
@@ -122,12 +134,8 @@ class Data(object):
     def process_json(self, an_input):
         return json.loads(an_input)
 
-    def process_table(self,a_file, with_header = True):
-        matrix = []
-        with open(a_file) as csv_file:
-            csv_reader = csv.reader(csv_file, delimiter=',')
-            if not with_header:
-                next(csv_reader, None)  # skip the headers
-            for row in csv_reader:
-                matrix.append(row)
+    def process_table(self,a_file, file_type, with_header = True):
+        a_pd = pd.read_csv(a_file)
+        #matrix = a_pd.values.tolist()
+        matrix = [a_pd.columns.values.tolist()] + a_pd.values.tolist()
         return matrix

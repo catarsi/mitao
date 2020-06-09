@@ -28,7 +28,7 @@ class Tool(object):
             tool_conf = self.tool_index[elem_value]
             if tool_conf["class"] in self.tool_handler:
                 print("Running a "+str(tool_conf["class"])+" tool ..."+" .With value: "+elem_value)
-                res = getattr(self.tool_handler[tool_conf["class"]],method)(input_files, param)
+                res = getattr(self.tool_handler[tool_conf["class"]],method)(input_files, param, elem_id)
         else:
             #Tool not handled
             res["data"]["error"] = "Tool not handled!"

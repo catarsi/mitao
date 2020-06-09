@@ -53,6 +53,11 @@ FILE_TYPE["series"] = ["json"]
 FILE_TYPE["gensim_dictionary"] = ["gdict"]
 FILE_TYPE["gensim_ldamodel"] = ["glda"]
 
+#Set log
+import logging
+BASE_LOG_PATH = SCRIPT_PATH+"/src/.log"
+logging.basicConfig(filename=BASE_LOG_PATH+'/all.log', format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
+
 def shutdown_server():
     func = request.environ.get('werkzeug.server.shutdown')
     if func is None:
@@ -227,6 +232,8 @@ def process():
             extension = "txt"
         elif file_type == "img":
             extension = "png"
+        elif file_type == "html-file":
+            extension = "html"
         elif file_type == "pdf":
             extension = "pdf"
         elif file_type == "html":
@@ -267,6 +274,9 @@ def process():
 
         elif file_type == "html":
             write_on_file = True
+
+        elif file_type == "html-file":
+            copyfile(file_value, path)
 
         elif file_type == "img":
             #copy the picture from the .tmp/ directory to the tool dir

@@ -1,7 +1,16 @@
 import numpy as np
+import pandas as pd
+import plotly.graph_objects as go
+import plotly.express as px
+from collections import defaultdict
+import re
 
 import matplotlib
 matplotlib.use('Agg')
+
+# Plotting tools
+import pyLDAvis
+import pyLDAvis.gensim  # don't skip this
 import matplotlib.pyplot as plt
 
 class Terminal(object):
@@ -11,150 +20,193 @@ class Terminal(object):
         self.base_tmp_path = base_tmp_path_base
         pass
 
-    def doc_topics_barchart(self, input_files, param):
-        data_to_return = {"data":{}}
+    def ldavis(self, input_files, param, tool_id):
 
+        data_to_return = {"data":{}}
         ok_to_process = False
-        #Check the MUST Prerequisite
-        # Check Restrictions
-        if "d-doc-topics" in input_files:
-            if len(input_files["d-doc-topics"]) > 0:
-                ok_to_process = True
+
+        # Check the tool needs
+        # -----
+        if "d-model-corpus" in input_files and "d-dictionary-corpus" in input_files and "d-gensimldamodel" in input_files:
+            ok_to_process = len(input_files["d-model-corpus"]) and len(input_files["d-dictionary-corpus"]) and len(input_files["d-gensimldamodel"])
 
         if not ok_to_process:
             res_err = {"data":{}}
             res_err["data"]["error"] = "Input data missing!"
             return res_err
 
-        #For each different file entry in input_files["d-doc-topics"] build a different chart and save it
-        documents = input_files["d-doc-topics"]
-        documents_legend = []
-        for file_name in documents:
-            all_tab = documents[file_name]
-            if(len(all_tab[0]) > 1):
-                if(len(all_tab) > 1):
-                    topic_names = all_tab[0][1:]
-                    doc_names = [r[0] for r in all_tab[1:]]
-                    doc_names_index = [r_index for r_index in range(0, len(doc_names)) ]
-                    topics_tab = [r[1:] for r in all_tab[1:]]
+        corpus = []
+        for file_k in input_files["d-model-corpus"]:
+            for d in input_files["d-model-corpus"][file_k]:
+                corpus.append(d["value"])
 
-                    documents_legend.append(["document","index"])
-                    for index_doc in range(0,len(doc_names)):
-                        documents_legend.append([doc_names[index_doc],index_doc])
+        dictionary = None
+        for file_k in input_files["d-dictionary-corpus"]:
+            dictionary = input_files["d-dictionary-corpus"][file_k]
 
-                    topics_tab_normalized = []
-                    for row in topics_tab:
-                        normalize_row = [float(cell) for cell in row]
-                        topics_tab_normalized.append(normalize_row)
+        ldamodel = None
+        for file_k in input_files["d-gensimldamodel"]:
+            ldamodel = input_files["d-gensimldamodel"][file_k]
 
-                    #lets draw now
-                    doctopic = np.array(topics_tab_normalized)
-                    N, K = doctopic.shape
-                    ind = np.arange(N)  # the x-axis locations for the novels
-                    width = 0.5  # the width of the bars
-                    plots = []
-                    height_cumulative = np.zeros(N)
-
-                    for k in range(K):
-                        color = plt.cm.coolwarm(k/K, 1)
-                        if k == 0:
-                            p = plt.bar(ind, doctopic[:, k], width, color=color)
-                        else:
-                            p = plt.bar(ind, doctopic[:, k], width, bottom=height_cumulative, color=color)
-                        height_cumulative += doctopic[:, k]
-                        plots.append(p)
-
-                    plt.ylim((0, 1))  # proportions sum to 1, so the height of the stacked bars is 1
-                    plt.ylabel('Topics')
-                    plt.title('Topic distribution across documents')
-                    plt.xticks(ind+width/2, doc_names, rotation = 70, ha="right")
-                    plt.yticks(np.arange(0, 1, len(doc_names)))
-                    plt.tight_layout()
-                    # see http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.legend for details
-                    # on making a legend in matplotlib
-                    plt.legend([p[0] for p in plots], topic_names)
-                    plt.savefig(self.base_tmp_path+'/doctopic_chart.png', dpi = 300)
-                    plt.close()
-                    plt.clf()
-                    plt.cla()
-
-
-        data_to_return["data"]["d-chartimg"] = {'doctopic_chart.png': self.base_tmp_path+'/doctopic_chart.png'}
-        data_to_return["data"]["d-chartlegend"] = {'legend': documents_legend}
+        # Params
+        # -----
+        # NO PARAMS
+        vis = pyLDAvis.gensim.prepare(ldamodel, corpus, dictionary, sort_topics=False)
+        html_str = pyLDAvis.prepared_data_to_html(vis)
+        data_to_return["data"]["d-ldavis-html"] = {"ldavis": html_str}
         return data_to_return
 
-    def topics_words_list(self, input_files, param):
+    def cat_topics_barchart(self, input_files, param, tool_id):
         data_to_return = {"data":{}}
 
-        ok_to_process = False
-        #Check the MUST Prerequisite
+        # Pre
+        # -------
         # Check Restrictions
-        documents = []
-        if "d-topics-table" in input_files:
-            if len(input_files["d-topics-table"]) > 0:
-                documents = input_files["d-topics-table"]
-                ok_to_process = True
-
+        ok_to_process = ("d-doc-topics-table" in input_files) and (len(input_files["d-doc-topics-table"]) == 1)
+        ok_to_process = ok_to_process and (("d-metadata" in input_files) and (len(input_files["d-metadata"]) > 0))
         if not ok_to_process:
-            res_err = {"data":{}}
-            res_err["data"]["error"] = "Input data missing!"
-            return res_err
+            data_to_return["data"]["error"] = "unexpected or missing input!"
+            return data_to_return
+
+        # Read inputs
+        inputs = {"meta_docs": {}, "docs_topics": {}}
+        for file_k in input_files["d-metadata"]:
+            inputs["meta_docs"][file_k] =  input_files["d-metadata"][file_k]
+        for file_k in input_files["d-doc-topics-table"]:
+            inputs["docs_topics"] =  input_files["d-doc-topics-table"][file_k]
+
+        # Params
+        NUM_TOPICS = 2
+        META_KEY = ""
+        META_LABEL = ""
+        if param != None:
+            if "p-topic" in param:
+                NUM_TOPICS = int(param["p-topic"])
+            if "p-meta-category" in param:
+                META_KEY = param["p-meta-category"]
+                META_LABEL = "metadata attribute = <"+META_KEY+">"
 
 
-        #For each different file entry in input_files["d-topics-table"] build a different chart and save it
-        documents_legend = []
-        for file_name in documents:
-            a_tab = documents[file_name]
+        # Process
+        # -------
+        # 1) Read and process the inputs
+        def get_column_name_for_max_values_of(row,df):
+            return df.loc[:,df.loc[row] == df.loc[row].max()].columns.tolist()
 
-            NUM_TOPICS = []
-            max_score = 0
-            num_top_words = 0
-            for row_index in range(1,len(a_tab)):
-                if float(a_tab[row_index][2]) > float(max_score):
-                    max_score = a_tab[row_index][2]
-                NUM_TOPICS.append(a_tab[row_index][0])
-                if NUM_TOPICS[0] == a_tab[row_index][0]:
-                    num_top_words = num_top_words + 1
-            NUM_TOPICS = len(set(NUM_TOPICS))
+        mydf = pd.DataFrame.from_records(inputs["docs_topics"][1:])
+        mydf.columns = inputs["docs_topics"][0]
+        mydf = mydf.set_index(inputs["docs_topics"][0][0])
+        dict_topics = dict((el,[]) for el in mydf.columns)
+        index_files = []
+        for index,row in mydf.iterrows():
+            for t_k in get_column_name_for_max_values_of(index,mydf):
+                clean_index = re.sub(r'^.*?\/', '', str(index))
+                dict_topics[t_k].append(clean_index)
+                index_files.append(clean_index)
 
+        meta = {}
+        for f_name in inputs["meta_docs"]:
+            k_meta = re.sub(r'^.*?\/', '', str(f_name)).replace(".json","")
+            if k_meta in index_files:
+                meta[k_meta] = inputs["meta_docs"][f_name]
 
-            MAXFONT = 50
-            MINFONT = 16
-            fontsize_base = MAXFONT/ float(max_score)
+        # 2) Classify on categories
+        dict_cat = defaultdict(dict)
+        DOC_TOT = 0
+        CAT_TOT = defaultdict(int)
+        for t in dict_topics:
+            for f_k in dict_topics[t]:
+                if f_k in meta and META_KEY in meta[f_k]:
+                    if not meta[f_k][META_KEY] in dict_cat:
+                        dict_cat[meta[f_k][META_KEY]] = []
 
-            plt.figure(figsize=(NUM_TOPICS*8, NUM_TOPICS*2.5))
+                    index_in = [i for i, d in enumerate(dict_cat[meta[f_k][META_KEY]]) if d["topic"] == t]
+                    if len(index_in) == 0:
+                        dict_cat[meta[f_k][META_KEY]].append({"topic":t, "length":0, "items":[]})
+                        index_in = [len(dict_cat[meta[f_k][META_KEY]]) - 1]
 
-            for t in range(NUM_TOPICS):
-                plt.subplot(1, NUM_TOPICS, t + 1)  # plot numbering starts with 1
-                plt.box(on=None)
-                plt.ylim(0, num_top_words + 0.5)  # stretch the y-axis to accommodate the words
-                plt.xticks([])  # remove x-axis markings ('ticks')
-                plt.yticks([]) # remove y-axis markings ('ticks')
-                plt.title('Topic #{}'.format(t + 1), fontsize = MAXFONT/2, pad = MAXFONT)
+                    dict_cat[meta[f_k][META_KEY]][index_in[0]]["items"].append(f_k)
+                    dict_cat[meta[f_k][META_KEY]][index_in[0]]["length"] += 1
+                    DOC_TOT += 1
+                    CAT_TOT[meta[f_k][META_KEY]] += 1
 
-                top_words = []
-                for row_index in range(1,len(a_tab)):
-                    row = a_tab[row_index]
-                    if (int(row[0]) == int(t+1)):
-                        top_words.append(row[1:])
-                #print("Topic",t+1,"with ",num_top_words," : ",top_words)
+        # 3) Sort the topics
+        for cat in dict_cat:
+            dict_cat[cat] = sorted(dict_cat[cat], key=lambda k: k['length'], reverse=True)
 
-                for i in range(0,len(top_words)):
-                    word = top_words[i][0]
-                    score = float(top_words[i][1])
-                    plt.text(0.3, num_top_words-i-0.5, word, fontsize= MINFONT + fontsize_base*score)
+        # 4) Prepare the Y-axis
+        y_info= dict()
+        i_cat = 0
+        PALETTE = ["#2a9d8f","#e9c46a","#8ab17d","#e76f51","#287271","#f4a261","#df8f71","#cba270","#264653","#887161"]
+        OTHER_COLOR = "#C7C7C7"
+        color_id = 0
+        ordered_bars = []
+        for cat in dict_cat:
+            tot_top_docs = 0
+            for elem in dict_cat[cat][:NUM_TOPICS]:
+                if not elem["topic"] in y_info:
+                    y_info[elem["topic"]] = {
+                        "topic_y": [0 for _ in range(len(dict_cat))],
+                        "topic_y_lbl": "{0:.2f}%".format(elem["length"]/DOC_TOT) + " of all the documents <br>"+"{0:.2f}%".format(elem["length"]/CAT_TOT[cat]) + " of the documents in "+str(cat),
+                        #"color": PALETTE[color_id]
+                        "color": None
+                    }
+                    ordered_bars.append(elem["topic"])
+                    color_id += 1
+                y_info[elem["topic"]]["topic_y"][i_cat] = elem['length']
+                tot_top_docs += elem['length']
 
-            #plt.figure(figsize=(800/self.MY_DPI, 800/self.MY_DPI), dpi=self.MY_DPI)
-            plt.savefig(self.base_tmp_path+'/topicswords_chart.png', dpi = 200)
-            plt.tight_layout();
-            plt.close()
-            plt.clf()
-            plt.cla()
+            other_length = CAT_TOT[cat] - tot_top_docs
+            if NUM_TOPICS < len(dict_cat[cat]):
+                if not "other" in y_info:
+                    ordered_bars.insert(0,"other")
+                    y_info["other"] = {
+                        "topic_y": [0 for _ in range(len(dict_cat))],
+                        "topic_y_lbl": "{0:.2f}%".format(other_length/DOC_TOT) + " of all the documents <br>"+"{0:.2f}%".format(other_length/CAT_TOT[cat]) + " of the documents in "+str(cat),
+                        "color": OTHER_COLOR
+                    }
+                y_info["other"]["topic_y"][i_cat] = other_length
+            i_cat += 1
 
-        data_to_return["data"]["d-chartimg"] = {'topicswords_chart.png': self.base_tmp_path+'/topicswords_chart.png'}
+        # 5) Plot
+        barchart_data = [["topics/category"]+[cat for cat in dict_cat]]
+        fig = go.Figure()
+        x = list(dict_cat.keys())
+        for k_t in ordered_bars:
+            barchart_data.append([k_t] + y_info[k_t]["topic_y"])
+            fig.add_trace(go.Bar(
+                x=x,
+                y=y_info[k_t]["topic_y"],
+                hovertemplate =
+                '<b>Documents</b>: %{y}'+
+                '<br><b>Category</b>: %{x}<br>'+
+                '<b>'+y_info[k_t]["topic_y_lbl"]+'</b>',
+                marker_color= y_info[k_t]["color"], # marker color can be a single color value or an iterable
+                #text = ,
+                name=k_t))
+
+        fig.update_layout(
+            barmode='stack',
+            xaxis={'categoryorder':'category ascending'},
+            #title="Plot Title",
+            xaxis_title= META_LABEL,
+            yaxis_title= "Number of documents",
+            font=dict(
+                family="Courier New, monospace",
+                size=14,
+                color="#7f7f7f"
+            )
+        )
+
+        #fig.show()
+        f_name = str(tool_id)+'_topicsdocs_chart.html'
+        fig.write_html(self.base_tmp_path+'/'+f_name)
+
+        data_to_return["data"]["d-grouped-barchart"] = {'barchart_data': barchart_data}
+        data_to_return["data"]["d-chart-html"] = {f_name: self.base_tmp_path+'/'+f_name}
         return data_to_return
 
-    def save_file(self, input_files, param):
+    def save_file(self, input_files, param, tool_id):
         data_to_return = {"data":{}}
 
         # NO RESTRICTIONS  Takes any input
