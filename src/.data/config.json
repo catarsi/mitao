@@ -134,7 +134,7 @@
             "label": "Doc X Topic Visualization",
             "class_label": "Terminal",
             "class": "Terminal",
-            "param": ["p-meta-category","p-topic"],
+            "param": ["p-meta-value","p-meta-type","p-topic"],
             "function": "cat_topics_barchart",
             "compatible_input": ["d-doc-topics-table","d-metadata"],
             "output": ["d-chart-html","d-grouped-barchart"]
@@ -230,11 +230,18 @@
           "value": [0,1],
           "init_value": 0
         },
-        "p-meta-category":{
+        "p-meta-value":{
           "handler": "input-text",
           "label": "Select a metadata attribute:",
           "value": "",
           "init_value": ""
+        },
+        "p-meta-type":{
+          "handler": "select-value",
+          "label": "Data type of the metadata:",
+          "value_label": ["integer","string","list of integers","list of strings"],
+          "value": ["int","str","list::int","list::str"],
+          "init_value": "str"
         },
         "p-topic-from":{
           "handler": "input-text",

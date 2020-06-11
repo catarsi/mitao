@@ -16,6 +16,7 @@ import matplotlib.pyplot as plt
 class Terminal(object):
 
     def __init__(self, base_tmp_path_base):
+        self.PALETTE = ["#0377a8","#fc6f5f","#e2ce71","#ad7947","#e97947","#5cb991","#ffadcb","#b46ddc"]
         self.MY_DPI = 80
         self.base_tmp_path = base_tmp_path_base
         pass
@@ -79,12 +80,15 @@ class Terminal(object):
         NUM_TOPICS = 2
         META_KEY = ""
         META_LABEL = ""
+        META_KEY_TYPE = ""
         if param != None:
             if "p-topic" in param:
                 NUM_TOPICS = int(param["p-topic"])
-            if "p-meta-category" in param:
-                META_KEY = param["p-meta-category"]
+            if "p-meta-value" in param:
+                META_KEY = param["p-meta-value"]
                 META_LABEL = "metadata attribute = <"+META_KEY+">"
+            if "p-meta-type" in param:
+                META_KEY_TYPE = param["p-meta-type"]
 
 
         # Process
@@ -98,6 +102,7 @@ class Terminal(object):
         mydf = mydf.set_index(inputs["docs_topics"][0][0])
         dict_topics = dict((el,[]) for el in mydf.columns)
         index_files = []
+        # for each topic we create a list of all the documents which have it in as top score
         for index,row in mydf.iterrows():
             for t_k in get_column_name_for_max_values_of(index,mydf):
                 clean_index = re.sub(r'^.*?\/', '', str(index))
@@ -112,32 +117,39 @@ class Terminal(object):
 
         # 2) Classify on categories
         dict_cat = defaultdict(dict)
-        DOC_TOT = 0
-        CAT_TOT = defaultdict(int)
+        DOC_TOT = len(list(meta.keys()))
         for t in dict_topics:
             for f_k in dict_topics[t]:
                 if f_k in meta and META_KEY in meta[f_k]:
-                    if not meta[f_k][META_KEY] in dict_cat:
-                        dict_cat[meta[f_k][META_KEY]] = []
+                    #Check Meta Type
+                    meta_val = [meta[f_k][META_KEY]]
+                    if META_KEY_TYPE.startswith("list"):
+                        meta_val = meta[f_k][META_KEY]
 
-                    index_in = [i for i, d in enumerate(dict_cat[meta[f_k][META_KEY]]) if d["topic"] == t]
-                    if len(index_in) == 0:
-                        dict_cat[meta[f_k][META_KEY]].append({"topic":t, "length":0, "items":[]})
-                        index_in = [len(dict_cat[meta[f_k][META_KEY]]) - 1]
+                    for m_v in meta_val:
+                        if m_v.strip() != "":
+                            if not m_v in dict_cat:
+                                dict_cat[m_v] = []
 
-                    dict_cat[meta[f_k][META_KEY]][index_in[0]]["items"].append(f_k)
-                    dict_cat[meta[f_k][META_KEY]][index_in[0]]["length"] += 1
-                    DOC_TOT += 1
-                    CAT_TOT[meta[f_k][META_KEY]] += 1
+                            index_in = [i for i, d in enumerate(dict_cat[m_v]) if d["topic"] == t]
+                            if len(index_in) == 0:
+                                dict_cat[m_v].append({"topic":t, "length":0, "items":[]})
+                                index_in = [len(dict_cat[m_v]) - 1]
+
+                            dict_cat[m_v][index_in[0]]["items"].append(f_k)
+                            dict_cat[m_v][index_in[0]]["length"] += 1
 
         # 3) Sort the topics
+        CAT_TOT = defaultdict(int)
         for cat in dict_cat:
             dict_cat[cat] = sorted(dict_cat[cat], key=lambda k: k['length'], reverse=True)
+            for topic_o in dict_cat[cat]:
+                CAT_TOT[cat] += topic_o['length']
 
         # 4) Prepare the Y-axis
         y_info= dict()
         i_cat = 0
-        PALETTE = ["#2a9d8f","#e9c46a","#8ab17d","#e76f51","#287271","#f4a261","#df8f71","#cba270","#264653","#887161"]
+
         OTHER_COLOR = "#C7C7C7"
         color_id = 0
         ordered_bars = []
@@ -147,13 +159,15 @@ class Terminal(object):
                 if not elem["topic"] in y_info:
                     y_info[elem["topic"]] = {
                         "topic_y": [0 for _ in range(len(dict_cat))],
-                        "topic_y_lbl": "{0:.2f}%".format(elem["length"]/DOC_TOT) + " of all the documents <br>"+"{0:.2f}%".format(elem["length"]/CAT_TOT[cat]) + " of the documents in "+str(cat),
+                        "topic_y_lbl": ["" for _ in range(len(dict_cat))],
                         #"color": PALETTE[color_id]
-                        "color": None
+                        "color": self.PALETTE[color_id % len(self.PALETTE)],
+                        "color_opacity": 1 - ((((len(ordered_bars) + 1) / len(self.PALETTE)) * 0.25) % 1)
                     }
                     ordered_bars.append(elem["topic"])
                     color_id += 1
                 y_info[elem["topic"]]["topic_y"][i_cat] = elem['length']
+                y_info[elem["topic"]]["topic_y_lbl"][i_cat] = "+ "+"%.2f"%((elem["length"]/DOC_TOT)*100 ) + "% of all the documents <br>"+"+ "+"%.2f"%((elem["length"]/CAT_TOT[cat])*100)+ "% of the documents in "+str(cat)
                 tot_top_docs += elem['length']
 
             other_length = CAT_TOT[cat] - tot_top_docs
@@ -162,10 +176,12 @@ class Terminal(object):
                     ordered_bars.insert(0,"other")
                     y_info["other"] = {
                         "topic_y": [0 for _ in range(len(dict_cat))],
-                        "topic_y_lbl": "{0:.2f}%".format(other_length/DOC_TOT) + " of all the documents <br>"+"{0:.2f}%".format(other_length/CAT_TOT[cat]) + " of the documents in "+str(cat),
-                        "color": OTHER_COLOR
+                        "topic_y_lbl": ["" for _ in range(len(dict_cat))],
+                        "color": OTHER_COLOR,
+                        "color_opacity": 1
                     }
                 y_info["other"]["topic_y"][i_cat] = other_length
+                y_info["other"]["topic_y_lbl"][i_cat] = "+ "+"%.2f"%((other_length/DOC_TOT)*100)+ "% of all the documents <br>"+"+ "+"%.2f"%((other_length/CAT_TOT[cat])*100)+ "% of the documents in "+str(cat)
             i_cat += 1
 
         # 5) Plot
@@ -174,19 +190,37 @@ class Terminal(object):
         x = list(dict_cat.keys())
         for k_t in ordered_bars:
             barchart_data.append([k_t] + y_info[k_t]["topic_y"])
+
+            #convert hex to rgba
+            h = color=y_info[k_t]["color"].lstrip('#')
+            t = tuple(int(h[i:i+2], 16) for i in (0, 2, 4))
+            t= t + (y_info[k_t]["color_opacity"],)
+            rgba = "rgba"+str(t)
+
             fig.add_trace(go.Bar(
                 x=x,
                 y=y_info[k_t]["topic_y"],
+                hovertext = y_info[k_t]["topic_y_lbl"],
                 hovertemplate =
-                '<b>Documents</b>: %{y}'+
-                '<br><b>Category</b>: %{x}<br>'+
-                '<b>'+y_info[k_t]["topic_y_lbl"]+'</b>',
-                marker_color= y_info[k_t]["color"], # marker color can be a single color value or an iterable
+                '<b>Topic #'+str(k_t)+'</b><br>'+
+                '--------<br>'+
+                '<b>Documents</b>: %{y}<br>'+
+                '<b>Category</b>: %{x}<br>'+
+                '<b>%{hovertext}</b>'+
+                '<extra></extra>', #hide the second box
+                marker = dict(color=y_info[k_t]["color"], opacity=y_info[k_t]["color_opacity"]),
+                hoverlabel = {
+                    "font": {"color": 'black'},
+                    "bgcolor": rgba
+                },
+                #marker_color= y_info[k_t]["color"], # marker color can be a single color value or an iterable
                 #text = ,
                 name=k_t))
 
         fig.update_layout(
             barmode='stack',
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
             xaxis={'categoryorder':'category ascending'},
             #title="Plot Title",
             xaxis_title= META_LABEL,
@@ -197,6 +231,7 @@ class Terminal(object):
                 color="#7f7f7f"
             )
         )
+        fig.update_yaxes(showgrid=True, gridwidth=0.2, gridcolor='#E9E9E9')
 
         #fig.show()
         f_name = str(tool_id)+'_topicsdocs_chart.html'
