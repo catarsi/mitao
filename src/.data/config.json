@@ -107,7 +107,7 @@
         },
         "d-chart-html":{
             "label": "An HTML chart",
-            "data_class": "html-file",
+            "data_class": "html",
             "param": ["p-file"],
             "file_name": "dynamic_chart",
             "class_label": "General"
@@ -134,7 +134,7 @@
             "label": "Doc X Topic Visualization",
             "class_label": "Terminal",
             "class": "Terminal",
-            "param": ["p-meta-value","p-meta-type","p-topic"],
+            "param": ["p-meta-value","p-meta-type","p-topic","p-chart-axis"],
             "function": "cat_topics_barchart",
             "compatible_input": ["d-doc-topics-table","d-metadata"],
             "output": ["d-chart-html","d-grouped-barchart"]
@@ -178,7 +178,7 @@
             "class_label": "Text-Analysis",
             "class": "TextAnalysis",
             "function": "tokenize",
-            "param": ["p-defstopwords"],
+            "param": ["p-defstopwords","p-deflemmatize"],
             "compatible_input": ["d-gen-text","d-stopwords"],
             "output": ["d-processed-corpus"]
         },
@@ -236,6 +236,13 @@
           "value": "",
           "init_value": ""
         },
+        "p-chart-axis":{
+          "handler": "select-value",
+          "label": "Data type of the x-axis :",
+          "value_label": ["None","Time series"],
+          "value": ["none","time_series"],
+          "init_value": "None"
+        },
         "p-meta-type":{
           "handler": "select-value",
           "label": "Data type of the metadata:",
@@ -283,9 +290,16 @@
         },
         "p-defstopwords":{
           "handler": "select-value",
-          "label": "Stopwwords language:",
+          "label": "Stop words:",
           "value_label": ["None","Arabic","Azerbaijani","Danish","Dutch","English","Finnish","French","German","Greek","Hungarian","Indonesian","Italian","Kazakh","Nepali","Norwegian","Portuguese","Romanian","Russian","Spanish","Swedish","Turkish"],
           "value": ["none","arabic","azerbaijani","danish","dutch","english","finnish","french","german","greek","hungarian","indonesian","italian","kazakh","nepali","norwegian","portuguese","romanian","russian","spanish","swedish","turkish"],
+          "init_value": "none"
+        },
+        "p-deflemmatize":{
+          "handler": "select-value",
+          "label": "Lemmatize:",
+          "value_label": ["None","Danish","Dutch","English","French","German","Hungarian","Italian","Norwegian","Portuguese","Romanian","Russian","Spanish","Swedish"],
+          "value": ["none","danish","dutch","english","finnish","french","german","hungarian","italian","norwegian","porter","portuguese","romanian","russian","spanish","swedish"],
           "init_value": "none"
         },
         "p-corpusmodel":{

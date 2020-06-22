@@ -56,6 +56,9 @@ FILE_TYPE["gensim_ldamodel"] = ["glda"]
 #Set log
 import logging
 BASE_LOG_PATH = SCRIPT_PATH+"/src/.log"
+log_file = open(BASE_LOG_PATH+'/all.log',"r+")
+log_file.truncate(0)
+log_file.close()
 logging.basicConfig(filename=BASE_LOG_PATH+'/all.log', format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
 def shutdown_server():

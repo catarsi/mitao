@@ -182,17 +182,18 @@ label p{
 
 #control_body{
   max-height: 500px;
+  transition: max-height 0.5s;
+  overflow: hidden;
   padding-top: 20px;
   width: 100%;
   background-color: var(--bg-light-color);
   border-radius: 10px 0px 0px 10px;
   border: solid 1px var(--bg-color);
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 #control_mid .control-params{
   width: 100%;
-  margin-top: 25px;
-  padding-top: 5px;
+  margin-top: 20px;
   color: var(--parms-color);
   font-size: small;
 }
@@ -208,6 +209,7 @@ label p{
   padding-top: 15%;
   padding-right: 10px;
   width: 100%;
+  display: none;
 }
 #control_foot .foot-dom{
   display:inline-block;

@@ -36,10 +36,13 @@ class TextAnalysis(object):
 
         # Params
         # -----
-        p_stopwords = None #string e.g. "English"
+        p_stopwords = "none" #string e.g. "English"
+        p_lemmatize_lang = "none"
         if param != None:
             if "p-defstopwords" in param:
                 p_stopwords = str(param["p-defstopwords"])
+            if "p-deflemmatize" in param:
+                p_lemmatize_lang = str(param["p-deflemmatize"])
 
 
         # Data (Input Documents)
@@ -50,39 +53,37 @@ class TextAnalysis(object):
             documents[file_k] =  input_files["d-gen-text"][file_k]
         docs_df = pd.DataFrame.from_dict(documents, orient='index', columns=["content"])
 
-        # Data preprocessing
-        # Tokenization, remove words having fewer than 3 chars, stopwords, lemmatizing, stemming
-        # -----
-        lang = "english"
-        if p_stopwords != "none":
-            lang = p_stopwords.lower()
-        stemmer = SnowballStemmer(lang)
 
         def read_stopwords_data(obj_data):
             res = []
             for file_name in obj_data:
-                for a_tab in obj_data[file_name]:
-                    for row in a_tab:
-                        res.append(row)
+                for index,a_tab in enumerate(obj_data[file_name]):
+                    if index != 0:
+                        for row in a_tab:
+                            res.append(row)
             return res
 
         stopwords_data = set()
         if "d-stopwords" in input_files:
             if len(input_files["d-stopwords"]) > 0:
-                stopwords_data = set(read_stopwords_data(input_files["d-stopwords"]))
+                for f in input_files["d-stopwords"]:
+                    stopwords_data = stopwords_data.union(set(read_stopwords_data(input_files["d-stopwords"])))
 
-        def lemmatize_stemming(text):
+        if p_stopwords != "none":
+            stopwords_data = stopwords_data.union(set(stopwords.words(p_stopwords)))
+
+        def lemmatize_stemming(text,lang):
+            stemmer = SnowballStemmer(lang)
             return stemmer.stem(WordNetLemmatizer().lemmatize(text, pos='v'))
 
         def preprocess(text):
             result = []
             for token in gensim.utils.simple_preprocess(text):
-                stop = stopwords_data
-                if p_stopwords != "none":
-                    stop = stop.union(set(stopwords.words(p_stopwords)))
-                #stop = gensim.parsing.preprocessing.STOPWORDS
-                if token not in stop and len(token) > 3:
-                    result.append(lemmatize_stemming(token))
+                if token not in stopwords_data and len(token) > 3:
+                    if p_lemmatize_lang != "none":
+                        result.append(lemmatize_stemming(token,p_lemmatize_lang))
+                    else:
+                        result.append(token)
             return result
 
         processed_docs = docs_df['content'].map(preprocess)
@@ -282,7 +283,7 @@ class TextAnalysis(object):
             topics = []
             for t_index in range(0, ldamodel.num_topics):
                 wp = ldamodel.show_topic(t_index, topn=topnum_words)
-                topic_keywords = [[t_index,word,prop] for word, prop in wp]
+                topic_keywords = [[t_index + 1,word,prop] for word, prop in wp]
                 topic_keywords = sorted(topic_keywords, key=itemgetter(2), reverse=True)
                 topics = topics + topic_keywords
 
