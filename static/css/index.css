@@ -83,6 +83,12 @@ DIAGRAM TOP
   font-weight: 340;
   height:45px;
 }
+#diagram_elems button svg{
+  width: 25%;
+  height: 80%;
+  padding-right: 5px;
+  vertical-align: top;
+}
 #diagram_elems button#add_tool:hover{
   background-color: var(--tool-color-hover)!important;
 }
@@ -158,6 +164,12 @@ DIAGRAM TOP
   color: white;
   height:45px;
 }
+#general button#btn_run_workflow svg{
+  width: 20%;
+  height: 80%;
+  padding-right: 5px;
+  vertical-align: top;
+}
 #general button#btn_run_workflow:hover{
   background-color: var(--bg-color-hover);
 }
@@ -183,6 +195,13 @@ DIAGRAM TOP
   margin: 0 auto;
   margin-top: 3px;
   margin-bottom: 5px;
+  background-color: var(--bg-color);
+  border: none;
+  border-bottom: dotted 1.5px white;
+  color: white;
+}
+#list_options button:hover{
+  border-bottom: solid 1.5px;
 }
 #list_options a{
   font-size: 14pt;

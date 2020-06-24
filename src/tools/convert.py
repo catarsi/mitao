@@ -59,14 +59,25 @@ class Convert(object):
             meta_dict = dict()
             for r in meta_list:
                 if len(r) > 1:
-                    att = r[0]
-                    rule = r[1]
-                    att_names = re.findall("\<(.*)\>", att)
-                    if len(att_names) > 0:
+                    parts = r[0].split(" : ")
+                    att_names = re.findall("<(.*)>", parts[0])
+                    att_type = parts[1]
+                    if len(att_names) > 0 and len(att_type) > 0:
                         att = att_names[0]
-                        att_value = re.findall(rule, f_name)
-                        if len(att_value) > 0:
-                            meta_dict[att] = att_value[0]
+                        rule = r[1]
+                        found_elem = re.findall(r[1], f_name)
+
+                        if "list" in att_type:
+                            att_type_val = re.findall("list\((.*)\)", att_type)
+                            if len(att_type_val) > 0:
+                                att_type_parts = att_type_val[0].split(",")
+                                data_type = att_type_parts[0]
+                                separator = att_type_parts[1]
+                                meta_dict[att] = found_elem[0].split(separator)
+                        else:
+                            if len(found_elem) > 0:
+                                meta_dict[att] = found_elem[0]
+
             docs_meta[f_name] = meta_dict
 
         data_to_return["data"]["d-metadata"] = docs_meta

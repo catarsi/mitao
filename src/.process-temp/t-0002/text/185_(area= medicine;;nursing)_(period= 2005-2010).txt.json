@@ -1,1 +1,1 @@
-{"area": "medicine;;nursing", "period": "2005-2010"}
+{"area": ["medicine", "nursing"], "period": "2005-2010"}
