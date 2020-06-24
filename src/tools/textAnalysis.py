@@ -297,7 +297,6 @@ class TextAnalysis(object):
     def calc_coherence(self, input_files, param, tool_id):
 
         data_to_return = {"data":{}}
-        data_to_return = {"data":{}}
 
         # Pre
         # -------

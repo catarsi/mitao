@@ -121,6 +121,15 @@
         }
   },
   "tool": {
+        "t-meta-builder": {
+            "label": "Metadata builder",
+            "class": "Convert",
+            "class_label": "Converter",
+            "function": "meta_builder",
+            "param": ["p-metaregex"],
+            "compatible_input": ["d-gen-text"],
+            "output": ["d-metadata"]
+        },
         "t-lda-coherance": {
             "label": "Topic modelling Coherance calculator",
             "class_label": "Text-Analysis",
@@ -285,6 +294,12 @@
         "p-filterregex":{
           "handler": "input-text",
           "label": "Specific text <p> (Regular expressions supported, try it on <a target=&quot;_blank&quot; href=https://regex101.com>the online demo</a>) </p>",
+          "value": "",
+          "init_value": ""
+        },
+        "p-metaregex":{
+          "handler": "input-text-large",
+          "label": "A meta attribute/s and its corresponding regular expression <p> Example: &lt;meta_att&gt; = _area=(.*)_",
           "value": "",
           "init_value": ""
         },

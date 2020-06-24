@@ -3,24 +3,42 @@
   --bg-light-color: #E0D8CB;
   /*--bg-light-color: rgba(198, 176, 140, 0.1);*/
   --bg-color: #B29E7E;
+  --bg-color-hover: #A8926E;
   --tool-color: #E5CE80;
+  --tool-color-hover: #DCBE56;
   --data-color: #2E9D99;
-  --parms-color: black;
+  --data-color-hover: #288986;
+  --dark-font: #273746;
+  --parms-color: #273746;
 }
 :disabled{
   opacity: 0.6;
 }
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
 button,a { cursor: pointer; }
 button:hover{
   opacity: 1!important;
+  outline:0!important;
+}
+button:focus{
+  outline:0!important;
 }
 select {
   margin-right: 10px;
 }
 
 body {
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  font-size: 14px;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 320;
 }
 
 /*
@@ -29,6 +47,7 @@ DIAGRAM TOP
 
 #gui_top{
   margin-bottom: 30px;
+  height: fit-content;
   width: 100%;
   padding: 10px;
   padding-top: 30px;
@@ -38,8 +57,8 @@ DIAGRAM TOP
 }
 .corner-box{
   width: var(--info-panel-width);
+  height: fit-content;
   display: inline-block;
-  visibility: hidden;
 }
 
 #diagram_editor{
@@ -60,13 +79,26 @@ DIAGRAM TOP
 #diagram_elems button#add_tool{
   border: var(--tool-color);
   background-color: var(--tool-color);
-  opacity: 0.8;
+  color: white;
+  font-weight: 340;
+  height:45px;
 }
+#diagram_elems button#add_tool:hover{
+  background-color: var(--tool-color-hover)!important;
+}
+
 #diagram_elems button#add_data{
   border: var(--data-color);
   background-color: var(--data-color);
-  opacity: 0.8;
+  color: white;
+  font-weight: 340;
+  height:45px;
 }
+#diagram_elems button#add_data:hover{
+  background-color: var(--data-color-hover);
+}
+
+
 #diagram_view{
   width: 30%;
   vertical-align: bottom;
@@ -85,11 +117,14 @@ DIAGRAM TOP
   vertical-align: bottom;
 }
 #diagram_view .comp *{
+  background: none;
+  border: none;
   color: white;
 }
-#diagram_view .comp #redo_btn{
-  border-left: solid;
-  padding-left: 5px;
+#diagram_view .comp *:focus{
+  background: none;
+  border: none;
+  outline:0;
 }
 #diagram_view .comp#diagram_zoom{
   display: none;
@@ -108,9 +143,23 @@ DIAGRAM TOP
   vertical-align: bottom;
 }
 #general .comp#list_options_trigger{
+  background-color: var(--bg-color);
+  border: none;
+  color: white;
+  height:45px;
+}
+#general .comp#list_options_trigger:hover{
+  background-color: var(--bg-color-hover);
 }
 #general button#btn_run_workflow{
+  font-weight: 340;
   width: 180px;
+  background-color: var(--bg-color);
+  color: white;
+  height:45px;
+}
+#general button#btn_run_workflow:hover{
+  background-color: var(--bg-color-hover);
 }
 .navbar-toggle{
   display: block;
@@ -120,15 +169,20 @@ DIAGRAM TOP
   position: absolute;
   display: none;
   z-index: 1000;
-  background-color: grey;
-  min-width: 200px;
+  background-color: var(--bg-color);
+  min-width: 220px;
   right: 30px;
   border-radius: 0px 0px 0px 10px;
 }
 #list_options button{
+  vertical-align: middle;
   font-size: 12pt;
+  font-weight: 340;
   display: block;
-  width: 100%;
+  width: 98%;
+  margin: 0 auto;
+  margin-top: 3px;
+  margin-bottom: 5px;
 }
 #list_options a{
   font-size: 14pt;
@@ -149,6 +203,8 @@ DIAGRAM TOP
   vertical-align: top;
   display: inline-block;
   min-height: 300px;
+  position: relative;
+  z-index: 10;
 }
 #gui_middle #cy{
   display: inline-block;
@@ -170,9 +226,8 @@ DIAGRAM TOP
 ------------------------
 */
 
-
-label p{
-  font-size: 80%;
+label{
+  font-weight: 500;
 }
 
 .check-value input{
@@ -187,9 +242,10 @@ label p{
   padding-top: 20px;
   width: 100%;
   background-color: var(--bg-light-color);
-  border-radius: 10px 0px 0px 10px;
-  border: solid 1px var(--bg-color);
+  border-radius: 0px 0px 0px 10px;
+  /*border: solid 1px var(--bg-color);*/
   padding-bottom: 20px;
+  opacity: 1;
 }
 #control_mid .control-params{
   width: 100%;
@@ -245,6 +301,12 @@ input {
 .input-group + .input-group{
   padding-top: 12px;
 }
+.input-text-large textarea{
+  min-height: 100px;
+  resize: none;
+  width: 100%;
+}
+
 #edit_buttons{
   padding-left: 10%;
 }
@@ -276,8 +338,9 @@ input {
   max-width:350px;
   max-height:50px;
   vertical-align: middle;
-  border: solid 2px #917442;
-  margin-right:2px;
+  border: solid 1px #917442;
+  border-radius: 5px;
+  margin-right:3px;
 }
 .timeline-block-inner.tool-block{
   background-color: var(--tool-color);
@@ -289,7 +352,10 @@ input {
   border: none;
 }
 .timeline-block-inner.text-block label{
-  padding-top: 5%;
+  padding-top: 15px;
+  padding-left: 10px;
+  font-weight: 520;
+  font-size: 14pt;
 }
 
 .timeline-block-inner .inner-timeline-block {
@@ -360,27 +426,32 @@ input {
 }
 
 #control_nav {
-    display: none;
-    width: 100%;
-    text-align:center;
     /*border-top: solid 1px;*/
-    border-top-color: grey ;
+
+    height: fit-content;
 }
 #control_nav li {
   display:inline-block;
 }
+#control_nav li.active{
+  z-index: 20;
+  opacity: 1;
+}
 #control_nav li a{
-  font-size:150%;
-  background-color: transparent;
-  color: black;
+  background-color: var(--bg-light-color);
+  color: var(--dark-font);
+  border-radius: 5px 5px 0px 0px;
+  font-weight: 350;
+  font-size: 14pt;
+  z-index: 1;
+  font-weight: 300;
+  opacity: 0.7;
 }
 #control_nav > .active > a,
 #control_nav > .active > a:hover,
 #control_nav > .active > a:focus {
-  color: #82683b;
-  border-bottom: solid;
-  border-bottom-color: #82683b;
   margin-bottom: 25px;
+  opacity: 1;
 }
 
 

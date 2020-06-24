@@ -19,8 +19,8 @@ class dipam_diagram {
 
     this.STYLE = {
       node: {
-        tool: {'shape': 'diamond','background-color': '#E5CE80'},
-        data: {'shape': 'round-rectangle','background-color': '#2E9D99'},
+        tool: {'font-family': 'sans-serif', 'font-weight':"300", 'font-size':'14pt', 'shape': 'diamond','background-color': '#E5CE80'},
+        data: {'font-family': 'sans-serif', 'font-weight':"300", 'font-size':'14pt', 'shape': 'round-rectangle','background-color': '#2E9D99'},
       },
       edge:{
         edge: {'line-color': '#bfbfbf', 'target-arrow-color': '#bfbfbf'}
@@ -50,7 +50,6 @@ class dipam_diagram {
                 rows: 2,
                 cols: 2
               },
-
               style: [
                 {
                   selector: 'node[name]',
@@ -515,7 +514,7 @@ class dipam_diagram {
   // (3) The realtime correlated items (Remove edges in case not suitable anymore)
   // (4) The real time compatible elements of the cy diagram
   update_elem(id, type, data){
-    console.log("Data to uodate: ",data);
+    console.log("Data to update: ",data);
     //first check if it's the Diagram
     if (id == this.DIAGRAM_GENERAL.data.id) {
       for (var k_data in data) {
@@ -650,6 +649,7 @@ class dipam_diagram {
           var flag_compatible = false;
           if (k_nodes == 'target_nodes') {
             flag_compatible = this.is_compatible(node, node_to_check_obj);
+            console.log(flag_compatible);
             if (!(flag_compatible)){
               this.cy.remove(this.cy.edges('edge[source="'+node_id+'"]').edges('edge[target="'+node_to_check_obj_id+'"]') );
             }
@@ -657,7 +657,7 @@ class dipam_diagram {
           else if (k_nodes == 'source_nodes') {
             flag_compatible = this.is_compatible(node_to_check_obj, node);
             if (!(flag_compatible)){
-              this.cy.remove(this.cy.edges('edge[source="'+node_id+'"]').edges('edge[target="'+node_to_check_obj_id+'"]') );
+              this.cy.remove(this.cy.edges('edge[source="'+node_to_check_obj_id+'"]').edges('edge[target="'+node_id+'"]') );
             }
           }
           else if (k_nodes == 'all_nodes') {

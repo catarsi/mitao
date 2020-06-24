@@ -26,25 +26,30 @@
 
       <div id="gui_top">
 
-          <div class="corner-box"></div>
+          <div class="corner-box">
+            <ul id="control_nav" class="nav control-nav">
+              <li id="nav_overview" class="nav-btn"><a id="nav_overview_a">Diagram</a></li>
+              <li id="nav_info" class="nav-btn"><a id="nav_info_a">Elements</a></li>
+            </ul>
+          </div>
 
           <div id="diagram_editor">
 
-            <div id="diagram_view" class="">
+            <div id="diagram_view" class="noselect">
               <div id="diagram_undo_redo" class="comp">
                 <!--<span class="nav-btn"><a id="undo_btn" >&#8404;</a></span>
                 <span class="nav-btn"><a id="redo_btn" >&#8405;</a></span>-->
-                <span class="nav-btn"><a id="undo_btn" >Undo</a></span>
-                <span class="nav-btn"><a id="redo_btn" >Redo</a></span>
+                <span class="nav-btn"><button type="button" id="undo_btn">Undo</button></span>
+                <span class="nav-btn"><button type="button" id="redo_btn">Redo</button></span>
               </div>
-              <div id="diagram_fit" class="comp"><a id="fit_btn" >&#10070; Fit diagram</a></div>
+              <div id="diagram_fit" class="comp"><button type="button" id="fit_btn" >&#10070; Fit diagram</button></div>
               <div id="diagram_zoom" class="comp">
                 <span class="nav-btn"><a id="zoom_in_btn" >&#43;</a></span>
                 <span class="nav-btn"><a id="zoom_out_btn" >&#8722;</a></span>
               </div>
             </div>
 
-            <div id="general" class="">
+            <div id="general" class="noselect">
             <span>
               <div id="diagram_elems" class="">
                 <span class="comp"><button id="add_tool" type="button" class="btn btn-warning">Add Tool</button></span>
@@ -76,10 +81,6 @@
 
       <div id="gui_middle">
           <div id="control">
-            <ul id="control_nav" class="nav control-nav">
-              <li id="nav_overview" class="nav-btn"><a id="nav_overview_a">Overview</a></li>
-              <li id="nav_info" class="nav-btn"><a id="nav_info_a">Info</a></li>
-            </ul>
             <div id="control_body"></div>
           </div>
           <div id="cy"></div>

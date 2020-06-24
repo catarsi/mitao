@@ -53,6 +53,11 @@ class dipam_interface {
 
         this.workflow = null;
         this.request_status_on = true;
+
+        this.DOMS.DIAGRAM.UNDO_BTN.style["pointer-events"] = "none";
+        this.DOMS.DIAGRAM.UNDO_BTN.style["opacity"] = 0.3;
+        this.DOMS.DIAGRAM.REDO_BTN.style["pointer-events"] = "none";
+        this.DOMS.DIAGRAM.REDO_BTN.style["opacity"] = 0.3;
     }
 
     set_corresponding_diagram(diagram){
@@ -68,6 +73,7 @@ class dipam_interface {
           'cancel-trigger': {},
           'save-trigger': {},
           'input-text-trigger': {},
+          'input-text-large-trigger': {},
           'select-file-trigger': {},
           'select-value-trigger': {},
           'check-value-trigger': {}
@@ -267,6 +273,17 @@ class dipam_interface {
                 `;
                 break;
 
+            case 'input-text-large':
+                      str_html = str_html + `
+                      <div class="input-group `+dom_tag+`">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text">`+param.intro_lbl+`</label>
+                        </div>
+                        <textarea data-id="`+elem.data.id+`" id="`+a_dom_id+`" class="`+a_dom_class+` save-value att-handler" value="`+dom_value+`" data-att-value="`+k_attribute+`" type="text" >`+dom_value+`</textarea>
+                      </div>
+                      `;
+                break;
+
           case 'select-file':
                   dom_value = interface_instance.label_handler(a_dom_id, {value: dom_value, elem: elem});
                   var str_options = `<option selected>Select source</option>
@@ -325,6 +342,21 @@ class dipam_interface {
       $(document).on('keyup', '#workflow_extra input', function(){
           document.getElementById(this.id).setAttribute('data-att-value',$(this).val());
       });
+      // delete with keyboard diagram items
+      $('body').keydown(function(event){
+          //var letter = String.fromCharCode(event.which);
+          if ((event.keyCode == 8) || (event.keyCode == 46)){
+            if ((interface_instance.info_section_elem['elem_class'] == "nodes") || (interface_instance.info_section_elem['elem_class'] == "edges")) {
+              var focused_elems = $(':focus');
+              if ((interface_instance.info_section_elem['elem'] != null) && (focused_elems.length == 0))  {
+                interface_instance.info_section_elem['elem'];
+                document.getElementById('remove').click();
+              }
+            }
+          }
+
+          //console.log(interface_instance.DIAGRAM_INSTANCE_OBJ.get_undo_redo());
+       });
     }
     set_control_section_events(elem){
       if ('_private' in elem) {
@@ -408,7 +440,7 @@ class dipam_interface {
               break;
           case 'input-text-trigger':
             $(event_dom).on('change', function(){
-              console.log($(event_dom).val());
+              //console.log($(event_dom).val());
               interface_instance.set_dipam_temp_val(this.getAttribute('data-att-value'),$(event_dom).val());
               var data_to_update = $.extend(true,{},interface_instance.editing("save"));
               interface_instance.reload_control_section(
@@ -421,6 +453,21 @@ class dipam_interface {
               document.getElementById('save').click();
             });
             break;
+          case 'input-text-large-trigger':
+              console.log($(event_dom).val());
+              $(event_dom).on('change', function(){
+                interface_instance.set_dipam_temp_val(this.getAttribute('data-att-value'),$(event_dom).val());
+                var data_to_update = $.extend(true,{},interface_instance.editing("save"));
+                interface_instance.reload_control_section(
+                    diagram_instance.update_elem(
+                      corresponding_elem.data.id,
+                      corresponding_elem.data.type,
+                      data_to_update
+                    ), true
+                );
+                document.getElementById('save').click();
+              });
+              break;
           case 'select-value-trigger':
                 var dom_id = event_dom.getAttribute('id');
                 $(event_dom).on('change', function(){
@@ -431,13 +478,15 @@ class dipam_interface {
                       //in case is a value update the param section
                       if (is_data_elem_value) {
                         var data_to_update = $.extend(true,{},interface_instance.editing("save"));
+                        var _res = diagram_instance.update_elem(
+                          corresponding_elem.data.id,
+                          corresponding_elem.data.type,
+                          data_to_update
+                        )
                         interface_instance.reload_control_section(
-                            diagram_instance.update_elem(
-                              corresponding_elem.data.id,
-                              corresponding_elem.data.type,
-                              data_to_update
-                            ), true
+                            _res, true
                         );
+                        console.log(_res);
                       }
                     };
                     interface_instance.editing("save");
@@ -984,16 +1033,20 @@ class dipam_interface {
   }
 
   show_undo(flag= true){
-    this.DOMS.DIAGRAM.UNDO_BTN.style.visibility = 'visible';
+    this.DOMS.DIAGRAM.UNDO_BTN.style["pointer-events"] = "auto";
+    this.DOMS.DIAGRAM.UNDO_BTN.style["opacity"] = 1;
     if (!(flag)) {
-      this.DOMS.DIAGRAM.UNDO_BTN.style.visibility = 'hidden';
+      this.DOMS.DIAGRAM.UNDO_BTN.style["pointer-events"] = "none";
+      this.DOMS.DIAGRAM.UNDO_BTN.style["opacity"] = 0.3;
     }
   }
 
   show_redo(flag= true){
-    this.DOMS.DIAGRAM.REDO_BTN.style.visibility = 'visible';
+    this.DOMS.DIAGRAM.REDO_BTN.style["pointer-events"] = "auto";
+    this.DOMS.DIAGRAM.REDO_BTN.style["opacity"] = 1;
     if (!(flag)) {
-      this.DOMS.DIAGRAM.REDO_BTN.style.visibility = 'hidden';
+      this.DOMS.DIAGRAM.REDO_BTN.style["pointer-events"] = "none";
+      this.DOMS.DIAGRAM.REDO_BTN.style["opacity"] = 0.3;
     }
   }
 
@@ -1142,7 +1195,7 @@ class dipam_interface {
     function _elem_onclick_handle(){
         //nodes on click handler
         diagram_cy.nodes().on('click', function(e){
-            console.log("Node clicked !", this._private.data.id,this);
+            //console.log("Node clicked !", this._private.data.id,this);
             diagram_instance.click_elem_style(this,'node');
             diagram_instance.check_node_compatibility(this);
             interface_instance.click_on_node(this);
@@ -1150,7 +1203,7 @@ class dipam_interface {
 
         //edges on click handler
         diagram_cy.edges().on('click', function(e){
-            console.log("Edge clicked !", this._private.data.id,this);
+            //console.log("Edge clicked !", this._private.data.id,this);
             diagram_instance.click_elem_style(this,'edge');
             interface_instance.click_on_edge(this);
         });
