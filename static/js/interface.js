@@ -105,6 +105,7 @@ class dipam_interface {
     build_info(elem, elem_class= 'nodes', update_control_params = false) {
       if('_private' in elem)
         elem = elem._private;
+      console.log(elem);
       this.info_section_html = this.build_control_section(elem, update_control_params);
       this.info_section_elem['elem'] = elem;
       this.info_section_elem['elem_class'] = elem_class;
@@ -123,6 +124,7 @@ class dipam_interface {
 
       res_str_html = res_str_html + '<div id="control_mid">';
       var all_param_doms_str = "";
+      var input_output_info_str = "";
       for (var k_attribute in elem.data) {
         var a_dom_str = "";
 
@@ -144,6 +146,12 @@ class dipam_interface {
                 res_elem_type = {'[KEY]': ["edge"],'label': ["Edge"],'class_label':["General"]};
               }
               a_dom_str = _build_a_dom("select-value", elem, k_attribute, {intro_lbl: "Type:", value: res_elem_type['[KEY]'], label: res_elem_type['label'], class_label: res_elem_type['class_label']});
+
+              //corresponding info and details about it
+              input_output_info_str = _build_info(elem.data);
+              if (input_output_info_str.length > 0) {
+                input_output_info_str = "<div class='input-output-info'>"+ input_output_info_str + "</div>"
+              }
               break;
 
             case 'param':
@@ -169,7 +177,9 @@ class dipam_interface {
           res_str_html = res_str_html + a_dom_str;
         }
       }
-      res_str_html = res_str_html + "<div class='control-params'>"+ all_param_doms_str + '</div></div>';
+
+
+      res_str_html = res_str_html + input_output_info_str + "<div class='control-params'>"+ all_param_doms_str + '</div></div>';
       //console.log(this.temp_dipam_value);
 
       //now the foot buttons
@@ -186,6 +196,48 @@ class dipam_interface {
       res_str_html = res_str_html + '</div>';
 
       return res_str_html;
+
+      function _build_info(elem_data){
+        var input_output_info_str = "";
+        if (elem_data.type == "tool") {
+          var a_tool_obj = diagram_instance.get_conf_att("tool", elem_data.value, null);
+          var inputs_index = []
+          var optional_input_info_str = "";
+          if ("optional_input" in a_tool_obj) {
+            for (var u = 0; u < a_tool_obj["optional_input"].length; u++) {
+              var a_data_obj = diagram_instance.get_conf_att("data", a_tool_obj["optional_input"][u], null);
+              optional_input_info_str = optional_input_info_str +"&rarr; "+ a_data_obj["label"] + " (optional)<p>";
+              inputs_index.push(a_data_obj["label"]);
+            }
+          }
+          var required_input_info_str = "";
+          for (var u = 0; u < a_tool_obj["compatible_input"].length; u++) {
+            var a_data_obj = diagram_instance.get_conf_att("data", a_tool_obj["compatible_input"][u], null);
+            if (inputs_index.indexOf(a_data_obj["label"]) == -1) {
+              required_input_info_str = required_input_info_str +"&rarr; "+ a_data_obj["label"] +"<p>";
+            }
+          }
+          var title_input = ""
+          if ((required_input_info_str.length > 0) || (optional_input_info_str.length > 0)) {
+            title_input = '<div class="title">Input:</div>'
+          }
+          input_output_info_str = title_input + required_input_info_str + optional_input_info_str;
+
+          var output_info_str = "";
+          if ("output" in a_tool_obj) {
+            for (var u = 0; u < a_tool_obj["output"].length; u++) {
+              var a_data_obj = diagram_instance.get_conf_att("data", a_tool_obj["output"][u], null);
+              output_info_str = output_info_str +"&rarr; "+ a_data_obj["label"] +"<p>";
+            }
+          }
+          title_input = ""
+          if (output_info_str.length > 0){
+            title_input = '<div class="title">Output:</div>'
+          }
+          input_output_info_str = input_output_info_str + title_input + output_info_str;
+        }
+        return input_output_info_str;
+      }
 
       function _build_a_dom(dom_tag, elem, k_attribute, param = {}, is_param = false){
         var a_dom_id = k_attribute;
@@ -279,7 +331,7 @@ class dipam_interface {
                         <div class="input-group-prepend">
                           <label class="input-group-text">`+param.intro_lbl+`</label>
                         </div>
-                        <textarea data-id="`+elem.data.id+`" id="`+a_dom_id+`" class="`+a_dom_class+` save-value att-handler" value="`+dom_value+`" data-att-value="`+k_attribute+`" type="text" >`+dom_value+`</textarea>
+                        <textarea data-id="`+elem.data.id+`" id="`+a_dom_id+`" class="`+a_dom_class+` save-value att-handler" value="`+dom_value+`" data-att-value="`+k_attribute+`" type="text" >`+ dom_value.replace(/\\n/g,"&#13;&#10;")+`</textarea>
                       </div>
                       `;
                 break;
@@ -1148,16 +1200,29 @@ class dipam_interface {
     $( "#"+this.DOMS.WORKFLOW.SAVE_BTN.getAttribute('id')).on({
         click: function(e) {
           e.preventDefault();
+
+          document.getElementById('list_options_trigger').click();
           //interface_instance.click_save_workflow();
           var workflow_data = diagram_instance.get_workflow_data();
-          //console.log(workflow_data);
+          //console.log(JSON.stringify(workflow_data));
           $.post( "/saveworkflow"+"?time="+(new Date().getTime()).toString(), {
+            //workflow_data: JSON.stringify(workflow_data).replace(/\\/g, "\\\\"),
             workflow_data: JSON.stringify(workflow_data),
             path: "",
             name: "",
             load: "off"
           }).done(function() {
             interface_instance.DOMS.WORKFLOW.SAVE_BTN_DOWNLOAD.click();
+          });
+        }
+    });
+
+    $( "#"+this.DOMS.WORKFLOW.SHUTDOWN_BTN.getAttribute('id')).on({
+        click: function(e) {
+          e.preventDefault();
+          document.getElementById('list_options_trigger').click();
+          $.get("/shutdown").done(function() {
+            window.close();
           });
         }
     });
@@ -1177,6 +1242,7 @@ class dipam_interface {
             var reader = new FileReader();
             reader.readAsText(file, "UTF-8");
             reader.onload = function(e) {
+                document.getElementById('list_options_trigger').click();
                 var result = e.target.result;
                 //console.log(result);
                 $.post( "/loadworkflow", {

@@ -3,6 +3,7 @@
   --bg-light-color: #E0D8CB;
   /*--bg-light-color: rgba(198, 176, 140, 0.1);*/
   --bg-color: #B29E7E;
+  --bg-color-light: #EFEBE5;
   --bg-color-hover: #A8926E;
   --tool-color: #E5CE80;
   --tool-color-hover: #DCBE56;
@@ -223,7 +224,7 @@ DIAGRAM TOP
   display: inline-block;
   min-height: 300px;
   position: relative;
-  z-index: 10;
+  z-index: 100;
 }
 #gui_middle #cy{
   display: inline-block;
@@ -255,9 +256,6 @@ label{
 }
 
 #control_body{
-  max-height: 500px;
-  transition: max-height 0.5s;
-  overflow: hidden;
   padding-top: 20px;
   width: 100%;
   background-color: var(--bg-light-color);
@@ -265,6 +263,11 @@ label{
   /*border: solid 1px var(--bg-color);*/
   padding-bottom: 20px;
   opacity: 1;
+}
+#control_mid{
+  max-height: 460px;
+  transition: max-height 0.5s;
+  overflow: auto
 }
 #control_mid .control-params{
   width: 100%;
@@ -276,6 +279,21 @@ label{
   border-left: solid 1.3px var(--parms-color);
 }
 #control_mid .control-params .input-group + .input-group{
+}
+#control_mid .input-output-info{
+  margin-top: 10px;
+  margin-left: 20px;
+  padding: 5px;
+  padding-left: 5px;
+  width: 80%;
+  border-radius: 5px;
+  border: solid 0.5px gray;
+  background-color: var(--bg-color-light);
+
+}
+#control_mid .input-output-info .title{
+  font-size:120%;
+  margin-bottom: 5px;
 }
 
 #control_foot{

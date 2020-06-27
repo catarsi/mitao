@@ -9,6 +9,7 @@ import time
 from os.path import basename
 from shutil import copyfile
 import zipfile
+from ast import literal_eval
 
 from src import tool
 from src import data
@@ -83,8 +84,8 @@ def index():
     workflow_path = request.args.get('workflow')
     if workflow_path == None:
         workflow_path = BASE_CONFIG_PATH+"/workflow.json"
-    workflow_data = json.load(open(workflow_path))
-    return render_template('index.html', workflow=workflow_data, config=CONFIG_DATA)
+    workflow_data = json.dumps(json.load(open(workflow_path)))
+    return render_template('index.html', workflow=workflow_data, config=json.dumps(CONFIG_DATA))
 
 @app.route('/upload', methods = ['POST'])
 def upload():
@@ -188,6 +189,7 @@ def save_workflow():
 def load_workflow():
     workflow_file = request.form['workflow_file']
     jsdata = json.loads(workflow_file)
+    print(jsdata)
     workflow_fname = "workflow.json"
     path = BASE_CONFIG_PATH+"/"
     with open(path + workflow_fname, 'w') as outfile:

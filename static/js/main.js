@@ -1,6 +1,10 @@
 
 //load json files
+//var workflow = JSON.parse(decode_json(workflow));
+
+//var workflow = JSON.parse(JSON.stringify(workflow));
 var workflow = JSON.parse(decode_json(workflow));
+
 var config = JSON.parse(decode_json(config));
 //console.log("Config:",config);
 //console.log("Workflow:",workflow);
@@ -11,8 +15,10 @@ function decode_json(text){
   var parser = new DOMParser;
   var dom = parser.parseFromString('<!doctype html><body>' + msg,'text/html');
   msg = dom.body.textContent;
-  msg = msg.replace(/'/g, '"');
-  msg = msg.replace('\\', "\\\\");
+  //msg = msg.replace(/'/g, '"');
+  msg = msg.replace(/[\n\r]/g, '\\n');
+  msg = msg.replace(/\\/g, "\\\\");
+
   return msg;
 }
 

@@ -122,7 +122,8 @@
   },
   "tool": {
         "t-meta-builder": {
-            "label": "Metadata builder",
+            "label": "Metadata generator",
+            "info": "",
             "class": "Convert",
             "class_label": "Converter",
             "function": "meta_builder",
@@ -131,7 +132,7 @@
             "output": ["d-metadata"]
         },
         "t-lda-coherance": {
-            "label": "Topic modelling Coherance calculator",
+            "label": "LDA coherence calculator",
             "class_label": "Text-Analysis",
             "class": "TextAnalysis",
             "function": "calc_coherence",
@@ -140,7 +141,7 @@
             "output": ["d-coherence"]
         },
         "t-topic-docs-view": {
-            "label": "Doc X Topic Visualization",
+            "label": "DocsXTopics visualizer",
             "class_label": "Terminal",
             "class": "Terminal",
             "param": ["p-meta-value","p-meta-type","p-topic","p-chart-axis"],
@@ -148,8 +149,16 @@
             "compatible_input": ["d-doc-topics-table","d-metadata"],
             "output": ["d-chart-html","d-grouped-barchart"]
         },
+        "t-topic-docs": {
+            "label": "DocsXTopics matrix builder",
+            "class_label": "Text-Analysis",
+            "class": "TextAnalysis",
+            "function": "doc_prop_topics",
+            "compatible_input": ["d-model-corpus","d-gensimldamodel"],
+            "output": ["d-doc-topics-table"]
+        },
         "t-topic-words": {
-            "label": "Words X Topic",
+            "label": "TermsXTopics matrix builder",
             "class_label": "Text-Analysis",
             "class": "TextAnalysis",
             "param": ["p-numwords"],
@@ -157,16 +166,8 @@
             "compatible_input": ["d-model-corpus","d-gensimldamodel"],
             "output": ["d-word-topics-table"]
         },
-        "t-topic-docs": {
-            "label": "Doc X Topic",
-            "class_label": "Text-Analysis",
-            "class": "TextAnalysis",
-            "function": "doc_prop_topics",
-            "compatible_input": ["d-model-corpus","d-gensimldamodel"],
-            "output": ["d-doc-topics-table"]
-        },
         "t-topic-ldavis": {
-            "label": "Visualize with LDAvis",
+            "label": "LDAvis visualizer",
             "class_label": "Terminal",
             "class": "Terminal",
             "function": "ldavis",
@@ -183,16 +184,17 @@
             "output": ["d-model-corpus","d-dictionary-corpus"]
         },
         "t-corpus-tokenize": {
-            "label": "Tokenizer",
+            "label": "Documents tokenizer",
             "class_label": "Text-Analysis",
             "class": "TextAnalysis",
             "function": "tokenize",
             "param": ["p-defstopwords","p-deflemmatize"],
             "compatible_input": ["d-gen-text","d-stopwords"],
+            "optional_input": ["d-stopwords"],
             "output": ["d-processed-corpus"]
         },
         "t-topic-lda": {
-            "label": "Topic modeling with LDA",
+            "label": "LDA Topic modelling calculator",
             "class_label": "Text-Analysis",
             "class": "TextAnalysis",
             "function": "lda",
@@ -201,7 +203,7 @@
             "output": ["d-gensimldamodel"]
         },
         "t-filter-text": {
-            "label": "Filter the text",
+            "label": "Documents Filter",
             "class": "Filter",
             "class_label": "Filter",
             "function": "filter_text",
@@ -210,14 +212,15 @@
             "output": ["d-gen-text"]
         },
         "t-save-files": {
-            "label": "Save files",
+            "label": "Saver",
             "class": "Terminal",
             "class_label": "Terminal",
             "function": "save_file",
-            "compatible_input": ["d-gensimldamodel","d-grouped-barchart","d-chart-html","d-metadata","d-dictionary-corpus","d-model-corpus","d-processed-corpus","d-gen-text","d-word-topics-table","d-doc-topics-table","d-coherence","d-perplexity","d-doc-topics","d-chartimg","d-ldavis-html"]
+            "compatible_input": ["d-gensimldamodel","d-grouped-barchart","d-chart-html","d-metadata","d-dictionary-corpus","d-model-corpus","d-processed-corpus","d-gen-text","d-word-topics-table","d-doc-topics-table","d-coherence","d-perplexity","d-doc-topics","d-chartimg","d-ldavis-html"],
+            "optional_input": ["d-gensimldamodel","d-grouped-barchart","d-chart-html","d-metadata","d-dictionary-corpus","d-model-corpus","d-processed-corpus","d-gen-text","d-word-topics-table","d-doc-topics-table","d-coherence","d-perplexity","d-doc-topics","d-chartimg","d-ldavis-html"]
         },
         "t-convert-pdftotext": {
-            "label": "Convert PDF document/s to text",
+            "label": "PDF to TXT documents converter",
             "class": "Convert",
             "class_label": "Converter",
             "function": "pdf_to_text",
