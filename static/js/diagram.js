@@ -250,7 +250,7 @@ class dipam_diagram {
 
     function _normalize_data_to_save(an_elem, is_node = false) {
       //check if there is objects also
-      console.log(an_elem._private.data)
+      //console.log(an_elem._private.data)
       /*
       if ("param" in an_elem._private.data) {
         if ("p-file" in an_elem._private.data.param) {
@@ -514,7 +514,7 @@ class dipam_diagram {
   // (3) The realtime correlated items (Remove edges in case not suitable anymore)
   // (4) The real time compatible elements of the cy diagram
   update_elem(id, type, data){
-    console.log("Data to update: ",data);
+    //console.log("Data to update: ",data);
     //first check if it's the Diagram
     if (id == this.DIAGRAM_GENERAL.data.id) {
       for (var k_data in data) {
@@ -649,7 +649,6 @@ class dipam_diagram {
           var flag_compatible = false;
           if (k_nodes == 'target_nodes') {
             flag_compatible = this.is_compatible(node, node_to_check_obj);
-            console.log(flag_compatible);
             if (!(flag_compatible)){
               this.cy.remove(this.cy.edges('edge[source="'+node_id+'"]').edges('edge[target="'+node_to_check_obj_id+'"]') );
             }

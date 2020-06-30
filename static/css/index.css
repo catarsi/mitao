@@ -343,6 +343,35 @@ input {
   resize: none;
   width: 100%;
 }
+.input-text-group .input-group-prepend{
+  display: none;
+}
+.input-text-group table {
+  border-spacing: 3px;
+  border-collapse: separate;
+  table-layout: auto;
+}
+.input-text-group table td{
+  padding-bottom: 10px;
+}
+.input-text-group table td:last-child {
+ display: table-cell;
+ border-bottom: none;
+}
+.input-text-group table td:last-child button{
+  font-size: 16pt;
+  width: 35px;
+  height: 35px;
+  background-color: #7CD775;
+  border: none;
+  border-radius: 7px;
+  opacity: 0.85;
+}
+.input-text-group table td:last-child button.del_att_regex{
+  background-color: #FF6F56;
+}
+
+
 
 #edit_buttons{
   padding-left: 10%;

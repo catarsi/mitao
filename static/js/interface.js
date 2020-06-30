@@ -74,6 +74,7 @@ class dipam_interface {
           'save-trigger': {},
           'input-text-trigger': {},
           'input-text-large-trigger': {},
+          'input-text-group-trigger': {},
           'select-file-trigger': {},
           'select-value-trigger': {},
           'check-value-trigger': {}
@@ -105,7 +106,6 @@ class dipam_interface {
     build_info(elem, elem_class= 'nodes', update_control_params = false) {
       if('_private' in elem)
         elem = elem._private;
-      console.log(elem);
       this.info_section_html = this.build_control_section(elem, update_control_params);
       this.info_section_elem['elem'] = elem;
       this.info_section_elem['elem_class'] = elem_class;
@@ -156,7 +156,9 @@ class dipam_interface {
 
             case 'param':
               //is a param
-              for (var k_param in elem.data.param) {
+              var sorted_params = Object.keys(elem.data.param).sort();
+              for (var k = 0; k < sorted_params.length; k++) {
+                    var k_param = sorted_params[k];
                     var para_obj = diagram_instance.get_conf_att("param",k_param, null);
                     var para_val = para_obj.value;
                     if (para_val != -1) {
@@ -336,6 +338,67 @@ class dipam_interface {
                       `;
                 break;
 
+            case 'input-text-group':
+                      var g_inputs = `<div data-id="`+elem.data.id+`" id="`+a_dom_id+`" class="g-headers `+a_dom_class+` save-value att-handler" data-att-value="`+k_attribute+`">`;
+
+                      //get the rows with their corresponding values
+                      //att[[EQUALS]]ff[[ATT]]type[[EQUALS]][[ATT]]regex[[EQUALS]]
+                      console.log(dom_value);
+                      var rows = null;
+                      var index_rows = new Array(1).fill(-1);
+                      if (dom_value != null) {
+                        rows = dom_value.split("[[RULE]]");
+                        index_rows = new Array(rows.length).fill(-1);
+                        for (var i = 0; i < rows.length; i++) {
+                          var cells = rows[i].split("[[ATT]]");
+                          for (var j = 0; j < cells.length; j++) {
+                            var vals = cells[j].split("[[EQUALS]]");
+                            if (index_rows[i] == -1) {
+                              index_rows[i] = {};
+                            }
+                            index_rows[i][vals[0]] = vals[1];
+                          }
+                        }
+                      }
+
+
+                      var input_text_header = `<tr><td>`;
+                      var columns = [];
+                      for (var i = 0; i < param.label.length; i++) {
+                        input_text_header = input_text_header + "<div>"+param.label[i]+"</div>";
+                        if (columns.indexOf(param.value[i]) == -1) {
+                          columns.push(param.value[i]);
+                        }
+                      }
+                      input_text_header = input_text_header + `</td><td><button type="button" data-value="`+param.value+`" class="add_att_regex">+</button></td></tr>`;
+
+                      var input_text_row_pattern = "";
+                      for (var i = 0; i < index_rows.length; i++) {
+                        input_text_row_pattern = input_text_row_pattern + `<tr><td>`;
+                        var a_row = index_rows[i];
+                        for (var j = 0; j < columns.length; j++) {
+                          var input_val = a_row[columns[j]];
+                          if (input_val == undefined) {
+                            input_val = "";
+                          }
+                          input_text_row_pattern = input_text_row_pattern + `<input value="`+input_val+`" class=`+columns[j]+` type="text"></input>`;
+                        }
+                        if (i > 0) {
+                            input_text_row_pattern = input_text_row_pattern + `</td><td><button type="button" class="del_att_regex">-</button></td></tr>`+`</tr>`;
+                        }else {
+                            input_text_row_pattern = input_text_row_pattern + `</td><td></td></tr>`+`</tr>`;
+                        }
+                      }
+
+                      str_html = str_html + `
+                      <div class="input-group `+dom_tag+`">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text">`+param.intro_lbl+`</label>
+                        </div>
+                        `+g_inputs +`<table>`+ input_text_header + input_text_row_pattern + `</table></div>
+                      </div>`;
+                break;
+
           case 'select-file':
                   dom_value = interface_instance.label_handler(a_dom_id, {value: dom_value, elem: elem});
                   var str_options = `<option selected>Select source</option>
@@ -388,8 +451,8 @@ class dipam_interface {
       var interface_instance = this;
       //always do these default events
       $(document).on('keyup', '#control input', function(){
-          var key_att = document.getElementById(this.id).getAttribute('data-att-value');
-          interface_instance.set_dipam_temp_val(key_att,$(this).val());
+          //var key_att = document.getElementById(this.id).getAttribute('data-att-value');
+          //interface_instance.set_dipam_temp_val(key_att,$(this).val());
       });
       $(document).on('keyup', '#workflow_extra input', function(){
           document.getElementById(this.id).setAttribute('data-att-value',$(this).val());
@@ -520,6 +583,59 @@ class dipam_interface {
                 document.getElementById('save').click();
               });
               break;
+          case 'input-text-group-trigger':
+                  $(event_dom).on('click','.add_att_regex', function(){
+                    var column_list = String($(this).attr("data-value")).split(",");
+                    var input_text_row_pattern = "<tr><td>";
+                    for (var i = 0; i < column_list.length; i++) {
+                      input_text_row_pattern = input_text_row_pattern + `<input class=`+column_list[i]+` type="text"></input>`;
+                    }
+                    var html_row = input_text_row_pattern + `</td><td><button type="button" class="del_att_regex">-</button></td></tr>`;
+                    this.parentElement.parentElement.parentElement.innerHTML = this.parentElement.parentElement.parentElement.innerHTML + html_row;
+                  });
+                  $(event_dom).on('click','.del_att_regex', function(){
+                    this.parentElement.parentElement.remove();
+                  });
+                  $(event_dom).on('change','input', function(){
+                    $(this).attr('value', $(this).val());
+                    var list_inputs = $("."+dom_class+" input");
+                    var index_inputs = {};
+                    var num_rows = 0;
+                    for (var i = 0; i < list_inputs.length; i++) {
+                      var c_name = list_inputs[i].className;
+                      if (!(c_name in index_inputs)) {
+                        index_inputs[c_name] = [];
+                      }
+                      index_inputs[c_name].push(list_inputs[i].value)
+                      if (index_inputs[c_name].length > num_rows) {
+                        num_rows = index_inputs[c_name].length;
+                      }
+                    }
+
+                    var new_value = "";
+                    for (var i = 0; i < num_rows; i++) {
+                      for (var k in index_inputs) {
+                        new_value = new_value + k+"[[EQUALS]]"+index_inputs[k][i]+"[[ATT]]";
+                      }
+                      new_value = new_value.substring(0, new_value.length - 7) + "[[RULE]]";
+                    }
+                    new_value = new_value.substring(0, new_value.length - 8);
+
+                    //console.log(index_inputs);
+                    //console.log(new_value);
+
+                    interface_instance.set_dipam_temp_val($(event_dom).attr('data-att-value'),new_value);
+                    var data_to_update = $.extend(true,{},interface_instance.editing("save"));
+                    interface_instance.reload_control_section(
+                        diagram_instance.update_elem(
+                          corresponding_elem.data.id,
+                          corresponding_elem.data.type,
+                          data_to_update
+                        ), true
+                    );
+                    document.getElementById('save').click();
+                  });
+                  break;
           case 'select-value-trigger':
                 var dom_id = event_dom.getAttribute('id');
                 $(event_dom).on('change', function(){

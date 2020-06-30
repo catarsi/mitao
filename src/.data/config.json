@@ -253,7 +253,7 @@
           "label": "Data type of the x-axis :",
           "value_label": ["None","Time series"],
           "value": ["none","time_series"],
-          "init_value": "None"
+          "init_value": "none"
         },
         "p-meta-type":{
           "handler": "select-value",
@@ -301,10 +301,11 @@
           "init_value": ""
         },
         "p-metaregex":{
-          "handler": "input-text-large",
-          "label": "A meta attribute/s and its corresponding regular expression <p> Example: &lt;meta_att&gt; = _area=(.*)_",
-          "value": "",
-          "init_value": ""
+          "handler": "input-text-group",
+          "label": "",
+          "value_label": ["Attribute","Type","Regular expression"],
+          "value": ["att","type","regex"],
+          "init_value": [["att","type","regex"]]
         },
         "p-defstopwords":{
           "handler": "select-value",

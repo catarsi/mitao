@@ -46,39 +46,40 @@ class Convert(object):
             documents[file_k] =  input_files["d-gen-text"][file_k]
 
         # Params
-        REGEX_RULES = None
+        REGEX_TEXT = None
         if param != None:
             if "p-metaregex" in param:
-                REGEX_RULES = str(param["p-metaregex"])
+                REGEX_TEXT = str(param["p-metaregex"])
 
-        regex_text = REGEX_RULES
-        meta_list = [row.split(" = ") for row in regex_text.split("\n")]
 
+        meta_list = [row.split("[[ATT]]") for row in REGEX_TEXT.split("[[RULE]]")]
         docs_meta = {}
         for f_name in documents:
             meta_dict = dict()
             for r in meta_list:
-                if len(r) > 1:
-                    parts = r[0].split(" : ")
-                    att_names = re.findall("<(.*)>", parts[0])
-                    att_type = parts[1]
-                    if len(att_names) > 0 and len(att_type) > 0:
-                        att = att_names[0]
-                        rule = r[1]
-                        found_elem = re.findall(r[1], f_name)
+                row_index = dict()
+                for cell in r:
+                    parts = cell.split("[[EQUALS]]")
+                    att_name = parts[0]
+                    att_value = parts[1]
+                    row_index[att_name] = att_value
 
-                        if "list" in att_type:
-                            att_type_val = re.findall("list\((.*)\)", att_type)
-                            if len(att_type_val) > 0:
-                                att_type_parts = att_type_val[0].split(",")
-                                data_type = att_type_parts[0]
-                                separator = att_type_parts[1]
-                                meta_dict[att] = found_elem[0].split(separator)
-                        else:
-                            if len(found_elem) > 0:
-                                meta_dict[att] = found_elem[0]
+                found_elem = re.findall(row_index["regex"], f_name)
+                if "list" in row_index["type"]:
+                    att_type = row_index["type"]
+                    att_type_val = re.findall("list\((.*)\)", att_type)
+                    if len(att_type_val) > 0:
+                        att_type_parts = att_type_val[0].split(",")
+                        data_type = att_type_parts[0]
+                        separator = att_type_parts[1]
+                        l_res = found_elem[0].split(separator)
+                        meta_dict[row_index["att"]] = found_elem[0].split(separator)
+                else:
+                    if len(found_elem) > 0:
+                        meta_dict[row_index["att"]] = found_elem[0]
 
             docs_meta[f_name] = meta_dict
+
 
         data_to_return["data"]["d-metadata"] = docs_meta
         return data_to_return
