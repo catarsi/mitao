@@ -144,7 +144,7 @@
             "label": "DocsXTopics visualizer",
             "class_label": "Terminal",
             "class": "Terminal",
-            "param": ["p-meta-value","p-meta-type","p-topic","p-chart-axis"],
+            "param": ["p-meta-value","p-meta-type","p-meta-filter","p-chart-axis"],
             "function": "cat_topics_barchart",
             "compatible_input": ["d-doc-topics-table","d-metadata"],
             "output": ["d-chart-html","d-grouped-barchart"]
@@ -245,6 +245,12 @@
         "p-meta-value":{
           "handler": "input-text",
           "label": "Select a metadata attribute:",
+          "value": "",
+          "init_value": ""
+        },
+        "p-meta-filter":{
+          "handler": "input-text",
+          "label": "List of metadata attribute/s to filter on:",
           "value": "",
           "init_value": ""
         },

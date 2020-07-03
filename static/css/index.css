@@ -11,6 +11,8 @@
   --data-color-hover: #288986;
   --dark-font: #273746;
   --parms-color: #273746;
+  --running: #7CD775;
+  --error: #FF6F56;
 }
 :disabled{
   opacity: 0.6;
@@ -160,7 +162,7 @@ DIAGRAM TOP
 }
 #general button#btn_run_workflow{
   font-weight: 340;
-  width: 180px;
+  width: 25%;
   background-color: var(--bg-color);
   color: white;
   height:45px;
@@ -172,7 +174,7 @@ DIAGRAM TOP
   vertical-align: top;
 }
 #general button#btn_run_workflow:hover{
-  background-color: var(--bg-color-hover);
+  background-color: var(--bg-color-hover)!important;
 }
 .navbar-toggle{
   display: block;
@@ -612,3 +614,33 @@ ul + label{
     background-color: #ccc;
 }
 /* Popup box BEGIN */
+
+@media only screen and (max-width: 1300px) {
+  .corner-box *{
+    font-size: 10pt!important;
+  }
+  #diagram_editor #general *{
+      font-size: 10pt!important;
+      width: fit-content!important;
+      vertical-align:bottom!important;
+  }
+  #diagram_editor #diagram_view *{
+      font-size: 10pt!important;
+      width: fit-content!important;
+      vertical-align:bottom!important;
+  }
+  #general button#btn_run_workflow{
+        font-size: 80%;
+        width: fit-content!important;
+        height: fit-content!important;
+  }
+  #general button#add_tool{
+    height: fit-content!important;
+  }
+  #general button#add_data{
+    height: fit-content!important;
+  }
+  #general button#list_options_trigger{
+    height: fit-content!important;
+  }
+}

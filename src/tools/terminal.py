@@ -5,6 +5,7 @@ import plotly.express as px
 from collections import defaultdict
 from collections import OrderedDict
 import re
+import json
 
 import matplotlib
 matplotlib.use('Agg')
@@ -78,14 +79,14 @@ class Terminal(object):
             inputs["docs_topics"] =  input_files["d-doc-topics-table"][file_k]
 
         # Params
-        NUM_TOPICS = 2
+        META_FILTER = []
         META_KEY = ""
         META_LABEL = ""
         META_KEY_TYPE = ""
         CHART_AXIS_TYPE = "none"
         if param != None:
-            if "p-topic" in param:
-                NUM_TOPICS = int(param["p-topic"])
+            if "p-meta-filter" in param:
+                META_FILTER = [a.strip() for a in param["p-meta-filter"].split(",")]
             if "p-meta-value" in param:
                 META_KEY = param["p-meta-value"]
                 META_LABEL = "metadata attribute = <"+META_KEY+">"
@@ -94,8 +95,6 @@ class Terminal(object):
             if "p-chart-axis" in param:
                 if param["p-chart-axis"] == "time_series":
                     CHART_AXIS_TYPE = "initial"
-
-
 
         # Process
         # -------
@@ -119,274 +118,487 @@ class Terminal(object):
                 index_files.append(clean_index)
 
         meta = {}
+        meta_index = {}
+        meta_x_values = set()
         for f_name in inputs["meta_docs"]:
             k_meta = re.sub(r'^.*?\/', '', str(f_name)).replace(".json","")
             if k_meta in index_files:
                 meta[k_meta] = inputs["meta_docs"][f_name]
+                for a_meta_k in inputs["meta_docs"][f_name]:
+                    a_meta_k_val = inputs["meta_docs"][f_name][a_meta_k]
+                    a_data_type = str(type(a_meta_k_val))
+                    if "list" in a_data_type:
+                        inner_type = "string"
+                        if len(a_meta_k_val) > 0:
+                            inner_type = str(type(a_meta_k_val[0]))
+                            if "str" in inner_type:
+                                inner_type = "string"
+                            elif "int" in inner_type:
+                                inner_type = "integer"
+                        meta_index[a_meta_k] = "list("+inner_type+")"
+                    elif "str" in a_data_type:
+                        meta_index[a_meta_k] = "string"
+                    elif "int" in a_data_type:
+                        meta_index[a_meta_k] = "integer"
 
-        # 2) Classify on categories
-        dict_cat = defaultdict(dict)
-        for t in dict_topics:
-            for f_k in dict_topics[t]:
-                if f_k in meta and META_KEY in meta[f_k]:
-                    #Check Meta Type
-                    meta_val = [meta[f_k][META_KEY]]
-                    if META_KEY_TYPE.startswith("list"):
-                        meta_val = meta[f_k][META_KEY]
+                    if a_meta_k == META_KEY:
+                        meta_x_values.add(a_meta_k_val)
 
-                    for m_v in meta_val:
-                        if m_v.strip() != "":
-                            if not m_v in dict_cat:
-                                dict_cat[m_v] = []
+        meta_x_values = list(meta_x_values)
+        meta_x_values.sort()
 
-                            index_in = [i for i, d in enumerate(dict_cat[m_v]) if d["topic"] == t]
-                            if len(index_in) == 0:
-                                dict_cat[m_v].append({"topic":t, "length":0, "items":[]})
-                                index_in = [len(dict_cat[m_v]) - 1]
+        filter_meta = dict()
+        for m in meta_index:
+            if m in META_FILTER:
+                filter_meta[m] = meta_index[m]
 
-                            dict_cat[m_v][index_in[0]]["items"].append(f_k)
-                            dict_cat[m_v][index_in[0]]["length"] += 1
-
-        # 3) Sort the topics
-        CAT_TOT = defaultdict(int)
-        DOC_TOT = 0
-        for cat in dict_cat:
-            dict_cat[cat] = sorted(dict_cat[cat], key=lambda k: k['length'], reverse=True)
-            for topic_o in dict_cat[cat]:
-                CAT_TOT[cat] += topic_o['length']
-                DOC_TOT += topic_o['length']
-
-        # 4) Prepare the Y-axis
-        y_info= dict()
-        i_cat = 0
-
-        # if time series x is sorted
-        x = sorted(dict_cat.keys())
-        NUM_CAT = len(dict_cat)
-
-        color_id = 0
-        ordered_topics = []
-        for cat in x:
-            tot_top_docs = 0
-            for elem in dict_cat[cat][:NUM_TOPICS]:
-                if not elem["topic"] in y_info:
-                    y_info[elem["topic"]] = {
-                        "topic_y_count": [0 for _ in range(NUM_CAT)],
-                        "topic_y_percentage": [0 for _ in range(NUM_CAT)],
-                        "topic_y_count_lbl": ["" for _ in range(NUM_CAT)],
-                        "topic_y_percentage_lbl": ["" for _ in range(NUM_CAT)],
-                        #"color": PALETTE[color_id]
-                        "color": self.PALETTE[color_id % len(self.PALETTE)],
-                        "color_opacity": 1 - ((((len(ordered_topics) + 1) / len(self.PALETTE)) * 0.25) % 1)
-                    }
-                    ordered_topics.append(elem["topic"])
-                    color_id += 1
-                y_info[elem["topic"]]["topic_y_count"][i_cat] = elem['length']
-                y_info[elem["topic"]]["topic_y_percentage"][i_cat] = elem["length"]/CAT_TOT[cat]
-                y_info[elem["topic"]]["topic_y_count_lbl"][i_cat] = "<br>&#8594; %.2f"%((elem["length"]/DOC_TOT)*100 ) + "% of all the documents <br>"+"&#8594; %.2f"%((elem["length"]/CAT_TOT[cat])*100)+ "% of the documents in "+str(cat)
-                y_info[elem["topic"]]["topic_y_percentage_lbl"][i_cat] = "<br>&#8594; %d documents (%.2f"%(elem["length"] ,(elem["length"]/DOC_TOT)*100 ) + "% of all the documents)"
-                tot_top_docs += elem['length']
-
-            other_length = CAT_TOT[cat] - tot_top_docs
-            if NUM_TOPICS < len(dict_cat[cat]):
-                if not "other" in y_info:
-                    ordered_topics.insert(0,"other")
-                    y_info["other"] = {
-                        "topic_y_count": [0 for _ in range(NUM_CAT)],
-                        "topic_y_percentage": [0 for _ in range(NUM_CAT)],
-                        "topic_y_count_lbl": ["" for _ in range(NUM_CAT)],
-                        "topic_y_percentage_lbl": ["" for _ in range(NUM_CAT)],
-                        "color": "#C7C7C7",
-                        "color_opacity": 1
-                    }
-                y_info["other"]["topic_y_count"][i_cat] = other_length
-                y_info["other"]["topic_y_percentage"][i_cat] = other_length/CAT_TOT[cat]
-                y_info["other"]["topic_y_count_lbl"][i_cat] = "<br>&#8594; %.2f"%((other_length/DOC_TOT)*100)+ "% of all the documents <br>"+"&#8594; %.2f"%((other_length/CAT_TOT[cat])*100)+ "% of the documents in "+str(cat)
-                y_info["other"]["topic_y_percentage_lbl"][i_cat] = "<br>&#8594; %d documents (%.2f"%(other_length,(other_length/DOC_TOT)*100)+ "% of all the documents)"
-            i_cat += 1
-
-        # 5) Plot
-        str_html_dict = dict()
-        for y_type in ["count","percentage"]:
-            y_suffix = ""
-            if y_type == "percentage":
-                y_suffix = ",.2%"
-            for chart_type in ["bars","lines"]:
-
-                yaxis_title_val = "Number of documents"
-                if y_type == "percentage":
-                    yaxis_title_val = "Percentage"
-
-                barchart_data = [["topics/category"]+[cat for cat in x]]
-                fig = go.Figure()
-
-                for k_t in ordered_topics:
-                    barchart_data.append([k_t] + y_info[k_t]["topic_y_"+y_type])
-
-                    #convert hex to rgba
-                    h = color=y_info[k_t]["color"].lstrip('#')
-                    t = tuple(int(h[i:i+2], 16) for i in (0, 2, 4))
-                    t= t + (y_info[k_t]["color_opacity"],)
-                    rgba = "rgba"+str(t)
-
-                    if chart_type == "lines":
-                        fig.add_trace(go.Scatter(
-                            x=x, y=y_info[k_t]["topic_y_"+y_type],
-                            mode='lines+markers',
-                            hovertext = y_info[k_t]["topic_y_"+y_type+"_lbl"],
-                            hovertemplate =
-                            '<b>Topic #'+str(k_t)+'</b>'+
-                            '<br>&#8594; <b>%{y}</b> of the documents in <b><%{x}></b> '+
-                            '%{hovertext}'+
-                            '<extra></extra>', #hide the second box
-                            line=dict(color=rgba, width=2.5),
-                            hoverlabel = {
-                                "font": {"color": 'black'},
-                                "bgcolor": rgba
-                            },
-                            name=k_t))
-
-                    elif chart_type == "bars":
-                        fig.add_trace(go.Bar(
-                            x=x,
-                            y=y_info[k_t]["topic_y_"+y_type],
-                            hovertext = y_info[k_t]["topic_y_"+y_type+"_lbl"],
-                            hovertemplate =
-                            '<b>Topic #'+str(k_t)+'</b>'+
-                            '<br>&#8594; <b>%{y}</b> of the documents in <b><%{x}></b> '+
-                            '%{hovertext}'+
-                            '<extra></extra>', #hide the second box
-                            marker = dict(color=y_info[k_t]["color"], opacity=y_info[k_t]["color_opacity"]),
-                            hoverlabel = {
-                                "font": {"color": 'black'},
-                                "bgcolor": rgba
-                            },
-                            #marker_color= y_info[k_t]["color"], # marker color can be a single color value or an iterable
-                            #text = ,
-                            name=k_t))
-
-                fig.update_layout(
-                    barmode='stack',
-                    paper_bgcolor='rgba(0,0,0,0)',
-                    plot_bgcolor='rgba(0,0,0,0)',
-                    xaxis={'categoryorder':'category ascending'},
-                    legend_title_text='Topic',
-                    #title="Plot Title",
-                    yaxis_tickformat = y_suffix,
-                    xaxis_title= META_LABEL,
-                    yaxis_title= yaxis_title_val,
-                    font=dict(
-                        family="helvetica neue",
-                        size=17,
-                        color="black"
-                    )
-                )
-                fig.update_yaxes(showgrid=True, gridwidth=0.2, gridcolor='#E9E9E9')
-
-                #fig.show()
-                #f_name = str(tool_id)+'_'+chart_type+'_chart_('+str(META_KEY)+').html'
-                #fig.write_html(self.base_tmp_path+'/'+f_name)
-                k_chart = "_".join(sorted([y_type,chart_type]))
-                str_html = fig.to_html()
-                str_html = str_html.rsplit("\n",3)[0]
-                str_html = str_html.split("\n",5)[5]
-                str_html_dict[k_chart] = str_html
-
-        html_template = """<!DOCTYPE html>
+        html_template = """
+        <!DOCTYPE html>
         <html>
-        <head>
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-          <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-          <script type="text/javascript">
-            var charts = new Set(["count","bars"]);
+          <head>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+                <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                <script src="https://cdn.plot.ly/plotly-1.52.3.min.js" charset="utf-8"></script>
 
-            function check(val, exclude_val) {
-              if(!(charts.has(val))){
-                charts.delete(exclude_val);
-                charts.add(val);
-              }
-              var res_set = Array.from(charts).sort();
-              chart_key = Array.from(res_set).join('_');
-              console.log(chart_key)
-              l_chart_keys = ["bars_count","count_lines","bars_percentage","lines_percentage"];
-              for (var i = 0; i < l_chart_keys.length; i++) {
-                document.getElementById(l_chart_keys[i]).style.display = "none";
-              }
-              document.getElementById(chart_key).style.display = "block";
-            }
-          </script>
-          <style>
-              body{
-                padding: 30px;
-              }
-              .switch_buttons{
-                padding-top: 10px;
-                padding-left: 10px;
-              }
-              .html-object{
-                width: 100%;
-                height: 600px;
-              }
-              .switch-btn{
-                width: 180px;
-              }
-              .g-1{
-                margin-bottom: 5px;
-              }
-              #lines_chart{
-                display: """+CHART_AXIS_TYPE+""";
-              }
-            </style>
-          <title>Viualizations</title>
-        </head>
-        <body>
-            <div class="switch_buttons">
-              <div class="g-1 btn-group btn-group-toggle" data-toggle="buttons">
-                 <label class="switch-btn btn btn-light active">
-                   <input type="radio" name="options" id="option1" onchange="check('count','percentage')" autocomplete="off" checked> Counts <span style="margin-left: 5px"> # </span>
-                 </label>
-                 <label class="switch-btn btn btn-light">
-                   <input type="radio" name="options" id="option2" onchange="check('percentage','count')" autocomplete="off"> Percentage <span style="margin-left: 5px"> % </span>
-                 </label>
-              </div>
-              <br>
-              <div class="g-2 btn-group btn-group-toggle" data-toggle="buttons">
-                 <label class="switch-btn btn btn-light active">
-                   <input type="radio" name="options" id="option1" onchange="check('bars','lines')" autocomplete="off" checked> Bars chart <span style="margin-left: 5px">
-                   <svg class="bi bi-bar-chart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="4" height="5" x="1" y="10" rx="1"/>
-                      <rect width="4" height="9" x="6" y="6" rx="1"/>
-                      <rect width="4" height="14" x="11" y="1" rx="1"/>
-                    </svg>
-                 </label>
-                 <label id="lines_chart" class="switch-btn btn btn-light">
-                   <input type="radio" name="options" id="option2" onchange="check('lines','bars')" autocomplete="off"> Lines chart <span style="margin-left: 5px">
-                   <svg class="bi bi-graph-up" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0h1v16H0V0zm1 15h15v1H1v-1z"/>
-                    <path fill-rule="evenodd" d="M14.39 4.312L10.041 9.75 7 6.707l-3.646 3.647-.708-.708L7 5.293 9.959 8.25l3.65-4.563.781.624z"/>
-                    <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4h-3.5a.5.5 0 0 1-.5-.5z"/>
-                  </svg>
-                 </label>
-              </div>
-            </div>
-            <div id="content">
-              <div id="bars_count" class="html-object" type="text/html">"""+str_html_dict["bars_count"]+"""</div>
-              <div id="count_lines" class="html-object" type="text/html">"""+str_html_dict["count_lines"]+"""</div>
-              <div id="bars_percentage" class="html-object" type="text/html">"""+str_html_dict["bars_percentage"]+"""</div>
-              <div id="lines_percentage" class="html-object" type="text/html">"""+str_html_dict["lines_percentage"]+"""</div>
-            </div>
-            <script type="text/javascript">
-              check('bars','lines');
-            </script>
-        </body>
-        </html>"""
+                <style>
+                    body{
+                      padding: 30px;
+                    }
+                    .chart-container{
+                      display: inline-block;
+                      vertical-align: top;
+                      width: 70%;
+                      border-left: 1px solid gray;
+                      margin-left: 20px;
+                      min-height: 500px;
+                    }
+                    .handlers-container{
+                      padding: 10px;
+                      width: fit-content;
+                      width: 300px;
+                      display: inline-block;
+                    }
+                    .sec-title{
+                      font-size: 13pt;
+                      border-bottom: solid 1px;
+                      padding-left: 5px;
+                    }
+                    #btn_filter{
+                      margin-top: 20px;
+                      width: 100%;
+                    }
+                    #btn_filter:hover{
+                      color: white;
+                    }
+
+                    .switch_buttons{
+                      width: 100%;
+                      vertical-align: top;
+                      margin-bottom: 20px;
+                    }
+                    .switch-btn{
+                      width: 130px;
+                      font-size: 10pt;
+                    }
+
+                    .g-1{
+                      margin-bottom: 5px;
+                    }
+                    #lines_chart{
+                      display: """+CHART_AXIS_TYPE+""";
+                    }
+
+                    #filters_container{
+                      padding: 10px;
+                      width: 100%;
+                      max-height: 200px;
+                    }
+                    .m-box{
+                      vertical-align: top;
+                      margin-right: 5%;
+                      width: 100%;
+                      margin-bottom: 10px;
+                    }
+                    .m-box .pre{
+                      display: inline-block;
+                      width: 5%;
+                      font-size: 12pt;
+                    }
+                    .m-box button{
+                      display: inline-block;
+                      width: 95%;
+                    }
+                    .m-box-values{
+                      display: none;
+                      max-height: 150px;
+                      overflow: scroll;
+                      margin-top: 10px;
+                    }
+                    .m-box-values label{
+                      padding-left: 10px;
+                      font-size: 10pt;
+                      vertical-align: top;
+                    }
+                </style>
+                <title>Viualizations</title>
+
+                <script type="text/javascript">
+
+                /*FROM MITAO*/
+                var app_init_data = """+json.dumps(dict_topics, indent = 4)+""";
+                var app_meta = """+json.dumps(meta, indent = 4)+""";
+                var att_index = """+json.dumps(filter_meta, indent = 4)+""";
+
+                /*FROM MITAO*/
+                var app_x_att = \""""+META_KEY+"""\";
+                var app_x_data = """+json.dumps(meta_x_values)+""";
+
+                /*------------*/
+                /*------------*/
+                var charts = new Set(["count","bars"]);
+                var filtered_data = JSON.parse(JSON.stringify(app_init_data));
+                var filter_index = null;
+                var index_meta = {};
+                for (var k_f in app_meta) {
+                  for (var m in app_meta[k_f]) {
+                    if ((m != app_x_att) && (m in att_index)) {
+                      if (!(m in index_meta)) {
+                        index_meta[m] =  new Set();
+                      }
+                      if (att_index[m] == "string"){
+                        index_meta[m].add(app_meta[k_f][m]);
+                      }else if (att_index[m] == "integer"){
+                        index_meta[m].add(app_meta[k_f][m]);
+                      }else if (att_index[m].includes("list")) {
+                        for (var i = 0; i < app_meta[k_f][m].length; i++) {
+                          index_meta[m].add(app_meta[k_f][m][i]);
+                        }
+                      }
+                    }
+                  }
+                }
+
+
+                function draw_chart(obj_data, x_data, x_att, chart_type, data_type) {
+
+                  function hexToRgbA(hex,opacity){
+                      var c;
+                      if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
+                          c= hex.substring(1).split('');
+                          if(c.length== 3){
+                              c= [c[0], c[0], c[1], c[1], c[2], c[2]];
+                          }
+                          c= '0x'+c.join('');
+                          return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+','+opacity+')';
+                      }
+                      throw new Error('Bad Hex');
+                  }
+
+                  var palette = ["#0377a8","#fc6f5f","#e2ce71","#ad7947","#e97947","#5cb991","#ffadcb","#b46ddc"];
+                  var type = null;
+                  var barmode = null;
+                  if (chart_type == "bars") {
+                    type = "bar";
+                    barmode = "stack";
+                  }else if (chart_type == "lines") {
+                    type = "scatter";
+                  }
+
+                  var chart_data = [];
+                  var index_palette = 0;
+                  for (var cat in obj_data) {
+
+                    var color = palette[index_palette%palette.length];
+                    var opacity = 1 - (Math.floor(index_palette/palette.length) * 0.20);
+                    if (opacity < 0.3) {
+                      opacity = 1;
+                    }
+                    index_palette += 1;
+
+                    var y_vals = [];
+                    var y_text = [];
+                    for (var i = 0; i < x_data.length; i++) {
+                      y_vals.push(obj_data[cat][x_data[i]][data_type]);
+                      y_text.push(String((obj_data[cat][x_data[i]]["precentage_total"] * 100).toFixed(2)));
+                    }
+
+                    var others_opt = {};
+                    if (chart_type == "lines") {
+                      others_opt = {
+                          line: {
+                            color: hexToRgbA(color,opacity),
+                            width: 1
+                          }
+                      }
+                    }
+
+                    var trace = {
+                        x: x_data,
+                        y: y_vals,
+                        name: cat,
+                        type: type,
+                        text: y_text,
+                        orientation: 'v',
+                        hovertemplate: '<b>Topic #'+cat+'</b>'+
+                                      '<br>&#8594; <b>%{y}</b> document/s in <b><%{x}></b>'+
+                                      '<br>&#8594; <b>%{text}%</b> of all the documents'+
+                                      '<extra></extra>',
+                        marker: {
+                          color: hexToRgbA(color,opacity),
+                          size: 8
+                        }
+                    };
+
+                    chart_data.push(Object.assign( {}, trace, others_opt));
+                  }
+
+                  var layout = {};
+                  if (chart_type == "bars") {
+                    layout = {
+                      "barmode": barmode,
+                      "xaxis": {
+                        tickmode: "array",
+                        tickvals: x_data,
+                        ticktext: x_data
+                      },
+                      "yaxis":{}
+                    };
+                  }else if (chart_type == "lines") {
+                    layout = {
+                      "xaxis": {
+                        tickmode: "linear",
+                        tickvals: x_data,
+                        ticktext: x_data
+                      },
+                      "yaxis":{}
+                    };
+                  }
+
+                  if (data_type == "counts") {
+                  }else if (data_type == "percentage") {
+                    layout["yaxis"] = {tickformat: '%'}
+                  }
+
+
+
+                  Plotly.newPlot('chart_container', chart_data, layout);
+                }
+
+                function check(g= null, v=null) {
+                        // check the type of chart
+                        var chart_type = null;
+                        var data_type = null;
+                        if ((g != null) && (g == "g-1")) {
+                          data_type = v;
+                        }else {
+                          $(".g-1 label").each(function( index ) {
+                            if ($( this ).hasClass('active')){
+                              data_type = $( this ).attr("value");
+                            }
+                          });
+                        }
+
+                        if ((g != null) && (g == "g-2")) {
+                          chart_type = v;
+                        }else {
+                          $(".g-2 label").each(function( index ) {
+                            if ($( this ).hasClass('active')){
+                              chart_type = $( this ).attr("value");
+                            }
+                          });
+                        }
+
+
+                        //now prepare the data
+                        // <obj_data> and <x_data>
+                        var obj_data = {};
+                        var index_counts = {"all": 0, "category":{}, "x_tick":{}}
+                        for (var k_cat in filtered_data) {
+                          //init
+                          obj_data[k_cat] = {};
+                          index_counts["category"][k_cat] = 0;
+                          for (var i = 0; i < app_x_data.length; i++) {
+                            obj_data[k_cat][app_x_data[i]] = {"counts":0,"percentage":0};
+                          }
+                          //populate
+                          for (var i = 0; i < filtered_data[k_cat].length; i++) {
+                            var elem_name = filtered_data[k_cat][i];
+                            if (elem_name in app_meta) {
+                              if (app_x_att in app_meta[elem_name]) {
+                                var att_val = app_meta[elem_name][app_x_att];
+                                if (app_x_data.indexOf(att_val) != -1) {
+                                  obj_data[k_cat][att_val]["counts"] += 1;
+                                  //update counts
+                                  if (!(k_cat in index_counts["category"])) {
+                                    index_counts["category"][k_cat] = 0;
+                                  }
+                                  if (!(att_val in index_counts["x_tick"])) {
+                                    index_counts["x_tick"][att_val] = 0;
+                                  }
+                                  index_counts["category"][k_cat] += 1;
+                                  index_counts["x_tick"][att_val] += 1;
+                                  index_counts["all"] += 1;
+                                }
+                              }
+                            }
+                          }
+                        }
+
+                        for (var k_cat in obj_data) {
+                          for (var x_key in obj_data[k_cat]) {
+                            obj_data[k_cat][x_key]["percentage"] =  obj_data[k_cat][x_key]["counts"]/index_counts["x_tick"][x_key];
+                            obj_data[k_cat][x_key]["precentage_total"] = obj_data[k_cat][x_key]["counts"]/index_counts["all"];
+                          }
+                        }
+
+                        console.log(obj_data);
+                        draw_chart(obj_data, app_x_data, app_x_att, chart_type, data_type);
+                }
+
+                function filter() {
+                  // filter_index = {"att":{Set of values}}
+                  filtered_data = JSON.parse(JSON.stringify(app_init_data));
+                  var copy_filtered_data = JSON.parse(JSON.stringify(filtered_data));
+                  for (var k_cat in filtered_data) {
+                      copy_filtered_data[k_cat] = [];
+                      for (var i = 0; i < filtered_data[k_cat].length; i++) {
+                        var elem_name = filtered_data[k_cat][i];
+                        var include = false;
+                        if (elem_name in app_meta) {
+                          for (var a_meta_att in app_meta[elem_name]) {
+                            var a_meta_att_value = app_meta[elem_name][a_meta_att];
+                            if (a_meta_att in filter_index) {
+                              if (att_index[a_meta_att] == "string") {
+                                include = (include || filter_index[a_meta_att].has(a_meta_att_value));
+                              }else if (att_index[a_meta_att].includes("list")) {
+                                for (var j = 0; j < a_meta_att_value.length; j++) {
+                                  include = (include || filter_index[a_meta_att].has(a_meta_att_value[j]));
+                                }
+                              }
+                            }
+                          }
+                        }
+                        if (include) {
+                          copy_filtered_data[k_cat].push(elem_name);
+                        }
+                      }
+                  }
+                  filtered_data = copy_filtered_data;
+                }
+
+                </script>
+
+              </head>
+              <body>
+                      <div class="handlers-container">
+
+                        <div class="switch_buttons">
+                          <div class="g-1 btn-group btn-group-toggle" data-toggle="buttons">
+                             <label onchange="check('g-1','counts');" value="counts" class="switch-btn btn btn-light active">
+                               <input value="counts" type="radio" name="options" id="option_g1_1" autocomplete="off" checked> Counts <span style="margin-left: 5px"> # </span>
+                             </label>
+                             <label onchange="check('g-1','percentage');" value="percentage" class="switch-btn btn btn-light">
+                               <input value="percentage" type="radio" name="options" id="option_g1_2" autocomplete="off"> Percentage <span style="margin-left: 5px"> % </span>
+                             </label>
+                          </div>
+                          <br>
+                          <div class="g-2 btn-group btn-group-toggle" data-toggle="buttons">
+                             <label onchange="check('g-2','bars');" value="bars" class="switch-btn btn btn-light active">
+                               <input value="bars" type="radio" name="options" id="option_g2_1" autocomplete="off" checked> Bars chart <span style="margin-left: 5px">
+                               <svg class="bi bi-bar-chart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                  <rect width="4" height="5" x="1" y="10" rx="1"/>
+                                  <rect width="4" height="9" x="6" y="6" rx="1"/>
+                                  <rect width="4" height="14" x="11" y="1" rx="1"/>
+                                </svg>
+                                </span>
+                             </label>
+                             <label onchange="check('g-2','lines');" value="lines" id="lines_chart" class="switch-btn btn btn-light">
+                               <input value="lines" type="radio" name="options" id="option_g2_2" autocomplete="off"> Lines chart
+                               <span style="margin-left: 5px">
+                                 <svg class="bi bi-graph-up" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h1v16H0V0zm1 15h15v1H1v-1z"/>
+                                <path fill-rule="evenodd" d="M14.39 4.312L10.041 9.75 7 6.707l-3.646 3.647-.708-.708L7 5.293 9.959 8.25l3.65-4.563.781.624z"/>
+                                <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4h-3.5a.5.5 0 0 1-.5-.5z"/>
+                                </svg>
+                              </span>
+                             </label>
+                          </div>
+                        </div>
+
+                        <div class="sec-title">Filters</div>
+                        <div id="filters_container">
+                        </div>
+
+                      </div>
+
+
+
+                      <div id="chart_container" class="chart-container"></div>
+
+                      <script type="text/javascript">
+
+                      /* BUild doms*/
+                      for (var m_att in index_meta) {
+                        var filter_box = "";
+                        var l_meta_values = Array.from(index_meta[m_att]);
+                        l_meta_values = l_meta_values.sort();
+                        if (l_meta_values.length > 0) {
+                          for (var i = 0; i < l_meta_values.length; i++) {
+                            filter_box = filter_box + '<input class="f-checkbox" data-att="'+m_att+'" type="checkbox" id="checkbox_'+String(i)+'" value="'+l_meta_values[i]+'" checked><label for="checkbox_'+String(i)+'">'+l_meta_values[i]+'</label><br>';
+                          }
+                          filter_box = "<div class='m-box'><span class='pre' id='"+m_att+"_pre'>+</span><button id='"+m_att+"_btn' type='button' class='btn btn-light'>Metadata attribute: "+m_att+"</button><div id='"+m_att+"_values' class='m-box-values'>" + filter_box.substring(0, filter_box.length-4)+"</div>";
+                        }
+                        document.getElementById("filters_container").innerHTML += filter_box;
+                      }
+                      document.getElementById("filters_container").innerHTML += "<button id='btn_filter' type='button' class='btn btn-dark'>Apply filters</button>";
+                      for (var m_att in index_meta) {
+
+                         $("#"+m_att+"_btn").click(function(event) {
+                          var values_box = event.target.id.replace("_btn","_values");
+                          var pre_box = event.target.id.replace("_btn","_pre");
+                          var display_val = $("#"+values_box).css('display');
+
+                          if (display_val == "none") {
+                            document.getElementById(pre_box).innerHTML = "-";
+                            $("#"+values_box).css("display", "block");
+                          }else {
+                            if (display_val == "block") {
+                              document.getElementById(pre_box).innerHTML = "+";
+                              $("#"+values_box).css("display", "none");
+                            }
+                          }
+                        });
+                      }
+
+                      if (Object.keys(index_meta).length > 0) {
+                        $("#btn_filter").click(function(event) {
+                          var checked_inputs = $(".f-checkbox:checked");
+                          var index_filters = {};
+                          for (var i = 0; i < checked_inputs.length; i++) {
+                            var checked_att = checked_inputs[i].getAttribute("data-att");
+                            var checked_value = checked_inputs[i].getAttribute("value");
+                            if (!(checked_att in index_filters)) {
+                              index_filters[checked_att] = new Set();
+                            }
+                            index_filters[checked_att].add(checked_value);
+                          }
+                          filter_index = index_filters;
+                          filter();
+                          check();
+                       });
+                     }
+
+                      check();
+                      </script>
+                  </body>
+        </html>
+        """
 
         f_name = str(tool_id)+'_chart_('+str(META_KEY)+')'
-        data_to_return["data"]["d-grouped-barchart"] = {f_name+'_data': barchart_data}
-        #data_to_return["data"]["d-chart-html"] = {f_name: self.base_tmp_path+'/'+f_name}
+        #data_to_return["data"]["d-grouped-barchart"] = {f_name+'_data': barchart_data}
         data_to_return["data"]["d-chart-html"] = {f_name+'_view': html_template}
         return data_to_return
 

@@ -889,6 +889,7 @@ class dipam_interface {
     var new_status = -1;
     var new_lbl_status = -1;
     var workflow_status = this.DOMS.WORKFLOW.RUN_BTN.value;
+    var instance = this;
 
     if (workflow_status == 'ready') {
       _disable_divs(this,true);
@@ -903,49 +904,55 @@ class dipam_interface {
     }else if (workflow_status == 'stop') {
       _disable_divs(this,false);
       new_status = "ready";
-      new_lbl_status = "Run workflow";
+      new_lbl_status = '<svg class="bi bi-play-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>Run workflow';
     }
+    _style_workflow_btn(new_status,new_lbl_status);
 
-    this.DOMS.WORKFLOW.RUN_BTN.style["pointer-events"] = "auto";
-    this.DOMS.WORKFLOW.RUN_BTN.value = new_status;
-    this.DOMS.WORKFLOW.RUN_BTN.innerHTML = new_lbl_status;
     return new_status;
 
+    function _style_workflow_btn(new_status,new_lbl_status) {
+      var new_bg_color = "var(--bg-color)";
+      var new_width = "25%";
+      if (new_status == "run") {
+        //new_bg_color = "var(--running)";
+        new_width = "50%";
+      }
+      if (new_status == "stop") {
+        new_width = "50%";
+      }
+
+      instance.DOMS.WORKFLOW.RUN_BTN.style["background-color"] = new_bg_color;
+      instance.DOMS.WORKFLOW.RUN_BTN.style["width"] = new_width;
+      instance.DOMS.WORKFLOW.RUN_BTN.style["opacity"] = '1';
+      instance.DOMS.WORKFLOW.RUN_BTN.style["pointer-events"] = "auto";
+      instance.DOMS.WORKFLOW.RUN_BTN.value = new_status;
+      instance.DOMS.WORKFLOW.RUN_BTN.innerHTML = new_lbl_status;
+    }
     function _disable_divs(instance,disable){
       var p_event = 'none';
-      var opacity_val = '0.3';
+      var opacity_val = '0.8';
       if (!(disable)) {
         p_event = '';
         opacity_val = '';
       }
-
-      instance.DOMS.DIAGRAM.CONTAINER.style["pointer-events"] = p_event;
-      //instance.DOMS.DIAGRAM.CONTAINER.style["opacity"] = opacity_val;
       //set all single nodes style
       var all_nodes = instance.DIAGRAM_INSTANCE_OBJ.get_nodes();
       for (var i = 0; i < all_nodes.length; i++) {
-        all_nodes[i].style({"opacity" : opacity_val});
+        all_nodes[i].style({"opacity" : '0.3'});
       }
 
-      instance.DOMS.DIAGRAM.EDITOR_CONTAINER.style["pointer-events"] = p_event;
-      //instance.DOMS.DIAGRAM.EDITOR_CONTAINER.style["opacity"] = opacity_val;
-      instance.DOMS.DIAGRAM.ADD_TOOL_BTN.style["opacity"] = opacity_val;
-      instance.DOMS.DIAGRAM.ADD_DATA_BTN.style["opacity"] = opacity_val;
-
-      instance.DOMS.DIAGRAM.ZOOM_CONTAINER.style["pointer-events"] = p_event;
-      instance.DOMS.DIAGRAM.ZOOM_CONTAINER.style["opacity"] = opacity_val;
-
-      instance.DOMS.DIAGRAM.FIT_CONTAINER.style["pointer-events"] = p_event;
-      instance.DOMS.DIAGRAM.FIT_CONTAINER.style["opacity"] = opacity_val;
-
-      instance.DOMS.DIAGRAM.UNDO_REDO_CONTAINER.style["pointer-events"] = p_event;
-      instance.DOMS.DIAGRAM.UNDO_REDO_CONTAINER.style["opacity"] = opacity_val;
-
-      instance.DOMS.CONTROL.NAV_CONTAINER.style["pointer-events"] = p_event;
-      instance.DOMS.CONTROL.NAV_CONTAINER.style["opacity"] = opacity_val;
-
-      instance.DOMS.CONTROL.CONTAINER.style["pointer-events"] = p_event;
-      instance.DOMS.CONTROL.CONTAINER.style["opacity"] = opacity_val;
+      var elements = [
+        instance.DOMS.DIAGRAM.CONTAINER,
+        instance.DOMS.DIAGRAM.ADD_TOOL_BTN,
+        instance.DOMS.DIAGRAM.ADD_DATA_BTN,
+        instance.DOMS.DIAGRAM.UNDO_REDO_CONTAINER,
+        instance.DOMS.CONTROL.NAV_CONTAINER,
+        instance.DOMS.CONTROL.CONTAINER,
+      ]
+      for (var i = 0; i < elements.length; i++) {
+        elements[i].style["opacity"] =  opacity_val;
+        elements[i].style["pointer-events"] =  p_event;
+      }
 
       var control_inputs = document.getElementsByClassName('check-value-trigger');
       //console.log(control_inputs);
