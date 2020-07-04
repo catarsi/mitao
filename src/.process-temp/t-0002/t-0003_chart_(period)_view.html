@@ -33,7 +33,7 @@
                       padding-left: 5px;
                     }
                     #btn_filter{
-                      margin-top: 20px;
+                      margin-top: 5px;
                       width: 100%;
                     }
                     #btn_filter:hover{
@@ -69,13 +69,15 @@
                       margin-bottom: 10px;
                     }
                     .m-box .pre{
-                      display: inline-block;
-                      width: 5%;
-                      font-size: 12pt;
+                      font-size: 16pt;
+                      padding-left:3%;
+                      max-width: 5%;
+                      border-left: solid 1px gray;
+                      vertical-align: middle;
                     }
                     .m-box button{
                       display: inline-block;
-                      width: 95%;
+                      width: 90%;
                     }
                     .m-box-values{
                       display: none;
@@ -87,6 +89,16 @@
                       padding-left: 10px;
                       font-size: 10pt;
                       vertical-align: top;
+                      max-width: 80%;
+                    }
+                    #refine_container{
+                      padding: 10px;
+                      width: 100%;
+                      max-height: 200px;
+                      margin-bottom: 20px;
+                    }
+                    #refine_container select{
+                       width: 100%;
                     }
                 </style>
                 <title>Viualizations</title>
@@ -4091,342 +4103,416 @@
                 var app_x_data = ["1998-2004", "2005-2010", "2011-2017"];
 
                 /*------------*/
-                /*------------*/
-                var charts = new Set(["count","bars"]);
-                var filtered_data = JSON.parse(JSON.stringify(app_init_data));
-                var filter_index = null;
-                var index_meta = {};
-                for (var k_f in app_meta) {
-                  for (var m in app_meta[k_f]) {
-                    if ((m != app_x_att) && (m in att_index)) {
-                      if (!(m in index_meta)) {
-                        index_meta[m] =  new Set();
-                      }
-                      if (att_index[m] == "string"){
-                        index_meta[m].add(app_meta[k_f][m]);
-                      }else if (att_index[m] == "integer"){
-                        index_meta[m].add(app_meta[k_f][m]);
-                      }else if (att_index[m].includes("list")) {
-                        for (var i = 0; i < app_meta[k_f][m].length; i++) {
-                          index_meta[m].add(app_meta[k_f][m][i]);
-                        }
-                      }
-                    }
+        /*------------*/
+        var charts = new Set(["count","bars"]);
+        var filtered_data = JSON.parse(JSON.stringify(app_init_data));
+        var filter_index = null;
+        var index_meta = {};
+        for (var k_f in app_meta) {
+          for (var m in app_meta[k_f]) {
+            if ((m != app_x_att) && (m in att_index)) {
+              if (!(m in index_meta)) {
+                index_meta[m] =  new Set();
+              }
+              if (att_index[m] == "string"){
+                index_meta[m].add(app_meta[k_f][m]);
+              }else if (att_index[m] == "integer"){
+                index_meta[m].add(app_meta[k_f][m]);
+              }else if (att_index[m].includes("list")) {
+                for (var i = 0; i < app_meta[k_f][m].length; i++) {
+                  index_meta[m].add(app_meta[k_f][m][i]);
+                }
+              }
+            }
+          }
+        }
+
+        //var top_topics = Object.keys(app_init_data).length;
+
+        function draw_chart(obj_data, x_data, x_att, chart_type, data_type) {
+
+          function hexToRgbA(hex,opacity){
+              var c;
+              if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
+                  c= hex.substring(1).split('');
+                  if(c.length== 3){
+                      c= [c[0], c[0], c[1], c[1], c[2], c[2]];
                   }
+                  c= '0x'+c.join('');
+                  return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+','+opacity+')';
+              }
+              throw new Error('Bad Hex');
+          }
+
+          var palette = ["#0377a8","#fc6f5f","#e2ce71","#ad7947","#e97947","#5cb991","#ffadcb","#b46ddc"];
+          var type = null;
+          var barmode = null;
+          if (chart_type == "bars") {
+            type = "bar";
+            barmode = "stack";
+          }else if (chart_type == "lines") {
+            type = "scatter";
+          }
+
+          var chart_data = [];
+          var index_palette = 0;
+          for (var cat in obj_data) {
+
+            var color = palette[index_palette%palette.length];
+            var opacity = 1 - (Math.floor(index_palette/palette.length) * 0.20);
+            if (opacity < 0.3) {
+              opacity = 1;
+            }
+            index_palette += 1;
+
+            var trace_color = hexToRgbA(color,opacity);
+            if(cat == "others"){
+              trace_color = "#CCCCCC";
+            }
+
+            var y_vals = [];
+            var y_text = [];
+            for (var i = 0; i < x_data.length; i++) {
+              y_vals.push(obj_data[cat][x_data[i]][data_type]);
+              y_text.push(String((obj_data[cat][x_data[i]]["precentage_total"] * 100).toFixed(2)));
+            }
+
+            var others_opt = {};
+            if (chart_type == "lines") {
+              others_opt = {
+                  line: {
+                    color: trace_color,
+                    width: 1
+                  }
+              }
+            }
+
+            var trace = {
+                x: x_data,
+                y: y_vals,
+                name: cat,
+                type: type,
+                text: y_text,
+                orientation: 'v',
+                hovertemplate: '<b>Topic #'+cat+'</b>'+
+                              '<br>&#8594; <b>%{y}</b> document/s in <b><%{x}></b>'+
+                              '<br>&#8594; <b>%{text}%</b> of all the documents'+
+                              '<extra></extra>',
+                marker: {
+                  color: trace_color,
+                  size: 8
+                }
+            };
+
+            chart_data.push(Object.assign( {}, trace, others_opt));
+          }
+
+          var layout = {};
+          if (chart_type == "bars") {
+            layout = {
+              "barmode": barmode,
+              "xaxis": {
+                tickmode: "array",
+                tickvals: x_data,
+                ticktext: x_data
+              },
+              "yaxis":{}
+            };
+          }else if (chart_type == "lines") {
+            layout = {
+              "xaxis": {
+                tickmode: "linear",
+                tickvals: x_data,
+                ticktext: x_data
+              },
+              "yaxis":{}
+            };
+          }
+
+          if (data_type == "counts") {
+          }else if (data_type == "percentage") {
+            layout["yaxis"] = {tickformat: '%'}
+          }
+
+
+
+          Plotly.newPlot('chart_container', chart_data, layout);
+        }
+
+        function check(g= null, v=null) {
+                // check the type of chart
+                var chart_type = null;
+                var data_type = null;
+                if ((g != null) && (g == "g-1")) {
+                  data_type = v;
+                }else {
+                  $(".g-1 label").each(function( index ) {
+                    if ($( this ).hasClass('active')){
+                      data_type = $( this ).attr("value");
+                    }
+                  });
                 }
 
-
-                function draw_chart(obj_data, x_data, x_att, chart_type, data_type) {
-
-                  function hexToRgbA(hex,opacity){
-                      var c;
-                      if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
-                          c= hex.substring(1).split('');
-                          if(c.length== 3){
-                              c= [c[0], c[0], c[1], c[1], c[2], c[2]];
-                          }
-                          c= '0x'+c.join('');
-                          return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+','+opacity+')';
-                      }
-                      throw new Error('Bad Hex');
-                  }
-
-                  var palette = ["#0377a8","#fc6f5f","#e2ce71","#ad7947","#e97947","#5cb991","#ffadcb","#b46ddc"];
-                  var type = null;
-                  var barmode = null;
-                  if (chart_type == "bars") {
-                    type = "bar";
-                    barmode = "stack";
-                  }else if (chart_type == "lines") {
-                    type = "scatter";
-                  }
-
-                  var chart_data = [];
-                  var index_palette = 0;
-                  for (var cat in obj_data) {
-
-                    var color = palette[index_palette%palette.length];
-                    var opacity = 1 - (Math.floor(index_palette/palette.length) * 0.20);
-                    if (opacity < 0.3) {
-                      opacity = 1;
+                if ((g != null) && (g == "g-2")) {
+                  chart_type = v;
+                }else {
+                  $(".g-2 label").each(function( index ) {
+                    if ($( this ).hasClass('active')){
+                      chart_type = $( this ).attr("value");
                     }
-                    index_palette += 1;
-
-                    var y_vals = [];
-                    var y_text = [];
-                    for (var i = 0; i < x_data.length; i++) {
-                      y_vals.push(obj_data[cat][x_data[i]][data_type]);
-                      y_text.push(String((obj_data[cat][x_data[i]]["precentage_total"] * 100).toFixed(2)));
-                    }
-
-                    var others_opt = {};
-                    if (chart_type == "lines") {
-                      others_opt = {
-                          line: {
-                            color: hexToRgbA(color,opacity),
-                            width: 1
-                          }
-                      }
-                    }
-
-                    var trace = {
-                        x: x_data,
-                        y: y_vals,
-                        name: cat,
-                        type: type,
-                        text: y_text,
-                        orientation: 'v',
-                        hovertemplate: '<b>Topic #'+cat+'</b>'+
-                                      '<br>&#8594; <b>%{y}</b> document/s in <b><%{x}></b>'+
-                                      '<br>&#8594; <b>%{text}%</b> of all the documents'+
-                                      '<extra></extra>',
-                        marker: {
-                          color: hexToRgbA(color,opacity),
-                          size: 8
-                        }
-                    };
-
-                    chart_data.push(Object.assign( {}, trace, others_opt));
-                  }
-
-                  var layout = {};
-                  if (chart_type == "bars") {
-                    layout = {
-                      "barmode": barmode,
-                      "xaxis": {
-                        tickmode: "array",
-                        tickvals: x_data,
-                        ticktext: x_data
-                      },
-                      "yaxis":{}
-                    };
-                  }else if (chart_type == "lines") {
-                    layout = {
-                      "xaxis": {
-                        tickmode: "linear",
-                        tickvals: x_data,
-                        ticktext: x_data
-                      },
-                      "yaxis":{}
-                    };
-                  }
-
-                  if (data_type == "counts") {
-                  }else if (data_type == "percentage") {
-                    layout["yaxis"] = {tickformat: '%'}
-                  }
-
-
-
-                  Plotly.newPlot('chart_container', chart_data, layout);
+                  });
                 }
 
-                function check(g= null, v=null) {
-                        // check the type of chart
-                        var chart_type = null;
-                        var data_type = null;
-                        if ((g != null) && (g == "g-1")) {
-                          data_type = v;
-                        }else {
-                          $(".g-1 label").each(function( index ) {
-                            if ($( this ).hasClass('active')){
-                              data_type = $( this ).attr("value");
-                            }
-                          });
-                        }
-
-                        if ((g != null) && (g == "g-2")) {
-                          chart_type = v;
-                        }else {
-                          $(".g-2 label").each(function( index ) {
-                            if ($( this ).hasClass('active')){
-                              chart_type = $( this ).attr("value");
-                            }
-                          });
-                        }
-
-
-                        //now prepare the data
-                        // <obj_data> and <x_data>
-                        var obj_data = {};
-                        var index_counts = {"all": 0, "category":{}, "x_tick":{}}
-                        for (var k_cat in filtered_data) {
-                          //init
-                          obj_data[k_cat] = {};
-                          index_counts["category"][k_cat] = 0;
-                          for (var i = 0; i < app_x_data.length; i++) {
-                            obj_data[k_cat][app_x_data[i]] = {"counts":0,"percentage":0};
-                          }
-                          //populate
-                          for (var i = 0; i < filtered_data[k_cat].length; i++) {
-                            var elem_name = filtered_data[k_cat][i];
-                            if (elem_name in app_meta) {
-                              if (app_x_att in app_meta[elem_name]) {
-                                var att_val = app_meta[elem_name][app_x_att];
-                                if (app_x_data.indexOf(att_val) != -1) {
-                                  obj_data[k_cat][att_val]["counts"] += 1;
-                                  //update counts
-                                  if (!(k_cat in index_counts["category"])) {
-                                    index_counts["category"][k_cat] = 0;
-                                  }
-                                  if (!(att_val in index_counts["x_tick"])) {
-                                    index_counts["x_tick"][att_val] = 0;
-                                  }
-                                  index_counts["category"][k_cat] += 1;
-                                  index_counts["x_tick"][att_val] += 1;
-                                  index_counts["all"] += 1;
-                                }
-                              }
-                            }
-                          }
-                        }
-
-                        for (var k_cat in obj_data) {
-                          for (var x_key in obj_data[k_cat]) {
-                            obj_data[k_cat][x_key]["percentage"] =  obj_data[k_cat][x_key]["counts"]/index_counts["x_tick"][x_key];
-                            obj_data[k_cat][x_key]["precentage_total"] = obj_data[k_cat][x_key]["counts"]/index_counts["all"];
-                          }
-                        }
-
-                        console.log(obj_data);
-                        draw_chart(obj_data, app_x_data, app_x_att, chart_type, data_type);
+                /*Refine obj_data and select only the top_topics*/
+                var index_top_topics = {}
+                var index_top_topics_counts = {}
+                var index_other_topics = {}
+                var e = document.getElementById("top_topics");
+                var top_topics = parseInt(e.options[e.selectedIndex].value);
+                for (var i = 0; i < app_x_data.length; i++) {
+                  index_top_topics[app_x_data[i]] = new Array();
+                  index_top_topics_counts[app_x_data[i]] = new Array();
+                  index_other_topics[app_x_data[i]] = {"categories": new Set(),"counts":0}
                 }
 
-                function filter() {
-                  // filter_index = {"att":{Set of values}}
-                  filtered_data = JSON.parse(JSON.stringify(app_init_data));
-                  var copy_filtered_data = JSON.parse(JSON.stringify(filtered_data));
-                  for (var k_cat in filtered_data) {
-                      copy_filtered_data[k_cat] = [];
+                //now prepare the data
+                // <obj_data> and <x_data>
+                var obj_data = {};
+                var index_counts = {"all": 0, "category":{}, "x_tick":{}}
+                for (var k_cat in filtered_data) {
+                      //init
+                      obj_data[k_cat] = {};
+                      index_counts["category"][k_cat] = 0;
+                      for (var i = 0; i < app_x_data.length; i++) {
+                        obj_data[k_cat][app_x_data[i]] = {"counts":0,"percentage":0};
+                      }
+                      //populate
                       for (var i = 0; i < filtered_data[k_cat].length; i++) {
                         var elem_name = filtered_data[k_cat][i];
-                        var include = false;
                         if (elem_name in app_meta) {
-                          for (var a_meta_att in app_meta[elem_name]) {
-                            var a_meta_att_value = app_meta[elem_name][a_meta_att];
-                            if (a_meta_att in filter_index) {
-                              if (att_index[a_meta_att] == "string") {
-                                include = (include || filter_index[a_meta_att].has(a_meta_att_value));
-                              }else if (att_index[a_meta_att].includes("list")) {
-                                for (var j = 0; j < a_meta_att_value.length; j++) {
-                                  include = (include || filter_index[a_meta_att].has(a_meta_att_value[j]));
-                                }
+                          if (app_x_att in app_meta[elem_name]) {
+                            var att_val = app_meta[elem_name][app_x_att];
+                            if (app_x_data.indexOf(att_val) != -1) {
+                              obj_data[k_cat][att_val]["counts"] += 1;
+                              //update counts
+                              if (!(k_cat in index_counts["category"])) {
+                                index_counts["category"][k_cat] = 0;
                               }
+                              if (!(att_val in index_counts["x_tick"])) {
+                                index_counts["x_tick"][att_val] = 0;
+                              }
+                              index_counts["category"][k_cat] += 1;
+                              index_counts["x_tick"][att_val] += 1;
+                              index_counts["all"] += 1;
                             }
                           }
                         }
-                        if (include) {
-                          copy_filtered_data[k_cat].push(elem_name);
+                      }
+
+                      //check top_topics
+                      for (var i = 0; i < app_x_data.length; i++) {
+                        var val_x_counts = obj_data[k_cat][app_x_data[i]]["counts"];
+                        if (index_top_topics_counts[app_x_data[i]].length < top_topics) {
+                          index_top_topics[app_x_data[i]].push(k_cat)
+                          index_top_topics_counts[app_x_data[i]].push(val_x_counts)
+                        }else {
+                          var k_cat_others_key = k_cat;
+                          var k_cat_others_val = val_x_counts;
+                          for (var n = 0; n < index_top_topics_counts[app_x_data[i]].length; n++) {
+                            if (val_x_counts > index_top_topics_counts[app_x_data[i]][n]){
+                              /*switch a top value and move the old top value to the others category*/
+                              k_cat_others_key = index_top_topics[app_x_data[i]][n];
+                              k_cat_others_val = index_top_topics_counts[app_x_data[i]][n];
+                              index_top_topics_counts[app_x_data[i]][n] = val_x_counts;
+                              index_top_topics[app_x_data[i]][n] = k_cat;
+                              break;
+                            }
+                          }
+                          index_other_topics[app_x_data[i]]["categories"].add(k_cat_others_key);
+                          index_other_topics[app_x_data[i]]["counts"] += k_cat_others_val;
                         }
                       }
+                }
+                console.log(index_top_topics,index_top_topics_counts,index_other_topics);
+                //update the obj_data with only the top topics
+                updated_obj_data = {}
+                for (var k_cat in obj_data) {
+                  var count_zeros = 0;
+                  for (var x_key in obj_data[k_cat]) {
+                    //if is not part of the top topics
+                    // -> make its count 0
+                    if (index_top_topics[x_key].indexOf(k_cat) == -1){
+                      obj_data[k_cat][x_key]["counts"] = 0;
+                      count_zeros += 1;
+                    }
                   }
-                  filtered_data = copy_filtered_data;
+                  // remove it if the topic is 0 in for all the x values
+                  if (count_zeros != app_x_data.length) {
+                    updated_obj_data[k_cat] = obj_data[k_cat];
+                  }
+                }
+                obj_data = updated_obj_data;
+                obj_data["others"] = index_other_topics;
+
+                for (var k_cat in obj_data) {
+                  for (var x_key in obj_data[k_cat]) {
+                    obj_data[k_cat][x_key]["percentage"] =  obj_data[k_cat][x_key]["counts"]/index_counts["x_tick"][x_key];
+                    obj_data[k_cat][x_key]["precentage_total"] = obj_data[k_cat][x_key]["counts"]/index_counts["all"];
+                  }
                 }
 
-                </script>
+                console.log(obj_data);
+                draw_chart(obj_data, app_x_data, app_x_att, chart_type, data_type);
+        }
 
-              </head>
-              <body>
-                      <div class="handlers-container">
-
-                        <div class="switch_buttons">
-                          <div class="g-1 btn-group btn-group-toggle" data-toggle="buttons">
-                             <label onchange="check('g-1','counts');" value="counts" class="switch-btn btn btn-light active">
-                               <input value="counts" type="radio" name="options" id="option_g1_1" autocomplete="off" checked> Counts <span style="margin-left: 5px"> # </span>
-                             </label>
-                             <label onchange="check('g-1','percentage');" value="percentage" class="switch-btn btn btn-light">
-                               <input value="percentage" type="radio" name="options" id="option_g1_2" autocomplete="off"> Percentage <span style="margin-left: 5px"> % </span>
-                             </label>
-                          </div>
-                          <br>
-                          <div class="g-2 btn-group btn-group-toggle" data-toggle="buttons">
-                             <label onchange="check('g-2','bars');" value="bars" class="switch-btn btn btn-light active">
-                               <input value="bars" type="radio" name="options" id="option_g2_1" autocomplete="off" checked> Bars chart <span style="margin-left: 5px">
-                               <svg class="bi bi-bar-chart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                  <rect width="4" height="5" x="1" y="10" rx="1"/>
-                                  <rect width="4" height="9" x="6" y="6" rx="1"/>
-                                  <rect width="4" height="14" x="11" y="1" rx="1"/>
-                                </svg>
-                                </span>
-                             </label>
-                             <label onchange="check('g-2','lines');" value="lines" id="lines_chart" class="switch-btn btn btn-light">
-                               <input value="lines" type="radio" name="options" id="option_g2_2" autocomplete="off"> Lines chart
-                               <span style="margin-left: 5px">
-                                 <svg class="bi bi-graph-up" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0h1v16H0V0zm1 15h15v1H1v-1z"/>
-                                <path fill-rule="evenodd" d="M14.39 4.312L10.041 9.75 7 6.707l-3.646 3.647-.708-.708L7 5.293 9.959 8.25l3.65-4.563.781.624z"/>
-                                <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4h-3.5a.5.5 0 0 1-.5-.5z"/>
-                                </svg>
-                              </span>
-                             </label>
-                          </div>
-                        </div>
-
-                        <div class="sec-title">Filters</div>
-                        <div id="filters_container">
-                        </div>
-
-                      </div>
-
-
-
-                      <div id="chart_container" class="chart-container"></div>
-
-                      <script type="text/javascript">
-
-                      /* BUild doms*/
-                      for (var m_att in index_meta) {
-                        var filter_box = "";
-                        var l_meta_values = Array.from(index_meta[m_att]);
-                        l_meta_values = l_meta_values.sort();
-                        if (l_meta_values.length > 0) {
-                          for (var i = 0; i < l_meta_values.length; i++) {
-                            filter_box = filter_box + '<input class="f-checkbox" data-att="'+m_att+'" type="checkbox" id="checkbox_'+String(i)+'" value="'+l_meta_values[i]+'" checked><label for="checkbox_'+String(i)+'">'+l_meta_values[i]+'</label><br>';
-                          }
-                          filter_box = "<div class='m-box'><span class='pre' id='"+m_att+"_pre'>+</span><button id='"+m_att+"_btn' type='button' class='btn btn-light'>Metadata attribute: "+m_att+"</button><div id='"+m_att+"_values' class='m-box-values'>" + filter_box.substring(0, filter_box.length-4)+"</div>";
+        function filter() {
+          // filter_index = {"att":{Set of values}}
+          filtered_data = JSON.parse(JSON.stringify(app_init_data));
+          var copy_filtered_data = JSON.parse(JSON.stringify(filtered_data));
+          for (var k_cat in filtered_data) {
+              copy_filtered_data[k_cat] = [];
+              for (var i = 0; i < filtered_data[k_cat].length; i++) {
+                var elem_name = filtered_data[k_cat][i];
+                var include = false;
+                if (elem_name in app_meta) {
+                  for (var a_meta_att in app_meta[elem_name]) {
+                    var a_meta_att_value = app_meta[elem_name][a_meta_att];
+                    if (a_meta_att in filter_index) {
+                      if (att_index[a_meta_att] == "string") {
+                        include = (include || filter_index[a_meta_att].has(a_meta_att_value));
+                      }else if (att_index[a_meta_att].includes("list")) {
+                        for (var j = 0; j < a_meta_att_value.length; j++) {
+                          include = (include || filter_index[a_meta_att].has(a_meta_att_value[j]));
                         }
-                        document.getElementById("filters_container").innerHTML += filter_box;
                       }
-                      document.getElementById("filters_container").innerHTML += "<button id='btn_filter' type='button' class='btn btn-dark'>Apply filters</button>";
-                      for (var m_att in index_meta) {
+                    }
+                  }
+                }
+                if (include) {
+                  copy_filtered_data[k_cat].push(elem_name);
+                }
+              }
+          }
+          filtered_data = copy_filtered_data;
+        }
 
-                         $("#"+m_att+"_btn").click(function(event) {
-                          var values_box = event.target.id.replace("_btn","_values");
-                          var pre_box = event.target.id.replace("_btn","_pre");
-                          var display_val = $("#"+values_box).css('display');
+        </script>
 
-                          if (display_val == "none") {
-                            document.getElementById(pre_box).innerHTML = "-";
-                            $("#"+values_box).css("display", "block");
-                          }else {
-                            if (display_val == "block") {
-                              document.getElementById(pre_box).innerHTML = "+";
-                              $("#"+values_box).css("display", "none");
-                            }
-                          }
-                        });
-                      }
+      </head>
+      <body>
+              <div class="handlers-container">
 
-                      if (Object.keys(index_meta).length > 0) {
-                        $("#btn_filter").click(function(event) {
-                          var checked_inputs = $(".f-checkbox:checked");
-                          var index_filters = {};
-                          for (var i = 0; i < checked_inputs.length; i++) {
-                            var checked_att = checked_inputs[i].getAttribute("data-att");
-                            var checked_value = checked_inputs[i].getAttribute("value");
-                            if (!(checked_att in index_filters)) {
-                              index_filters[checked_att] = new Set();
-                            }
-                            index_filters[checked_att].add(checked_value);
-                          }
-                          filter_index = index_filters;
-                          filter();
-                          check();
-                       });
-                     }
+                <div class="switch_buttons">
+                  <div class="g-1 btn-group btn-group-toggle" data-toggle="buttons">
+                     <label onchange="check('g-1','counts');" value="counts" class="switch-btn btn btn-light active">
+                       <input value="counts" type="radio" name="options" id="option_g1_1" autocomplete="off" checked> Counts <span style="margin-left: 5px"> # </span>
+                     </label>
+                     <label onchange="check('g-1','percentage');" value="percentage" class="switch-btn btn btn-light">
+                       <input value="percentage" type="radio" name="options" id="option_g1_2" autocomplete="off"> Percentage <span style="margin-left: 5px"> % </span>
+                     </label>
+                  </div>
+                  <br>
+                  <div class="g-2 btn-group btn-group-toggle" data-toggle="buttons">
+                     <label onchange="check('g-2','bars');" value="bars" class="switch-btn btn btn-light active">
+                       <input value="bars" type="radio" name="options" id="option_g2_1" autocomplete="off" checked> Bars chart <span style="margin-left: 5px">
+                       <svg class="bi bi-bar-chart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="4" height="5" x="1" y="10" rx="1"/>
+                          <rect width="4" height="9" x="6" y="6" rx="1"/>
+                          <rect width="4" height="14" x="11" y="1" rx="1"/>
+                        </svg>
+                        </span>
+                     </label>
+                     <label onchange="check('g-2','lines');" value="lines" id="lines_chart" class="switch-btn btn btn-light">
+                       <input value="lines" type="radio" name="options" id="option_g2_2" autocomplete="off"> Lines chart
+                       <span style="margin-left: 5px">
+                         <svg class="bi bi-graph-up" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h1v16H0V0zm1 15h15v1H1v-1z"/>
+                        <path fill-rule="evenodd" d="M14.39 4.312L10.041 9.75 7 6.707l-3.646 3.647-.708-.708L7 5.293 9.959 8.25l3.65-4.563.781.624z"/>
+                        <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4h-3.5a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                      </span>
+                     </label>
+                  </div>
+                </div>
 
-                      check();
-                      </script>
-                  </body>
+                <div class="sec-title">Refine</div>
+                <div id="refine_container"></div>
+
+                <div class="sec-title">Filter</div>
+                <div id="filters_container"></div>
+
+              </div>
+
+
+
+              <div id="chart_container" class="chart-container"></div>
+
+              <script type="text/javascript">
+
+              /* BUild doms*/
+              for (var m_att in index_meta) {
+                var filter_box = "";
+                var l_meta_values = Array.from(index_meta[m_att]);
+                l_meta_values = l_meta_values.sort();
+                if (l_meta_values.length > 0) {
+                  for (var i = 0; i < l_meta_values.length; i++) {
+                    filter_box = filter_box + '<span><input class="f-checkbox" data-att="'+m_att+'" type="checkbox" id="checkbox_'+String(i)+'" value="'+l_meta_values[i]+'" checked></span><span><label for="checkbox_'+String(i)+'">'+l_meta_values[i]+'</label></span><br>';
+                  }
+                  filter_box = "<div class='m-box'><button id='"+m_att+"_btn' type='button' class='btn btn-light'>Metadata attribute: "+m_att+"</button><span class='pre' id='"+m_att+"_pre'>+</span><div id='"+m_att+"_values' class='m-box-values'>" + filter_box.substring(0, filter_box.length-4)+"</div>";
+                }
+                document.getElementById("filters_container").innerHTML += filter_box
+              }
+              document.getElementById("filters_container").innerHTML += "<button id='btn_filter' type='button' class='btn btn-dark'>Apply filters</button>";
+              for (var m_att in index_meta) {
+
+                 $("#"+m_att+"_btn").click(function(event) {
+                  var values_box = event.target.id.replace("_btn","_values");
+                  var pre_box = event.target.id.replace("_btn","_pre");
+                  var display_val = $("#"+values_box).css('display');
+
+                  if (display_val == "none") {
+                    document.getElementById(pre_box).innerHTML = "-";
+                    $("#"+values_box).css("display", "block");
+                  }else {
+                    if (display_val == "block") {
+                      document.getElementById(pre_box).innerHTML = "+";
+                      $("#"+values_box).css("display", "none");
+                    }
+                  }
+                });
+              }
+
+              if (Object.keys(index_meta).length > 0) {
+                $("#btn_filter").click(function(event) {
+                  var checked_inputs = $(".f-checkbox:checked");
+                  var index_filters = {};
+                  for (var i = 0; i < checked_inputs.length; i++) {
+                    var checked_att = checked_inputs[i].getAttribute("data-att");
+                    var checked_value = checked_inputs[i].getAttribute("value");
+                    if (!(checked_att in index_filters)) {
+                      index_filters[checked_att] = new Set();
+                    }
+                    index_filters[checked_att].add(checked_value);
+                  }
+                  filter_index = index_filters;
+                  filter();
+                  check();
+               });
+             }
+
+             var str_options = "";
+             for (var topic_i = 0; topic_i < Object.keys(app_init_data).length-1; topic_i++) {
+               str_options += "<option value='"+String(topic_i+1)+"'>Show top "+String(topic_i+1)+" topics</option>";
+             }
+             str_options = "<option value='"+String(Object.keys(app_init_data).length)+"'>Show all the topics</option>" + str_options;
+             document.getElementById("refine_container").innerHTML += "<select id='top_topics'>"+str_options+"</select>";
+
+             $("#top_topics").change(function(event) {
+               check();
+             });
+
+              check();
+              </script>
+          </body>
         </html>
         
