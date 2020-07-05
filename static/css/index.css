@@ -139,6 +139,20 @@ DIAGRAM TOP
   display: none;
 }
 
+#diagram_view .comp#remove_elem{
+  position: absolute;
+  border: solid 1px black;
+  top: 90px;
+  left: calc(var(--info-panel-width) + 20px);
+  z-index: 1000;
+  background-color: var(--error);
+  display: none;
+}
+#diagram_view .comp#remove_elem *{
+  vertical-align: middle;
+  opacity: 0.9;
+}
+
 #general{
   display: inline-block;
   width: calc(70% - 5px);

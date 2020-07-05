@@ -19,7 +19,9 @@ class dipam_interface {
               "ZOOMOUT_BTN": document.getElementById('zoom_out_btn'),
               //fit
               "FIT_CONTAINER": document.getElementById('diagram_fit'),
-              "FIT_BTN": document.getElementById('fit_btn')
+              "FIT_BTN": document.getElementById('fit_btn'),
+              //remove elem
+              "REMOVE_ELEM_CONTAINER": document.getElementById('remove_elem'),
           },
           "CONTROL": {
               "CONTAINER": document.getElementById('control_body'),
@@ -464,7 +466,7 @@ class dipam_interface {
             if ((interface_instance.info_section_elem['elem_class'] == "nodes") || (interface_instance.info_section_elem['elem_class'] == "edges")) {
               var focused_elems = $(':focus');
               if ((interface_instance.info_section_elem['elem'] != null) && (focused_elems.length == 0))  {
-                interface_instance.info_section_elem['elem'];
+                //interface_instance.info_section_elem['elem'];
                 document.getElementById('remove').click();
               }
             }
@@ -798,9 +800,9 @@ class dipam_interface {
     }
 
 
-
     removing(){
       this.info_section_html = "";
+      $( "#"+this.DOMS.DIAGRAM.REMOVE_ELEM_CONTAINER.getAttribute('id')).css("display", "none");
       this.click_overview_nav();
     }
 
@@ -1358,6 +1360,15 @@ class dipam_interface {
         }
     });
 
+    $( "#"+this.DOMS.DIAGRAM.REMOVE_ELEM_CONTAINER.getAttribute('id')+" button").on('click', function(e){
+      if ((interface_instance.info_section_elem['elem_class'] == "nodes") || (interface_instance.info_section_elem['elem_class'] == "edges")) {
+        if (interface_instance.info_section_elem['elem'] != null){
+          document.getElementById('remove').click();
+          $( "#"+interface_instance.DOMS.DIAGRAM.REMOVE_ELEM_CONTAINER.getAttribute('id')).css("display", "none");
+        }
+      }
+    });
+
     $('#file_to_load').on({
         change: function(e) {
           var file = $('#file_to_load')[0].files[0];
@@ -1384,10 +1395,10 @@ class dipam_interface {
     function _elem_onclick_handle(){
         //nodes on click handler
         diagram_cy.nodes().on('click', function(e){
-            //console.log("Node clicked !", this._private.data.id,this);
             diagram_instance.click_elem_style(this,'node');
             diagram_instance.check_node_compatibility(this);
             interface_instance.click_on_node(this);
+            elem_remove_handler(this);
         });
 
         //edges on click handler
@@ -1395,7 +1406,12 @@ class dipam_interface {
             //console.log("Edge clicked !", this._private.data.id,this);
             diagram_instance.click_elem_style(this,'edge');
             interface_instance.click_on_edge(this);
+            elem_remove_handler(this);
         });
+
+        function elem_remove_handler(elem) {
+          $( "#"+interface_instance.DOMS.DIAGRAM.REMOVE_ELEM_CONTAINER.getAttribute('id')).css("display", "block");
+        }
     }
 
   }

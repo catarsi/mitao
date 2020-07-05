@@ -136,13 +136,17 @@ class Terminal(object):
                             elif "int" in inner_type:
                                 inner_type = "integer"
                         meta_index[a_meta_k] = "list("+inner_type+")"
+                        l = [a_val for a_val in a_meta_k_val]
+                        a_meta_k_val = l
                     elif "str" in a_data_type:
                         meta_index[a_meta_k] = "string"
+                        a_meta_k_val = [a_meta_k_val]
                     elif "int" in a_data_type:
                         meta_index[a_meta_k] = "integer"
+                        a_meta_k_val = [a_meta_k_val]
 
                     if a_meta_k == META_KEY:
-                        meta_x_values.add(a_meta_k_val)
+                        meta_x_values.update(a_meta_k_val)
 
         meta_x_values = list(meta_x_values)
         meta_x_values.sort()
@@ -266,6 +270,7 @@ class Terminal(object):
 
                 /*FROM MITAO*/
                 var app_x_att = \""""+META_KEY+"""\";
+                var app_x_att_type = \""""+meta_index[META_KEY]+"""\";
                 var app_x_data = """+json.dumps(meta_x_values)+""";
 
                 /*------------*/
@@ -457,20 +462,29 @@ class Terminal(object):
                         var elem_name = filtered_data[k_cat][i];
                         if (elem_name in app_meta) {
                           if (app_x_att in app_meta[elem_name]) {
-                            var att_val = app_meta[elem_name][app_x_att];
-                            if (app_x_data.indexOf(att_val) != -1) {
-                              obj_data[k_cat][att_val]["counts"] += 1;
-                              //update counts
-                              if (!(k_cat in index_counts["category"])) {
-                                index_counts["category"][k_cat] = 0;
-                              }
-                              if (!(att_val in index_counts["x_tick"])) {
-                                index_counts["x_tick"][att_val] = 0;
-                              }
-                              index_counts["category"][k_cat] += 1;
-                              index_counts["x_tick"][att_val] += 1;
-                              index_counts["all"] += 1;
+
+                            var l_att_val = [app_meta[elem_name][app_x_att]];
+                            if (app_x_att_type.includes("list")) {
+                              var l_att_val = app_meta[elem_name][app_x_att];
                             }
+                            for (var h = 0; h < l_att_val.length; h++) {
+                              att_val = l_att_val[h];
+                              //TODO AN ERROR
+                              if (app_x_data.indexOf(att_val) != -1) {
+                                obj_data[k_cat][att_val]["counts"] += 1;
+                                //update counts
+                                if (!(k_cat in index_counts["category"])) {
+                                  index_counts["category"][k_cat] = 0;
+                                }
+                                if (!(att_val in index_counts["x_tick"])) {
+                                  index_counts["x_tick"][att_val] = 0;
+                                }
+                                index_counts["category"][k_cat] += 1;
+                                index_counts["x_tick"][att_val] += 1;
+                                index_counts["all"] += 1;
+                              }
+                            }
+
                           }
                         }
                       }

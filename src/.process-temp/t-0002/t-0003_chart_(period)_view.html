@@ -54,7 +54,7 @@
                       margin-bottom: 5px;
                     }
                     #lines_chart{
-                      display: initial;
+                      display: none;
                     }
 
                     #filters_container{
@@ -4100,6 +4100,7 @@
 
                 /*FROM MITAO*/
                 var app_x_att = "period";
+                var app_x_att_type = "string";
                 var app_x_data = ["1998-2004", "2005-2010", "2011-2017"];
 
                 /*------------*/
@@ -4291,20 +4292,29 @@
                         var elem_name = filtered_data[k_cat][i];
                         if (elem_name in app_meta) {
                           if (app_x_att in app_meta[elem_name]) {
-                            var att_val = app_meta[elem_name][app_x_att];
-                            if (app_x_data.indexOf(att_val) != -1) {
-                              obj_data[k_cat][att_val]["counts"] += 1;
-                              //update counts
-                              if (!(k_cat in index_counts["category"])) {
-                                index_counts["category"][k_cat] = 0;
-                              }
-                              if (!(att_val in index_counts["x_tick"])) {
-                                index_counts["x_tick"][att_val] = 0;
-                              }
-                              index_counts["category"][k_cat] += 1;
-                              index_counts["x_tick"][att_val] += 1;
-                              index_counts["all"] += 1;
+
+                            var l_att_val = [app_meta[elem_name][app_x_att]];
+                            if (app_x_att_type.includes("list")) {
+                              var l_att_val = app_meta[elem_name][app_x_att];
                             }
+                            for (var h = 0; h < l_att_val.length; h++) {
+                              att_val = l_att_val[h];
+                              //TODO AN ERROR
+                              if (app_x_data.indexOf(att_val) != -1) {
+                                obj_data[k_cat][att_val]["counts"] += 1;
+                                //update counts
+                                if (!(k_cat in index_counts["category"])) {
+                                  index_counts["category"][k_cat] = 0;
+                                }
+                                if (!(att_val in index_counts["x_tick"])) {
+                                  index_counts["x_tick"][att_val] = 0;
+                                }
+                                index_counts["category"][k_cat] += 1;
+                                index_counts["x_tick"][att_val] += 1;
+                                index_counts["all"] += 1;
+                              }
+                            }
+
                           }
                         }
                       }
