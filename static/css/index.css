@@ -1,18 +1,23 @@
 :root {
   --info-panel-width: 25%;
+  --current-info-panel-width: 300px;
+  --cy-height: 550px;
   --bg-light-color: #E0D8CB;
-  /*--bg-light-color: rgba(198, 176, 140, 0.1);*/
-  --bg-color: #B29E7E;
+  --bg-app: white;
+  --bg-boxes: #F9F9F9;
+  --bg-color: #e6e8e6;
   --bg-color-light: #EFEBE5;
-  --bg-color-hover: #A8926E;
-  --tool-color: #E5CE80;
-  --tool-color-hover: #DCBE56;
+  --bg-tool-light: #F4EBCC;
+  --bg-color-hover: #F9F9F9;
+  --tool-color: #C38391;
+  --diagram-color: #898989;
+  --tool-color-hover: #b56576;
   --data-color: #2E9D99;
   --data-color-hover: #288986;
   --dark-font: #273746;
-  --parms-color: #273746;
+  --parms-color: white;
   --running: #7CD775;
-  --error: #FF6F56;
+  --error: white;
 }
 :disabled{
   opacity: 0.6;
@@ -26,6 +31,14 @@
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+.group{
+  border-left: double 6px white!important;
+}
+
+
+.not-active {
+  pointer-events: none;
+}
 
 button,a { cursor: pointer; }
 button:hover{
@@ -36,12 +49,111 @@ button:focus{
   outline:0!important;
 }
 select {
-  margin-right: 10px;
+  background-color: var(--diagram-color);
+  color: white;
+  border: none;
+  border-bottom: dotted 2px;
+}
+input{
+  background-color: var(--diagram-color);
+  border: none;
+  border-bottom: dotted 2px white;
+  color: white;
+}
+::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+textarea{
+  background-color: var(--diagram-color);
+  color: white;
+  min-height:10px;
+  border: none;
+}
+
+input:focus{
+  outline:0!important;
+}
+textarea:focus{
+  outline:0!important;
+}
+select:focus{
+  outline:0!important;
 }
 
 body {
+  background-color: var(--bg-app);
   font-family: "Noto Sans", sans-serif;
   font-weight: 320;
+}
+
+/*level(2) of the layout*/
+
+#gui{
+  width:100%;
+}
+#left{
+  position:absolute;
+  width: 350px;
+  margin-left: 20px;
+}
+#right{
+  position:absolute;
+  left: 350px;
+  min-width: 800px;
+  width: 65%;
+}
+
+
+/*level(3) of the layout*/
+
+
+#control{
+  position: relative;
+  margin-top: 120px;
+  left: 20px;
+  width: 100%;
+  min-width: 300px;
+  vertical-align: top;
+  display: inline-block;
+  min-height: 300px;
+  position: relative;
+  z-index: 1000;
+  border-radius: 10px 15px 15px 10px;
+  background-color: var(--diagram-color);
+}
+#control.diagram{
+  background-color: var(--diagram-color);
+}
+#control.diagram input{
+  background-color: var(--diagram-color);
+}
+#control.diagram textarea{
+  background-color: var(--diagram-color);
+}
+#control.tool{
+  background-color: var(--tool-color-hover);
+}
+#control.tool input{
+  background-color: var(--tool-color-hover);
+}
+#control.tool select{
+  background-color: var(--tool-color-hover);
+}
+#control.data{
+  background-color: var(--data-color-hover);
+}
+#control.data input{
+  background-color: var(--data-color-hover);
+}
+#control.data select{
+  background-color: var(--data-color-hover);
+}
+#control label{
+  color: white;
+}
+#control input{
+  border-radius: px;
 }
 
 /*
@@ -49,6 +161,7 @@ DIAGRAM TOP
 */
 
 #gui_top{
+  position: relative;
   margin-bottom: 30px;
   height: fit-content;
   width: 100%;
@@ -59,14 +172,18 @@ DIAGRAM TOP
   max-height: 50px;
 }
 .corner-box{
+  position: absolute;
+  padding-left: 50px;
+  min-width: 300px;
   width: var(--info-panel-width);
-  height: fit-content;
+  height: 100%;
   display: inline-block;
+  cursor: none;
+  visibility: hidden;
 }
 
 #diagram_editor{
-  width: calc(100% - var(--info-panel-width) - 20px);
-  display: inline-block;
+  min-width: 800px;
   min-height: 40px;
 }
 #diagram_editor *{
@@ -109,12 +226,15 @@ DIAGRAM TOP
 
 
 #diagram_view{
+  margin-top: 10px;
   width: 30%;
+  min-width: 300px;
   vertical-align: bottom;
   display: inline-block;
   background-color: var(--bg-color);
   border-radius: 5px;
   text-align: center;
+  border: solid 1px lightgray;
 }
 
 #diagram_view .comp{
@@ -128,7 +248,7 @@ DIAGRAM TOP
 #diagram_view .comp *{
   background: none;
   border: none;
-  color: white;
+  color: black;
 }
 #diagram_view .comp *:focus{
   background: none;
@@ -141,45 +261,52 @@ DIAGRAM TOP
 
 #diagram_view .comp#remove_elem{
   position: absolute;
-  border: solid 1px black;
-  top: 90px;
-  left: calc(var(--info-panel-width) + 20px);
+  right: calc(0px + 3%);
+  top: calc(var(--cy-height) + 25px);
   z-index: 1000;
-  background-color: var(--error);
   display: none;
+  background-color: var(--bg-color);
+  border: solid 2px lightgray;
+}
+#diagram_view .comp#remove_elem:hover{
+  background-color: var(--bg-color-hover);
 }
 #diagram_view .comp#remove_elem *{
   vertical-align: middle;
   opacity: 0.9;
+  color: black;
 }
 
 #general{
   display: inline-block;
-  width: calc(70% - 5px);
-  text-align: right;
+  min-width: 400px;
+  float: right;
+  text-align:right;
 }
 #general button{
-  font-size: 15pt;
+  font-size: 13pt;
 }
 #general .comp{
-  font-size: 14pt;
+  font-size: 12pt;
   vertical-align: bottom;
 }
 #general .comp#list_options_trigger{
   background-color: var(--bg-color);
   border: none;
-  color: white;
+  color: black;
   height:45px;
+  border: solid 1px lightgray;
 }
 #general .comp#list_options_trigger:hover{
   background-color: var(--bg-color-hover);
 }
 #general button#btn_run_workflow{
   font-weight: 340;
-  width: 25%;
   background-color: var(--bg-color);
-  color: white;
+  border: solid 1px lightgray;
+  color: black;
   height:45px;
+  width: 180px;
 }
 #general button#btn_run_workflow svg{
   width: 20%;
@@ -199,9 +326,11 @@ DIAGRAM TOP
   display: none;
   z-index: 1000;
   background-color: var(--bg-color);
-  min-width: 220px;
-  right: 30px;
-  border-radius: 0px 0px 0px 10px;
+  min-width: 250px;
+  border-radius: 10px 10px 10px 10px;
+  border: solid 2px lightgray;
+  right: 3%;
+  margin-top: 20px;
 }
 #list_options button{
   vertical-align: middle;
@@ -215,10 +344,11 @@ DIAGRAM TOP
   background-color: var(--bg-color);
   border: none;
   border-bottom: dotted 1.5px white;
-  color: white;
+  color: black;
 }
 #list_options button:hover{
-  border-bottom: solid 1.5px;
+  border-bottom: solid 1.5px gray;
+  background-color: var(--bg-color-hover);
 }
 #list_options a{
   font-size: 14pt;
@@ -230,25 +360,24 @@ DIAGRAM TOP
 /*
 ------------------------
 */
+
 #gui_middle{
+  width: 100%;
   padding: 10px;
   padding-top: 1px;
+  padding-bottom: 2px;
 }
-#gui_middle #control{
-  width: var(--info-panel-width);
-  vertical-align: top;
-  display: inline-block;
-  min-height: 300px;
-  position: relative;
-  z-index: 100;
-}
+
 #gui_middle #cy{
+  padding-left: 30px;
   display: inline-block;
   border-radius: 5px;
-  border: solid 2px var(--bg-color);
-  height: 500px;
+  border: solid 2px lightgray;
+  height: var(--cy-height);
   z-index: 999;
-  width: calc(100% - var(--info-panel-width) - 20px);
+  width: 100%;
+  min-width: 800px;
+  background-color: var(--bg-boxes);
 }
 
 /*
@@ -256,7 +385,7 @@ DIAGRAM TOP
 */
 
 #gui_bottom{
-  padding-left: var(--info-panel-width);
+  width: 100%;
 }
 /*
 ------------------------
@@ -274,42 +403,63 @@ label{
 #control_body{
   padding-top: 20px;
   width: 100%;
-  background-color: var(--bg-light-color);
-  border-radius: 0px 0px 0px 10px;
-  /*border: solid 1px var(--bg-color);*/
   padding-bottom: 20px;
   opacity: 1;
 }
 #control_mid{
-  max-height: 460px;
+  max-height: 400px;
   transition: max-height 0.5s;
-  overflow: auto
+  overflow: auto;
+}
+#control_mid .elem-logo{
+  font-size: 16pt;
+  float: right;
+  margin-right: 10px;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 7px;
+  background-color: rgba(250,250,250,0.2);
+}
+#control_mid .elem-logo svg{
+  vertical-align: middle;
 }
 #control_mid .control-params{
   width: 100%;
   margin-top: 20px;
-  color: var(--parms-color);
   font-size: small;
 }
 #control_mid .control-params .input-group{
-  border-left: solid 1.3px var(--parms-color);
+  padding-top: 15px;
+  border-left: solid 2px var(--parms-color);
 }
 #control_mid .control-params .input-group + .input-group{
 }
-#control_mid .input-output-info{
+#control_mid .info-box{
   margin-top: 10px;
   margin-left: 20px;
   padding: 5px;
   padding-left: 5px;
   width: 80%;
-  border-radius: 5px;
-  border: solid 0.5px gray;
-  background-color: var(--bg-color-light);
-
+  border-radius: 7px;
+  color: white;
+  background-color: rgba(250,250,250,0.2);
+  text-align: center;
 }
-#control_mid .input-output-info .title{
+#control_mid .info-box .title{
   font-size:120%;
   margin-bottom: 5px;
+}
+#control_mid .info-box button{
+  width: fit-content;
+  background-color: transparent!important;
+  border: none;
+  opacity: 0.8;
+  font-size: 12pt;
+}
+#control_mid .info-box .content{
+  margin-top: 10px;
+  text-align: left;
 }
 
 #control_foot{
@@ -330,7 +480,7 @@ label{
   padding-right: 10px;
 }
 #control_foot button:hover{
- color: #82683b;
+ color: var(--bg-color);
 }
 
 .input-group{
@@ -349,42 +499,59 @@ select, .dropdown-toggle{
 }
 .input-group
 input {
-  width: calc(100% - 10px);
+  width: calc(100%);
 }
 .input-group + .input-group{
-  padding-top: 12px;
+  padding-top: 10px;
 }
+.control-params .input-group{
+  padding-top: 5px;
+  padding-bottom: 8px;
+}
+
 .input-text-large textarea{
   min-height: 100px;
   resize: none;
   width: 100%;
 }
+.input-text-group{
+  padding-top: 0px!important;
+  padding-bottom: 0px!important;
+}
 .input-text-group .input-group-prepend{
   display: none;
 }
 .input-text-group table {
-  border-spacing: 3px;
+  color: white;
   border-collapse: separate;
+  border-spacing: 0 10px;
   table-layout: auto;
 }
 .input-text-group table td{
-  padding-bottom: 10px;
+  padding-bottom: 25px;
+  border-left: solid 2px white;
+  padding-left: 5px;
+}
+.input-text-group table tr{
 }
 .input-text-group table td:last-child {
  display: table-cell;
  border-bottom: none;
+ border-left: none!important;
 }
 .input-text-group table td:last-child button{
   font-size: 16pt;
   width: 35px;
   height: 35px;
-  background-color: #7CD775;
   border: none;
   border-radius: 7px;
   opacity: 0.85;
+  color: black;
+  font-weight: 500;
+  margin-top: 50%;
+  margin-left: 50%;
 }
 .input-text-group table td:last-child button.del_att_regex{
-  background-color: #FF6F56;
 }
 
 
@@ -420,7 +587,6 @@ input {
   max-width:350px;
   max-height:50px;
   vertical-align: middle;
-  border: solid 1px #917442;
   border-radius: 5px;
   margin-right:3px;
 }
@@ -559,8 +725,8 @@ ul + label{
 .timeline-block-inner .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color: #917442;
-  color: #fff;
+  background-color: var(--bg-color);
+  color: black;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
@@ -630,31 +796,5 @@ ul + label{
 /* Popup box BEGIN */
 
 @media only screen and (max-width: 1300px) {
-  .corner-box *{
-    font-size: 10pt!important;
-  }
-  #diagram_editor #general *{
-      font-size: 10pt!important;
-      width: fit-content!important;
-      vertical-align:bottom!important;
-  }
-  #diagram_editor #diagram_view *{
-      font-size: 10pt!important;
-      width: fit-content!important;
-      vertical-align:bottom!important;
-  }
-  #general button#btn_run_workflow{
-        font-size: 80%;
-        width: fit-content!important;
-        height: fit-content!important;
-  }
-  #general button#add_tool{
-    height: fit-content!important;
-  }
-  #general button#add_data{
-    height: fit-content!important;
-  }
-  #general button#list_options_trigger{
-    height: fit-content!important;
-  }
+
 }

@@ -24,7 +24,9 @@ class dipam_interface {
               "REMOVE_ELEM_CONTAINER": document.getElementById('remove_elem'),
           },
           "CONTROL": {
+              "BASE": document.getElementById('control'),
               "CONTAINER": document.getElementById('control_body'),
+              //"CONTAINER_MID": document.getElementById('control_mid'),
               //menu navigator
               "NAV_CONTAINER": document.getElementById('control_nav'),
               "INFO_BTN": document.getElementById('nav_info_a'),
@@ -111,6 +113,7 @@ class dipam_interface {
       this.info_section_html = this.build_control_section(elem, update_control_params);
       this.info_section_elem['elem'] = elem;
       this.info_section_elem['elem_class'] = elem_class;
+      this.DOMS.CONTROL.BASE.className = elem.data.type;
     }
 
     build_control_section(elem, update_control_params = false){
@@ -126,7 +129,6 @@ class dipam_interface {
 
       res_str_html = res_str_html + '<div id="control_mid">';
       var all_param_doms_str = "";
-      var input_output_info_str = "";
       for (var k_attribute in elem.data) {
         var a_dom_str = "";
 
@@ -138,7 +140,7 @@ class dipam_interface {
             case 'name':
               //is an input-box
               this.set_dipam_temp_val(k_attribute,elem.data.name);
-              a_dom_str = _build_a_dom("input-text", elem, k_attribute, {intro_lbl: "Name:"});
+              a_dom_str = _build_logo_dom(elem.data.type) + _build_a_dom("input-text", elem, k_attribute, {intro_lbl: "Name:"});
               break;
             case 'value':
               //is a dropdown
@@ -148,42 +150,53 @@ class dipam_interface {
                 res_elem_type = {'[KEY]': ["edge"],'label': ["Edge"],'class_label':["General"]};
               }
               a_dom_str = _build_a_dom("select-value", elem, k_attribute, {intro_lbl: "Type:", value: res_elem_type['[KEY]'], label: res_elem_type['label'], class_label: res_elem_type['class_label']});
-
-              //corresponding info and details about it
-              input_output_info_str = _build_info(elem.data);
-              if (input_output_info_str.length > 0) {
-                input_output_info_str = "<div class='input-output-info'>"+ input_output_info_str + "</div>"
-              }
               break;
 
             case 'param':
               //is a param
-              var sorted_params = Object.keys(elem.data.param).sort();
-              for (var k = 0; k < sorted_params.length; k++) {
-                    var k_param = sorted_params[k];
-                    var para_obj = diagram_instance.get_conf_att("param",k_param, null);
-                    var para_val = para_obj.value;
-                    if (para_val != -1) {
-                      all_param_doms_str = all_param_doms_str + _build_a_dom(para_obj.handler, elem, k_param, {intro_lbl: para_obj.label, value: para_obj.value, label: para_obj.value_label}, true);
-                      this.set_dipam_temp_val(k_param,elem.data.param[k_param]);
-                   }
-              }
-              if (update_control_params) {
-                var control_param_sec = document.getElementsByClassName("control-params");
-                if (control_param_sec.length > 0) {
-                  control_param_sec = control_param_sec[0];
-                }else {
-                  return -1;
+              //var sorted_params = Object.keys(elem.data.param).sort();
+              var l_conf_params = diagram_instance.get_conf_att(elem.data.type, elem.data.value, null)["param"];
+              if (l_conf_params != undefined) {
+                for (var k = 0; k < l_conf_params.length; k++) {
+                      var k_param = l_conf_params[k];
+                      var para_obj = diagram_instance.get_conf_att("param",k_param, null);
+                      var para_val = para_obj.value;
+                      if (para_val != -1) {
+                        all_param_doms_str = all_param_doms_str + _build_a_dom(para_obj.handler, elem, k_param, {intro_lbl: para_obj.label, placeholder:para_obj.placeholder, value: para_obj.value, label: para_obj.value_label, group:para_obj.group}, true);
+                        this.set_dipam_temp_val(k_param,elem.data.param[k_param]);
+                     }
                 }
-                control_param_sec.innerHTML = all_param_doms_str;
+                if (update_control_params) {
+                  var control_param_sec = document.getElementsByClassName("control-params");
+                  if (control_param_sec.length > 0) {
+                    control_param_sec = control_param_sec[0];
+                  }else {
+                    return -1;
+                  }
+                  control_param_sec.innerHTML = all_param_doms_str;
+                }
               }
           }
           res_str_html = res_str_html + a_dom_str;
         }
       }
 
+      //info and input output
+      //corresponding info and details about it
 
-      res_str_html = res_str_html + input_output_info_str + "<div class='control-params'>"+ all_param_doms_str + '</div></div>';
+      var input_output_info_str = "";
+      var description_str = "";
+      var elem_conf_obj = diagram_instance.get_conf_att(elem.data.type, elem.data.value, null);
+      description_str = _build_description(elem_conf_obj['description']);
+      if (description_str != "") {
+        description_str = "<div class='info-box'>"+ description_str + "</div>";
+      }
+      input_output_info_str = _build_info(elem.data);
+      if (input_output_info_str.length > 0) {
+        input_output_info_str = "<div class='info-box'>"+ input_output_info_str + "</div>";
+      }
+
+      res_str_html = res_str_html + description_str + input_output_info_str + "<div class='control-params'>"+ all_param_doms_str + '</div></div>';
       //console.log(this.temp_dipam_value);
 
       //now the foot buttons
@@ -201,6 +214,13 @@ class dipam_interface {
 
       return res_str_html;
 
+      function _build_description(str){
+        if (str == undefined) {
+          return "";
+        }else {
+          return _build_open_trigger("Description")+"<div class='content' style='display: none'>"+str+"</div>";
+        }
+      }
       function _build_info(elem_data){
         var input_output_info_str = "";
         if (elem_data.type == "tool") {
@@ -238,11 +258,36 @@ class dipam_interface {
           if (output_info_str.length > 0){
             title_input = '<div class="title">Output:</div>'
           }
-          input_output_info_str = input_output_info_str + title_input + output_info_str;
+          input_output_info_str = _build_open_trigger("Inputs and Outputs")+"<div class='content' style='display: none'>"+ input_output_info_str + title_input + output_info_str+"</div>";
         }
         return input_output_info_str;
       }
-
+      function _build_open_trigger(title){
+        var svg_closed = '<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/></svg>';
+        var svg_open = '<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>';
+        var html_btn = `<button class="open-box-trigger" data-title="`+title+`" type="button">`+title+` `+svg_closed+`</button>`;
+        return html_btn;
+      }
+      function _build_logo_dom(elem_type){
+        var html_logo = "<div class='elem-logo'>";
+        switch (elem_type) {
+          case "tool":
+            html_logo += '<svg class="bi bi-tools" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M0 1l1-1 3.081 2.2a1 1 0 0 1 .419.815v.07a1 1 0 0 0 .293.708L10.5 9.5l.914-.305a1 1 0 0 1 1.023.242l3.356 3.356a1 1 0 0 1 0 1.414l-1.586 1.586a1 1 0 0 1-1.414 0l-3.356-3.356a1 1 0 0 1-.242-1.023L9.5 10.5 3.793 4.793a1 1 0 0 0-.707-.293h-.071a1 1 0 0 1-.814-.419L0 1zm11.354 9.646a.5.5 0 0 0-.708.708l3 3a.5.5 0 0 0 .708-.708l-3-3z"/><path fill-rule="evenodd" d="M15.898 2.223a3.003 3.003 0 0 1-3.679 3.674L5.878 12.15a3 3 0 1 1-2.027-2.027l6.252-6.341A3 3 0 0 1 13.778.1l-2.142 2.142L12 4l1.757.364 2.141-2.141zm-13.37 9.019L3.001 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/></svg>';
+            break;
+          case "data":
+            html_logo += '<svg class="bi bi-archive-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.643 15C13.979 15 15 13.845 15 12.5V5H1v7.5C1 13.845 2.021 15 3.357 15h9.286zM6 7a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1H6zM.8 1a.8.8 0 0 0-.8.8V3a.8.8 0 0 0 .8.8h14.4A.8.8 0 0 0 16 3V1.8a.8.8 0 0 0-.8-.8H.8z"/></svg>';
+            break;
+          case "diagram":
+            html_logo += '<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-diagram-2-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 11.5A1.5 1.5 0 0 1 4.5 10h1A1.5 1.5 0 0 1 7 11.5v1A1.5 1.5 0 0 1 5.5 14h-1A1.5 1.5 0 0 1 3 12.5v-1zm6 0a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1A1.5 1.5 0 0 1 9 12.5v-1zm-3-8A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6h-1A1.5 1.5 0 0 1 6 4.5v-1z"/><path fill-rule="evenodd" d="M8 5a.5.5 0 0 1 .5.5V7H11a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 5 7h2.5V5.5A.5.5 0 0 1 8 5z"/></svg>';
+            break;
+          case "edge":
+            html_logo += '<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-up-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2.5 4a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1H3.5V9a.5.5 0 0 1-1 0V4z"/><path fill-rule="evenodd" d="M2.646 3.646a.5.5 0 0 1 .708 0l9 9a.5.5 0 0 1-.708.708l-9-9a.5.5 0 0 1 0-.708z"/></svg>';
+            break;
+          default:
+        }
+        html_logo += "</div>";
+        return html_logo;
+      }
       function _build_a_dom(dom_tag, elem, k_attribute, param = {}, is_param = false){
         var a_dom_id = k_attribute;
         var a_dom_class = dom_tag + "-trigger";
@@ -254,6 +299,14 @@ class dipam_interface {
         }
         if (k_attribute == "value") {
           a_dom_class = a_dom_class+" "+ "data-elem-value";
+        }
+        var group_class = "";
+        if ("group" in param) {
+          if (param["group"] == true) {
+            group_class = "group";
+          }else {
+            group_class = "ungroup";
+          }
         }
 
         switch (dom_tag) {
@@ -289,7 +342,7 @@ class dipam_interface {
               }
 
               str_html = str_html + `
-              <div class="input-group `+dom_tag+`">
+              <div class="input-group `+dom_tag+` `+group_class+`">
                       <div class="input-group-prepend">
                         <label class="input-group-text">`+param.intro_lbl+`</label>
                       </div>
@@ -297,7 +350,7 @@ class dipam_interface {
               </div>`;
               break;
 
-        case 'check-value':
+          case 'check-value':
                   var str_options = "";
                   //console.log(param.value,dom_value);
                   for (var j = 0; j < param.value.length; j++) {
@@ -309,7 +362,7 @@ class dipam_interface {
                    };
 
                     str_html = str_html + `
-                    <div class="input-group `+dom_tag+`">
+                    <div class="input-group `+dom_tag+` `+group_class+`">
                           <div class="input-group-prepend">
                             <label class="input-group-text">`+param.intro_lbl+`</label>
                           </div>
@@ -319,28 +372,46 @@ class dipam_interface {
                   break;
 
           case 'input-text':
+                var placeholder_str = "";
+                if (param.placeholder != undefined){
+                  placeholder_str = 'placeholder="'+param.placeholder+'"';
+                }
+                var input_value_html = "";
+                if (dom_value != undefined){
+                  input_value_html = 'value="'+dom_value+'"';
+                }
                 str_html = str_html + `
-                <div class="input-group `+dom_tag+`">
+                <div class="input-group `+dom_tag+` `+group_class+`">
                   <div class="input-group-prepend">
                     <label class="input-group-text">`+param.intro_lbl+`</label>
                   </div>
-                  <input data-id="`+elem.data.id+`" id="`+a_dom_id+`" class="`+a_dom_class+` save-value att-handler" value="`+dom_value+`" data-att-value="`+k_attribute+`" type="text" ></input>
+                  <input `+placeholder_str+` data-id="`+elem.data.id+`" id="`+a_dom_id+`" class="`+a_dom_class+` save-value att-handler" `+input_value_html+` data-att-value="`+k_attribute+`" type="text" ></input>
                 </div>
                 `;
                 break;
 
-            case 'input-text-large':
-                      str_html = str_html + `
-                      <div class="input-group `+dom_tag+`">
-                        <div class="input-group-prepend">
-                          <label class="input-group-text">`+param.intro_lbl+`</label>
-                        </div>
-                        <textarea data-id="`+elem.data.id+`" id="`+a_dom_id+`" class="`+a_dom_class+` save-value att-handler" value="`+dom_value+`" data-att-value="`+k_attribute+`" type="text" >`+ dom_value.replace(/\\n/g,"&#13;&#10;")+`</textarea>
-                      </div>
-                      `;
+          case 'input-text-large':
+                var placeholder_str = "";
+                if (param.placeholder != undefined){
+                  placeholder_str = 'placeholder="'+param.placeholder+'"';
+                }
+                var input_value_html = "";
+                var str_value_html = "";
+                if (dom_value != undefined){
+                  str_value_html = dom_value;
+                  input_value_html = 'value="'+dom_value+'"';
+                }
+                str_html = str_html + `
+                <div class="input-group `+dom_tag+` `+group_class+`">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text">`+param.intro_lbl+`</label>
+                  </div>
+                  <textarea `+placeholder_str+` data-id="`+elem.data.id+`" id="`+a_dom_id+`" class="`+a_dom_class+` save-value att-handler" `+input_value_html+` data-att-value="`+k_attribute+`" type="text" >`+ str_value_html.replace(/\\n/g,"&#13;&#10;")+`</textarea>
+                </div>
+                `;
                 break;
 
-            case 'input-text-group':
+          case 'input-text-group':
                       var g_inputs = `<div data-id="`+elem.data.id+`" id="`+a_dom_id+`" class="g-headers `+a_dom_class+` save-value att-handler" data-att-value="`+k_attribute+`">`;
 
                       //get the rows with their corresponding values
@@ -383,7 +454,12 @@ class dipam_interface {
                           if (input_val == undefined) {
                             input_val = "";
                           }
-                          input_text_row_pattern = input_text_row_pattern + `<input value="`+input_val+`" class=`+columns[j]+` type="text"></input>`;
+                          var placeholder_str = "";
+                          if (param.placeholder != undefined){
+                            placeholder_str = 'placeholder="'+param.placeholder[j]+'"';
+                          }
+
+                          input_text_row_pattern = input_text_row_pattern + `<input `+placeholder_str+` value="`+input_val+`" class=`+columns[j]+` type="text"></input>`;
                         }
                         if (i > 0) {
                             input_text_row_pattern = input_text_row_pattern + `</td><td><button type="button" class="del_att_regex">-</button></td></tr>`+`</tr>`;
@@ -393,7 +469,7 @@ class dipam_interface {
                       }
 
                       str_html = str_html + `
-                      <div class="input-group `+dom_tag+`">
+                      <div class="input-group `+dom_tag+` `+group_class+`">
                         <div class="input-group-prepend">
                           <label class="input-group-text">`+param.intro_lbl+`</label>
                         </div>
@@ -408,7 +484,7 @@ class dipam_interface {
                                     <option id='`+a_dom_id+`_optdir' value='dir'>Directory</option>`;
 
                   str_html = str_html +`
-                  <div class="input-group btn-group `+dom_tag+`">
+                  <div class="input-group btn-group `+dom_tag+` `+group_class+`">
                       <div class="input-group-prepend">
                         <label class="input-group-text">`+param.intro_lbl+`</label>
                       </div>
@@ -421,21 +497,21 @@ class dipam_interface {
                   `;
                   break;
 
-            case 'edit':
+          case 'edit':
                   str_html = str_html + `
                   <div class="foot-dom btn-edit">
                   <button id="edit" value="editoff" type="button" data-id="`+elem.data.id+`" class="`+a_dom_class+` btn btn-light">
                   `+param.intro_lbl+`</button></div>`;
                   break;
 
-            case 'remove':
+          case 'remove':
                   str_html = str_html + `
                   <div class="foot-dom btn-remove">
                   <button id="remove" type="button" data-id="`+elem.data.id+`" class="`+a_dom_class+` btn btn-light">
                   `+param.intro_lbl+`</button></div>`;
                   break;
 
-            case 'save':
+          case 'save':
                 str_html = str_html + `<div id="edit_buttons" class="foot-dom">
                                        <span><button id='cancel' type='button' class='cancel-trigger btn btn-default edit-switch'>Cancel</button></span>
                                        <span>
@@ -457,22 +533,36 @@ class dipam_interface {
           //interface_instance.set_dipam_temp_val(key_att,$(this).val());
       });
       $(document).on('keyup', '#workflow_extra input', function(){
-          document.getElementById(this.id).setAttribute('data-att-value',$(this).val());
+          //document.getElementById(this.id).setAttribute('data-att-value',$(this).val());
       });
       // delete with keyboard diagram items
-      $('body').keydown(function(event){
-          //var letter = String.fromCharCode(event.which);
+      //TODO Check UNDO REDO ISSUE
+      $('body').one("keydown", function(event){
+      //$('body').keyup(function(event){
           if ((event.keyCode == 8) || (event.keyCode == 46)){
             if ((interface_instance.info_section_elem['elem_class'] == "nodes") || (interface_instance.info_section_elem['elem_class'] == "edges")) {
               var focused_elems = $(':focus');
               if ((interface_instance.info_section_elem['elem'] != null) && (focused_elems.length == 0))  {
-                //interface_instance.info_section_elem['elem'];
-                document.getElementById('remove').click();
+                //document.getElementById('remove').click();
               }
             }
           }
+       });
 
-          //console.log(interface_instance.DIAGRAM_INSTANCE_OBJ.get_undo_redo());
+       $('.open-box-trigger').on( "click", function() {
+          var current_display_val =  $( this ).next().css( "display");
+          var svg_closed = '<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/></svg>';
+          var svg_open = '<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>';
+          console.log(current_display_val);
+          if (current_display_val == "none") {
+            $( this ).next().css( "display","block");
+            $( this ).html($( this ).attr("data-title") +" "+ svg_open);
+          }else {
+            if (current_display_val == "block") {
+              $( this ).next().css( "display","none");
+              $( this ).html($( this ).attr("data-title") +" "+ svg_closed);
+            }
+          }
        });
     }
     set_control_section_events(elem){
@@ -486,12 +576,23 @@ class dipam_interface {
         }
       }
     }
+
+
     set_a_dom_event(event_dom, dom_class, corresponding_elem = null, param = {}){
       var interface_instance = this;
       var diagram_instance = this.DIAGRAM_INSTANCE_OBJ;
+
+      function _check_undo_redo(){
+        interface_instance.show_undo_redo(
+          diagram_instance.get_undo_redo().isUndoStackEmpty(),
+          diagram_instance.get_undo_redo().isRedoStackEmpty()
+        );
+      }
+
       if ('_private' in corresponding_elem) {
         corresponding_elem = corresponding_elem._private;
       }
+      console.log("corresponding_elem = ",corresponding_elem);
 
       switch (dom_class) {
           case 'edit-trigger':
@@ -557,32 +658,25 @@ class dipam_interface {
               break;
           case 'input-text-trigger':
             $(event_dom).on('change', function(){
+              var scrol_pos = $("#control_mid").scrollTop();
               //console.log($(event_dom).val());
               interface_instance.set_dipam_temp_val(this.getAttribute('data-att-value'),$(event_dom).val());
               var data_to_update = $.extend(true,{},interface_instance.editing("save"));
-              interface_instance.reload_control_section(
-                  diagram_instance.update_elem(
-                    corresponding_elem.data.id,
-                    corresponding_elem.data.type,
-                    data_to_update
-                  ), true
-              );
+              diagram_instance.update_elem(corresponding_elem.data.id, corresponding_elem.data.type, data_to_update);
               document.getElementById('save').click();
+              _check_undo_redo();
+              $("#control_mid").scrollTop(scrol_pos);
             });
             break;
           case 'input-text-large-trigger':
-              console.log($(event_dom).val());
               $(event_dom).on('change', function(){
-                interface_instance.set_dipam_temp_val(this.getAttribute('data-att-value'),$(event_dom).val());
+                var scrol_pos = $("#control_mid").scrollTop();
+                var current_val = $(this).val();
+                interface_instance.set_dipam_temp_val(this.getAttribute('data-att-value'),current_val);
                 var data_to_update = $.extend(true,{},interface_instance.editing("save"));
-                interface_instance.reload_control_section(
-                    diagram_instance.update_elem(
-                      corresponding_elem.data.id,
-                      corresponding_elem.data.type,
-                      data_to_update
-                    ), true
-                );
+                diagram_instance.update_elem(corresponding_elem.data.id, corresponding_elem.data.type, data_to_update);
                 document.getElementById('save').click();
+                $("#control_mid").scrollTop(scrol_pos);
               });
               break;
           case 'input-text-group-trigger':
@@ -599,6 +693,7 @@ class dipam_interface {
                     this.parentElement.parentElement.remove();
                   });
                   $(event_dom).on('change','input', function(){
+                    var scrol_pos = $("#control_mid").scrollTop();
                     $(this).attr('value', $(this).val());
                     var list_inputs = $("."+dom_class+" input");
                     var index_inputs = {};
@@ -628,19 +723,16 @@ class dipam_interface {
 
                     interface_instance.set_dipam_temp_val($(event_dom).attr('data-att-value'),new_value);
                     var data_to_update = $.extend(true,{},interface_instance.editing("save"));
-                    interface_instance.reload_control_section(
-                        diagram_instance.update_elem(
-                          corresponding_elem.data.id,
-                          corresponding_elem.data.type,
-                          data_to_update
-                        ), true
-                    );
+                    diagram_instance.update_elem(corresponding_elem.data.id, corresponding_elem.data.type, data_to_update);
                     document.getElementById('save').click();
+                    $("#control_mid").scrollTop(scrol_pos);
                   });
                   break;
           case 'select-value-trigger':
                 var dom_id = event_dom.getAttribute('id');
                 $(event_dom).on('change', function(){
+                    var scrol_pos = $("#control_mid").scrollTop();
+
                     var arr_option_selected = $("#"+dom_id+" option:selected");
                     if (arr_option_selected.length > 0) {
                       interface_instance.set_dipam_temp_val(this.getAttribute('data-att-value'), arr_option_selected[0].value);
@@ -648,23 +740,17 @@ class dipam_interface {
                       //in case is a value update the param section
                       if (is_data_elem_value) {
                         var data_to_update = $.extend(true,{},interface_instance.editing("save"));
-                        var _res = diagram_instance.update_elem(
-                          corresponding_elem.data.id,
-                          corresponding_elem.data.type,
-                          data_to_update
-                        )
-                        interface_instance.reload_control_section(
-                            _res, true
-                        );
-                        console.log(_res);
+                        diagram_instance.update_elem(corresponding_elem.data.id, corresponding_elem.data.type, data_to_update);
                       }
                     };
                     interface_instance.editing("save");
                     document.getElementById('save').click();
+                    $("#control_mid").scrollTop(scrol_pos);
                 });
                 break;
            case 'check-value-trigger':
                       $(event_dom).on('click', function(){
+                          var scrol_pos = $("#control_mid").scrollTop();
                           var father_id = this.getAttribute('data-select-target');
                           var check_value = this.getAttribute('value');
                           var att_key = document.getElementById(father_id).getAttribute('data-att-value');
@@ -678,6 +764,7 @@ class dipam_interface {
                           interface_instance.set_dipam_temp_val(att_key, a_list);
                           interface_instance.editing("save");
                           document.getElementById('save').click();
+                          $("#control_mid").scrollTop(scrol_pos);
                       });
                   break;
             case 'select-file-trigger':
@@ -697,23 +784,27 @@ class dipam_interface {
                     //console.log(this.value);
                     var data_att_value = this.files;
                     if(data_att_value){
+                        var scrol_pos = $("#control_mid").scrollTop();
                         var corresponding_lbl = interface_instance.label_handler(dom_id, {value: data_att_value, elem: corresponding_elem} );
                         a_dom_obj_lbl.innerHTML = corresponding_lbl;
                         var att_key = $("#"+dom_id)[0].getAttribute('data-att-value');
                         interface_instance.set_dipam_temp_val(att_key, data_att_value);
                         interface_instance.editing("save");
                         document.getElementById('save').click();
+                        $("#control_mid").scrollTop(scrol_pos);
                     }
                   });
                   $( "#"+dom_id+"_dir").on('change', function(){
                     var data_att_value = this.files;
                     if(data_att_value){
+                        var scrol_pos = $("#control_mid").scrollTop();
                         var corresponding_lbl = interface_instance.label_handler(dom_id, {value: data_att_value, elem: corresponding_elem} );
                         a_dom_obj_lbl.innerHTML = corresponding_lbl;
                         var att_key = $("#"+dom_id)[0].getAttribute('data-att-value');
                         interface_instance.set_dipam_temp_val(att_key, data_att_value);
                         interface_instance.editing("save");
                         document.getElementById('save').click();
+                        $("#control_mid").scrollTop(scrol_pos);
                     }
                   });
                   break;
@@ -751,11 +842,14 @@ class dipam_interface {
     }
     click_overview_nav() {
       this.switch_nav('nav_overview');
+      this.DOMS.CONTROL.BASE.className = "diagram";
       this.DOMS.CONTROL.CONTAINER.innerHTML = this.overview_section_html;
       var overview_elem = this.overview_section_elem;
       //this.set_section_events(this.OVERVIEW_SECTION[overview_elem.elem_class][overview_elem.elem.data.type], overview_elem.elem);
       this.set_must_events();
       this.set_control_section_events(overview_elem.elem);
+      document.getElementById('edit').click();
+      this.reset_dipam_temp_val();
     }
     switch_nav(nav_node_id) {
       for (var i = 0; i < document.getElementsByClassName('nav-btn').length; i++) {
@@ -878,7 +972,6 @@ class dipam_interface {
         var ele_target_att = obj_dom.getAttribute('data-att-value');
         res_value[ele_target_att] = this.get_dipam_temp_val(ele_target_att);
       }
-      //console.log(res_value);
       return res_value;
     }
 
@@ -924,7 +1017,7 @@ class dipam_interface {
       }
 
       instance.DOMS.WORKFLOW.RUN_BTN.style["background-color"] = new_bg_color;
-      instance.DOMS.WORKFLOW.RUN_BTN.style["width"] = new_width;
+      //instance.DOMS.WORKFLOW.RUN_BTN.style["width"] = new_width;
       instance.DOMS.WORKFLOW.RUN_BTN.style["opacity"] = '1';
       instance.DOMS.WORKFLOW.RUN_BTN.style["pointer-events"] = "auto";
       instance.DOMS.WORKFLOW.RUN_BTN.value = new_status;
@@ -950,6 +1043,7 @@ class dipam_interface {
         instance.DOMS.DIAGRAM.UNDO_REDO_CONTAINER,
         instance.DOMS.CONTROL.NAV_CONTAINER,
         instance.DOMS.CONTROL.CONTAINER,
+        instance.DOMS.DIAGRAM.REMOVE_ELEM_CONTAINER
       ]
       for (var i = 0; i < elements.length; i++) {
         elements[i].style["opacity"] =  opacity_val;
@@ -1279,6 +1373,8 @@ class dipam_interface {
     //the info section Nav menu
     $( "#"+this.DOMS.CONTROL.OVERVIEW_BTN.getAttribute('id')).on("click", function() {
       interface_instance.click_overview_nav();
+      diagram_instance.click_elem_style();
+      $( "#"+interface_instance.DOMS.DIAGRAM.REMOVE_ELEM_CONTAINER.getAttribute('id')).css("display", "none");
     });
     $( "#"+this.DOMS.CONTROL.INFO_BTN.getAttribute('id')).on("click", function() {
       interface_instance.click_info_nav();
@@ -1394,6 +1490,15 @@ class dipam_interface {
 
     function _elem_onclick_handle(){
         //nodes on click handler
+        diagram_cy.on('tap', function(event){
+          // target holds a reference to the originator
+          // of the event (core or element)
+          var evtTarget = event.target;
+          if (Object.keys(evtTarget).length == 1) {
+            $( "#"+interface_instance.DOMS.CONTROL.OVERVIEW_BTN.getAttribute('id')).click();
+          }
+        });
+
         diagram_cy.nodes().on('click', function(e){
             diagram_instance.click_elem_style(this,'node');
             diagram_instance.check_node_compatibility(this);

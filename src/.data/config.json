@@ -1,4 +1,7 @@
 {
+  "diagram": {
+    "param": ["p-gendescription"]
+  },
   "data": {
         "d-metadata":{
             "label": "Documents metadata",
@@ -123,7 +126,7 @@
   "tool": {
         "t-meta-builder": {
             "label": "Metadata generator",
-            "info": "",
+            "description": "Takes a collection of textual documents and builds a different metadata file for each given document. The metadata attributes are defined using regular expression rules applied to the original documents names.",
             "class": "Convert",
             "class_label": "Converter",
             "function": "meta_builder",
@@ -229,61 +232,68 @@
         }
   },
   "param": {
+        "p-gendescription":{
+          "handler": "input-text-large",
+          "label": "Brief description:",
+          "value": "",
+          "placeholder": "E.G. This is my first Diagram with MITAO and I am so proud of it!",
+          "init_value": ""
+        },
         "p-file":{
           "handler": "select-file",
           "label": "File/s or Directory:",
           "value": {},
           "init_value": {}
         },
-        "p-log":{
-          "handler": "switch-value",
-          "label": "Log scale",
-          "value_label": ["True","False"],
-          "value": [0,1],
-          "init_value": 0
-        },
         "p-meta-value":{
           "handler": "input-text",
-          "label": "Select a metadata attribute:",
+          "label": "Attribute:",
+          "group": true,
           "value": "",
-          "init_value": ""
+          "placeholder": "E.G. year",
+          "init_value": false
+        },
+        "p-meta-type":{
+          "handler": "select-value",
+          "label": "Attribute type:",
+          "group": true,
+          "value_label": ["integer","string","list of integers","list of strings"],
+          "value": ["int","str","list::int","list::str"],
+          "init_value": "str"
         },
         "p-meta-filter":{
           "handler": "input-text",
-          "label": "List of metadata attribute/s to filter on:",
+          "label": "Attribute/s to use as filters:",
           "value": "",
+          "placeholder": "E.G. age",
           "init_value": ""
         },
         "p-chart-axis":{
           "handler": "select-value",
-          "label": "Data type of the x-axis :",
+          "label": "X-Axis data type:",
           "value_label": ["None","Time series"],
           "value": ["none","time_series"],
           "init_value": "none"
-        },
-        "p-meta-type":{
-          "handler": "select-value",
-          "label": "Data type of the metadata:",
-          "value_label": ["integer","string","list of integers","list of strings"],
-          "value": ["int","str","list::int","list::str"],
-          "init_value": "str"
         },
         "p-topic-from":{
           "handler": "input-text",
           "label": "Start from (number of topics):",
           "value": "1",
+          "placeholder": "E.G. 5",
           "init_value": 1
         },
         "p-topic-to":{
           "handler": "input-text",
           "label": "Stop at (number of topics):",
           "value": "1",
+          "placeholder": "E.G. 10",
           "init_value": 1
         },
         "p-topic":{
           "handler": "input-text",
           "label": "Number of topics:",
           "value": "2",
+          "placeholder": "E.G. 5",
           "init_value": 2
         },
         "p-numwords":{
@@ -304,6 +314,7 @@
           "handler": "input-text",
           "label": "Specific text <p> (Regular expressions supported, try it on <a target=&quot;_blank&quot; href=https://regex101.com>the online demo</a>) </p>",
           "value": "",
+          "placeholder": "E.G. ^(.*) bye",
           "init_value": ""
         },
         "p-metaregex":{
@@ -311,6 +322,7 @@
           "label": "",
           "value_label": ["Attribute","Type","Regular expression"],
           "value": ["att","type","regex"],
+          "placeholder": ["E.G. age","E.G. string | integer | list(string,;)","E.G. _age=(.*)_"],
           "init_value": [["att","type","regex"]]
         },
         "p-defstopwords":{

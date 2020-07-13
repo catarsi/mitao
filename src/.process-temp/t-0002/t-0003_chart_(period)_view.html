@@ -10,96 +10,107 @@
                 <script src="https://cdn.plot.ly/plotly-1.52.3.min.js" charset="utf-8"></script>
 
                 <style>
-                    body{
-                      padding: 30px;
-                    }
-                    .chart-container{
-                      display: inline-block;
-                      vertical-align: top;
-                      width: 70%;
-                      border-left: 1px solid gray;
-                      margin-left: 20px;
-                      min-height: 500px;
-                    }
-                    .handlers-container{
-                      padding: 10px;
-                      width: fit-content;
-                      width: 300px;
-                      display: inline-block;
-                    }
-                    .sec-title{
-                      font-size: 13pt;
-                      border-bottom: solid 1px;
-                      padding-left: 5px;
-                    }
-                    #btn_filter{
-                      margin-top: 5px;
-                      width: 100%;
-                    }
-                    #btn_filter:hover{
-                      color: white;
-                    }
+                        body{
+                          padding: 30px;
+                        }
+                        .chart-container{
+                          display: inline-block;
+                          vertical-align: top;
+                          width: 70%;
+                          border-left: 1px solid gray;
+                          margin-left: 20px;
+                          height: auto;
+                          max-height: 700px;
+                          min-width: 800px;
+                        }
+                        .handlers-container{
+                          padding: 10px;
+                          width: fit-content;
+                          width: 300px;
+                          display: inline-block;
+                        }
+                        .sec-title{
+                          font-size: 14pt;
+                          border-bottom: solid 1px;
+                          padding-left: 5px;
+                        }
+                        #btn_filter{
+                          margin-top: 5px;
+                          width: 100%;
+                        }
+                        #btn_filter:hover{
+                          color: white;
+                        }
 
-                    .switch_buttons{
-                      width: 100%;
-                      vertical-align: top;
-                      margin-bottom: 20px;
-                    }
-                    .switch-btn{
-                      width: 130px;
-                      font-size: 10pt;
-                    }
+                        .switch_buttons{
+                          width: 100%;
+                          vertical-align: top;
+                          margin-bottom: 20px;
+                        }
+                        .switch-btn{
+                          width: 130px;
+                          font-size: 10pt;
+                        }
 
-                    .g-1{
-                      margin-bottom: 5px;
-                    }
-                    #lines_chart{
-                      display: none;
-                    }
+                        .g-1{
+                          margin-bottom: 5px;
+                        }
+                        #lines_chart{
+                          display: initial;
+                        }
 
-                    #filters_container{
-                      padding: 10px;
-                      width: 100%;
-                      max-height: 200px;
-                    }
-                    .m-box{
-                      vertical-align: top;
-                      margin-right: 5%;
-                      width: 100%;
-                      margin-bottom: 10px;
-                    }
-                    .m-box .pre{
-                      font-size: 16pt;
-                      padding-left:3%;
-                      max-width: 5%;
-                      border-left: solid 1px gray;
-                      vertical-align: middle;
-                    }
-                    .m-box button{
-                      display: inline-block;
-                      width: 90%;
-                    }
-                    .m-box-values{
-                      display: none;
-                      max-height: 150px;
-                      overflow: scroll;
-                      margin-top: 10px;
-                    }
-                    .m-box-values label{
-                      padding-left: 10px;
-                      font-size: 10pt;
-                      vertical-align: top;
-                      max-width: 80%;
-                    }
-                    #refine_container{
-                      padding: 10px;
-                      width: 100%;
-                      max-height: 200px;
-                      margin-bottom: 20px;
-                    }
-                    #refine_container select{
-                       width: 100%;
-                    }
+                        #filters_container{
+                          padding: 10px;
+                          width: 100%;
+                          max-height: 200px;
+                        }
+                        .m-box{
+                          vertical-align: top;
+                          margin-right: 5%;
+                          width: 100%;
+                          margin-bottom: 10px;
+                        }
+                        .m-box .pre{
+                          font-size: 16pt;
+                          padding-left:3%;
+                          max-width: 5%;
+                          border-left: solid 1px gray;
+                          vertical-align: middle;
+                        }
+                        .m-box button{
+                          display: inline-block;
+                          width: 90%;
+                          font-size: 12pt;
+                          white-space: normal;
+
+                        }
+                        label.f-all-checkbox{
+                            color: navy;
+                            font-size: 10pt!important;
+                            padding: 5px;
+                        }
+                        .m-box-values{
+                          display: none;
+                          max-height: 150px;
+                          overflow: scroll;
+                          margin-top: 1px;
+                          margin: 0 auto;
+                        }
+                        .m-box-values label{
+                          padding-left: 10px;
+                          font-size: 10pt;
+                          vertical-align: center;
+                          max-width: 80%;
+                        }
+                        #refine_container{
+                          padding: 10px;
+                          width: 100%;
+                          max-height: 200px;
+                          margin-bottom: 20px;
+                        }
+                        #refine_container select{
+                           width: 100%;
+                        }
                 </style>
                 <title>Viualizations</title>
 
@@ -4105,6 +4116,7 @@
 
                 /*------------*/
         /*------------*/
+        var index_trace_colors = {};
         var charts = new Set(["count","bars"]);
         var filtered_data = JSON.parse(JSON.stringify(app_init_data));
         var filter_index = null;
@@ -4128,24 +4140,34 @@
           }
         }
 
+        /*Define all colors*/
+        function hexToRgbA(hex,opacity){
+            var c;
+            if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
+                c= hex.substring(1).split('');
+                if(c.length== 3){
+                    c= [c[0], c[0], c[1], c[1], c[2], c[2]];
+                }
+                c= '0x'+c.join('');
+                return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+','+opacity+')';
+            }
+            throw new Error('Bad Hex');
+        }
+        var palette = ["#0377a8","#fc6f5f","#e2ce71","#ad7947","#e97947","#5cb991","#ffadcb","#b46ddc"];
+        var index_palette = 0;
+        for (var k_cat in filtered_data) {
+          var color = palette[index_palette%palette.length];
+          var opacity = 1 - (Math.floor(index_palette/palette.length) * 0.20);
+          if (opacity < 0.3) { opacity = 1;}
+          index_trace_colors[k_cat] = hexToRgbA(color,opacity);
+          index_palette += 1;
+        }
+        index_trace_colors["others"] = "#CCCCCC";
+
         //var top_topics = Object.keys(app_init_data).length;
 
         function draw_chart(obj_data, x_data, x_att, chart_type, data_type) {
 
-          function hexToRgbA(hex,opacity){
-              var c;
-              if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
-                  c= hex.substring(1).split('');
-                  if(c.length== 3){
-                      c= [c[0], c[0], c[1], c[1], c[2], c[2]];
-                  }
-                  c= '0x'+c.join('');
-                  return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+','+opacity+')';
-              }
-              throw new Error('Bad Hex');
-          }
-
-          var palette = ["#0377a8","#fc6f5f","#e2ce71","#ad7947","#e97947","#5cb991","#ffadcb","#b46ddc"];
           var type = null;
           var barmode = null;
           if (chart_type == "bars") {
@@ -4159,17 +4181,7 @@
           var index_palette = 0;
           for (var cat in obj_data) {
 
-            var color = palette[index_palette%palette.length];
-            var opacity = 1 - (Math.floor(index_palette/palette.length) * 0.20);
-            if (opacity < 0.3) {
-              opacity = 1;
-            }
-            index_palette += 1;
-
-            var trace_color = hexToRgbA(color,opacity);
-            if(cat == "others"){
-              trace_color = "#CCCCCC";
-            }
+            var trace_color = index_trace_colors[cat];
 
             var y_vals = [];
             var y_text = [];
@@ -4211,22 +4223,30 @@
           var layout = {};
           if (chart_type == "bars") {
             layout = {
+              "hovermode": "closest",
               "barmode": barmode,
               "xaxis": {
+                'automargin': true,
                 tickmode: "array",
                 tickvals: x_data,
                 ticktext: x_data
               },
-              "yaxis":{}
+              "yaxis":{
+                'automargin': true,
+              }
             };
           }else if (chart_type == "lines") {
             layout = {
+              "hovermode": "closest",
               "xaxis": {
+                'automargin': true,
                 tickmode: "linear",
                 tickvals: x_data,
                 ticktext: x_data
               },
-              "yaxis":{}
+              "yaxis":{
+                'automargin': true,
+              }
             };
           }
 
@@ -4262,18 +4282,6 @@
                       chart_type = $( this ).attr("value");
                     }
                   });
-                }
-
-                /*Refine obj_data and select only the top_topics*/
-                var index_top_topics = {}
-                var index_top_topics_counts = {}
-                var index_other_topics = {}
-                var e = document.getElementById("top_topics");
-                var top_topics = parseInt(e.options[e.selectedIndex].value);
-                for (var i = 0; i < app_x_data.length; i++) {
-                  index_top_topics[app_x_data[i]] = new Array();
-                  index_top_topics_counts[app_x_data[i]] = new Array();
-                  index_other_topics[app_x_data[i]] = {"categories": new Set(),"counts":0}
                 }
 
                 //now prepare the data
@@ -4314,36 +4322,40 @@
                                 index_counts["all"] += 1;
                               }
                             }
-
                           }
-                        }
-                      }
-
-                      //check top_topics
-                      for (var i = 0; i < app_x_data.length; i++) {
-                        var val_x_counts = obj_data[k_cat][app_x_data[i]]["counts"];
-                        if (index_top_topics_counts[app_x_data[i]].length < top_topics) {
-                          index_top_topics[app_x_data[i]].push(k_cat)
-                          index_top_topics_counts[app_x_data[i]].push(val_x_counts)
-                        }else {
-                          var k_cat_others_key = k_cat;
-                          var k_cat_others_val = val_x_counts;
-                          for (var n = 0; n < index_top_topics_counts[app_x_data[i]].length; n++) {
-                            if (val_x_counts > index_top_topics_counts[app_x_data[i]][n]){
-                              /*switch a top value and move the old top value to the others category*/
-                              k_cat_others_key = index_top_topics[app_x_data[i]][n];
-                              k_cat_others_val = index_top_topics_counts[app_x_data[i]][n];
-                              index_top_topics_counts[app_x_data[i]][n] = val_x_counts;
-                              index_top_topics[app_x_data[i]][n] = k_cat;
-                              break;
-                            }
-                          }
-                          index_other_topics[app_x_data[i]]["categories"].add(k_cat_others_key);
-                          index_other_topics[app_x_data[i]]["counts"] += k_cat_others_val;
                         }
                       }
                 }
-                console.log(index_top_topics,index_top_topics_counts,index_other_topics);
+
+                /*Refine obj_data and select only the top_topics*/
+                var index_top_topics = {}
+                var index_other_topics = {}
+                var e = document.getElementById("top_topics");
+                var top_topics = parseInt(e.options[e.selectedIndex].value);
+                for (var i = 0; i < app_x_data.length; i++) {
+                  index_top_topics[app_x_data[i]] = new Array();
+                  index_other_topics[app_x_data[i]] = {"categories": new Set(),"counts":0}
+                }
+                for (var k_cat in filtered_data) {
+                  for (var i = 0; i < app_x_data.length; i++) {
+                    var val_x_counts = obj_data[k_cat][app_x_data[i]]["counts"];
+                    index_top_topics[app_x_data[i]].push({"category":k_cat,"counts":val_x_counts});
+                  }
+                }
+                for (var i = 0; i < app_x_data.length; i++) {
+                  // Sort app_x_data[k_cat]
+                  index_top_topics[app_x_data[i]].sort((a, b) => (a.counts < b.counts) ? 1 : -1)
+                  var tot_topics = index_top_topics[app_x_data[i]].length;
+                  if (top_topics < tot_topics) {
+                    index_other_topics[app_x_data[i]]["categories"] = index_top_topics[app_x_data[i]].slice(top_topics, tot_topics);
+                    for (var n = 0; n < index_other_topics[app_x_data[i]]["categories"].length; n++) {
+                      var a_category = index_other_topics[app_x_data[i]]["categories"][n];
+                      index_other_topics[app_x_data[i]]["counts"] += a_category["counts"];
+                    }
+                  }
+                  index_top_topics[app_x_data[i]] = index_top_topics[app_x_data[i]].slice(0, top_topics);
+                }
+
                 //update the obj_data with only the top topics
                 updated_obj_data = {}
                 for (var k_cat in obj_data) {
@@ -4351,7 +4363,15 @@
                   for (var x_key in obj_data[k_cat]) {
                     //if is not part of the top topics
                     // -> make its count 0
-                    if (index_top_topics[x_key].indexOf(k_cat) == -1){
+                    function search_category(nameKey, myArray){
+                        for (var i=0; i < myArray.length; i++) {
+                            if (myArray[i].category === nameKey) {
+                                return myArray[i];
+                            }
+                        }
+                        return -1;
+                    }
+                    if (search_category(k_cat, index_top_topics[x_key]) == -1){
                       obj_data[k_cat][x_key]["counts"] = 0;
                       count_zeros += 1;
                     }
@@ -4371,40 +4391,57 @@
                   }
                 }
 
-                console.log(obj_data);
+                //console.log(obj_data);
                 draw_chart(obj_data, app_x_data, app_x_att, chart_type, data_type);
         }
 
         function filter() {
-          // filter_index = {"att":{Set of values}}
-          filtered_data = JSON.parse(JSON.stringify(app_init_data));
-          var copy_filtered_data = JSON.parse(JSON.stringify(filtered_data));
-          for (var k_cat in filtered_data) {
-              copy_filtered_data[k_cat] = [];
-              for (var i = 0; i < filtered_data[k_cat].length; i++) {
-                var elem_name = filtered_data[k_cat][i];
-                var include = false;
-                if (elem_name in app_meta) {
-                  for (var a_meta_att in app_meta[elem_name]) {
-                    var a_meta_att_value = app_meta[elem_name][a_meta_att];
-                    if (a_meta_att in filter_index) {
-                      if (att_index[a_meta_att] == "string") {
-                        include = (include || filter_index[a_meta_att].has(a_meta_att_value));
-                      }else if (att_index[a_meta_att].includes("list")) {
-                        for (var j = 0; j < a_meta_att_value.length; j++) {
-                          include = (include || filter_index[a_meta_att].has(a_meta_att_value[j]));
+
+              // filter_index = {"att":{Set of values}}
+              filtered_data = JSON.parse(JSON.stringify(app_init_data));
+              var copy_filtered_data = JSON.parse(JSON.stringify(filtered_data));
+              for (var k_cat in filtered_data) {
+                  copy_filtered_data[k_cat] = [];
+                  for (var i = 0; i < filtered_data[k_cat].length; i++) {
+                    var elem_name = filtered_data[k_cat][i];
+                    var include = false;
+                    //in case we have no filters always include
+                    if (Object.keys(att_index).length == 0) {
+                      include = true;
+                    }else{
+                      //in case we have filters -> all meta filters must be satisfaied
+                      include = true;
+                      if (elem_name in app_meta) {
+                        var inter_check = true;
+                        for (var filter_att in att_index) {
+                          inter_check = inter_check && (filter_att in app_meta[elem_name]);
+                          if (inter_check) {
+                            var a_meta_att_value = app_meta[elem_name][filter_att];
+                            inter_check = inter_check && (filter_att in filter_index);
+                            if (inter_check) {
+                              var meta_res = false;
+                              if (att_index[filter_att] == "string") {
+                                meta_res = (meta_res || filter_index[filter_att].has(a_meta_att_value));
+                              }else if (att_index[filter_att].includes("list")) {
+                                for (var j = 0; j < a_meta_att_value.length; j++) {
+                                  meta_res = (meta_res || filter_index[filter_att].has(a_meta_att_value[j]));
+                                }
+                              }
+                              inter_check = inter_check && meta_res;
+                            }
+                          }
+                          include = include && inter_check;
                         }
                       }
                     }
+
+                    if (include) {
+                      copy_filtered_data[k_cat].push(elem_name);
+                    }
                   }
-                }
-                if (include) {
-                  copy_filtered_data[k_cat].push(elem_name);
-                }
               }
-          }
-          filtered_data = copy_filtered_data;
-        }
+              filtered_data = copy_filtered_data;
+            }
 
         </script>
 
@@ -4459,70 +4496,84 @@
 
               <script type="text/javascript">
 
-              /* BUild doms*/
-              for (var m_att in index_meta) {
-                var filter_box = "";
-                var l_meta_values = Array.from(index_meta[m_att]);
-                l_meta_values = l_meta_values.sort();
-                if (l_meta_values.length > 0) {
-                  for (var i = 0; i < l_meta_values.length; i++) {
-                    filter_box = filter_box + '<span><input class="f-checkbox" data-att="'+m_att+'" type="checkbox" id="checkbox_'+String(i)+'" value="'+l_meta_values[i]+'" checked></span><span><label for="checkbox_'+String(i)+'">'+l_meta_values[i]+'</label></span><br>';
+                /* BUild doms*/
+                for (var m_att in index_meta) {
+                  var filter_box = "";
+                  var l_meta_values = Array.from(index_meta[m_att]);
+                  l_meta_values = l_meta_values.sort();
+                  if (l_meta_values.length > 0) {
+                    for (var i = 0; i < l_meta_values.length; i++) {
+                      filter_box = filter_box + '<span><input class="f-checkbox" data-att="'+m_att+'" type="checkbox" id="checkbox_'+String(i)+'" value="'+l_meta_values[i]+'" checked></span><span><label for="checkbox_'+String(i)+'">'+l_meta_values[i]+'</label></span><br>';
+                    }
+                    filter_box = "<div class='m-box'><button id='"+m_att+"_btn' type='button' class='btn btn-light'>Metadata attribute: "+m_att+"</button><span class='pre' id='"+m_att+"_pre'>+</span><div id='"+m_att+"_values' class='m-box-values'>" +'<input class="f-all-checkbox" data-att="'+m_att+'" data-checked=true type="checkbox" id="all_checkbox_'+String(i)+'" checked></span><span><label class="f-all-checkbox" for="all_checkbox_'+String(i)+'">Check/Uncheck all</label><br>'+ filter_box.substring(0, filter_box.length-4)+"</div>";
                   }
-                  filter_box = "<div class='m-box'><button id='"+m_att+"_btn' type='button' class='btn btn-light'>Metadata attribute: "+m_att+"</button><span class='pre' id='"+m_att+"_pre'>+</span><div id='"+m_att+"_values' class='m-box-values'>" + filter_box.substring(0, filter_box.length-4)+"</div>";
+                  document.getElementById("filters_container").innerHTML += filter_box;
                 }
-                document.getElementById("filters_container").innerHTML += filter_box
-              }
-              document.getElementById("filters_container").innerHTML += "<button id='btn_filter' type='button' class='btn btn-dark'>Apply filters</button>";
-              for (var m_att in index_meta) {
+                document.getElementById("filters_container").innerHTML += "<button id='btn_filter' type='button' class='btn btn-dark'>Apply filters</button>";
+                for (var m_att in index_meta) {
 
-                 $("#"+m_att+"_btn").click(function(event) {
-                  var values_box = event.target.id.replace("_btn","_values");
-                  var pre_box = event.target.id.replace("_btn","_pre");
-                  var display_val = $("#"+values_box).css('display');
+                   $("#"+m_att+"_btn").click(function(event) {
+                    var values_box = event.target.id.replace("_btn","_values");
+                    var pre_box = event.target.id.replace("_btn","_pre");
+                    var display_val = $("#"+values_box).css('display');
 
-                  if (display_val == "none") {
-                    document.getElementById(pre_box).innerHTML = "-";
-                    $("#"+values_box).css("display", "block");
-                  }else {
-                    if (display_val == "block") {
-                      document.getElementById(pre_box).innerHTML = "+";
-                      $("#"+values_box).css("display", "none");
+                    if (display_val == "none") {
+                      document.getElementById(pre_box).innerHTML = "-";
+                      $("#"+values_box).css("display", "block");
+                    }else {
+                      if (display_val == "block") {
+                        document.getElementById(pre_box).innerHTML = "+";
+                        $("#"+values_box).css("display", "none");
+                      }
                     }
-                  }
+                  });
+                }
+
+                if (Object.keys(index_meta).length > 0) {
+                  $("#btn_filter").click(function(event) {
+                    var checked_inputs = $(".f-checkbox:checked");
+                    var index_filters = {};
+                    for (var i = 0; i < checked_inputs.length; i++) {
+                      var checked_att = checked_inputs[i].getAttribute("data-att");
+                      var checked_value = checked_inputs[i].getAttribute("value");
+                      if (!(checked_att in index_filters)) {
+                        index_filters[checked_att] = new Set();
+                      }
+                      index_filters[checked_att].add(checked_value);
+                    }
+                    filter_index = index_filters;
+                    filter();
+                    check();
+                 });
+                }
+
+                if (Object.keys(att_index).length == 0) {
+                 $("#filters_container").css("display", "none");
+                 $("#filters_container").prev().css("display", "none");
+                }else {
+                 $(".f-all-checkbox").change(function() {
+
+                   var current_val = $(this).attr('checked');
+                   var new_val = !current_val;
+                   var data_att = $(this).attr('data-att');
+                   $(".f-checkbox[data-att='"+data_att+"']").prop('checked', new_val);
+                   $(this).attr('checked',new_val);
+                 });
+                }
+
+                var str_options = "";
+                for (var topic_i = 0; topic_i < Object.keys(app_init_data).length-1; topic_i++) {
+                 str_options += "<option value='"+String(topic_i+1)+"'>Show top "+String(topic_i+1)+" topics</option>";
+                }
+                str_options = "<option value='"+String(Object.keys(app_init_data).length)+"'>Show all the topics</option>" + str_options;
+                document.getElementById("refine_container").innerHTML += "<select id='top_topics'>"+str_options+"</select>";
+
+                $("#top_topics").change(function(event) {
+                 check();
                 });
-              }
 
-              if (Object.keys(index_meta).length > 0) {
-                $("#btn_filter").click(function(event) {
-                  var checked_inputs = $(".f-checkbox:checked");
-                  var index_filters = {};
-                  for (var i = 0; i < checked_inputs.length; i++) {
-                    var checked_att = checked_inputs[i].getAttribute("data-att");
-                    var checked_value = checked_inputs[i].getAttribute("value");
-                    if (!(checked_att in index_filters)) {
-                      index_filters[checked_att] = new Set();
-                    }
-                    index_filters[checked_att].add(checked_value);
-                  }
-                  filter_index = index_filters;
-                  filter();
-                  check();
-               });
-             }
-
-             var str_options = "";
-             for (var topic_i = 0; topic_i < Object.keys(app_init_data).length-1; topic_i++) {
-               str_options += "<option value='"+String(topic_i+1)+"'>Show top "+String(topic_i+1)+" topics</option>";
-             }
-             str_options = "<option value='"+String(Object.keys(app_init_data).length)+"'>Show all the topics</option>" + str_options;
-             document.getElementById("refine_container").innerHTML += "<select id='top_topics'>"+str_options+"</select>";
-
-             $("#top_topics").change(function(event) {
-               check();
-             });
-
-              check();
-              </script>
-          </body>
-        </html>
+                $("#btn_filter").click();
+                </script>
+                </body>
+                </html>
         

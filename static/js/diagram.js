@@ -19,7 +19,7 @@ class dipam_diagram {
 
     this.STYLE = {
       node: {
-        tool: {'font-family': 'sans-serif', 'font-weight':"300", 'font-size':'14pt', 'shape': 'diamond','background-color': '#E5CE80'},
+        tool: {'font-family': 'sans-serif', 'font-weight':"300", 'font-size':'14pt', 'shape': 'diamond','background-color': '#b56576'},
         data: {'font-family': 'sans-serif', 'font-weight':"300", 'font-size':'14pt', 'shape': 'round-rectangle','background-color': '#2E9D99'},
       },
       edge:{
@@ -29,11 +29,11 @@ class dipam_diagram {
 
     this.ONCLICK_STYLE = {
       node: {
-        tool: {'background-color': '#663500'},
-        data: {'background-color': '#663500'},
+        tool: {'background-color': '#90505E'},
+        data: {'background-color': '#247D7A'},
       },
       edge:{
-        edge: {'line-color': '#663500', 'target-arrow-color': '#663500'}
+        edge: {'line-color': '#989898', 'target-arrow-color': '#989898'}
       }
     };
 
@@ -416,14 +416,18 @@ class dipam_diagram {
           if (p_key in this.CONFIG.param) {
               var corresponding_param = this.CONFIG.param[p_key];
               var corresponding_param_handler = corresponding_param.handler;
-              var corresponding_param_val = null;
+              var corresponding_param_val = undefined;
               switch (corresponding_param_handler) {
                 case "select-value":
                   var init_val_index = corresponding_param.value.indexOf(corresponding_param.init_value);
                   corresponding_param_val = corresponding_param.value[init_val_index];
                   break;
                 case "input-text":
-                  corresponding_param_val = corresponding_param.init_value;
+                  if (corresponding_param.init_value != undefined){
+                    if (corresponding_param.init_value != false){
+                      corresponding_param_val = corresponding_param.init_value;
+                    }
+                  }
                   break;
                 case "select-file":
                   corresponding_param_val = JSON.parse(JSON.stringify(corresponding_param.init_value));
@@ -518,8 +522,17 @@ class dipam_diagram {
     //first check if it's the Diagram
     if (id == this.DIAGRAM_GENERAL.data.id) {
       for (var k_data in data) {
-        if (this.DIAGRAM_GENERAL.data.hasOwnProperty(k_data)) {
-          this.DIAGRAM_GENERAL.data[k_data] = data[k_data];
+        if (data[k_data] != -1) {
+          if (k_data == "name") {
+            if (this.DIAGRAM_GENERAL.data.hasOwnProperty(k_data)) {
+              this.DIAGRAM_GENERAL.data[k_data] = data[k_data];
+            }
+          }else {
+            //is a param
+            if (this.DIAGRAM_GENERAL.data.hasOwnProperty("param")) {
+              this.DIAGRAM_GENERAL.data.param[k_data] = data[k_data];
+            }
+          }
         }
       }
       return this.DIAGRAM_GENERAL;
@@ -569,6 +582,9 @@ class dipam_diagram {
     //update diagram
     this.cy.style().update();
 
+    //undo_redo update
+    //this.cy_undo_redo.do("add", this.cy.$("#"+d_elem._private.data.id));
+
     return d_elem;
   }
 
@@ -588,13 +604,12 @@ class dipam_diagram {
   //returns the removed element
   remove_elem(elem_id){
     this.cy_undo_redo.do("remove", this.cy.$("#"+elem_id));
+    console.log(this.cy_undo_redo.getUndoStack());
     return this.cy.remove("#"+elem_id);
   }
 
   //adapt the style of the clicked element:<elem> of type:<type>
-  click_elem_style(elem,type){
-
-    elem = elem._private.data;
+  click_elem_style(elem=null,type=null){
 
     //first color all nodes
     var arr_elems = this.cy.nodes();
@@ -609,10 +624,13 @@ class dipam_diagram {
       this.cy.edges('edge[id="'+elem_obj._private.data.id+'"]').style(this.STYLE.edge[elem_obj._private.data.type]);
     }
 
-    if (type == 'node') {
-      this.cy.nodes('node[id="'+elem.id+'"]').style(this.ONCLICK_STYLE.node[elem.type]);
-    }else if (type == 'edge') {
-      this.cy.edges('edge[id="'+elem.id+'"]').style(this.ONCLICK_STYLE.edge[elem.type]);
+    if ((elem != null) && (type != null))  {
+      elem = elem._private.data;
+      if (type == 'node') {
+        this.cy.nodes('node[id="'+elem.id+'"]').style(this.ONCLICK_STYLE.node[elem.type]);
+      }else if (type == 'edge') {
+        this.cy.edges('edge[id="'+elem.id+'"]').style(this.ONCLICK_STYLE.edge[elem.type]);
+      }
     }
   }
 
