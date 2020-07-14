@@ -1,751 +1,223 @@
-2020-07-13 22:48:51,162 : INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2020-07-13 22:48:52,458 : INFO : 127.0.0.1 - - [13/Jul/2020 22:48:52] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 22:48:52,507 : INFO : 127.0.0.1 - - [13/Jul/2020 22:48:52] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2020-07-13 22:48:52,528 : INFO : 127.0.0.1 - - [13/Jul/2020 22:48:52] "[36mGET /static/css/lightbox.css HTTP/1.1[0m" 304 -
-2020-07-13 22:48:52,530 : INFO : 127.0.0.1 - - [13/Jul/2020 22:48:52] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
-2020-07-13 22:48:52,533 : INFO : 127.0.0.1 - - [13/Jul/2020 22:48:52] "[36mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 304 -
-2020-07-13 22:48:52,537 : INFO : 127.0.0.1 - - [13/Jul/2020 22:48:52] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
-2020-07-13 22:48:52,543 : INFO : 127.0.0.1 - - [13/Jul/2020 22:48:52] "[36mGET /static/js/lodash.js HTTP/1.1[0m" 304 -
-2020-07-13 22:48:52,544 : INFO : 127.0.0.1 - - [13/Jul/2020 22:48:52] "[36mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 304 -
-2020-07-13 22:48:52,547 : INFO : 127.0.0.1 - - [13/Jul/2020 22:48:52] "[36mGET /static/js/lightbox.js HTTP/1.1[0m" 304 -
-2020-07-13 22:48:52,550 : INFO : 127.0.0.1 - - [13/Jul/2020 22:48:52] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 22:48:52,553 : INFO : 127.0.0.1 - - [13/Jul/2020 22:48:52] "[36mGET /static/js/diagram.js HTTP/1.1[0m" 304 -
-2020-07-13 22:48:52,558 : INFO : 127.0.0.1 - - [13/Jul/2020 22:48:52] "[36mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 304 -
-2020-07-13 22:48:52,560 : INFO : 127.0.0.1 - - [13/Jul/2020 22:48:52] "[36mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 304 -
-2020-07-13 22:48:52,561 : INFO : 127.0.0.1 - - [13/Jul/2020 22:48:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
-2020-07-13 22:48:52,858 : INFO : 127.0.0.1 - - [13/Jul/2020 22:48:52] "[36mGET /static/images/prev.png HTTP/1.1[0m" 304 -
-2020-07-13 22:48:52,863 : INFO : 127.0.0.1 - - [13/Jul/2020 22:48:52] "[36mGET /static/images/next.png HTTP/1.1[0m" 304 -
-2020-07-13 22:48:52,863 : INFO : 127.0.0.1 - - [13/Jul/2020 22:48:52] "[36mGET /static/images/loading.gif HTTP/1.1[0m" 304 -
-2020-07-13 22:48:52,864 : INFO : 127.0.0.1 - - [13/Jul/2020 22:48:52] "[36mGET /static/images/close.png HTTP/1.1[0m" 304 -
-2020-07-13 22:49:06,310 : INFO : 127.0.0.1 - - [13/Jul/2020 22:49:06] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 22:49:28,548 : INFO : 127.0.0.1 - - [13/Jul/2020 22:49:28] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 22:49:28,576 : INFO : 127.0.0.1 - - [13/Jul/2020 22:49:28] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 22:49:28,579 : INFO : 127.0.0.1 - - [13/Jul/2020 22:49:28] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 22:49:28,583 : INFO : 127.0.0.1 - - [13/Jul/2020 22:49:28] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 22:49:28,587 : INFO : 127.0.0.1 - - [13/Jul/2020 22:49:28] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 22:49:28,587 : INFO : 127.0.0.1 - - [13/Jul/2020 22:49:28] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 22:49:28,590 : INFO : 127.0.0.1 - - [13/Jul/2020 22:49:28] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 22:49:28,593 : INFO : 127.0.0.1 - - [13/Jul/2020 22:49:28] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 22:49:28,601 : INFO : 127.0.0.1 - - [13/Jul/2020 22:49:28] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 22:49:28,603 : INFO : 127.0.0.1 - - [13/Jul/2020 22:49:28] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 22:49:28,608 : INFO : 127.0.0.1 - - [13/Jul/2020 22:49:28] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 22:49:28,613 : INFO : 127.0.0.1 - - [13/Jul/2020 22:49:28] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 22:49:28,615 : INFO : 127.0.0.1 - - [13/Jul/2020 22:49:28] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 22:49:28,620 : INFO : 127.0.0.1 - - [13/Jul/2020 22:49:28] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 22:49:28,849 : INFO : 127.0.0.1 - - [13/Jul/2020 22:49:28] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 22:49:28,852 : INFO : 127.0.0.1 - - [13/Jul/2020 22:49:28] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 22:49:28,854 : INFO : 127.0.0.1 - - [13/Jul/2020 22:49:28] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 22:49:28,856 : INFO : 127.0.0.1 - - [13/Jul/2020 22:49:28] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 22:49:28,879 : INFO : 127.0.0.1 - - [13/Jul/2020 22:49:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 22:49:37,442 : INFO : 127.0.0.1 - - [13/Jul/2020 22:49:37] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 22:50:21,532 : INFO : 127.0.0.1 - - [13/Jul/2020 22:50:21] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 22:51:43,477 : INFO : 127.0.0.1 - - [13/Jul/2020 22:51:43] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 22:51:43,535 : INFO : 127.0.0.1 - - [13/Jul/2020 22:51:43] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 22:51:43,539 : INFO : 127.0.0.1 - - [13/Jul/2020 22:51:43] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 22:51:43,542 : INFO : 127.0.0.1 - - [13/Jul/2020 22:51:43] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 22:51:43,544 : INFO : 127.0.0.1 - - [13/Jul/2020 22:51:43] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 22:51:43,549 : INFO : 127.0.0.1 - - [13/Jul/2020 22:51:43] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 22:51:43,558 : INFO : 127.0.0.1 - - [13/Jul/2020 22:51:43] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 22:51:43,560 : INFO : 127.0.0.1 - - [13/Jul/2020 22:51:43] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 22:51:43,562 : INFO : 127.0.0.1 - - [13/Jul/2020 22:51:43] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 22:51:43,566 : INFO : 127.0.0.1 - - [13/Jul/2020 22:51:43] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 22:51:43,570 : INFO : 127.0.0.1 - - [13/Jul/2020 22:51:43] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 22:51:43,576 : INFO : 127.0.0.1 - - [13/Jul/2020 22:51:43] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 22:51:43,578 : INFO : 127.0.0.1 - - [13/Jul/2020 22:51:43] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 22:51:43,581 : INFO : 127.0.0.1 - - [13/Jul/2020 22:51:43] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 22:51:43,677 : INFO : 127.0.0.1 - - [13/Jul/2020 22:51:43] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 22:51:43,679 : INFO : 127.0.0.1 - - [13/Jul/2020 22:51:43] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 22:51:43,680 : INFO : 127.0.0.1 - - [13/Jul/2020 22:51:43] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 22:51:43,681 : INFO : 127.0.0.1 - - [13/Jul/2020 22:51:43] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 22:51:43,708 : INFO : 127.0.0.1 - - [13/Jul/2020 22:51:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 22:52:15,076 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:15] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 22:52:22,074 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:22] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 22:52:22,106 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:22] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 22:52:22,114 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:22] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 22:52:22,119 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:22] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 22:52:22,120 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:22] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 22:52:22,123 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:22] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 22:52:22,131 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:22] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 22:52:22,131 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:22] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 22:52:22,133 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:22] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 22:52:22,138 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:22] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 22:52:22,143 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:22] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 22:52:22,147 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:22] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 22:52:22,151 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:22] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 22:52:22,155 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:22] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 22:52:22,273 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:22] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 22:52:22,275 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:22] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 22:52:22,276 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:22] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 22:52:22,276 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:22] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 22:52:22,304 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 22:52:25,737 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:25] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 22:52:33,713 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:33] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 22:52:43,052 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:43] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 22:52:52,093 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:52] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 22:52:56,538 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:56] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 22:52:59,499 : INFO : 127.0.0.1 - - [13/Jul/2020 22:52:59] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 22:53:07,164 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:07] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2020-07-13 22:53:07,171 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:07] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
-2020-07-13 22:53:07,172 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:07] "[36mGET /static/css/lightbox.css HTTP/1.1[0m" 304 -
-2020-07-13 22:53:07,215 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:07] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 22:53:09,949 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:09] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 22:53:09,996 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:09] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 22:53:09,998 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:09] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 22:53:10,002 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:10] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 22:53:10,007 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:10] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 22:53:10,012 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:10] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 22:53:10,013 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:10] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 22:53:10,017 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:10] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 22:53:10,019 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:10] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 22:53:10,021 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:10] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 22:53:10,026 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:10] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 22:53:10,033 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:10] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 22:53:10,036 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:10] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 22:53:10,040 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:10] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 22:53:10,156 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:10] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 22:53:10,214 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:10] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 22:53:10,215 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:10] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 22:53:10,216 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:10] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 22:53:10,217 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:10] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 22:53:10,259 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 22:53:28,820 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:28] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 22:53:41,902 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:41] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 22:53:55,200 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:55] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 22:53:57,760 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:57] "[37mPOST /saveworkflow?time=1594673637748 HTTP/1.1[0m" 200 -
-2020-07-13 22:53:57,767 : INFO : 127.0.0.1 - - [13/Jul/2020 22:53:57] "[37mGET /download/workflow HTTP/1.1[0m" 200 -
-2020-07-13 22:54:18,095 : INFO : 127.0.0.1 - - [13/Jul/2020 22:54:18] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 22:56:44,217 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:44] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 22:56:44,296 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:44] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 22:56:44,299 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:44] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 22:56:44,301 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:44] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 22:56:44,304 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:44] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 22:56:44,305 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:44] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 22:56:44,309 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:44] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 22:56:44,310 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:44] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 22:56:44,317 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:44] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 22:56:44,323 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:44] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 22:56:44,327 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:44] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 22:56:44,328 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:44] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 22:56:44,343 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:44] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 22:56:44,349 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:44] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 22:56:44,440 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:44] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 22:56:44,507 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:44] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 22:56:44,508 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:44] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 22:56:44,509 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:44] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 22:56:44,511 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:44] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 22:56:44,554 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 22:56:49,088 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:49] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 22:56:51,174 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:51] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 22:56:51,215 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:51] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 22:56:51,229 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:51] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 22:56:51,234 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:51] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 22:56:51,239 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:51] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 22:56:51,250 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:51] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 22:56:51,250 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:51] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 22:56:51,255 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:51] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 22:56:51,257 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:51] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 22:56:51,259 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:51] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 22:56:51,274 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:51] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 22:56:51,276 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:51] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 22:56:51,280 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:51] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 22:56:51,282 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:51] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 22:56:51,379 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:51] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 22:56:51,437 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:51] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 22:56:51,439 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:51] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 22:56:51,439 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:51] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 22:56:51,441 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:51] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 22:56:51,484 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 22:56:53,131 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:53] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 22:56:55,581 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:55] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 22:56:59,706 : INFO : 127.0.0.1 - - [13/Jul/2020 22:56:59] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 22:59:42,708 : INFO : 127.0.0.1 - - [13/Jul/2020 22:59:42] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 22:59:42,761 : INFO : 127.0.0.1 - - [13/Jul/2020 22:59:42] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 22:59:42,763 : INFO : 127.0.0.1 - - [13/Jul/2020 22:59:42] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 22:59:42,769 : INFO : 127.0.0.1 - - [13/Jul/2020 22:59:42] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 22:59:42,774 : INFO : 127.0.0.1 - - [13/Jul/2020 22:59:42] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 22:59:42,774 : INFO : 127.0.0.1 - - [13/Jul/2020 22:59:42] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 22:59:42,775 : INFO : 127.0.0.1 - - [13/Jul/2020 22:59:42] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 22:59:42,787 : INFO : 127.0.0.1 - - [13/Jul/2020 22:59:42] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 22:59:42,790 : INFO : 127.0.0.1 - - [13/Jul/2020 22:59:42] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 22:59:42,792 : INFO : 127.0.0.1 - - [13/Jul/2020 22:59:42] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 22:59:42,796 : INFO : 127.0.0.1 - - [13/Jul/2020 22:59:42] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 22:59:42,806 : INFO : 127.0.0.1 - - [13/Jul/2020 22:59:42] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 22:59:42,815 : INFO : 127.0.0.1 - - [13/Jul/2020 22:59:42] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 22:59:42,823 : INFO : 127.0.0.1 - - [13/Jul/2020 22:59:42] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 22:59:42,943 : INFO : 127.0.0.1 - - [13/Jul/2020 22:59:42] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 22:59:43,009 : INFO : 127.0.0.1 - - [13/Jul/2020 22:59:43] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 22:59:43,017 : INFO : 127.0.0.1 - - [13/Jul/2020 22:59:43] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 22:59:43,017 : INFO : 127.0.0.1 - - [13/Jul/2020 22:59:43] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 22:59:43,018 : INFO : 127.0.0.1 - - [13/Jul/2020 22:59:43] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 22:59:43,052 : INFO : 127.0.0.1 - - [13/Jul/2020 22:59:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:00:04,543 : INFO : 127.0.0.1 - - [13/Jul/2020 23:00:04] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:01:34,388 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:34] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:01:34,425 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:34] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:01:34,451 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:34] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:01:34,456 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:34] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:01:34,461 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:34] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:01:34,466 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:34] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:01:34,469 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:34] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:01:34,477 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:34] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:01:34,485 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:34] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:01:34,490 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:34] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:01:34,498 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:34] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:01:34,503 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:34] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:01:34,507 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:34] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:01:34,508 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:34] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:01:34,583 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:34] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:01:34,644 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:34] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:01:34,645 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:34] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:01:34,646 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:34] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:01:34,647 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:34] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:01:34,683 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:01:41,151 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:41] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:01:59,190 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:59] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:01:59,233 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:59] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:01:59,249 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:59] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:01:59,252 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:59] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:01:59,256 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:59] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:01:59,259 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:59] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:01:59,260 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:59] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:01:59,267 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:59] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:01:59,269 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:59] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:01:59,272 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:59] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:01:59,273 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:59] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:01:59,278 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:59] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:01:59,285 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:59] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:01:59,288 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:59] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:01:59,391 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:59] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:01:59,455 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:59] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:01:59,455 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:59] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:01:59,455 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:59] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:01:59,456 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:59] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:01:59,492 : INFO : 127.0.0.1 - - [13/Jul/2020 23:01:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:02:04,217 : INFO : 127.0.0.1 - - [13/Jul/2020 23:02:04] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:03:21,856 : INFO : 127.0.0.1 - - [13/Jul/2020 23:03:21] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:03:21,922 : INFO : 127.0.0.1 - - [13/Jul/2020 23:03:21] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
-2020-07-13 23:03:21,930 : INFO : 127.0.0.1 - - [13/Jul/2020 23:03:21] "[36mGET /static/css/lightbox.css HTTP/1.1[0m" 304 -
-2020-07-13 23:03:21,941 : INFO : 127.0.0.1 - - [13/Jul/2020 23:03:21] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
-2020-07-13 23:03:21,942 : INFO : 127.0.0.1 - - [13/Jul/2020 23:03:21] "[36mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 304 -
-2020-07-13 23:03:21,943 : INFO : 127.0.0.1 - - [13/Jul/2020 23:03:21] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2020-07-13 23:03:21,945 : INFO : 127.0.0.1 - - [13/Jul/2020 23:03:21] "[36mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 304 -
-2020-07-13 23:03:21,950 : INFO : 127.0.0.1 - - [13/Jul/2020 23:03:21] "[36mGET /static/js/lodash.js HTTP/1.1[0m" 304 -
-2020-07-13 23:03:21,953 : INFO : 127.0.0.1 - - [13/Jul/2020 23:03:21] "[36mGET /static/js/lightbox.js HTTP/1.1[0m" 304 -
-2020-07-13 23:03:21,958 : INFO : 127.0.0.1 - - [13/Jul/2020 23:03:21] "[36mGET /static/js/diagram.js HTTP/1.1[0m" 304 -
-2020-07-13 23:03:21,959 : INFO : 127.0.0.1 - - [13/Jul/2020 23:03:21] "[36mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 304 -
-2020-07-13 23:03:21,964 : INFO : 127.0.0.1 - - [13/Jul/2020 23:03:21] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:03:21,965 : INFO : 127.0.0.1 - - [13/Jul/2020 23:03:21] "[36mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 304 -
-2020-07-13 23:03:21,966 : INFO : 127.0.0.1 - - [13/Jul/2020 23:03:21] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
-2020-07-13 23:03:22,088 : INFO : 127.0.0.1 - - [13/Jul/2020 23:03:22] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:03:22,169 : INFO : 127.0.0.1 - - [13/Jul/2020 23:03:22] "[36mGET /static/images/prev.png HTTP/1.1[0m" 304 -
-2020-07-13 23:03:22,170 : INFO : 127.0.0.1 - - [13/Jul/2020 23:03:22] "[36mGET /static/images/next.png HTTP/1.1[0m" 304 -
-2020-07-13 23:03:22,171 : INFO : 127.0.0.1 - - [13/Jul/2020 23:03:22] "[36mGET /static/images/loading.gif HTTP/1.1[0m" 304 -
-2020-07-13 23:03:22,172 : INFO : 127.0.0.1 - - [13/Jul/2020 23:03:22] "[36mGET /static/images/close.png HTTP/1.1[0m" 304 -
-2020-07-13 23:05:25,918 : INFO : 127.0.0.1 - - [13/Jul/2020 23:05:25] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:05:25,981 : INFO : 127.0.0.1 - - [13/Jul/2020 23:05:25] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:05:25,988 : INFO : 127.0.0.1 - - [13/Jul/2020 23:05:25] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:05:25,990 : INFO : 127.0.0.1 - - [13/Jul/2020 23:05:25] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:05:25,993 : INFO : 127.0.0.1 - - [13/Jul/2020 23:05:25] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:05:25,995 : INFO : 127.0.0.1 - - [13/Jul/2020 23:05:25] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:05:25,998 : INFO : 127.0.0.1 - - [13/Jul/2020 23:05:25] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:05:25,999 : INFO : 127.0.0.1 - - [13/Jul/2020 23:05:25] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:05:26,012 : INFO : 127.0.0.1 - - [13/Jul/2020 23:05:26] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:05:26,013 : INFO : 127.0.0.1 - - [13/Jul/2020 23:05:26] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:05:26,016 : INFO : 127.0.0.1 - - [13/Jul/2020 23:05:26] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:05:26,020 : INFO : 127.0.0.1 - - [13/Jul/2020 23:05:26] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:05:26,038 : INFO : 127.0.0.1 - - [13/Jul/2020 23:05:26] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:05:26,039 : INFO : 127.0.0.1 - - [13/Jul/2020 23:05:26] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:05:26,152 : INFO : 127.0.0.1 - - [13/Jul/2020 23:05:26] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:05:26,232 : INFO : 127.0.0.1 - - [13/Jul/2020 23:05:26] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:05:26,233 : INFO : 127.0.0.1 - - [13/Jul/2020 23:05:26] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:05:26,234 : INFO : 127.0.0.1 - - [13/Jul/2020 23:05:26] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:05:26,235 : INFO : 127.0.0.1 - - [13/Jul/2020 23:05:26] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:05:26,288 : INFO : 127.0.0.1 - - [13/Jul/2020 23:05:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:07:39,183 : INFO : 127.0.0.1 - - [13/Jul/2020 23:07:39] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:10:22,685 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:22] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:10:22,737 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:22] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:10:22,741 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:22] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:10:22,746 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:22] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:10:22,747 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:22] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:10:22,762 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:22] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:10:22,763 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:22] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:10:22,774 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:22] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:10:22,775 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:22] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:10:22,781 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:22] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:10:22,782 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:22] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:10:22,786 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:22] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:10:22,789 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:22] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:10:22,792 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:22] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:10:22,929 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:22] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:10:23,002 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:23] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:10:23,003 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:23] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:10:23,004 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:23] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:10:23,005 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:23] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:10:23,065 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:10:26,772 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:26] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:10:31,687 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:31] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:10:55,141 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:55] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:10:55,221 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:55] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:10:55,230 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:55] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:10:55,230 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:55] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:10:55,231 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:55] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:10:55,236 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:55] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:10:55,239 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:55] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:10:55,247 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:55] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:10:55,255 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:55] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:10:55,261 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:55] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:10:55,275 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:55] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:10:55,275 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:55] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:10:55,276 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:55] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:10:55,277 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:55] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:10:55,374 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:55] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:10:55,436 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:55] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:10:55,438 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:55] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:10:55,440 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:55] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:10:55,440 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:55] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:10:55,483 : INFO : 127.0.0.1 - - [13/Jul/2020 23:10:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:11:00,055 : INFO : 127.0.0.1 - - [13/Jul/2020 23:11:00] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:12:00,380 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:00] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:12:00,421 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:00] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:12:00,442 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:00] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:12:00,447 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:00] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:12:00,455 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:00] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:12:00,467 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:00] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:12:00,473 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:00] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:12:00,475 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:00] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:12:00,476 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:00] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:12:00,479 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:00] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:12:00,481 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:00] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:12:00,499 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:00] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:12:00,507 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:00] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:12:00,509 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:00] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:12:00,588 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:00] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:12:00,658 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:00] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:12:00,659 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:00] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:12:00,660 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:00] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:12:00,661 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:00] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:12:00,694 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:12:05,675 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:05] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:12:20,382 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:20] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:12:25,641 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:25] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:12:32,055 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:32] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:12:35,031 : INFO : 127.0.0.1 - - [13/Jul/2020 23:12:35] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:13:03,460 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:03] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:13:03,502 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:03] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:13:03,506 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:03] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:13:03,512 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:03] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:13:03,516 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:03] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:13:03,523 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:03] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:13:03,528 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:03] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:13:03,535 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:03] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:13:03,545 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:03] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:13:03,552 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:03] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:13:03,562 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:03] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:13:03,575 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:03] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:13:03,579 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:03] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:13:03,583 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:03] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:13:03,673 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:03] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:13:03,748 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:03] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:13:03,750 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:03] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:13:03,751 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:03] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:13:03,752 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:03] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:13:03,797 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:13:06,445 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:06] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:13:17,385 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:17] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:13:17,426 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:17] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:13:17,433 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:17] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:13:17,436 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:17] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:13:17,447 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:17] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:13:17,451 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:17] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:13:17,465 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:17] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:13:17,472 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:17] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:13:17,478 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:17] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:13:17,482 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:17] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:13:17,488 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:17] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:13:17,494 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:17] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:13:17,496 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:17] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:13:17,498 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:17] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:13:17,567 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:17] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:13:17,635 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:17] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:13:17,637 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:17] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:13:17,637 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:17] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:13:17,639 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:17] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:13:17,680 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:13:24,010 : INFO : 127.0.0.1 - - [13/Jul/2020 23:13:24] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:14:57,308 : INFO : 127.0.0.1 - - [13/Jul/2020 23:14:57] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:14:57,353 : INFO : 127.0.0.1 - - [13/Jul/2020 23:14:57] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:14:57,354 : INFO : 127.0.0.1 - - [13/Jul/2020 23:14:57] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:14:57,356 : INFO : 127.0.0.1 - - [13/Jul/2020 23:14:57] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:14:57,365 : INFO : 127.0.0.1 - - [13/Jul/2020 23:14:57] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:14:57,369 : INFO : 127.0.0.1 - - [13/Jul/2020 23:14:57] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:14:57,370 : INFO : 127.0.0.1 - - [13/Jul/2020 23:14:57] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:14:57,374 : INFO : 127.0.0.1 - - [13/Jul/2020 23:14:57] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:14:57,376 : INFO : 127.0.0.1 - - [13/Jul/2020 23:14:57] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:14:57,379 : INFO : 127.0.0.1 - - [13/Jul/2020 23:14:57] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:14:57,382 : INFO : 127.0.0.1 - - [13/Jul/2020 23:14:57] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:14:57,387 : INFO : 127.0.0.1 - - [13/Jul/2020 23:14:57] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:14:57,392 : INFO : 127.0.0.1 - - [13/Jul/2020 23:14:57] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:14:57,393 : INFO : 127.0.0.1 - - [13/Jul/2020 23:14:57] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:14:57,527 : INFO : 127.0.0.1 - - [13/Jul/2020 23:14:57] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:14:57,601 : INFO : 127.0.0.1 - - [13/Jul/2020 23:14:57] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:14:57,603 : INFO : 127.0.0.1 - - [13/Jul/2020 23:14:57] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:14:57,605 : INFO : 127.0.0.1 - - [13/Jul/2020 23:14:57] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:14:57,607 : INFO : 127.0.0.1 - - [13/Jul/2020 23:14:57] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:14:57,655 : INFO : 127.0.0.1 - - [13/Jul/2020 23:14:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:15:30,377 : INFO : 127.0.0.1 - - [13/Jul/2020 23:15:30] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:17:26,677 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:26] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:17:26,735 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:26] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:17:26,736 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:26] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:17:26,737 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:26] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:17:26,744 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:26] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:17:26,744 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:26] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:17:26,748 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:26] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:17:26,755 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:26] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:17:26,756 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:26] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:17:26,762 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:26] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:17:26,767 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:26] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:17:26,770 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:26] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:17:26,776 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:26] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:17:26,778 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:26] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:17:26,884 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:26] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:17:26,950 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:26] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:17:26,950 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:26] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:17:26,953 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:26] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:17:26,954 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:26] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:17:26,998 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:17:31,811 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:31] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:17:42,178 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:42] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:17:42,241 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:42] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:17:42,253 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:42] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:17:42,259 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:42] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:17:42,264 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:42] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:17:42,275 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:42] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:17:42,283 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:42] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:17:42,288 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:42] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:17:42,296 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:42] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:17:42,301 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:42] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:17:42,305 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:42] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:17:42,309 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:42] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:17:42,314 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:42] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:17:42,315 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:42] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:17:42,387 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:42] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:17:42,451 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:42] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:17:42,452 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:42] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:17:42,453 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:42] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:17:42,454 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:42] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:17:42,495 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:17:44,581 : INFO : 127.0.0.1 - - [13/Jul/2020 23:17:44] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:18:10,049 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:10] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:18:10,112 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:10] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:18:10,115 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:10] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:18:10,121 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:10] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:18:10,128 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:10] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:10,138 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:10] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:10,143 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:10] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:10,150 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:10] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:10,156 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:10] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:10,162 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:10] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:10,165 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:10] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:10,166 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:10] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:10,167 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:10] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:10,183 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:10] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:10,245 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:10] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:18:10,322 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:10] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:18:10,323 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:10] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:18:10,324 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:10] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:18:10,326 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:10] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:18:10,371 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:18:13,174 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:13] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:18:16,057 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:16] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:18:16,099 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:16] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:18:16,114 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:16] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:18:16,120 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:16] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:16,127 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:16] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:16,133 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:16] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:16,142 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:16] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:18:16,144 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:16] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:16,144 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:16] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:16,145 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:16] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:16,149 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:16] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:16,159 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:16] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:16,161 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:16] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:16,167 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:16] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:16,244 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:16] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:18:16,309 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:16] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:18:16,311 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:16] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:18:16,312 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:16] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:18:16,315 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:16] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:18:16,348 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:18:18,585 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:18] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:18:36,298 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:36] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:18:36,372 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:36] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:18:36,372 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:36] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:18:36,374 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:36] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:18:36,376 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:36] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:36,376 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:36] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:36,377 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:36] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:36,385 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:36] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:36,386 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:36] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:36,402 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:36] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:36,403 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:36] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:36,406 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:36] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:36,414 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:36] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:36,419 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:36] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:18:36,506 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:36] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:18:36,573 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:36] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:18:36,575 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:36] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:18:36,577 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:36] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:18:36,577 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:36] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:18:36,611 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:18:42,353 : INFO : 127.0.0.1 - - [13/Jul/2020 23:18:42] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:21:52,742 : INFO : 127.0.0.1 - - [13/Jul/2020 23:21:52] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:21:52,817 : INFO : 127.0.0.1 - - [13/Jul/2020 23:21:52] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:21:52,821 : INFO : 127.0.0.1 - - [13/Jul/2020 23:21:52] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:21:52,826 : INFO : 127.0.0.1 - - [13/Jul/2020 23:21:52] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:21:52,832 : INFO : 127.0.0.1 - - [13/Jul/2020 23:21:52] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:21:52,839 : INFO : 127.0.0.1 - - [13/Jul/2020 23:21:52] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:21:52,845 : INFO : 127.0.0.1 - - [13/Jul/2020 23:21:52] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:21:52,854 : INFO : 127.0.0.1 - - [13/Jul/2020 23:21:52] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:21:52,860 : INFO : 127.0.0.1 - - [13/Jul/2020 23:21:52] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:21:52,866 : INFO : 127.0.0.1 - - [13/Jul/2020 23:21:52] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:21:52,871 : INFO : 127.0.0.1 - - [13/Jul/2020 23:21:52] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:21:52,878 : INFO : 127.0.0.1 - - [13/Jul/2020 23:21:52] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:21:52,882 : INFO : 127.0.0.1 - - [13/Jul/2020 23:21:52] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:21:52,883 : INFO : 127.0.0.1 - - [13/Jul/2020 23:21:52] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:21:52,983 : INFO : 127.0.0.1 - - [13/Jul/2020 23:21:52] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:21:53,060 : INFO : 127.0.0.1 - - [13/Jul/2020 23:21:53] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:21:53,062 : INFO : 127.0.0.1 - - [13/Jul/2020 23:21:53] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:21:53,062 : INFO : 127.0.0.1 - - [13/Jul/2020 23:21:53] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:21:53,063 : INFO : 127.0.0.1 - - [13/Jul/2020 23:21:53] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:21:53,127 : INFO : 127.0.0.1 - - [13/Jul/2020 23:21:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:22:13,444 : INFO : 127.0.0.1 - - [13/Jul/2020 23:22:13] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:22:13,485 : INFO : 127.0.0.1 - - [13/Jul/2020 23:22:13] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:22:13,486 : INFO : 127.0.0.1 - - [13/Jul/2020 23:22:13] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:22:13,491 : INFO : 127.0.0.1 - - [13/Jul/2020 23:22:13] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:22:13,494 : INFO : 127.0.0.1 - - [13/Jul/2020 23:22:13] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:22:13,498 : INFO : 127.0.0.1 - - [13/Jul/2020 23:22:13] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:22:13,498 : INFO : 127.0.0.1 - - [13/Jul/2020 23:22:13] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:22:13,500 : INFO : 127.0.0.1 - - [13/Jul/2020 23:22:13] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:22:13,505 : INFO : 127.0.0.1 - - [13/Jul/2020 23:22:13] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:22:13,506 : INFO : 127.0.0.1 - - [13/Jul/2020 23:22:13] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:22:13,510 : INFO : 127.0.0.1 - - [13/Jul/2020 23:22:13] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:22:13,514 : INFO : 127.0.0.1 - - [13/Jul/2020 23:22:13] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:22:13,520 : INFO : 127.0.0.1 - - [13/Jul/2020 23:22:13] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:22:13,521 : INFO : 127.0.0.1 - - [13/Jul/2020 23:22:13] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:22:13,647 : INFO : 127.0.0.1 - - [13/Jul/2020 23:22:13] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:22:13,743 : INFO : 127.0.0.1 - - [13/Jul/2020 23:22:13] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:22:13,745 : INFO : 127.0.0.1 - - [13/Jul/2020 23:22:13] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:22:13,748 : INFO : 127.0.0.1 - - [13/Jul/2020 23:22:13] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:22:13,750 : INFO : 127.0.0.1 - - [13/Jul/2020 23:22:13] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:22:13,804 : INFO : 127.0.0.1 - - [13/Jul/2020 23:22:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:22:16,297 : INFO : 127.0.0.1 - - [13/Jul/2020 23:22:16] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:24:36,554 : INFO : 127.0.0.1 - - [13/Jul/2020 23:24:36] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:24:36,614 : INFO : 127.0.0.1 - - [13/Jul/2020 23:24:36] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:24:36,617 : INFO : 127.0.0.1 - - [13/Jul/2020 23:24:36] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:24:36,619 : INFO : 127.0.0.1 - - [13/Jul/2020 23:24:36] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:24:36,631 : INFO : 127.0.0.1 - - [13/Jul/2020 23:24:36] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:24:36,635 : INFO : 127.0.0.1 - - [13/Jul/2020 23:24:36] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:24:36,621 : INFO : 127.0.0.1 - - [13/Jul/2020 23:24:36] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:24:36,627 : INFO : 127.0.0.1 - - [13/Jul/2020 23:24:36] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:24:36,643 : INFO : 127.0.0.1 - - [13/Jul/2020 23:24:36] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:24:36,650 : INFO : 127.0.0.1 - - [13/Jul/2020 23:24:36] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:24:36,655 : INFO : 127.0.0.1 - - [13/Jul/2020 23:24:36] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:24:36,661 : INFO : 127.0.0.1 - - [13/Jul/2020 23:24:36] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:24:36,666 : INFO : 127.0.0.1 - - [13/Jul/2020 23:24:36] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:24:36,672 : INFO : 127.0.0.1 - - [13/Jul/2020 23:24:36] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:24:36,757 : INFO : 127.0.0.1 - - [13/Jul/2020 23:24:36] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:24:36,838 : INFO : 127.0.0.1 - - [13/Jul/2020 23:24:36] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:24:36,840 : INFO : 127.0.0.1 - - [13/Jul/2020 23:24:36] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:24:36,841 : INFO : 127.0.0.1 - - [13/Jul/2020 23:24:36] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:24:36,841 : INFO : 127.0.0.1 - - [13/Jul/2020 23:24:36] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:24:36,893 : INFO : 127.0.0.1 - - [13/Jul/2020 23:24:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:24:41,432 : INFO : 127.0.0.1 - - [13/Jul/2020 23:24:41] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:25:21,450 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:21] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:25:21,503 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:21] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:25:21,503 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:21] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:25:21,504 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:21] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:25:21,519 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:21] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:25:21,519 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:21] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:25:21,523 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:21] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:25:21,525 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:21] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:25:21,529 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:21] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:25:21,531 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:21] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:25:21,537 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:21] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:25:21,548 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:21] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:25:21,553 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:21] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:25:21,556 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:21] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:25:21,660 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:21] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:25:21,735 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:21] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:25:21,735 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:21] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:25:21,737 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:21] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:25:21,739 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:21] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:25:21,786 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:25:24,982 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:24] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:25:45,869 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:45] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:25:45,911 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:45] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:25:45,915 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:45] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:25:45,919 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:45] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:25:45,924 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:45] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:25:45,929 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:45] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:25:45,930 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:45] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:25:45,936 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:45] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:25:45,943 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:45] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:25:45,950 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:45] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:25:45,952 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:45] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:25:45,957 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:45] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:25:45,959 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:45] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:25:45,960 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:45] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:25:46,049 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:46] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:25:46,132 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:46] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:25:46,135 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:46] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:25:46,137 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:46] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:25:46,138 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:46] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:25:46,185 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:25:49,258 : INFO : 127.0.0.1 - - [13/Jul/2020 23:25:49] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:26:03,128 : INFO : 127.0.0.1 - - [13/Jul/2020 23:26:03] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:26:03,178 : INFO : 127.0.0.1 - - [13/Jul/2020 23:26:03] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:26:03,178 : INFO : 127.0.0.1 - - [13/Jul/2020 23:26:03] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:26:03,180 : INFO : 127.0.0.1 - - [13/Jul/2020 23:26:03] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:26:03,184 : INFO : 127.0.0.1 - - [13/Jul/2020 23:26:03] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:26:03,186 : INFO : 127.0.0.1 - - [13/Jul/2020 23:26:03] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:26:03,191 : INFO : 127.0.0.1 - - [13/Jul/2020 23:26:03] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:26:03,191 : INFO : 127.0.0.1 - - [13/Jul/2020 23:26:03] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:26:03,206 : INFO : 127.0.0.1 - - [13/Jul/2020 23:26:03] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:26:03,208 : INFO : 127.0.0.1 - - [13/Jul/2020 23:26:03] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:26:03,212 : INFO : 127.0.0.1 - - [13/Jul/2020 23:26:03] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:26:03,213 : INFO : 127.0.0.1 - - [13/Jul/2020 23:26:03] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:26:03,220 : INFO : 127.0.0.1 - - [13/Jul/2020 23:26:03] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:26:03,223 : INFO : 127.0.0.1 - - [13/Jul/2020 23:26:03] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:26:03,327 : INFO : 127.0.0.1 - - [13/Jul/2020 23:26:03] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:26:03,404 : INFO : 127.0.0.1 - - [13/Jul/2020 23:26:03] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:26:03,407 : INFO : 127.0.0.1 - - [13/Jul/2020 23:26:03] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:26:03,410 : INFO : 127.0.0.1 - - [13/Jul/2020 23:26:03] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:26:03,410 : INFO : 127.0.0.1 - - [13/Jul/2020 23:26:03] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:26:03,466 : INFO : 127.0.0.1 - - [13/Jul/2020 23:26:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:26:05,968 : INFO : 127.0.0.1 - - [13/Jul/2020 23:26:05] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:28:44,176 : INFO : 127.0.0.1 - - [13/Jul/2020 23:28:44] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:28:44,225 : INFO : 127.0.0.1 - - [13/Jul/2020 23:28:44] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:28:44,235 : INFO : 127.0.0.1 - - [13/Jul/2020 23:28:44] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:28:44,237 : INFO : 127.0.0.1 - - [13/Jul/2020 23:28:44] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:28:44,248 : INFO : 127.0.0.1 - - [13/Jul/2020 23:28:44] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:28:44,251 : INFO : 127.0.0.1 - - [13/Jul/2020 23:28:44] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:28:44,256 : INFO : 127.0.0.1 - - [13/Jul/2020 23:28:44] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:28:44,264 : INFO : 127.0.0.1 - - [13/Jul/2020 23:28:44] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:28:44,272 : INFO : 127.0.0.1 - - [13/Jul/2020 23:28:44] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:28:44,287 : INFO : 127.0.0.1 - - [13/Jul/2020 23:28:44] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:28:44,287 : INFO : 127.0.0.1 - - [13/Jul/2020 23:28:44] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:28:44,292 : INFO : 127.0.0.1 - - [13/Jul/2020 23:28:44] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:28:44,295 : INFO : 127.0.0.1 - - [13/Jul/2020 23:28:44] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:28:44,298 : INFO : 127.0.0.1 - - [13/Jul/2020 23:28:44] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:28:44,401 : INFO : 127.0.0.1 - - [13/Jul/2020 23:28:44] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:28:44,492 : INFO : 127.0.0.1 - - [13/Jul/2020 23:28:44] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:28:44,495 : INFO : 127.0.0.1 - - [13/Jul/2020 23:28:44] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:28:44,496 : INFO : 127.0.0.1 - - [13/Jul/2020 23:28:44] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:28:44,497 : INFO : 127.0.0.1 - - [13/Jul/2020 23:28:44] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:28:44,581 : INFO : 127.0.0.1 - - [13/Jul/2020 23:28:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:30:32,498 : INFO : 127.0.0.1 - - [13/Jul/2020 23:30:32] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:30:32,540 : INFO : 127.0.0.1 - - [13/Jul/2020 23:30:32] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:30:32,544 : INFO : 127.0.0.1 - - [13/Jul/2020 23:30:32] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:30:32,548 : INFO : 127.0.0.1 - - [13/Jul/2020 23:30:32] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:30:32,550 : INFO : 127.0.0.1 - - [13/Jul/2020 23:30:32] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:30:32,553 : INFO : 127.0.0.1 - - [13/Jul/2020 23:30:32] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:30:32,557 : INFO : 127.0.0.1 - - [13/Jul/2020 23:30:32] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:30:32,562 : INFO : 127.0.0.1 - - [13/Jul/2020 23:30:32] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:30:32,564 : INFO : 127.0.0.1 - - [13/Jul/2020 23:30:32] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:30:32,567 : INFO : 127.0.0.1 - - [13/Jul/2020 23:30:32] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:30:32,575 : INFO : 127.0.0.1 - - [13/Jul/2020 23:30:32] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:30:32,576 : INFO : 127.0.0.1 - - [13/Jul/2020 23:30:32] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:30:32,579 : INFO : 127.0.0.1 - - [13/Jul/2020 23:30:32] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:30:32,580 : INFO : 127.0.0.1 - - [13/Jul/2020 23:30:32] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:30:32,751 : INFO : 127.0.0.1 - - [13/Jul/2020 23:30:32] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:30:32,865 : INFO : 127.0.0.1 - - [13/Jul/2020 23:30:32] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:30:32,869 : INFO : 127.0.0.1 - - [13/Jul/2020 23:30:32] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:30:32,870 : INFO : 127.0.0.1 - - [13/Jul/2020 23:30:32] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:30:32,871 : INFO : 127.0.0.1 - - [13/Jul/2020 23:30:32] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:30:32,942 : INFO : 127.0.0.1 - - [13/Jul/2020 23:30:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:30:36,117 : INFO : 127.0.0.1 - - [13/Jul/2020 23:30:36] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:31:46,522 : INFO : 127.0.0.1 - - [13/Jul/2020 23:31:46] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:36:58,160 : INFO : 127.0.0.1 - - [13/Jul/2020 23:36:58] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:36:58,215 : INFO : 127.0.0.1 - - [13/Jul/2020 23:36:58] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:36:58,218 : INFO : 127.0.0.1 - - [13/Jul/2020 23:36:58] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:36:58,226 : INFO : 127.0.0.1 - - [13/Jul/2020 23:36:58] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:36:58,233 : INFO : 127.0.0.1 - - [13/Jul/2020 23:36:58] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:36:58,242 : INFO : 127.0.0.1 - - [13/Jul/2020 23:36:58] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:36:58,250 : INFO : 127.0.0.1 - - [13/Jul/2020 23:36:58] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:36:58,259 : INFO : 127.0.0.1 - - [13/Jul/2020 23:36:58] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:36:58,263 : INFO : 127.0.0.1 - - [13/Jul/2020 23:36:58] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:36:58,271 : INFO : 127.0.0.1 - - [13/Jul/2020 23:36:58] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:36:58,278 : INFO : 127.0.0.1 - - [13/Jul/2020 23:36:58] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:36:58,286 : INFO : 127.0.0.1 - - [13/Jul/2020 23:36:58] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:36:58,293 : INFO : 127.0.0.1 - - [13/Jul/2020 23:36:58] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:36:58,296 : INFO : 127.0.0.1 - - [13/Jul/2020 23:36:58] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:36:58,384 : INFO : 127.0.0.1 - - [13/Jul/2020 23:36:58] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:36:58,444 : INFO : 127.0.0.1 - - [13/Jul/2020 23:36:58] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:36:58,449 : INFO : 127.0.0.1 - - [13/Jul/2020 23:36:58] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:36:58,450 : INFO : 127.0.0.1 - - [13/Jul/2020 23:36:58] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:36:58,451 : INFO : 127.0.0.1 - - [13/Jul/2020 23:36:58] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:36:58,499 : INFO : 127.0.0.1 - - [13/Jul/2020 23:36:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:37:01,239 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:01] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:37:03,592 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:03] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:37:05,718 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:05] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:37:17,086 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:17] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:37:17,150 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:17] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:37:17,153 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:17] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:37:17,155 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:17] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:37:17,167 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:17] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:17,168 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:17] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:17,172 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:17] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:17,173 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:17] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:17,174 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:17] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:17,186 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:17] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:17,190 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:17] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:17,190 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:17] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:17,196 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:17] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:17,208 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:17] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:17,291 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:17] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:37:17,364 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:17] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:37:17,366 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:17] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:37:17,367 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:17] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:37:17,367 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:17] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:37:17,416 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:37:36,850 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:36] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:37:36,898 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:36] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:37:36,903 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:36] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:37:36,914 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:36] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:36,919 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:36] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:37:36,929 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:36] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:36,936 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:36] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:36,944 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:36] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:36,954 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:36] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:36,961 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:36] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:36,965 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:36] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:36,977 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:36] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:36,978 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:36] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:36,981 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:36] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:37,056 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:37] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:37:37,130 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:37] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:37:37,132 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:37] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:37:37,135 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:37] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:37:37,141 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:37] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:37:37,197 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2020-07-13 23:37:40,569 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:40] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:37:44,076 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:44] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-13 23:37:48,130 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:48] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-13 23:37:48,171 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:48] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
-2020-07-13 23:37:48,176 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:48] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
-2020-07-13 23:37:48,187 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:48] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
-2020-07-13 23:37:48,191 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:48] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:48,196 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:48] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:48,201 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:48] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:48,208 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:48] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:48,211 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:48] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:48,216 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:48] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:48,218 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:48] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:48,219 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:48] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:48,251 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:48] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:48,262 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:48] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
-2020-07-13 23:37:48,346 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:48] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
-2020-07-13 23:37:48,420 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:48] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
-2020-07-13 23:37:48,421 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:48] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
-2020-07-13 23:37:48,422 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:48] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
-2020-07-13 23:37:48,423 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:48] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
-2020-07-13 23:37:48,476 : INFO : 127.0.0.1 - - [13/Jul/2020 23:37:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2020-07-14 23:54:59,488 : INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-14 23:55:00,781 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[37mGET / HTTP/1.1[0m" 200 -
+2020-07-14 23:55:00,847 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2020-07-14 23:55:00,856 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2020-07-14 23:55:00,860 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/css/lightbox.css HTTP/1.1[0m" 304 -
+2020-07-14 23:55:00,862 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 304 -
+2020-07-14 23:55:00,868 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+2020-07-14 23:55:00,869 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 304 -
+2020-07-14 23:55:00,873 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/js/lightbox.js HTTP/1.1[0m" 304 -
+2020-07-14 23:55:00,874 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/js/interface.js HTTP/1.1[0m" 304 -
+2020-07-14 23:55:00,875 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/js/lodash.js HTTP/1.1[0m" 304 -
+2020-07-14 23:55:00,882 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/js/diagram.js HTTP/1.1[0m" 304 -
+2020-07-14 23:55:00,886 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 304 -
+2020-07-14 23:55:00,889 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2020-07-14 23:55:00,889 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 304 -
+2020-07-14 23:55:01,331 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:01] "[36mGET /static/images/prev.png HTTP/1.1[0m" 304 -
+2020-07-14 23:55:01,333 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:01] "[36mGET /static/images/next.png HTTP/1.1[0m" 304 -
+2020-07-14 23:55:01,333 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:01] "[36mGET /static/images/loading.gif HTTP/1.1[0m" 304 -
+2020-07-14 23:55:01,334 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:01] "[36mGET /static/images/close.png HTTP/1.1[0m" 304 -
+2020-07-14 23:55:13,129 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:13] "[37mPOST /upload HTTP/1.1[0m" 200 -
+2020-07-14 23:55:25,482 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:25] "[37mGET /reset HTTP/1.1[0m" 200 -
+2020-07-14 23:55:25,562 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:25] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-07-14 23:55:30,224 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:30] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-07-14 23:55:30,277 : INFO : adding document #0 to Dictionary(0 unique tokens: [])
+2020-07-14 23:55:30,526 : INFO : built Dictionary(19975 unique tokens: ['aaura', 'aaventapasseri', 'abbandona', 'abbandonarsi', 'abbandonata']...) from 4 documents (total 112928 corpus positions)
+2020-07-14 23:55:30,608 : INFO : collecting document frequencies
+2020-07-14 23:55:30,608 : INFO : PROGRESS: processing document #0
+2020-07-14 23:55:30,617 : INFO : calculating IDF weights for 4 documents and 19975 features (31254 matrix non-zeros)
+2020-07-14 23:55:30,917 : INFO : saving Dictionary object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict, separately None
+2020-07-14 23:55:30,924 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
+2020-07-14 23:55:30,933 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:30] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-07-14 23:55:30,940 : INFO : loading Dictionary object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
+2020-07-14 23:55:30,952 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
+2020-07-14 23:55:30,977 : INFO : saving Dictionary object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/dictionary.gdict, separately None
+2020-07-14 23:55:30,985 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/dictionary.gdict
+2020-07-14 23:55:31,042 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:31] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-07-14 23:56:04,652 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:04] "[37mPOST /upload HTTP/1.1[0m" 200 -
+2020-07-14 23:56:14,759 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:14] "[37mGET /reset HTTP/1.1[0m" 200 -
+2020-07-14 23:56:14,838 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:14] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-07-14 23:56:17,693 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:17] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-07-14 23:56:17,725 : INFO : adding document #0 to Dictionary(0 unique tokens: [])
+2020-07-14 23:56:17,829 : INFO : built Dictionary(19975 unique tokens: ['aaura', 'aaventapasseri', 'abbandona', 'abbandonarsi', 'abbandonata']...) from 4 documents (total 112928 corpus positions)
+2020-07-14 23:56:17,876 : INFO : collecting document frequencies
+2020-07-14 23:56:17,876 : INFO : PROGRESS: processing document #0
+2020-07-14 23:56:17,882 : INFO : calculating IDF weights for 4 documents and 19975 features (31254 matrix non-zeros)
+2020-07-14 23:56:18,093 : INFO : saving Dictionary object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict, separately None
+2020-07-14 23:56:18,102 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
+2020-07-14 23:56:18,108 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:18] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-07-14 23:56:18,133 : INFO : loading Dictionary object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
+2020-07-14 23:56:18,147 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
+2020-07-14 23:56:18,149 : INFO : using symmetric alpha at 0.5
+2020-07-14 23:56:18,149 : INFO : using symmetric eta at 0.5
+2020-07-14 23:56:18,152 : INFO : using serial LDA version on this node
+2020-07-14 23:56:18,156 : INFO : running online LDA training, 2 topics, 5 passes over the supplied corpus of 4 documents, updating every 4000 documents, evaluating every ~4 documents, iterating 50x with a convergence threshold of 0.001000
+2020-07-14 23:56:18,156 : WARNING : too few updates, training might not converge; consider increasing the number of passes or iterations to improve accuracy
+2020-07-14 23:56:18,157 : INFO : training LDA model using 2 processes
+2020-07-14 23:56:18,168 : INFO : PROGRESS: pass 0, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
+2020-07-14 23:56:18,297 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"neanch" + 0.000*"persino" + 0.000*"aiac" + 0.000*"vittori" + 0.000*"hachiya" + 0.000*"odisseo" + 0.000*"steiner"
+2020-07-14 23:56:18,298 : INFO : topic #1 (0.500): 0.000*"speer" + 0.000*"hitler" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"persino" + 0.000*"diario" + 0.000*"steiner" + 0.000*"vittori" + 0.000*"bambina" + 0.000*"suicidio"
+2020-07-14 23:56:18,298 : INFO : topic diff=0.880610, rho=1.000000
+2020-07-14 23:56:18,440 : INFO : -11.191 per-word bound, 2338.5 perplexity estimate based on a held-out corpus of 4 documents with 236 words
+2020-07-14 23:56:18,441 : INFO : PROGRESS: pass 1, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
+2020-07-14 23:56:18,534 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"neanch" + 0.000*"diario" + 0.000*"aiac" + 0.000*"vittori" + 0.000*"persino" + 0.000*"hachiya" + 0.000*"dinanzi" + 0.000*"odisseo"
+2020-07-14 23:56:18,535 : INFO : topic #1 (0.500): 0.000*"speer" + 0.000*"hitler" + 0.000*"persino" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"steiner" + 0.000*"diario" + 0.000*"vittori" + 0.000*"lévi" + 0.000*"suicidio"
+2020-07-14 23:56:18,535 : INFO : topic diff=0.003209, rho=0.706753
+2020-07-14 23:56:18,681 : INFO : -11.189 per-word bound, 2334.9 perplexity estimate based on a held-out corpus of 4 documents with 236 words
+2020-07-14 23:56:18,682 : INFO : PROGRESS: pass 2, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
+2020-07-14 23:56:18,767 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"vittori" + 0.000*"hachiya" + 0.000*"dinanzi" + 0.000*"persino" + 0.000*"prezzi"
+2020-07-14 23:56:18,768 : INFO : topic #1 (0.500): 0.000*"speer" + 0.000*"hitler" + 0.000*"persino" + 0.000*"steiner" + 0.000*"aiac" + 0.000*"neanch" + 0.000*"diario" + 0.000*"lévi" + 0.000*"strauss" + 0.000*"dott"
+2020-07-14 23:56:18,768 : INFO : topic diff=0.002459, rho=0.577158
+2020-07-14 23:56:18,908 : INFO : -11.188 per-word bound, 2332.3 perplexity estimate based on a held-out corpus of 4 documents with 236 words
+2020-07-14 23:56:18,908 : INFO : PROGRESS: pass 3, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
+2020-07-14 23:56:18,988 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"vittori" + 0.000*"hachiya" + 0.000*"dinanzi" + 0.000*"prezzi" + 0.000*"odisseo"
+2020-07-14 23:56:18,989 : INFO : topic #1 (0.500): 0.000*"persino" + 0.000*"steiner" + 0.000*"speer" + 0.000*"hitler" + 0.000*"aiac" + 0.000*"neanch" + 0.000*"lévi" + 0.000*"strauss" + 0.000*"dott" + 0.000*"veza"
+2020-07-14 23:56:18,989 : INFO : topic diff=0.002308, rho=0.499875
+2020-07-14 23:56:19,151 : INFO : -11.185 per-word bound, 2328.7 perplexity estimate based on a held-out corpus of 4 documents with 236 words
+2020-07-14 23:56:19,151 : INFO : PROGRESS: pass 4, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
+2020-07-14 23:56:19,231 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"vittori" + 0.000*"hachiya" + 0.000*"dinanzi" + 0.000*"confucio" + 0.000*"prezzi"
+2020-07-14 23:56:19,231 : INFO : topic #1 (0.500): 0.000*"steiner" + 0.000*"persino" + 0.000*"aiac" + 0.000*"speer" + 0.000*"hitler" + 0.000*"neanch" + 0.000*"lévi" + 0.000*"strauss" + 0.000*"dott" + 0.000*"veza"
+2020-07-14 23:56:19,231 : INFO : topic diff=0.001786, rho=0.447124
+2020-07-14 23:56:19,387 : INFO : -11.185 per-word bound, 2327.5 perplexity estimate based on a held-out corpus of 4 documents with 236 words
+2020-07-14 23:56:19,471 : INFO : saving LdaState object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.state, separately None
+2020-07-14 23:56:19,476 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.state
+2020-07-14 23:56:19,493 : INFO : saving LdaMulticore object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda, separately ['expElogbeta', 'sstats']
+2020-07-14 23:56:19,494 : INFO : storing np array 'expElogbeta' to /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.expElogbeta.npy
+2020-07-14 23:56:19,501 : INFO : not storing attribute dispatcher
+2020-07-14 23:56:19,501 : INFO : not storing attribute state
+2020-07-14 23:56:19,501 : INFO : not storing attribute id2word
+2020-07-14 23:56:19,502 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda
+2020-07-14 23:56:19,507 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:19] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-07-14 23:56:39,968 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:39] "[37mPOST /upload HTTP/1.1[0m" 200 -
+2020-07-14 23:56:50,707 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:50] "[37mGET /reset HTTP/1.1[0m" 200 -
+2020-07-14 23:56:50,796 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:50] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-07-14 23:56:53,704 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:53] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-07-14 23:56:53,750 : INFO : adding document #0 to Dictionary(0 unique tokens: [])
+2020-07-14 23:56:53,887 : INFO : built Dictionary(19975 unique tokens: ['aaura', 'aaventapasseri', 'abbandona', 'abbandonarsi', 'abbandonata']...) from 4 documents (total 112928 corpus positions)
+2020-07-14 23:56:53,949 : INFO : collecting document frequencies
+2020-07-14 23:56:53,950 : INFO : PROGRESS: processing document #0
+2020-07-14 23:56:53,955 : INFO : calculating IDF weights for 4 documents and 19975 features (31254 matrix non-zeros)
+2020-07-14 23:56:54,208 : INFO : saving Dictionary object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict, separately None
+2020-07-14 23:56:54,218 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
+2020-07-14 23:56:54,226 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:54] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-07-14 23:56:54,259 : INFO : loading Dictionary object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
+2020-07-14 23:56:54,274 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
+2020-07-14 23:56:54,275 : INFO : using symmetric alpha at 0.5
+2020-07-14 23:56:54,275 : INFO : using symmetric eta at 0.5
+2020-07-14 23:56:54,280 : INFO : using serial LDA version on this node
+2020-07-14 23:56:54,286 : INFO : running online LDA training, 2 topics, 5 passes over the supplied corpus of 4 documents, updating every 4000 documents, evaluating every ~4 documents, iterating 50x with a convergence threshold of 0.001000
+2020-07-14 23:56:54,286 : WARNING : too few updates, training might not converge; consider increasing the number of passes or iterations to improve accuracy
+2020-07-14 23:56:54,287 : INFO : training LDA model using 2 processes
+2020-07-14 23:56:54,302 : INFO : PROGRESS: pass 0, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
+2020-07-14 23:56:54,419 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"neanch" + 0.000*"diario" + 0.000*"aiac" + 0.000*"persino" + 0.000*"suicidio" + 0.000*"steiner" + 0.000*"dinanzi" + 0.000*"odisseo"
+2020-07-14 23:56:54,419 : INFO : topic #1 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"aiac" + 0.000*"persino" + 0.000*"diario" + 0.000*"neanch" + 0.000*"vittori" + 0.000*"hachiya" + 0.000*"steiner" + 0.000*"kraus"
+2020-07-14 23:56:54,419 : INFO : topic diff=0.880563, rho=1.000000
+2020-07-14 23:56:54,616 : INFO : -11.192 per-word bound, 2339.4 perplexity estimate based on a held-out corpus of 4 documents with 236 words
+2020-07-14 23:56:54,616 : INFO : PROGRESS: pass 1, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
+2020-07-14 23:56:54,759 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"persino" + 0.000*"diario" + 0.000*"suicidio" + 0.000*"steiner" + 0.000*"odisseo" + 0.000*"dinanzi"
+2020-07-14 23:56:54,760 : INFO : topic #1 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"aiac" + 0.000*"persino" + 0.000*"neanch" + 0.000*"vittori" + 0.000*"hachiya" + 0.000*"steiner" + 0.000*"dinanzi"
+2020-07-14 23:56:54,760 : INFO : topic diff=0.001914, rho=0.706753
+2020-07-14 23:56:54,911 : INFO : -11.191 per-word bound, 2338.4 perplexity estimate based on a held-out corpus of 4 documents with 236 words
+2020-07-14 23:56:54,911 : INFO : PROGRESS: pass 2, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
+2020-07-14 23:56:54,993 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"persino" + 0.000*"suicidio" + 0.000*"diario" + 0.000*"odisseo" + 0.000*"steiner" + 0.000*"dinanzi"
+2020-07-14 23:56:54,994 : INFO : topic #1 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"persino" + 0.000*"aiac" + 0.000*"vittori" + 0.000*"neanch" + 0.000*"hachiya" + 0.000*"steiner" + 0.000*"dinanzi"
+2020-07-14 23:56:54,994 : INFO : topic diff=0.001330, rho=0.577158
+2020-07-14 23:56:55,153 : INFO : -11.190 per-word bound, 2337.0 perplexity estimate based on a held-out corpus of 4 documents with 236 words
+2020-07-14 23:56:55,153 : INFO : PROGRESS: pass 3, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
+2020-07-14 23:56:55,243 : INFO : topic #0 (0.500): 0.000*"neanch" + 0.000*"aiac" + 0.000*"hitler" + 0.000*"speer" + 0.000*"persino" + 0.000*"suicidio" + 0.000*"odisseo" + 0.000*"bambina" + 0.000*"diario" + 0.000*"fintanto"
+2020-07-14 23:56:55,244 : INFO : topic #1 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"persino" + 0.000*"vittori" + 0.000*"aiac" + 0.000*"neanch" + 0.000*"hachiya" + 0.000*"steiner" + 0.000*"dinanzi"
+2020-07-14 23:56:55,244 : INFO : topic diff=0.001656, rho=0.499875
+2020-07-14 23:56:55,393 : INFO : -11.189 per-word bound, 2334.9 perplexity estimate based on a held-out corpus of 4 documents with 236 words
+2020-07-14 23:56:55,393 : INFO : PROGRESS: pass 4, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
+2020-07-14 23:56:55,728 : INFO : topic #0 (0.500): 0.000*"neanch" + 0.000*"aiac" + 0.000*"hitler" + 0.000*"suicidio" + 0.000*"odisseo" + 0.000*"speer" + 0.000*"persino" + 0.000*"bambina" + 0.000*"fintanto" + 0.000*"dimenticato"
+2020-07-14 23:56:55,729 : INFO : topic #1 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"vittori" + 0.000*"persino" + 0.000*"hachiya" + 0.000*"steiner" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"dinanzi"
+2020-07-14 23:56:55,729 : INFO : topic diff=0.001288, rho=0.447124
+2020-07-14 23:56:55,884 : INFO : -11.189 per-word bound, 2333.9 perplexity estimate based on a held-out corpus of 4 documents with 236 words
+2020-07-14 23:56:55,997 : INFO : saving LdaState object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.state, separately None
+2020-07-14 23:56:56,001 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.state
+2020-07-14 23:56:56,010 : INFO : saving LdaMulticore object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda, separately ['expElogbeta', 'sstats']
+2020-07-14 23:56:56,011 : INFO : storing np array 'expElogbeta' to /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.expElogbeta.npy
+2020-07-14 23:56:56,012 : INFO : not storing attribute dispatcher
+2020-07-14 23:56:56,013 : INFO : not storing attribute state
+2020-07-14 23:56:56,013 : INFO : not storing attribute id2word
+2020-07-14 23:56:56,014 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda
+2020-07-14 23:56:56,018 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:56] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-07-14 23:56:56,044 : INFO : loading Dictionary object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
+2020-07-14 23:56:56,056 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
+2020-07-14 23:56:56,057 : INFO : loading LdaModel object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda
+2020-07-14 23:56:56,060 : INFO : loading expElogbeta from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.expElogbeta.npy with mmap=None
+2020-07-14 23:56:56,061 : INFO : setting ignored attribute dispatcher to None
+2020-07-14 23:56:56,061 : INFO : setting ignored attribute state to None
+2020-07-14 23:56:56,061 : INFO : setting ignored attribute id2word to None
+2020-07-14 23:56:56,061 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda
+2020-07-14 23:56:56,061 : INFO : loading LdaState object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.state
+2020-07-14 23:56:56,063 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.state
+2020-07-14 23:56:56,136 : INFO : NumExpr defaulting to 4 threads.
+2020-07-14 23:57:09,134 : INFO : 127.0.0.1 - - [14/Jul/2020 23:57:09] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-07-14 23:57:46,334 : INFO : 127.0.0.1 - - [14/Jul/2020 23:57:46] "[37mPOST /upload HTTP/1.1[0m" 200 -
+2020-07-14 23:57:55,580 : INFO : 127.0.0.1 - - [14/Jul/2020 23:57:55] "[37mGET /reset HTTP/1.1[0m" 200 -
+2020-07-14 23:57:55,661 : INFO : 127.0.0.1 - - [14/Jul/2020 23:57:55] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-07-14 23:57:58,592 : INFO : 127.0.0.1 - - [14/Jul/2020 23:57:58] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-07-14 23:57:58,617 : INFO : adding document #0 to Dictionary(0 unique tokens: [])
+2020-07-14 23:57:58,732 : INFO : built Dictionary(19975 unique tokens: ['aaura', 'aaventapasseri', 'abbandona', 'abbandonarsi', 'abbandonata']...) from 4 documents (total 112928 corpus positions)
+2020-07-14 23:57:58,778 : INFO : collecting document frequencies
+2020-07-14 23:57:58,778 : INFO : PROGRESS: processing document #0
+2020-07-14 23:57:58,784 : INFO : calculating IDF weights for 4 documents and 19975 features (31254 matrix non-zeros)
+2020-07-14 23:57:58,982 : INFO : saving Dictionary object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict, separately None
+2020-07-14 23:57:58,989 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
+2020-07-14 23:57:58,994 : INFO : 127.0.0.1 - - [14/Jul/2020 23:57:58] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-07-14 23:57:59,032 : INFO : loading Dictionary object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
+2020-07-14 23:57:59,042 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
+2020-07-14 23:57:59,043 : INFO : using symmetric alpha at 0.5
+2020-07-14 23:57:59,043 : INFO : using symmetric eta at 0.5
+2020-07-14 23:57:59,046 : INFO : using serial LDA version on this node
+2020-07-14 23:57:59,049 : INFO : running online LDA training, 2 topics, 5 passes over the supplied corpus of 4 documents, updating every 4000 documents, evaluating every ~4 documents, iterating 50x with a convergence threshold of 0.001000
+2020-07-14 23:57:59,049 : WARNING : too few updates, training might not converge; consider increasing the number of passes or iterations to improve accuracy
+2020-07-14 23:57:59,050 : INFO : training LDA model using 2 processes
+2020-07-14 23:57:59,059 : INFO : PROGRESS: pass 0, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
+2020-07-14 23:57:59,155 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"aiac" + 0.000*"diario" + 0.000*"neanch" + 0.000*"persino" + 0.000*"dinanzi" + 0.000*"vittori" + 0.000*"hachiya" + 0.000*"dimenticato"
+2020-07-14 23:57:59,155 : INFO : topic #1 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"neanch" + 0.000*"persino" + 0.000*"aiac" + 0.000*"steiner" + 0.000*"diario" + 0.000*"vittori" + 0.000*"hachiya" + 0.000*"odisseo"
+2020-07-14 23:57:59,156 : INFO : topic diff=0.880352, rho=1.000000
+2020-07-14 23:57:59,303 : INFO : -11.192 per-word bound, 2339.1 perplexity estimate based on a held-out corpus of 4 documents with 236 words
+2020-07-14 23:57:59,303 : INFO : PROGRESS: pass 1, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
+2020-07-14 23:57:59,396 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"aiac" + 0.000*"neanch" + 0.000*"diario" + 0.000*"persino" + 0.000*"dinanzi" + 0.000*"vittori" + 0.000*"suicidio" + 0.000*"odisseo"
+2020-07-14 23:57:59,397 : INFO : topic #1 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"persino" + 0.000*"neanch" + 0.000*"diario" + 0.000*"aiac" + 0.000*"vittori" + 0.000*"steiner" + 0.000*"hachiya" + 0.000*"confucio"
+2020-07-14 23:57:59,397 : INFO : topic diff=0.002408, rho=0.706753
+2020-07-14 23:57:59,539 : INFO : -11.191 per-word bound, 2337.6 perplexity estimate based on a held-out corpus of 4 documents with 236 words
+2020-07-14 23:57:59,540 : INFO : PROGRESS: pass 2, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
+2020-07-14 23:57:59,619 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"persino" + 0.000*"diario" + 0.000*"dinanzi" + 0.000*"prezzi" + 0.000*"suicidio" + 0.000*"odisseo"
+2020-07-14 23:57:59,619 : INFO : topic #1 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"persino" + 0.000*"vittori" + 0.000*"steiner" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"hachiya" + 0.000*"confucio"
+2020-07-14 23:57:59,619 : INFO : topic diff=0.002436, rho=0.577158
+2020-07-14 23:57:59,767 : INFO : -11.189 per-word bound, 2334.7 perplexity estimate based on a held-out corpus of 4 documents with 236 words
+2020-07-14 23:57:59,768 : INFO : PROGRESS: pass 3, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
+2020-07-14 23:57:59,845 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"speer" + 0.000*"persino" + 0.000*"suicidio" + 0.000*"odisseo" + 0.000*"prezzi" + 0.000*"diario" + 0.000*"dinanzi"
+2020-07-14 23:57:59,846 : INFO : topic #1 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"persino" + 0.000*"vittori" + 0.000*"steiner" + 0.000*"hachiya" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"confucio"
+2020-07-14 23:57:59,846 : INFO : topic diff=0.002396, rho=0.499875
+2020-07-14 23:57:59,998 : INFO : -11.187 per-word bound, 2331.2 perplexity estimate based on a held-out corpus of 4 documents with 236 words
+2020-07-14 23:57:59,999 : INFO : PROGRESS: pass 4, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
+2020-07-14 23:58:00,353 : INFO : topic #0 (0.500): 0.000*"neanch" + 0.000*"aiac" + 0.000*"hitler" + 0.000*"speer" + 0.000*"suicidio" + 0.000*"odisseo" + 0.000*"prezzi" + 0.000*"persino" + 0.000*"dinanzi" + 0.000*"bambina"
+2020-07-14 23:58:00,353 : INFO : topic #1 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"persino" + 0.000*"steiner" + 0.000*"vittori" + 0.000*"hachiya" + 0.000*"confucio" + 0.000*"strauss" + 0.000*"dott"
+2020-07-14 23:58:00,353 : INFO : topic diff=0.001716, rho=0.447124
+2020-07-14 23:58:00,516 : INFO : -11.186 per-word bound, 2329.7 perplexity estimate based on a held-out corpus of 4 documents with 236 words
+2020-07-14 23:58:00,582 : INFO : saving LdaState object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.state, separately None
+2020-07-14 23:58:00,584 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.state
+2020-07-14 23:58:00,592 : INFO : saving LdaMulticore object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda, separately ['expElogbeta', 'sstats']
+2020-07-14 23:58:00,593 : INFO : storing np array 'expElogbeta' to /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.expElogbeta.npy
+2020-07-14 23:58:00,595 : INFO : not storing attribute dispatcher
+2020-07-14 23:58:00,595 : INFO : not storing attribute state
+2020-07-14 23:58:00,595 : INFO : not storing attribute id2word
+2020-07-14 23:58:00,595 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda
+2020-07-14 23:58:00,599 : INFO : 127.0.0.1 - - [14/Jul/2020 23:58:00] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-07-14 23:58:00,633 : INFO : loading Dictionary object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
+2020-07-14 23:58:00,647 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
+2020-07-14 23:58:00,647 : INFO : loading LdaModel object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda
+2020-07-14 23:58:00,648 : INFO : loading expElogbeta from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.expElogbeta.npy with mmap=None
+2020-07-14 23:58:00,649 : INFO : setting ignored attribute dispatcher to None
+2020-07-14 23:58:00,649 : INFO : setting ignored attribute state to None
+2020-07-14 23:58:00,649 : INFO : setting ignored attribute id2word to None
+2020-07-14 23:58:00,649 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda
+2020-07-14 23:58:00,649 : INFO : loading LdaState object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.state
+2020-07-14 23:58:00,651 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.state
+2020-07-14 23:58:10,732 : INFO : 127.0.0.1 - - [14/Jul/2020 23:58:10] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-07-14 23:58:10,740 : INFO : 127.0.0.1 - - [14/Jul/2020 23:58:10] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-07-14 23:58:15,801 : INFO : 127.0.0.1 - - [14/Jul/2020 23:58:15] "[37mGET /download/t-0005?time=1594763890741 HTTP/1.1[0m" 200 -
