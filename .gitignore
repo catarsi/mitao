@@ -5,3 +5,4 @@ _venv
 __local__config_loader
 __local__index.html
 __local__config_loader.js
+.log

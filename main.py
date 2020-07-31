@@ -189,7 +189,6 @@ def save_workflow():
 def load_workflow():
     workflow_file = request.form['workflow_file']
     jsdata = json.loads(workflow_file)
-    print(jsdata)
     workflow_fname = "workflow.json"
     path = BASE_CONFIG_PATH+"/"
     with open(path + workflow_fname, 'w') as outfile:
@@ -484,7 +483,6 @@ def open_browser():
         if not browse:
             rec_open(url,index + 1)
         else:
-            print(browser_path[index])
             return True
 
         return True

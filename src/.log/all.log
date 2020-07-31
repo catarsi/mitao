@@ -1,223 +1,285 @@
-2020-07-14 23:54:59,488 : INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2020-07-14 23:55:00,781 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[37mGET / HTTP/1.1[0m" 200 -
-2020-07-14 23:55:00,847 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2020-07-14 23:55:00,856 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
-2020-07-14 23:55:00,860 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/css/lightbox.css HTTP/1.1[0m" 304 -
-2020-07-14 23:55:00,862 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 304 -
-2020-07-14 23:55:00,868 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
-2020-07-14 23:55:00,869 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 304 -
-2020-07-14 23:55:00,873 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/js/lightbox.js HTTP/1.1[0m" 304 -
-2020-07-14 23:55:00,874 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/js/interface.js HTTP/1.1[0m" 304 -
-2020-07-14 23:55:00,875 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/js/lodash.js HTTP/1.1[0m" 304 -
-2020-07-14 23:55:00,882 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/js/diagram.js HTTP/1.1[0m" 304 -
-2020-07-14 23:55:00,886 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 304 -
-2020-07-14 23:55:00,889 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
-2020-07-14 23:55:00,889 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:00] "[36mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 304 -
-2020-07-14 23:55:01,331 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:01] "[36mGET /static/images/prev.png HTTP/1.1[0m" 304 -
-2020-07-14 23:55:01,333 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:01] "[36mGET /static/images/next.png HTTP/1.1[0m" 304 -
-2020-07-14 23:55:01,333 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:01] "[36mGET /static/images/loading.gif HTTP/1.1[0m" 304 -
-2020-07-14 23:55:01,334 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:01] "[36mGET /static/images/close.png HTTP/1.1[0m" 304 -
-2020-07-14 23:55:13,129 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:13] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-14 23:55:25,482 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:25] "[37mGET /reset HTTP/1.1[0m" 200 -
-2020-07-14 23:55:25,562 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:25] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-07-14 23:55:30,224 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:30] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-07-14 23:55:30,277 : INFO : adding document #0 to Dictionary(0 unique tokens: [])
-2020-07-14 23:55:30,526 : INFO : built Dictionary(19975 unique tokens: ['aaura', 'aaventapasseri', 'abbandona', 'abbandonarsi', 'abbandonata']...) from 4 documents (total 112928 corpus positions)
-2020-07-14 23:55:30,608 : INFO : collecting document frequencies
-2020-07-14 23:55:30,608 : INFO : PROGRESS: processing document #0
-2020-07-14 23:55:30,617 : INFO : calculating IDF weights for 4 documents and 19975 features (31254 matrix non-zeros)
-2020-07-14 23:55:30,917 : INFO : saving Dictionary object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict, separately None
-2020-07-14 23:55:30,924 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
-2020-07-14 23:55:30,933 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:30] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-07-14 23:55:30,940 : INFO : loading Dictionary object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
-2020-07-14 23:55:30,952 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
-2020-07-14 23:55:30,977 : INFO : saving Dictionary object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/dictionary.gdict, separately None
-2020-07-14 23:55:30,985 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/dictionary.gdict
-2020-07-14 23:55:31,042 : INFO : 127.0.0.1 - - [14/Jul/2020 23:55:31] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-07-14 23:56:04,652 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:04] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-14 23:56:14,759 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:14] "[37mGET /reset HTTP/1.1[0m" 200 -
-2020-07-14 23:56:14,838 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:14] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-07-14 23:56:17,693 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:17] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-07-14 23:56:17,725 : INFO : adding document #0 to Dictionary(0 unique tokens: [])
-2020-07-14 23:56:17,829 : INFO : built Dictionary(19975 unique tokens: ['aaura', 'aaventapasseri', 'abbandona', 'abbandonarsi', 'abbandonata']...) from 4 documents (total 112928 corpus positions)
-2020-07-14 23:56:17,876 : INFO : collecting document frequencies
-2020-07-14 23:56:17,876 : INFO : PROGRESS: processing document #0
-2020-07-14 23:56:17,882 : INFO : calculating IDF weights for 4 documents and 19975 features (31254 matrix non-zeros)
-2020-07-14 23:56:18,093 : INFO : saving Dictionary object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict, separately None
-2020-07-14 23:56:18,102 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
-2020-07-14 23:56:18,108 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:18] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-07-14 23:56:18,133 : INFO : loading Dictionary object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
-2020-07-14 23:56:18,147 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
-2020-07-14 23:56:18,149 : INFO : using symmetric alpha at 0.5
-2020-07-14 23:56:18,149 : INFO : using symmetric eta at 0.5
-2020-07-14 23:56:18,152 : INFO : using serial LDA version on this node
-2020-07-14 23:56:18,156 : INFO : running online LDA training, 2 topics, 5 passes over the supplied corpus of 4 documents, updating every 4000 documents, evaluating every ~4 documents, iterating 50x with a convergence threshold of 0.001000
-2020-07-14 23:56:18,156 : WARNING : too few updates, training might not converge; consider increasing the number of passes or iterations to improve accuracy
-2020-07-14 23:56:18,157 : INFO : training LDA model using 2 processes
-2020-07-14 23:56:18,168 : INFO : PROGRESS: pass 0, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
-2020-07-14 23:56:18,297 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"neanch" + 0.000*"persino" + 0.000*"aiac" + 0.000*"vittori" + 0.000*"hachiya" + 0.000*"odisseo" + 0.000*"steiner"
-2020-07-14 23:56:18,298 : INFO : topic #1 (0.500): 0.000*"speer" + 0.000*"hitler" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"persino" + 0.000*"diario" + 0.000*"steiner" + 0.000*"vittori" + 0.000*"bambina" + 0.000*"suicidio"
-2020-07-14 23:56:18,298 : INFO : topic diff=0.880610, rho=1.000000
-2020-07-14 23:56:18,440 : INFO : -11.191 per-word bound, 2338.5 perplexity estimate based on a held-out corpus of 4 documents with 236 words
-2020-07-14 23:56:18,441 : INFO : PROGRESS: pass 1, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
-2020-07-14 23:56:18,534 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"neanch" + 0.000*"diario" + 0.000*"aiac" + 0.000*"vittori" + 0.000*"persino" + 0.000*"hachiya" + 0.000*"dinanzi" + 0.000*"odisseo"
-2020-07-14 23:56:18,535 : INFO : topic #1 (0.500): 0.000*"speer" + 0.000*"hitler" + 0.000*"persino" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"steiner" + 0.000*"diario" + 0.000*"vittori" + 0.000*"lévi" + 0.000*"suicidio"
-2020-07-14 23:56:18,535 : INFO : topic diff=0.003209, rho=0.706753
-2020-07-14 23:56:18,681 : INFO : -11.189 per-word bound, 2334.9 perplexity estimate based on a held-out corpus of 4 documents with 236 words
-2020-07-14 23:56:18,682 : INFO : PROGRESS: pass 2, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
-2020-07-14 23:56:18,767 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"vittori" + 0.000*"hachiya" + 0.000*"dinanzi" + 0.000*"persino" + 0.000*"prezzi"
-2020-07-14 23:56:18,768 : INFO : topic #1 (0.500): 0.000*"speer" + 0.000*"hitler" + 0.000*"persino" + 0.000*"steiner" + 0.000*"aiac" + 0.000*"neanch" + 0.000*"diario" + 0.000*"lévi" + 0.000*"strauss" + 0.000*"dott"
-2020-07-14 23:56:18,768 : INFO : topic diff=0.002459, rho=0.577158
-2020-07-14 23:56:18,908 : INFO : -11.188 per-word bound, 2332.3 perplexity estimate based on a held-out corpus of 4 documents with 236 words
-2020-07-14 23:56:18,908 : INFO : PROGRESS: pass 3, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
-2020-07-14 23:56:18,988 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"vittori" + 0.000*"hachiya" + 0.000*"dinanzi" + 0.000*"prezzi" + 0.000*"odisseo"
-2020-07-14 23:56:18,989 : INFO : topic #1 (0.500): 0.000*"persino" + 0.000*"steiner" + 0.000*"speer" + 0.000*"hitler" + 0.000*"aiac" + 0.000*"neanch" + 0.000*"lévi" + 0.000*"strauss" + 0.000*"dott" + 0.000*"veza"
-2020-07-14 23:56:18,989 : INFO : topic diff=0.002308, rho=0.499875
-2020-07-14 23:56:19,151 : INFO : -11.185 per-word bound, 2328.7 perplexity estimate based on a held-out corpus of 4 documents with 236 words
-2020-07-14 23:56:19,151 : INFO : PROGRESS: pass 4, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
-2020-07-14 23:56:19,231 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"vittori" + 0.000*"hachiya" + 0.000*"dinanzi" + 0.000*"confucio" + 0.000*"prezzi"
-2020-07-14 23:56:19,231 : INFO : topic #1 (0.500): 0.000*"steiner" + 0.000*"persino" + 0.000*"aiac" + 0.000*"speer" + 0.000*"hitler" + 0.000*"neanch" + 0.000*"lévi" + 0.000*"strauss" + 0.000*"dott" + 0.000*"veza"
-2020-07-14 23:56:19,231 : INFO : topic diff=0.001786, rho=0.447124
-2020-07-14 23:56:19,387 : INFO : -11.185 per-word bound, 2327.5 perplexity estimate based on a held-out corpus of 4 documents with 236 words
-2020-07-14 23:56:19,471 : INFO : saving LdaState object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.state, separately None
-2020-07-14 23:56:19,476 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.state
-2020-07-14 23:56:19,493 : INFO : saving LdaMulticore object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda, separately ['expElogbeta', 'sstats']
-2020-07-14 23:56:19,494 : INFO : storing np array 'expElogbeta' to /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.expElogbeta.npy
-2020-07-14 23:56:19,501 : INFO : not storing attribute dispatcher
-2020-07-14 23:56:19,501 : INFO : not storing attribute state
-2020-07-14 23:56:19,501 : INFO : not storing attribute id2word
-2020-07-14 23:56:19,502 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda
-2020-07-14 23:56:19,507 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:19] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-07-14 23:56:39,968 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:39] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-14 23:56:50,707 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:50] "[37mGET /reset HTTP/1.1[0m" 200 -
-2020-07-14 23:56:50,796 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:50] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-07-14 23:56:53,704 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:53] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-07-14 23:56:53,750 : INFO : adding document #0 to Dictionary(0 unique tokens: [])
-2020-07-14 23:56:53,887 : INFO : built Dictionary(19975 unique tokens: ['aaura', 'aaventapasseri', 'abbandona', 'abbandonarsi', 'abbandonata']...) from 4 documents (total 112928 corpus positions)
-2020-07-14 23:56:53,949 : INFO : collecting document frequencies
-2020-07-14 23:56:53,950 : INFO : PROGRESS: processing document #0
-2020-07-14 23:56:53,955 : INFO : calculating IDF weights for 4 documents and 19975 features (31254 matrix non-zeros)
-2020-07-14 23:56:54,208 : INFO : saving Dictionary object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict, separately None
-2020-07-14 23:56:54,218 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
-2020-07-14 23:56:54,226 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:54] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-07-14 23:56:54,259 : INFO : loading Dictionary object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
-2020-07-14 23:56:54,274 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
-2020-07-14 23:56:54,275 : INFO : using symmetric alpha at 0.5
-2020-07-14 23:56:54,275 : INFO : using symmetric eta at 0.5
-2020-07-14 23:56:54,280 : INFO : using serial LDA version on this node
-2020-07-14 23:56:54,286 : INFO : running online LDA training, 2 topics, 5 passes over the supplied corpus of 4 documents, updating every 4000 documents, evaluating every ~4 documents, iterating 50x with a convergence threshold of 0.001000
-2020-07-14 23:56:54,286 : WARNING : too few updates, training might not converge; consider increasing the number of passes or iterations to improve accuracy
-2020-07-14 23:56:54,287 : INFO : training LDA model using 2 processes
-2020-07-14 23:56:54,302 : INFO : PROGRESS: pass 0, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
-2020-07-14 23:56:54,419 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"neanch" + 0.000*"diario" + 0.000*"aiac" + 0.000*"persino" + 0.000*"suicidio" + 0.000*"steiner" + 0.000*"dinanzi" + 0.000*"odisseo"
-2020-07-14 23:56:54,419 : INFO : topic #1 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"aiac" + 0.000*"persino" + 0.000*"diario" + 0.000*"neanch" + 0.000*"vittori" + 0.000*"hachiya" + 0.000*"steiner" + 0.000*"kraus"
-2020-07-14 23:56:54,419 : INFO : topic diff=0.880563, rho=1.000000
-2020-07-14 23:56:54,616 : INFO : -11.192 per-word bound, 2339.4 perplexity estimate based on a held-out corpus of 4 documents with 236 words
-2020-07-14 23:56:54,616 : INFO : PROGRESS: pass 1, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
-2020-07-14 23:56:54,759 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"persino" + 0.000*"diario" + 0.000*"suicidio" + 0.000*"steiner" + 0.000*"odisseo" + 0.000*"dinanzi"
-2020-07-14 23:56:54,760 : INFO : topic #1 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"aiac" + 0.000*"persino" + 0.000*"neanch" + 0.000*"vittori" + 0.000*"hachiya" + 0.000*"steiner" + 0.000*"dinanzi"
-2020-07-14 23:56:54,760 : INFO : topic diff=0.001914, rho=0.706753
-2020-07-14 23:56:54,911 : INFO : -11.191 per-word bound, 2338.4 perplexity estimate based on a held-out corpus of 4 documents with 236 words
-2020-07-14 23:56:54,911 : INFO : PROGRESS: pass 2, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
-2020-07-14 23:56:54,993 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"persino" + 0.000*"suicidio" + 0.000*"diario" + 0.000*"odisseo" + 0.000*"steiner" + 0.000*"dinanzi"
-2020-07-14 23:56:54,994 : INFO : topic #1 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"persino" + 0.000*"aiac" + 0.000*"vittori" + 0.000*"neanch" + 0.000*"hachiya" + 0.000*"steiner" + 0.000*"dinanzi"
-2020-07-14 23:56:54,994 : INFO : topic diff=0.001330, rho=0.577158
-2020-07-14 23:56:55,153 : INFO : -11.190 per-word bound, 2337.0 perplexity estimate based on a held-out corpus of 4 documents with 236 words
-2020-07-14 23:56:55,153 : INFO : PROGRESS: pass 3, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
-2020-07-14 23:56:55,243 : INFO : topic #0 (0.500): 0.000*"neanch" + 0.000*"aiac" + 0.000*"hitler" + 0.000*"speer" + 0.000*"persino" + 0.000*"suicidio" + 0.000*"odisseo" + 0.000*"bambina" + 0.000*"diario" + 0.000*"fintanto"
-2020-07-14 23:56:55,244 : INFO : topic #1 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"persino" + 0.000*"vittori" + 0.000*"aiac" + 0.000*"neanch" + 0.000*"hachiya" + 0.000*"steiner" + 0.000*"dinanzi"
-2020-07-14 23:56:55,244 : INFO : topic diff=0.001656, rho=0.499875
-2020-07-14 23:56:55,393 : INFO : -11.189 per-word bound, 2334.9 perplexity estimate based on a held-out corpus of 4 documents with 236 words
-2020-07-14 23:56:55,393 : INFO : PROGRESS: pass 4, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
-2020-07-14 23:56:55,728 : INFO : topic #0 (0.500): 0.000*"neanch" + 0.000*"aiac" + 0.000*"hitler" + 0.000*"suicidio" + 0.000*"odisseo" + 0.000*"speer" + 0.000*"persino" + 0.000*"bambina" + 0.000*"fintanto" + 0.000*"dimenticato"
-2020-07-14 23:56:55,729 : INFO : topic #1 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"vittori" + 0.000*"persino" + 0.000*"hachiya" + 0.000*"steiner" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"dinanzi"
-2020-07-14 23:56:55,729 : INFO : topic diff=0.001288, rho=0.447124
-2020-07-14 23:56:55,884 : INFO : -11.189 per-word bound, 2333.9 perplexity estimate based on a held-out corpus of 4 documents with 236 words
-2020-07-14 23:56:55,997 : INFO : saving LdaState object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.state, separately None
-2020-07-14 23:56:56,001 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.state
-2020-07-14 23:56:56,010 : INFO : saving LdaMulticore object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda, separately ['expElogbeta', 'sstats']
-2020-07-14 23:56:56,011 : INFO : storing np array 'expElogbeta' to /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.expElogbeta.npy
-2020-07-14 23:56:56,012 : INFO : not storing attribute dispatcher
-2020-07-14 23:56:56,013 : INFO : not storing attribute state
-2020-07-14 23:56:56,013 : INFO : not storing attribute id2word
-2020-07-14 23:56:56,014 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda
-2020-07-14 23:56:56,018 : INFO : 127.0.0.1 - - [14/Jul/2020 23:56:56] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-07-14 23:56:56,044 : INFO : loading Dictionary object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
-2020-07-14 23:56:56,056 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
-2020-07-14 23:56:56,057 : INFO : loading LdaModel object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda
-2020-07-14 23:56:56,060 : INFO : loading expElogbeta from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.expElogbeta.npy with mmap=None
-2020-07-14 23:56:56,061 : INFO : setting ignored attribute dispatcher to None
-2020-07-14 23:56:56,061 : INFO : setting ignored attribute state to None
-2020-07-14 23:56:56,061 : INFO : setting ignored attribute id2word to None
-2020-07-14 23:56:56,061 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda
-2020-07-14 23:56:56,061 : INFO : loading LdaState object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.state
-2020-07-14 23:56:56,063 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.state
-2020-07-14 23:56:56,136 : INFO : NumExpr defaulting to 4 threads.
-2020-07-14 23:57:09,134 : INFO : 127.0.0.1 - - [14/Jul/2020 23:57:09] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-07-14 23:57:46,334 : INFO : 127.0.0.1 - - [14/Jul/2020 23:57:46] "[37mPOST /upload HTTP/1.1[0m" 200 -
-2020-07-14 23:57:55,580 : INFO : 127.0.0.1 - - [14/Jul/2020 23:57:55] "[37mGET /reset HTTP/1.1[0m" 200 -
-2020-07-14 23:57:55,661 : INFO : 127.0.0.1 - - [14/Jul/2020 23:57:55] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-07-14 23:57:58,592 : INFO : 127.0.0.1 - - [14/Jul/2020 23:57:58] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-07-14 23:57:58,617 : INFO : adding document #0 to Dictionary(0 unique tokens: [])
-2020-07-14 23:57:58,732 : INFO : built Dictionary(19975 unique tokens: ['aaura', 'aaventapasseri', 'abbandona', 'abbandonarsi', 'abbandonata']...) from 4 documents (total 112928 corpus positions)
-2020-07-14 23:57:58,778 : INFO : collecting document frequencies
-2020-07-14 23:57:58,778 : INFO : PROGRESS: processing document #0
-2020-07-14 23:57:58,784 : INFO : calculating IDF weights for 4 documents and 19975 features (31254 matrix non-zeros)
-2020-07-14 23:57:58,982 : INFO : saving Dictionary object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict, separately None
-2020-07-14 23:57:58,989 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
-2020-07-14 23:57:58,994 : INFO : 127.0.0.1 - - [14/Jul/2020 23:57:58] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-07-14 23:57:59,032 : INFO : loading Dictionary object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
-2020-07-14 23:57:59,042 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
-2020-07-14 23:57:59,043 : INFO : using symmetric alpha at 0.5
-2020-07-14 23:57:59,043 : INFO : using symmetric eta at 0.5
-2020-07-14 23:57:59,046 : INFO : using serial LDA version on this node
-2020-07-14 23:57:59,049 : INFO : running online LDA training, 2 topics, 5 passes over the supplied corpus of 4 documents, updating every 4000 documents, evaluating every ~4 documents, iterating 50x with a convergence threshold of 0.001000
-2020-07-14 23:57:59,049 : WARNING : too few updates, training might not converge; consider increasing the number of passes or iterations to improve accuracy
-2020-07-14 23:57:59,050 : INFO : training LDA model using 2 processes
-2020-07-14 23:57:59,059 : INFO : PROGRESS: pass 0, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
-2020-07-14 23:57:59,155 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"aiac" + 0.000*"diario" + 0.000*"neanch" + 0.000*"persino" + 0.000*"dinanzi" + 0.000*"vittori" + 0.000*"hachiya" + 0.000*"dimenticato"
-2020-07-14 23:57:59,155 : INFO : topic #1 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"neanch" + 0.000*"persino" + 0.000*"aiac" + 0.000*"steiner" + 0.000*"diario" + 0.000*"vittori" + 0.000*"hachiya" + 0.000*"odisseo"
-2020-07-14 23:57:59,156 : INFO : topic diff=0.880352, rho=1.000000
-2020-07-14 23:57:59,303 : INFO : -11.192 per-word bound, 2339.1 perplexity estimate based on a held-out corpus of 4 documents with 236 words
-2020-07-14 23:57:59,303 : INFO : PROGRESS: pass 1, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
-2020-07-14 23:57:59,396 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"aiac" + 0.000*"neanch" + 0.000*"diario" + 0.000*"persino" + 0.000*"dinanzi" + 0.000*"vittori" + 0.000*"suicidio" + 0.000*"odisseo"
-2020-07-14 23:57:59,397 : INFO : topic #1 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"persino" + 0.000*"neanch" + 0.000*"diario" + 0.000*"aiac" + 0.000*"vittori" + 0.000*"steiner" + 0.000*"hachiya" + 0.000*"confucio"
-2020-07-14 23:57:59,397 : INFO : topic diff=0.002408, rho=0.706753
-2020-07-14 23:57:59,539 : INFO : -11.191 per-word bound, 2337.6 perplexity estimate based on a held-out corpus of 4 documents with 236 words
-2020-07-14 23:57:59,540 : INFO : PROGRESS: pass 2, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
-2020-07-14 23:57:59,619 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"persino" + 0.000*"diario" + 0.000*"dinanzi" + 0.000*"prezzi" + 0.000*"suicidio" + 0.000*"odisseo"
-2020-07-14 23:57:59,619 : INFO : topic #1 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"persino" + 0.000*"vittori" + 0.000*"steiner" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"hachiya" + 0.000*"confucio"
-2020-07-14 23:57:59,619 : INFO : topic diff=0.002436, rho=0.577158
-2020-07-14 23:57:59,767 : INFO : -11.189 per-word bound, 2334.7 perplexity estimate based on a held-out corpus of 4 documents with 236 words
-2020-07-14 23:57:59,768 : INFO : PROGRESS: pass 3, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
-2020-07-14 23:57:59,845 : INFO : topic #0 (0.500): 0.000*"hitler" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"speer" + 0.000*"persino" + 0.000*"suicidio" + 0.000*"odisseo" + 0.000*"prezzi" + 0.000*"diario" + 0.000*"dinanzi"
-2020-07-14 23:57:59,846 : INFO : topic #1 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"persino" + 0.000*"vittori" + 0.000*"steiner" + 0.000*"hachiya" + 0.000*"neanch" + 0.000*"aiac" + 0.000*"confucio"
-2020-07-14 23:57:59,846 : INFO : topic diff=0.002396, rho=0.499875
-2020-07-14 23:57:59,998 : INFO : -11.187 per-word bound, 2331.2 perplexity estimate based on a held-out corpus of 4 documents with 236 words
-2020-07-14 23:57:59,999 : INFO : PROGRESS: pass 4, dispatched chunk #0 = documents up to #4/4, outstanding queue size 1
-2020-07-14 23:58:00,353 : INFO : topic #0 (0.500): 0.000*"neanch" + 0.000*"aiac" + 0.000*"hitler" + 0.000*"speer" + 0.000*"suicidio" + 0.000*"odisseo" + 0.000*"prezzi" + 0.000*"persino" + 0.000*"dinanzi" + 0.000*"bambina"
-2020-07-14 23:58:00,353 : INFO : topic #1 (0.500): 0.000*"hitler" + 0.000*"speer" + 0.000*"diario" + 0.000*"persino" + 0.000*"steiner" + 0.000*"vittori" + 0.000*"hachiya" + 0.000*"confucio" + 0.000*"strauss" + 0.000*"dott"
-2020-07-14 23:58:00,353 : INFO : topic diff=0.001716, rho=0.447124
-2020-07-14 23:58:00,516 : INFO : -11.186 per-word bound, 2329.7 perplexity estimate based on a held-out corpus of 4 documents with 236 words
-2020-07-14 23:58:00,582 : INFO : saving LdaState object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.state, separately None
-2020-07-14 23:58:00,584 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.state
-2020-07-14 23:58:00,592 : INFO : saving LdaMulticore object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda, separately ['expElogbeta', 'sstats']
-2020-07-14 23:58:00,593 : INFO : storing np array 'expElogbeta' to /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.expElogbeta.npy
-2020-07-14 23:58:00,595 : INFO : not storing attribute dispatcher
-2020-07-14 23:58:00,595 : INFO : not storing attribute state
-2020-07-14 23:58:00,595 : INFO : not storing attribute id2word
-2020-07-14 23:58:00,595 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda
-2020-07-14 23:58:00,599 : INFO : 127.0.0.1 - - [14/Jul/2020 23:58:00] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-07-14 23:58:00,633 : INFO : loading Dictionary object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
-2020-07-14 23:58:00,647 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0002/dictionary.gdict
-2020-07-14 23:58:00,647 : INFO : loading LdaModel object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda
-2020-07-14 23:58:00,648 : INFO : loading expElogbeta from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.expElogbeta.npy with mmap=None
-2020-07-14 23:58:00,649 : INFO : setting ignored attribute dispatcher to None
-2020-07-14 23:58:00,649 : INFO : setting ignored attribute state to None
-2020-07-14 23:58:00,649 : INFO : setting ignored attribute id2word to None
-2020-07-14 23:58:00,649 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda
-2020-07-14 23:58:00,649 : INFO : loading LdaState object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.state
-2020-07-14 23:58:00,651 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0003/ldamodel.glda.state
-2020-07-14 23:58:10,732 : INFO : 127.0.0.1 - - [14/Jul/2020 23:58:10] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-07-14 23:58:10,740 : INFO : 127.0.0.1 - - [14/Jul/2020 23:58:10] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-07-14 23:58:15,801 : INFO : 127.0.0.1 - - [14/Jul/2020 23:58:15] "[37mGET /download/t-0005?time=1594763890741 HTTP/1.1[0m" 200 -
+2020-07-31 15:19:41,418 : INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-07-31 15:19:42,708 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:42] "[37mGET / HTTP/1.1[0m" 200 -
+2020-07-31 15:19:42,758 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2020-07-31 15:19:42,768 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:42] "[36mGET /static/css/lightbox.css HTTP/1.1[0m" 304 -
+2020-07-31 15:19:42,773 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:42] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2020-07-31 15:19:42,776 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:42] "[36mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 304 -
+2020-07-31 15:19:42,780 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:42] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+2020-07-31 15:19:42,780 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:42] "[36mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 304 -
+2020-07-31 15:19:42,782 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:42] "[36mGET /static/js/lodash.js HTTP/1.1[0m" 304 -
+2020-07-31 15:19:42,787 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:42] "[36mGET /static/js/lightbox.js HTTP/1.1[0m" 304 -
+2020-07-31 15:19:42,790 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:42] "[36mGET /static/js/interface.js HTTP/1.1[0m" 304 -
+2020-07-31 15:19:42,791 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:42] "[36mGET /static/js/diagram.js HTTP/1.1[0m" 304 -
+2020-07-31 15:19:42,796 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:42] "[36mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 304 -
+2020-07-31 15:19:42,797 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:42] "[36mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 304 -
+2020-07-31 15:19:42,798 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2020-07-31 15:19:43,222 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:43] "[36mGET /static/images/prev.png HTTP/1.1[0m" 304 -
+2020-07-31 15:19:43,223 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:43] "[36mGET /static/images/next.png HTTP/1.1[0m" 304 -
+2020-07-31 15:19:43,225 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:43] "[36mGET /static/images/loading.gif HTTP/1.1[0m" 304 -
+2020-07-31 15:19:43,226 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:43] "[36mGET /static/images/close.png HTTP/1.1[0m" 304 -
+2020-07-31 15:19:56,433 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:56] "[37mGET / HTTP/1.1[0m" 200 -
+2020-07-31 15:19:56,472 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:56] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+2020-07-31 15:19:56,494 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:56] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
+2020-07-31 15:19:56,497 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:56] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
+2020-07-31 15:19:56,501 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:56] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:19:56,503 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:56] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:19:56,504 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:56] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:19:56,510 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:56] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
+2020-07-31 15:19:56,512 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:56] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
+2020-07-31 15:19:56,517 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:56] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
+2020-07-31 15:19:56,520 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:56] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
+2020-07-31 15:19:56,520 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:56] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
+2020-07-31 15:19:56,525 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:56] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
+2020-07-31 15:19:56,531 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:56] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
+2020-07-31 15:19:56,740 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:56] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
+2020-07-31 15:19:56,742 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:56] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
+2020-07-31 15:19:56,745 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:56] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
+2020-07-31 15:19:56,746 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:56] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
+2020-07-31 15:19:56,815 : INFO : 127.0.0.1 - - [31/Jul/2020 15:19:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2020-07-31 15:20:00,695 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2020-07-31 15:20:00,699 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:00] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2020-07-31 15:20:00,700 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:00] "[36mGET /static/css/lightbox.css HTTP/1.1[0m" 304 -
+2020-07-31 15:20:00,790 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:00] "[37mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 200 -
+2020-07-31 15:20:23,611 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:23] "[37mGET / HTTP/1.1[0m" 200 -
+2020-07-31 15:20:23,655 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:23] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
+2020-07-31 15:20:23,660 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:23] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
+2020-07-31 15:20:23,661 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:23] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+2020-07-31 15:20:23,666 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:23] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:20:23,670 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:23] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:20:23,672 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:23] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:20:23,675 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:23] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
+2020-07-31 15:20:23,677 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:23] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
+2020-07-31 15:20:23,680 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:23] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
+2020-07-31 15:20:23,685 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:23] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
+2020-07-31 15:20:23,686 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:23] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
+2020-07-31 15:20:23,689 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:23] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
+2020-07-31 15:20:23,691 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:23] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
+2020-07-31 15:20:23,950 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:23] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
+2020-07-31 15:20:23,950 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:23] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
+2020-07-31 15:20:23,951 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:23] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
+2020-07-31 15:20:23,953 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:23] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
+2020-07-31 15:20:23,995 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2020-07-31 15:20:26,668 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2020-07-31 15:20:26,671 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:26] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
+2020-07-31 15:20:26,675 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:26] "[36mGET /static/css/lightbox.css HTTP/1.1[0m" 304 -
+2020-07-31 15:20:26,768 : INFO : 127.0.0.1 - - [31/Jul/2020 15:20:26] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
+2020-07-31 15:22:17,399 : INFO : 127.0.0.1 - - [31/Jul/2020 15:22:17] "[37mGET / HTTP/1.1[0m" 200 -
+2020-07-31 15:22:17,471 : INFO : 127.0.0.1 - - [31/Jul/2020 15:22:17] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
+2020-07-31 15:22:17,476 : INFO : 127.0.0.1 - - [31/Jul/2020 15:22:17] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
+2020-07-31 15:22:17,483 : INFO : 127.0.0.1 - - [31/Jul/2020 15:22:17] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:22:17,490 : INFO : 127.0.0.1 - - [31/Jul/2020 15:22:17] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:22:17,495 : INFO : 127.0.0.1 - - [31/Jul/2020 15:22:17] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:22:17,506 : INFO : 127.0.0.1 - - [31/Jul/2020 15:22:17] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
+2020-07-31 15:22:17,506 : INFO : 127.0.0.1 - - [31/Jul/2020 15:22:17] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
+2020-07-31 15:22:17,509 : INFO : 127.0.0.1 - - [31/Jul/2020 15:22:17] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+2020-07-31 15:22:17,516 : INFO : 127.0.0.1 - - [31/Jul/2020 15:22:17] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
+2020-07-31 15:22:17,518 : INFO : 127.0.0.1 - - [31/Jul/2020 15:22:17] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
+2020-07-31 15:22:17,521 : INFO : 127.0.0.1 - - [31/Jul/2020 15:22:17] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
+2020-07-31 15:22:17,525 : INFO : 127.0.0.1 - - [31/Jul/2020 15:22:17] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
+2020-07-31 15:22:17,531 : INFO : 127.0.0.1 - - [31/Jul/2020 15:22:17] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
+2020-07-31 15:22:17,736 : INFO : 127.0.0.1 - - [31/Jul/2020 15:22:17] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
+2020-07-31 15:22:17,838 : INFO : 127.0.0.1 - - [31/Jul/2020 15:22:17] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
+2020-07-31 15:22:17,842 : INFO : 127.0.0.1 - - [31/Jul/2020 15:22:17] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
+2020-07-31 15:22:17,847 : INFO : 127.0.0.1 - - [31/Jul/2020 15:22:17] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
+2020-07-31 15:22:17,848 : INFO : 127.0.0.1 - - [31/Jul/2020 15:22:17] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
+2020-07-31 15:22:17,897 : INFO : 127.0.0.1 - - [31/Jul/2020 15:22:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2020-07-31 15:24:18,309 : INFO : 127.0.0.1 - - [31/Jul/2020 15:24:18] "[37mGET / HTTP/1.1[0m" 200 -
+2020-07-31 15:24:18,387 : INFO : 127.0.0.1 - - [31/Jul/2020 15:24:18] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
+2020-07-31 15:24:18,388 : INFO : 127.0.0.1 - - [31/Jul/2020 15:24:18] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
+2020-07-31 15:24:18,388 : INFO : 127.0.0.1 - - [31/Jul/2020 15:24:18] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+2020-07-31 15:24:18,390 : INFO : 127.0.0.1 - - [31/Jul/2020 15:24:18] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:24:18,395 : INFO : 127.0.0.1 - - [31/Jul/2020 15:24:18] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:24:18,401 : INFO : 127.0.0.1 - - [31/Jul/2020 15:24:18] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:24:18,408 : INFO : 127.0.0.1 - - [31/Jul/2020 15:24:18] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
+2020-07-31 15:24:18,408 : INFO : 127.0.0.1 - - [31/Jul/2020 15:24:18] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
+2020-07-31 15:24:18,414 : INFO : 127.0.0.1 - - [31/Jul/2020 15:24:18] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
+2020-07-31 15:24:18,417 : INFO : 127.0.0.1 - - [31/Jul/2020 15:24:18] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
+2020-07-31 15:24:18,420 : INFO : 127.0.0.1 - - [31/Jul/2020 15:24:18] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
+2020-07-31 15:24:18,422 : INFO : 127.0.0.1 - - [31/Jul/2020 15:24:18] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
+2020-07-31 15:24:18,423 : INFO : 127.0.0.1 - - [31/Jul/2020 15:24:18] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
+2020-07-31 15:24:18,593 : INFO : 127.0.0.1 - - [31/Jul/2020 15:24:18] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
+2020-07-31 15:24:18,690 : INFO : 127.0.0.1 - - [31/Jul/2020 15:24:18] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
+2020-07-31 15:24:18,692 : INFO : 127.0.0.1 - - [31/Jul/2020 15:24:18] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
+2020-07-31 15:24:18,694 : INFO : 127.0.0.1 - - [31/Jul/2020 15:24:18] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
+2020-07-31 15:24:18,695 : INFO : 127.0.0.1 - - [31/Jul/2020 15:24:18] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
+2020-07-31 15:24:18,772 : INFO : 127.0.0.1 - - [31/Jul/2020 15:24:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2020-07-31 15:26:19,885 : INFO : 127.0.0.1 - - [31/Jul/2020 15:26:19] "[37mGET / HTTP/1.1[0m" 200 -
+2020-07-31 15:26:19,952 : INFO : 127.0.0.1 - - [31/Jul/2020 15:26:19] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+2020-07-31 15:26:19,953 : INFO : 127.0.0.1 - - [31/Jul/2020 15:26:19] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
+2020-07-31 15:26:19,956 : INFO : 127.0.0.1 - - [31/Jul/2020 15:26:19] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
+2020-07-31 15:26:19,963 : INFO : 127.0.0.1 - - [31/Jul/2020 15:26:19] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:26:19,963 : INFO : 127.0.0.1 - - [31/Jul/2020 15:26:19] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:26:19,965 : INFO : 127.0.0.1 - - [31/Jul/2020 15:26:19] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:26:19,968 : INFO : 127.0.0.1 - - [31/Jul/2020 15:26:19] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
+2020-07-31 15:26:19,970 : INFO : 127.0.0.1 - - [31/Jul/2020 15:26:19] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
+2020-07-31 15:26:19,978 : INFO : 127.0.0.1 - - [31/Jul/2020 15:26:19] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
+2020-07-31 15:26:19,981 : INFO : 127.0.0.1 - - [31/Jul/2020 15:26:19] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
+2020-07-31 15:26:19,983 : INFO : 127.0.0.1 - - [31/Jul/2020 15:26:19] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
+2020-07-31 15:26:19,986 : INFO : 127.0.0.1 - - [31/Jul/2020 15:26:19] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
+2020-07-31 15:26:19,988 : INFO : 127.0.0.1 - - [31/Jul/2020 15:26:19] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
+2020-07-31 15:26:20,147 : INFO : 127.0.0.1 - - [31/Jul/2020 15:26:20] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
+2020-07-31 15:26:20,244 : INFO : 127.0.0.1 - - [31/Jul/2020 15:26:20] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
+2020-07-31 15:26:20,247 : INFO : 127.0.0.1 - - [31/Jul/2020 15:26:20] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
+2020-07-31 15:26:20,249 : INFO : 127.0.0.1 - - [31/Jul/2020 15:26:20] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
+2020-07-31 15:26:20,250 : INFO : 127.0.0.1 - - [31/Jul/2020 15:26:20] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
+2020-07-31 15:26:20,332 : INFO : 127.0.0.1 - - [31/Jul/2020 15:26:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2020-07-31 15:28:17,576 : INFO : 127.0.0.1 - - [31/Jul/2020 15:28:17] "[37mGET / HTTP/1.1[0m" 200 -
+2020-07-31 15:28:17,647 : INFO : 127.0.0.1 - - [31/Jul/2020 15:28:17] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+2020-07-31 15:28:17,648 : INFO : 127.0.0.1 - - [31/Jul/2020 15:28:17] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
+2020-07-31 15:28:17,657 : INFO : 127.0.0.1 - - [31/Jul/2020 15:28:17] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:28:17,658 : INFO : 127.0.0.1 - - [31/Jul/2020 15:28:17] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
+2020-07-31 15:28:17,659 : INFO : 127.0.0.1 - - [31/Jul/2020 15:28:17] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:28:17,663 : INFO : 127.0.0.1 - - [31/Jul/2020 15:28:17] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
+2020-07-31 15:28:17,665 : INFO : 127.0.0.1 - - [31/Jul/2020 15:28:17] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:28:17,673 : INFO : 127.0.0.1 - - [31/Jul/2020 15:28:17] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
+2020-07-31 15:28:17,675 : INFO : 127.0.0.1 - - [31/Jul/2020 15:28:17] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
+2020-07-31 15:28:17,676 : INFO : 127.0.0.1 - - [31/Jul/2020 15:28:17] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
+2020-07-31 15:28:17,684 : INFO : 127.0.0.1 - - [31/Jul/2020 15:28:17] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
+2020-07-31 15:28:17,685 : INFO : 127.0.0.1 - - [31/Jul/2020 15:28:17] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
+2020-07-31 15:28:17,689 : INFO : 127.0.0.1 - - [31/Jul/2020 15:28:17] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
+2020-07-31 15:28:17,904 : INFO : 127.0.0.1 - - [31/Jul/2020 15:28:17] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
+2020-07-31 15:28:18,004 : INFO : 127.0.0.1 - - [31/Jul/2020 15:28:18] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
+2020-07-31 15:28:18,005 : INFO : 127.0.0.1 - - [31/Jul/2020 15:28:18] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
+2020-07-31 15:28:18,008 : INFO : 127.0.0.1 - - [31/Jul/2020 15:28:18] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
+2020-07-31 15:28:18,008 : INFO : 127.0.0.1 - - [31/Jul/2020 15:28:18] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
+2020-07-31 15:28:18,070 : INFO : 127.0.0.1 - - [31/Jul/2020 15:28:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2020-07-31 15:29:06,168 : INFO : 127.0.0.1 - - [31/Jul/2020 15:29:06] "[37mGET / HTTP/1.1[0m" 200 -
+2020-07-31 15:29:06,242 : INFO : 127.0.0.1 - - [31/Jul/2020 15:29:06] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
+2020-07-31 15:29:06,249 : INFO : 127.0.0.1 - - [31/Jul/2020 15:29:06] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
+2020-07-31 15:29:06,251 : INFO : 127.0.0.1 - - [31/Jul/2020 15:29:06] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+2020-07-31 15:29:06,252 : INFO : 127.0.0.1 - - [31/Jul/2020 15:29:06] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:29:06,254 : INFO : 127.0.0.1 - - [31/Jul/2020 15:29:06] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:29:06,262 : INFO : 127.0.0.1 - - [31/Jul/2020 15:29:06] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:29:06,265 : INFO : 127.0.0.1 - - [31/Jul/2020 15:29:06] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
+2020-07-31 15:29:06,267 : INFO : 127.0.0.1 - - [31/Jul/2020 15:29:06] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
+2020-07-31 15:29:06,268 : INFO : 127.0.0.1 - - [31/Jul/2020 15:29:06] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
+2020-07-31 15:29:06,271 : INFO : 127.0.0.1 - - [31/Jul/2020 15:29:06] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
+2020-07-31 15:29:06,273 : INFO : 127.0.0.1 - - [31/Jul/2020 15:29:06] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
+2020-07-31 15:29:06,281 : INFO : 127.0.0.1 - - [31/Jul/2020 15:29:06] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
+2020-07-31 15:29:06,281 : INFO : 127.0.0.1 - - [31/Jul/2020 15:29:06] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
+2020-07-31 15:29:06,456 : INFO : 127.0.0.1 - - [31/Jul/2020 15:29:06] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
+2020-07-31 15:29:06,551 : INFO : 127.0.0.1 - - [31/Jul/2020 15:29:06] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
+2020-07-31 15:29:06,552 : INFO : 127.0.0.1 - - [31/Jul/2020 15:29:06] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
+2020-07-31 15:29:06,555 : INFO : 127.0.0.1 - - [31/Jul/2020 15:29:06] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
+2020-07-31 15:29:06,555 : INFO : 127.0.0.1 - - [31/Jul/2020 15:29:06] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
+2020-07-31 15:29:06,602 : INFO : 127.0.0.1 - - [31/Jul/2020 15:29:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2020-07-31 15:36:02,364 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:02] "[37mGET / HTTP/1.1[0m" 200 -
+2020-07-31 15:36:02,417 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:02] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+2020-07-31 15:36:02,425 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:02] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
+2020-07-31 15:36:02,428 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:02] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
+2020-07-31 15:36:02,432 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:02] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:36:02,436 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:02] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:36:02,439 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:02] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
+2020-07-31 15:36:02,441 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:02] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:36:02,447 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:02] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
+2020-07-31 15:36:02,450 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:02] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
+2020-07-31 15:36:02,451 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:02] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
+2020-07-31 15:36:02,458 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:02] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
+2020-07-31 15:36:02,465 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:02] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
+2020-07-31 15:36:02,469 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:02] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
+2020-07-31 15:36:03,763 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:03] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
+2020-07-31 15:36:11,039 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:11] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
+2020-07-31 15:36:11,043 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:11] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
+2020-07-31 15:36:11,049 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:11] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
+2020-07-31 15:36:11,051 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:11] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
+2020-07-31 15:36:11,096 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2020-07-31 15:36:36,682 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:36] "[37mGET / HTTP/1.1[0m" 200 -
+2020-07-31 15:36:36,751 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:36] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+2020-07-31 15:36:36,773 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:36] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
+2020-07-31 15:36:36,781 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:36] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
+2020-07-31 15:36:36,784 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:36] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:36:36,789 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:36] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:36:36,791 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:36] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+2020-07-31 15:36:36,794 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:36] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
+2020-07-31 15:36:36,796 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:36] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
+2020-07-31 15:36:36,797 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:36] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
+2020-07-31 15:36:36,804 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:36] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
+2020-07-31 15:36:36,806 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:36] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
+2020-07-31 15:36:36,810 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:36] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
+2020-07-31 15:36:36,814 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:36] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
+2020-07-31 15:36:39,649 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:39] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
+2020-07-31 15:36:45,424 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:45] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
+2020-07-31 15:36:45,427 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:45] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
+2020-07-31 15:36:45,428 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:45] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
+2020-07-31 15:36:45,431 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:45] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
+2020-07-31 15:36:45,483 : INFO : 127.0.0.1 - - [31/Jul/2020 15:36:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2020-07-31 16:17:30,644 : INFO : 127.0.0.1 - - [31/Jul/2020 16:17:30] "[37mGET / HTTP/1.1[0m" 200 -
+2020-07-31 16:17:30,723 : INFO : 127.0.0.1 - - [31/Jul/2020 16:17:30] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
+2020-07-31 16:17:30,731 : INFO : 127.0.0.1 - - [31/Jul/2020 16:17:30] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
+2020-07-31 16:17:30,731 : INFO : 127.0.0.1 - - [31/Jul/2020 16:17:30] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+2020-07-31 16:17:30,733 : INFO : 127.0.0.1 - - [31/Jul/2020 16:17:30] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
+2020-07-31 16:17:30,736 : INFO : 127.0.0.1 - - [31/Jul/2020 16:17:30] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+2020-07-31 16:17:30,739 : INFO : 127.0.0.1 - - [31/Jul/2020 16:17:30] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
+2020-07-31 16:17:30,739 : INFO : 127.0.0.1 - - [31/Jul/2020 16:17:30] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
+2020-07-31 16:17:30,755 : INFO : 127.0.0.1 - - [31/Jul/2020 16:17:30] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
+2020-07-31 16:17:30,758 : INFO : 127.0.0.1 - - [31/Jul/2020 16:17:30] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
+2020-07-31 16:17:30,759 : INFO : 127.0.0.1 - - [31/Jul/2020 16:17:30] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
+2020-07-31 16:17:30,759 : INFO : 127.0.0.1 - - [31/Jul/2020 16:17:30] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
+2020-07-31 16:17:30,769 : INFO : 127.0.0.1 - - [31/Jul/2020 16:17:30] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
+2020-07-31 16:17:30,772 : INFO : 127.0.0.1 - - [31/Jul/2020 16:17:30] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
+2020-07-31 16:17:31,038 : INFO : 127.0.0.1 - - [31/Jul/2020 16:17:31] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
+2020-07-31 16:17:31,138 : INFO : 127.0.0.1 - - [31/Jul/2020 16:17:31] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
+2020-07-31 16:17:31,139 : INFO : 127.0.0.1 - - [31/Jul/2020 16:17:31] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
+2020-07-31 16:17:31,139 : INFO : 127.0.0.1 - - [31/Jul/2020 16:17:31] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
+2020-07-31 16:17:31,140 : INFO : 127.0.0.1 - - [31/Jul/2020 16:17:31] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
+2020-07-31 16:17:31,228 : INFO : 127.0.0.1 - - [31/Jul/2020 16:17:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2020-07-31 16:19:36,946 : INFO : 127.0.0.1 - - [31/Jul/2020 16:19:36] "[37mGET / HTTP/1.1[0m" 200 -
+2020-07-31 16:19:37,022 : INFO : 127.0.0.1 - - [31/Jul/2020 16:19:37] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+2020-07-31 16:19:37,023 : INFO : 127.0.0.1 - - [31/Jul/2020 16:19:37] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
+2020-07-31 16:19:37,030 : INFO : 127.0.0.1 - - [31/Jul/2020 16:19:37] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
+2020-07-31 16:19:37,032 : INFO : 127.0.0.1 - - [31/Jul/2020 16:19:37] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
+2020-07-31 16:19:37,036 : INFO : 127.0.0.1 - - [31/Jul/2020 16:19:37] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+2020-07-31 16:19:37,042 : INFO : 127.0.0.1 - - [31/Jul/2020 16:19:37] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
+2020-07-31 16:19:37,043 : INFO : 127.0.0.1 - - [31/Jul/2020 16:19:37] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
+2020-07-31 16:19:37,046 : INFO : 127.0.0.1 - - [31/Jul/2020 16:19:37] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
+2020-07-31 16:19:37,051 : INFO : 127.0.0.1 - - [31/Jul/2020 16:19:37] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
+2020-07-31 16:19:37,054 : INFO : 127.0.0.1 - - [31/Jul/2020 16:19:37] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
+2020-07-31 16:19:37,056 : INFO : 127.0.0.1 - - [31/Jul/2020 16:19:37] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
+2020-07-31 16:19:37,057 : INFO : 127.0.0.1 - - [31/Jul/2020 16:19:37] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
+2020-07-31 16:19:37,065 : INFO : 127.0.0.1 - - [31/Jul/2020 16:19:37] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
+2020-07-31 16:19:37,250 : INFO : 127.0.0.1 - - [31/Jul/2020 16:19:37] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
+2020-07-31 16:19:37,347 : INFO : 127.0.0.1 - - [31/Jul/2020 16:19:37] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
+2020-07-31 16:19:37,349 : INFO : 127.0.0.1 - - [31/Jul/2020 16:19:37] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
+2020-07-31 16:19:37,350 : INFO : 127.0.0.1 - - [31/Jul/2020 16:19:37] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
+2020-07-31 16:19:37,351 : INFO : 127.0.0.1 - - [31/Jul/2020 16:19:37] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
+2020-07-31 16:19:37,452 : INFO : 127.0.0.1 - - [31/Jul/2020 16:19:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2020-07-31 16:20:53,626 : INFO : 127.0.0.1 - - [31/Jul/2020 16:20:53] "[37mGET / HTTP/1.1[0m" 200 -
+2020-07-31 16:20:53,710 : INFO : 127.0.0.1 - - [31/Jul/2020 16:20:53] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
+2020-07-31 16:20:53,718 : INFO : 127.0.0.1 - - [31/Jul/2020 16:20:53] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
+2020-07-31 16:20:53,722 : INFO : 127.0.0.1 - - [31/Jul/2020 16:20:53] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
+2020-07-31 16:20:53,727 : INFO : 127.0.0.1 - - [31/Jul/2020 16:20:53] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+2020-07-31 16:20:53,732 : INFO : 127.0.0.1 - - [31/Jul/2020 16:20:53] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
+2020-07-31 16:20:53,736 : INFO : 127.0.0.1 - - [31/Jul/2020 16:20:53] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+2020-07-31 16:20:53,738 : INFO : 127.0.0.1 - - [31/Jul/2020 16:20:53] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
+2020-07-31 16:20:53,744 : INFO : 127.0.0.1 - - [31/Jul/2020 16:20:53] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
+2020-07-31 16:20:53,746 : INFO : 127.0.0.1 - - [31/Jul/2020 16:20:53] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
+2020-07-31 16:20:53,753 : INFO : 127.0.0.1 - - [31/Jul/2020 16:20:53] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
+2020-07-31 16:20:53,759 : INFO : 127.0.0.1 - - [31/Jul/2020 16:20:53] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
+2020-07-31 16:20:53,767 : INFO : 127.0.0.1 - - [31/Jul/2020 16:20:53] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
+2020-07-31 16:20:53,769 : INFO : 127.0.0.1 - - [31/Jul/2020 16:20:53] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
+2020-07-31 16:20:53,935 : INFO : 127.0.0.1 - - [31/Jul/2020 16:20:53] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
+2020-07-31 16:20:54,055 : INFO : 127.0.0.1 - - [31/Jul/2020 16:20:54] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
+2020-07-31 16:20:54,056 : INFO : 127.0.0.1 - - [31/Jul/2020 16:20:54] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
+2020-07-31 16:20:54,057 : INFO : 127.0.0.1 - - [31/Jul/2020 16:20:54] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
+2020-07-31 16:20:54,059 : INFO : 127.0.0.1 - - [31/Jul/2020 16:20:54] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
+2020-07-31 16:20:54,138 : INFO : 127.0.0.1 - - [31/Jul/2020 16:20:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2020-07-31 16:21:23,278 : INFO : 127.0.0.1 - - [31/Jul/2020 16:21:23] "[37mGET / HTTP/1.1[0m" 200 -
+2020-07-31 16:21:23,332 : INFO : 127.0.0.1 - - [31/Jul/2020 16:21:23] "[37mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 200 -
+2020-07-31 16:21:23,333 : INFO : 127.0.0.1 - - [31/Jul/2020 16:21:23] "[37mGET /static/css/index.css HTTP/1.1[0m" 200 -
+2020-07-31 16:21:23,340 : INFO : 127.0.0.1 - - [31/Jul/2020 16:21:23] "[37mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 200 -
+2020-07-31 16:21:23,345 : INFO : 127.0.0.1 - - [31/Jul/2020 16:21:23] "[37mGET /static/css/lightbox.css HTTP/1.1[0m" 200 -
+2020-07-31 16:21:23,347 : INFO : 127.0.0.1 - - [31/Jul/2020 16:21:23] "[37mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 200 -
+2020-07-31 16:21:23,348 : INFO : 127.0.0.1 - - [31/Jul/2020 16:21:23] "[37mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 200 -
+2020-07-31 16:21:23,350 : INFO : 127.0.0.1 - - [31/Jul/2020 16:21:23] "[37mGET /static/js/lodash.js HTTP/1.1[0m" 200 -
+2020-07-31 16:21:23,358 : INFO : 127.0.0.1 - - [31/Jul/2020 16:21:23] "[37mGET /static/js/lightbox.js HTTP/1.1[0m" 200 -
+2020-07-31 16:21:23,359 : INFO : 127.0.0.1 - - [31/Jul/2020 16:21:23] "[37mGET /static/js/interface.js HTTP/1.1[0m" 200 -
+2020-07-31 16:21:23,366 : INFO : 127.0.0.1 - - [31/Jul/2020 16:21:23] "[37mGET /static/js/diagram.js HTTP/1.1[0m" 200 -
+2020-07-31 16:21:23,369 : INFO : 127.0.0.1 - - [31/Jul/2020 16:21:23] "[37mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 200 -
+2020-07-31 16:21:23,376 : INFO : 127.0.0.1 - - [31/Jul/2020 16:21:23] "[37mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 200 -
+2020-07-31 16:21:23,377 : INFO : 127.0.0.1 - - [31/Jul/2020 16:21:23] "[37mGET /static/js/main.js HTTP/1.1[0m" 200 -
+2020-07-31 16:21:23,575 : INFO : 127.0.0.1 - - [31/Jul/2020 16:21:23] "[36mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 304 -
+2020-07-31 16:21:23,674 : INFO : 127.0.0.1 - - [31/Jul/2020 16:21:23] "[37mGET /static/images/prev.png HTTP/1.1[0m" 200 -
+2020-07-31 16:21:23,677 : INFO : 127.0.0.1 - - [31/Jul/2020 16:21:23] "[37mGET /static/images/next.png HTTP/1.1[0m" 200 -
+2020-07-31 16:21:23,678 : INFO : 127.0.0.1 - - [31/Jul/2020 16:21:23] "[37mGET /static/images/loading.gif HTTP/1.1[0m" 200 -
+2020-07-31 16:21:23,678 : INFO : 127.0.0.1 - - [31/Jul/2020 16:21:23] "[37mGET /static/images/close.png HTTP/1.1[0m" 200 -
+2020-07-31 16:21:23,749 : INFO : 127.0.0.1 - - [31/Jul/2020 16:21:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

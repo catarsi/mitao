@@ -422,7 +422,7 @@ class Terminal(object):
 
           if (data_type == "counts") {
           }else if (data_type == "percentage") {
-            layout["yaxis"] = {tickformat: '%'}
+            layout["yaxis"] = {tickformat: '.2%'}
           }
 
 
@@ -761,6 +761,8 @@ class Terminal(object):
         #Build data here
         res_docs = {}
         for a_data_value in input_files:
+            if a_data_value in res_docs:
+                a_data_value = "(copy)_"+a_data_value
             res_docs[a_data_value] = {}
             for file_k in input_files[a_data_value]:
                 res_docs[a_data_value][file_k] = input_files[a_data_value][file_k]

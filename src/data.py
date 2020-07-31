@@ -115,12 +115,12 @@ class Data(object):
         return a_text_file
 
     def process_gensim_dict(self, a_file, file_type, filename):
-        #if file_type == "file":
-        #    a_file.save(self.tmp_folder+"/"+filename)
-        #    a_file = self.tmp_folder+"/"+filename
-        #g_dict = gensim.corpora.Dictionary.load(a_file)
+        if file_type == "file":
+            a_file.save(self.tmp_folder+"/"+filename)
+            a_file = self.tmp_folder+"/"+filename
+        g_dict = gensim.corpora.Dictionary.load(a_file)
         #os.remove(a_file)
-        return gensim.corpora.Dictionary.load(a_file)
+        return g_dict
 
     def process_gensim_ldamodel(self, a_file):
         return gensim.models.LdaModel.load(a_file)

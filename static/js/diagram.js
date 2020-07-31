@@ -608,6 +608,21 @@ class dipam_diagram {
     return this.cy.remove("#"+elem_id);
   }
 
+  highlight_diagram(){
+    //first color all nodes
+    var arr_elems = this.cy.nodes();
+    for (var i = 0; i < arr_elems.length; i++) {
+      var elem_obj = arr_elems[i];
+      this.cy.nodes('node[id="'+elem_obj._private.data.id+'"]').style({'opacity': '1', 'overlay-opacity': '0'});
+    }
+
+    arr_elems = this.cy.edges();
+    for (var i = 0; i < arr_elems.length; i++) {
+      var elem_obj = arr_elems[i];
+      this.cy.edges('edge[id="'+elem_obj._private.data.id+'"]').style({'opacity': '1', 'overlay-opacity': '0'});
+    }
+  }
+
   //adapt the style of the clicked element:<elem> of type:<type>
   click_elem_style(elem=null,type=null){
 

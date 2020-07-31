@@ -987,17 +987,17 @@ class dipam_interface {
     var instance = this;
 
     if (workflow_status == 'ready') {
-      _disable_divs(this,true);
+      _disable_divs(this,true,true);
       new_status = 'run';
       new_lbl_status = "Stop process";
 
     }else if (workflow_status == 'run') {
-      _disable_divs(this,true);
+      _disable_divs(this,true,false);
       new_status = 'stop';
       new_lbl_status = "Reset";
 
     }else if (workflow_status == 'stop') {
-      _disable_divs(this,false);
+      _disable_divs(this,false,true);
       new_status = "ready";
       new_lbl_status = '<svg class="bi bi-play-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/></svg>Run workflow';
     }
@@ -1023,7 +1023,7 @@ class dipam_interface {
       instance.DOMS.WORKFLOW.RUN_BTN.value = new_status;
       instance.DOMS.WORKFLOW.RUN_BTN.innerHTML = new_lbl_status;
     }
-    function _disable_divs(instance,disable){
+    function _disable_divs(instance,disable,reset_timeline){
       var p_event = 'none';
       var opacity_val = '0.8';
       if (!(disable)) {
@@ -1057,7 +1057,7 @@ class dipam_interface {
       }
 
       //instance.TIMELINE_CONTAINER.innerHTML = "";
-      if (!(disable)) {
+      if (reset_timeline) {
         [...document.getElementsByClassName('timeline-block-inner')].map(n => n && n.remove());
       }
       //instance.TIMELINE_TEXT.innerHTML = "Workflow timeline ...";
@@ -1489,16 +1489,18 @@ class dipam_interface {
     _elem_onclick_handle();
 
     function _elem_onclick_handle(){
-        //nodes on click handler
+
         diagram_cy.on('tap', function(event){
           // target holds a reference to the originator
           // of the event (core or element)
           var evtTarget = event.target;
           if (Object.keys(evtTarget).length == 1) {
             $( "#"+interface_instance.DOMS.CONTROL.OVERVIEW_BTN.getAttribute('id')).click();
+            diagram_instance.highlight_diagram();
           }
         });
 
+        //nodes on click handler
         diagram_cy.nodes().on('click', function(e){
             diagram_instance.click_elem_style(this,'node');
             diagram_instance.check_node_compatibility(this);

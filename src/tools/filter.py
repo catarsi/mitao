@@ -35,13 +35,13 @@ class Filter(object):
                         if f_opt == "names":
                             pass
                         elif f_opt == "dates":
-                            print("Filter Dates ...")
+                            #print("Filter Dates ...")
                             documents = self._filter_dates(documents)
                         elif f_opt == "references":
-                            print("Filter References ...")
+                            #print("Filter References ...")
                             documents = self._filter_references(documents)
                         elif f_opt == "header":
-                            print("Filter header ...")
+                            #print("Filter header ...")
                             documents = self._filter_header(documents)
 
             if "p-filterregex" in param:
