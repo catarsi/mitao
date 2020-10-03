@@ -1,6 +1,5 @@
 <img src="doc/mitao_v2.svg" alt="logo" width="250"/>
-# A Mashup Interface for Text Analysis Operations
-An open source, user-friendly, modular, and flexible software written in Python and Javascript for performing several kinds of text analysis, and can be run locally on a machine by using any modern Web browser. Its source code and documentation is all available on this repository, and it is licensed under the ISC License.
+MITAO, a Mashup Interface for Text Analysis Operations, is an open source, user-friendly, modular, and flexible software written in Python and Javascript for performing several kinds of text analysis, and can be run locally on a machine by using any modern Web browser. Its source code and documentation is all available on this repository, and it is licensed under the ISC License.
 This application is linked to the [CATARSI Project](https://centri.unibo.it/dharc/en/research/projects-at-dh-arc#catarsi). It was developed using [DIPAM](https://github.com/ivanhb/dipam): A Dashboard Interface for Python-based Applications Mashup.
 
 <img src="doc/main_screen.png" alt="screen"/>
