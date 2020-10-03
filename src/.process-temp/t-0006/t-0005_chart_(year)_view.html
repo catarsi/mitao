@@ -1,0 +1,809 @@
+
+        <!DOCTYPE html>
+        <html>
+          <head>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+                <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                <script src="https://cdn.plot.ly/plotly-1.52.3.min.js" charset="utf-8"></script>
+
+                <style>
+                        body{
+                          padding: 30px;
+                        }
+                        .chart-container{
+                          display: inline-block;
+                          vertical-align: top;
+                          width: 70%;
+                          border-left: 1px solid gray;
+                          margin-left: 20px;
+                          height: auto;
+                          max-height: 700px;
+                          min-width: 800px;
+                        }
+                        .handlers-container{
+                          padding: 10px;
+                          width: fit-content;
+                          width: 300px;
+                          display: inline-block;
+                        }
+                        .sec-title{
+                          font-size: 14pt;
+                          border-bottom: solid 1px;
+                          padding-left: 5px;
+                        }
+                        #btn_filter{
+                          margin-top: 5px;
+                          width: 100%;
+                        }
+                        #btn_filter:hover{
+                          color: white;
+                        }
+
+                        .switch_buttons{
+                          width: 100%;
+                          vertical-align: top;
+                          margin-bottom: 20px;
+                        }
+                        .switch-btn{
+                          width: 130px;
+                          font-size: 10pt;
+                        }
+
+                        .g-1{
+                          margin-bottom: 5px;
+                        }
+                        #lines_chart{
+                          display: initial;
+                        }
+
+                        #filters_container{
+                          padding: 10px;
+                          width: 100%;
+                          max-height: 200px;
+                        }
+                        .m-box{
+                          vertical-align: top;
+                          margin-right: 5%;
+                          width: 100%;
+                          margin-bottom: 10px;
+                        }
+                        .m-box .pre{
+                          font-size: 16pt;
+                          padding-left:3%;
+                          max-width: 5%;
+                          border-left: solid 1px gray;
+                          vertical-align: middle;
+                        }
+                        .m-box button{
+                          display: inline-block;
+                          width: 90%;
+                          font-size: 12pt;
+                          white-space: normal;
+
+                        }
+                        label.f-all-checkbox{
+                            color: navy;
+                            font-size: 10pt!important;
+                            padding: 5px;
+                        }
+                        .m-box-values{
+                          display: none;
+                          max-height: 150px;
+                          overflow: scroll;
+                          margin-top: 1px;
+                          margin: 0 auto;
+                        }
+                        .m-box-values label{
+                          padding-left: 10px;
+                          font-size: 10pt;
+                          vertical-align: center;
+                          max-width: 80%;
+                        }
+                        #refine_container{
+                          padding: 10px;
+                          width: 100%;
+                          max-height: 200px;
+                          margin-bottom: 20px;
+                        }
+                        #refine_container select{
+                           width: 100%;
+                        }
+                </style>
+                <title>Viualizations</title>
+
+                <script type="text/javascript">
+
+                /*FROM MITAO*/
+                var app_init_data = {
+    "1": [
+        "abs_(id=20)__(issue=No 4 (2019))__(year=2019).txt",
+        "abs_(id=26)__(issue=No 4 (2019))__(year=2019).txt",
+        "abs_(id=9)__(issue=No 6 (2019))__(year=2019).txt",
+        "abs_(id=25)__(issue=No 4 (2019))__(year=2019).txt",
+        "abs_(id=29)__(issue=No 4 (2019))__(year=2019).txt"
+    ],
+    "2": [
+        "abs_(id=11)__(issue=No 6 (2019))__(year=2019).txt",
+        "abs_(id=35)__(issue=No 2 (2018))__(year=2018).txt",
+        "abs_(id=5)__(issue=No 7 (2019))__(year=2019).txt",
+        "abs_(id=39)__(issue=No 2 (2018))__(year=2018).txt",
+        "abs_(issue=No 7 (2019))__(year=2019).txt",
+        "abs_(id=14)__(issue=No 5 (2019))__(year=2019).txt",
+        "abs_(id=32)__(issue=No 3 (2018))__(year=2018).txt",
+        "abs_(issue=No 2 (2018))__(year=2018).txt",
+        "abs_(id=24)__(issue=No 4 (2019))__(year=2019).txt",
+        "abs_(id=37)__(issue=No 2 (2018))__(year=2018).txt",
+        "abs_(id=0)__(issue=No 8 (2020))__(year=2020).txt"
+    ],
+    "3": [
+        "abs_(id=23)__(issue=No 4 (2019))__(year=2019).txt",
+        "abs_(id=30)__(issue=No 4 (2019))__(year=2019).txt",
+        "abs_(id=15)__(issue=No 5 (2019))__(year=2019).txt",
+        "abs_(id=18)__(issue=No 4 (2019))__(year=2019).txt",
+        "abs_(issue=No 8 (2020))__(year=2020).txt",
+        "abs_(id=28)__(issue=No 4 (2019))__(year=2019).txt",
+        "abs_(issue=No 4 (2019))__(year=2019).txt",
+        "abs_(id=27)__(issue=No 4 (2019))__(year=2019).txt",
+        "abs_(id=40)__(issue=No 1 (2017))__(year=2017).txt",
+        "abs_(id=34)__(issue=No 2 (2018))__(year=2018).txt",
+        "abs_(id=21)__(issue=No 4 (2019))__(year=2019).txt",
+        "abs_(id=31)__(issue=No 4 (2019))__(year=2019).txt",
+        "abs_(id=3)__(issue=No 8 (2020))__(year=2020).txt"
+    ],
+    "4": [
+        "abs_(id=12)__(issue=No 6 (2019))__(year=2019).txt",
+        "abs_(id=1)__(issue=No 8 (2020))__(year=2020).txt",
+        "abs_(issue=No 6 (2019))__(year=2019).txt",
+        "abs_(id=42)__(issue=No 1 (2017))__(year=2017).txt",
+        "abs_(id=36)__(issue=No 2 (2018))__(year=2018).txt",
+        "abs_(id=13)__(issue=No 5 (2019))__(year=2019).txt",
+        "abs_(issue=No 1 (2017))__(year=2017).txt",
+        "abs_(id=4)__(issue=No 7 (2019))__(year=2019).txt",
+        "abs_(id=17)__(issue=No 4 (2019))__(year=2019).txt"
+    ],
+    "5": [
+        "abs_(id=2)__(issue=No 8 (2020))__(year=2020).txt",
+        "abs_(id=41)__(issue=No 1 (2017))__(year=2017).txt",
+        "abs_(id=6)__(issue=No 6 (2019))__(year=2019).txt",
+        "abs_(id=16)__(issue=No 5 (2019))__(year=2019).txt",
+        "abs_(id=19)__(issue=No 4 (2019))__(year=2019).txt",
+        "abs_(id=33)__(issue=No 3 (2018))__(year=2018).txt",
+        "abs_(id=7)__(issue=No 6 (2019))__(year=2019).txt",
+        "abs_(issue=No 3 (2018))__(year=2018).txt",
+        "abs_(issue=No 5 (2019))__(year=2019).txt",
+        "abs_(id=38)__(issue=No 2 (2018))__(year=2018).txt",
+        "abs_(id=8)__(issue=No 6 (2019))__(year=2019).txt",
+        "abs_(id=10)__(issue=No 6 (2019))__(year=2019).txt",
+        "abs_(id=22)__(issue=No 4 (2019))__(year=2019).txt"
+    ]
+};
+                var app_meta = {
+    "abs_(id=13)__(issue=No 5 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(issue=No 7 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=25)__(issue=No 4 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=6)__(issue=No 6 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=10)__(issue=No 6 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(issue=No 4 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=35)__(issue=No 2 (2018))__(year=2018).txt": {
+        "year": "2018"
+    },
+    "abs_(id=30)__(issue=No 4 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=37)__(issue=No 2 (2018))__(year=2018).txt": {
+        "year": "2018"
+    },
+    "abs_(id=38)__(issue=No 2 (2018))__(year=2018).txt": {
+        "year": "2018"
+    },
+    "abs_(id=21)__(issue=No 4 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=39)__(issue=No 2 (2018))__(year=2018).txt": {
+        "year": "2018"
+    },
+    "abs_(id=41)__(issue=No 1 (2017))__(year=2017).txt": {
+        "year": "2017"
+    },
+    "abs_(id=34)__(issue=No 2 (2018))__(year=2018).txt": {
+        "year": "2018"
+    },
+    "abs_(id=23)__(issue=No 4 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=3)__(issue=No 8 (2020))__(year=2020).txt": {
+        "year": "2020"
+    },
+    "abs_(id=36)__(issue=No 2 (2018))__(year=2018).txt": {
+        "year": "2018"
+    },
+    "abs_(id=19)__(issue=No 4 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=42)__(issue=No 1 (2017))__(year=2017).txt": {
+        "year": "2017"
+    },
+    "abs_(id=29)__(issue=No 4 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=14)__(issue=No 5 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=8)__(issue=No 6 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=11)__(issue=No 6 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(issue=No 6 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=26)__(issue=No 4 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=20)__(issue=No 4 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=2)__(issue=No 8 (2020))__(year=2020).txt": {
+        "year": "2020"
+    },
+    "abs_(id=9)__(issue=No 6 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=32)__(issue=No 3 (2018))__(year=2018).txt": {
+        "year": "2018"
+    },
+    "abs_(id=18)__(issue=No 4 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=7)__(issue=No 6 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=22)__(issue=No 4 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=15)__(issue=No 5 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=1)__(issue=No 8 (2020))__(year=2020).txt": {
+        "year": "2020"
+    },
+    "abs_(id=24)__(issue=No 4 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=4)__(issue=No 7 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=16)__(issue=No 5 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=33)__(issue=No 3 (2018))__(year=2018).txt": {
+        "year": "2018"
+    },
+    "abs_(id=0)__(issue=No 8 (2020))__(year=2020).txt": {
+        "year": "2020"
+    },
+    "abs_(id=17)__(issue=No 4 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=12)__(issue=No 6 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(issue=No 1 (2017))__(year=2017).txt": {
+        "year": "2017"
+    },
+    "abs_(id=27)__(issue=No 4 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=40)__(issue=No 1 (2017))__(year=2017).txt": {
+        "year": "2017"
+    },
+    "abs_(issue=No 8 (2020))__(year=2020).txt": {
+        "year": "2020"
+    },
+    "abs_(issue=No 2 (2018))__(year=2018).txt": {
+        "year": "2018"
+    },
+    "abs_(id=5)__(issue=No 7 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(issue=No 5 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=28)__(issue=No 4 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(id=31)__(issue=No 4 (2019))__(year=2019).txt": {
+        "year": "2019"
+    },
+    "abs_(issue=No 3 (2018))__(year=2018).txt": {
+        "year": "2018"
+    }
+};
+                var att_index = {
+    "year": "string"
+};
+
+                /*FROM MITAO*/
+                var app_x_att = "year";
+                var app_x_att_type = "string";
+                var app_x_data = ["2017", "2018", "2019", "2020"];
+
+                /*------------*/
+        /*------------*/
+        var index_trace_colors = {};
+        var charts = new Set(["count","bars"]);
+        var filtered_data = JSON.parse(JSON.stringify(app_init_data));
+        var filter_index = null;
+        var index_meta = {};
+        for (var k_f in app_meta) {
+          for (var m in app_meta[k_f]) {
+            if ((m != app_x_att) && (m in att_index)) {
+              if (!(m in index_meta)) {
+                index_meta[m] =  new Set();
+              }
+              if (att_index[m] == "string"){
+                index_meta[m].add(app_meta[k_f][m]);
+              }else if (att_index[m] == "integer"){
+                index_meta[m].add(app_meta[k_f][m]);
+              }else if (att_index[m].includes("list")) {
+                for (var i = 0; i < app_meta[k_f][m].length; i++) {
+                  index_meta[m].add(app_meta[k_f][m][i]);
+                }
+              }
+            }
+          }
+        }
+
+        /*Define all colors*/
+        function hexToRgbA(hex,opacity){
+            var c;
+            if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
+                c= hex.substring(1).split('');
+                if(c.length== 3){
+                    c= [c[0], c[0], c[1], c[1], c[2], c[2]];
+                }
+                c= '0x'+c.join('');
+                return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+','+opacity+')';
+            }
+            throw new Error('Bad Hex');
+        }
+        var palette = ["#0377a8","#fc6f5f","#e2ce71","#ad7947","#e97947","#5cb991","#ffadcb","#b46ddc"];
+        var index_palette = 0;
+        for (var k_cat in filtered_data) {
+          var color = palette[index_palette%palette.length];
+          var opacity = 1 - (Math.floor(index_palette/palette.length) * 0.20);
+          if (opacity < 0.3) { opacity = 1;}
+          index_trace_colors[k_cat] = hexToRgbA(color,opacity);
+          index_palette += 1;
+        }
+        index_trace_colors["others"] = "#CCCCCC";
+
+        //var top_topics = Object.keys(app_init_data).length;
+
+        function draw_chart(obj_data, x_data, x_att, chart_type, data_type) {
+
+          var type = null;
+          var barmode = null;
+          if (chart_type == "bars") {
+            type = "bar";
+            barmode = "stack";
+          }else if (chart_type == "lines") {
+            type = "scatter";
+          }
+
+          var chart_data = [];
+          var index_palette = 0;
+          for (var cat in obj_data) {
+
+            var trace_color = index_trace_colors[cat];
+
+            var y_vals = [];
+            var y_text = [];
+            for (var i = 0; i < x_data.length; i++) {
+              y_vals.push(obj_data[cat][x_data[i]][data_type]);
+              y_text.push(String((obj_data[cat][x_data[i]]["precentage_total"] * 100).toFixed(2)));
+            }
+
+            var others_opt = {};
+            if (chart_type == "lines") {
+              others_opt = {
+                  line: {
+                    color: trace_color,
+                    width: 1
+                  }
+              }
+            }
+
+            var trace = {
+                x: x_data,
+                y: y_vals,
+                name: cat,
+                type: type,
+                text: y_text,
+                orientation: 'v',
+                hovertemplate: '<b>Topic #'+cat+'</b>'+
+                              '<br>&#8594; <b>%{y}</b> document/s in <b><%{x}></b>'+
+                              '<br>&#8594; <b>%{text}%</b> of all the documents'+
+                              '<extra></extra>',
+                marker: {
+                  color: trace_color,
+                  size: 8
+                }
+            };
+
+            chart_data.push(Object.assign( {}, trace, others_opt));
+          }
+
+          var layout = {};
+          if (chart_type == "bars") {
+            layout = {
+              "hovermode": "closest",
+              "barmode": barmode,
+              "xaxis": {
+                'automargin': true,
+                tickmode: "array",
+                tickvals: x_data,
+                ticktext: x_data
+              },
+              "yaxis":{
+                'automargin': true,
+              }
+            };
+          }else if (chart_type == "lines") {
+            layout = {
+              "hovermode": "closest",
+              "xaxis": {
+                'automargin': true,
+                tickmode: "linear",
+                tickvals: x_data,
+                ticktext: x_data
+              },
+              "yaxis":{
+                'automargin': true,
+              }
+            };
+          }
+
+          if (data_type == "counts") {
+          }else if (data_type == "percentage") {
+            layout["yaxis"] = {tickformat: '.2%'}
+          }
+
+
+
+          Plotly.newPlot('chart_container', chart_data, layout);
+        }
+
+        function check(g= null, v=null) {
+                // check the type of chart
+                var chart_type = null;
+                var data_type = null;
+                if ((g != null) && (g == "g-1")) {
+                  data_type = v;
+                }else {
+                  $(".g-1 label").each(function( index ) {
+                    if ($( this ).hasClass('active')){
+                      data_type = $( this ).attr("value");
+                    }
+                  });
+                }
+
+                if ((g != null) && (g == "g-2")) {
+                  chart_type = v;
+                }else {
+                  $(".g-2 label").each(function( index ) {
+                    if ($( this ).hasClass('active')){
+                      chart_type = $( this ).attr("value");
+                    }
+                  });
+                }
+
+                //now prepare the data
+                // <obj_data> and <x_data>
+                var obj_data = {};
+                var index_counts = {"all": 0, "category":{}, "x_tick":{}}
+                for (var k_cat in filtered_data) {
+                      //init
+                      obj_data[k_cat] = {};
+                      index_counts["category"][k_cat] = 0;
+                      for (var i = 0; i < app_x_data.length; i++) {
+                        obj_data[k_cat][app_x_data[i]] = {"counts":0,"percentage":0};
+                      }
+                      //populate
+                      for (var i = 0; i < filtered_data[k_cat].length; i++) {
+                        var elem_name = filtered_data[k_cat][i];
+                        if (elem_name in app_meta) {
+                          if (app_x_att in app_meta[elem_name]) {
+
+                            var l_att_val = [app_meta[elem_name][app_x_att]];
+                            if (app_x_att_type.includes("list")) {
+                              var l_att_val = app_meta[elem_name][app_x_att];
+                            }
+                            for (var h = 0; h < l_att_val.length; h++) {
+                              att_val = l_att_val[h];
+                              //TODO AN ERROR
+                              if (app_x_data.indexOf(att_val) != -1) {
+                                obj_data[k_cat][att_val]["counts"] += 1;
+                                //update counts
+                                if (!(k_cat in index_counts["category"])) {
+                                  index_counts["category"][k_cat] = 0;
+                                }
+                                if (!(att_val in index_counts["x_tick"])) {
+                                  index_counts["x_tick"][att_val] = 0;
+                                }
+                                index_counts["category"][k_cat] += 1;
+                                index_counts["x_tick"][att_val] += 1;
+                                index_counts["all"] += 1;
+                              }
+                            }
+                          }
+                        }
+                      }
+                }
+
+                /*Refine obj_data and select only the top_topics*/
+                var index_top_topics = {}
+                var index_other_topics = {}
+                var e = document.getElementById("top_topics");
+                var top_topics = parseInt(e.options[e.selectedIndex].value);
+                for (var i = 0; i < app_x_data.length; i++) {
+                  index_top_topics[app_x_data[i]] = new Array();
+                  index_other_topics[app_x_data[i]] = {"categories": new Set(),"counts":0}
+                }
+                for (var k_cat in filtered_data) {
+                  for (var i = 0; i < app_x_data.length; i++) {
+                    var val_x_counts = obj_data[k_cat][app_x_data[i]]["counts"];
+                    index_top_topics[app_x_data[i]].push({"category":k_cat,"counts":val_x_counts});
+                  }
+                }
+                for (var i = 0; i < app_x_data.length; i++) {
+                  // Sort app_x_data[k_cat]
+                  index_top_topics[app_x_data[i]].sort((a, b) => (a.counts < b.counts) ? 1 : -1)
+                  var tot_topics = index_top_topics[app_x_data[i]].length;
+                  if (top_topics < tot_topics) {
+                    index_other_topics[app_x_data[i]]["categories"] = index_top_topics[app_x_data[i]].slice(top_topics, tot_topics);
+                    for (var n = 0; n < index_other_topics[app_x_data[i]]["categories"].length; n++) {
+                      var a_category = index_other_topics[app_x_data[i]]["categories"][n];
+                      index_other_topics[app_x_data[i]]["counts"] += a_category["counts"];
+                    }
+                  }
+                  index_top_topics[app_x_data[i]] = index_top_topics[app_x_data[i]].slice(0, top_topics);
+                }
+
+                //update the obj_data with only the top topics
+                updated_obj_data = {}
+                for (var k_cat in obj_data) {
+                  var count_zeros = 0;
+                  for (var x_key in obj_data[k_cat]) {
+                    //if is not part of the top topics
+                    // -> make its count 0
+                    function search_category(nameKey, myArray){
+                        for (var i=0; i < myArray.length; i++) {
+                            if (myArray[i].category === nameKey) {
+                                return myArray[i];
+                            }
+                        }
+                        return -1;
+                    }
+                    if (search_category(k_cat, index_top_topics[x_key]) == -1){
+                      obj_data[k_cat][x_key]["counts"] = 0;
+                      count_zeros += 1;
+                    }
+                  }
+                  // remove it if the topic is 0 in for all the x values
+                  if (count_zeros != app_x_data.length) {
+                    updated_obj_data[k_cat] = obj_data[k_cat];
+                  }
+                }
+                obj_data = updated_obj_data;
+                obj_data["others"] = index_other_topics;
+
+                for (var k_cat in obj_data) {
+                  for (var x_key in obj_data[k_cat]) {
+                    obj_data[k_cat][x_key]["percentage"] =  obj_data[k_cat][x_key]["counts"]/index_counts["x_tick"][x_key];
+                    obj_data[k_cat][x_key]["precentage_total"] = obj_data[k_cat][x_key]["counts"]/index_counts["all"];
+                  }
+                }
+
+                //console.log(obj_data);
+                draw_chart(obj_data, app_x_data, app_x_att, chart_type, data_type);
+        }
+
+        function filter() {
+
+              // filter_index = {"att":{Set of values}}
+              filtered_data = JSON.parse(JSON.stringify(app_init_data));
+              var copy_filtered_data = JSON.parse(JSON.stringify(filtered_data));
+              for (var k_cat in filtered_data) {
+                  copy_filtered_data[k_cat] = [];
+                  for (var i = 0; i < filtered_data[k_cat].length; i++) {
+                    var elem_name = filtered_data[k_cat][i];
+                    var include = false;
+                    //in case we have no filters always include
+                    if (Object.keys(att_index).length == 0) {
+                      include = true;
+                    }else{
+                      //in case we have filters -> all meta filters must be satisfaied
+                      include = true;
+                      if (elem_name in app_meta) {
+                        var inter_check = true;
+                        for (var filter_att in att_index) {
+                          inter_check = inter_check && (filter_att in app_meta[elem_name]);
+                          if (inter_check) {
+                            var a_meta_att_value = app_meta[elem_name][filter_att];
+                            inter_check = inter_check && (filter_att in filter_index);
+                            if (inter_check) {
+                              var meta_res = false;
+                              if (att_index[filter_att] == "string") {
+                                meta_res = (meta_res || filter_index[filter_att].has(a_meta_att_value));
+                              }else if (att_index[filter_att].includes("list")) {
+                                for (var j = 0; j < a_meta_att_value.length; j++) {
+                                  meta_res = (meta_res || filter_index[filter_att].has(a_meta_att_value[j]));
+                                }
+                              }
+                              inter_check = inter_check && meta_res;
+                            }
+                          }
+                          include = include && inter_check;
+                        }
+                      }
+                    }
+
+                    if (include) {
+                      copy_filtered_data[k_cat].push(elem_name);
+                    }
+                  }
+              }
+              filtered_data = copy_filtered_data;
+            }
+
+        </script>
+
+      </head>
+      <body>
+              <div class="handlers-container">
+
+                <div class="switch_buttons">
+                  <div class="g-1 btn-group btn-group-toggle" data-toggle="buttons">
+                     <label onchange="check('g-1','counts');" value="counts" class="switch-btn btn btn-light active">
+                       <input value="counts" type="radio" name="options" id="option_g1_1" autocomplete="off" checked> Counts <span style="margin-left: 5px"> # </span>
+                     </label>
+                     <label onchange="check('g-1','percentage');" value="percentage" class="switch-btn btn btn-light">
+                       <input value="percentage" type="radio" name="options" id="option_g1_2" autocomplete="off"> Percentage <span style="margin-left: 5px"> % </span>
+                     </label>
+                  </div>
+                  <br>
+                  <div class="g-2 btn-group btn-group-toggle" data-toggle="buttons">
+                     <label onchange="check('g-2','bars');" value="bars" class="switch-btn btn btn-light active">
+                       <input value="bars" type="radio" name="options" id="option_g2_1" autocomplete="off" checked> Bars chart <span style="margin-left: 5px">
+                       <svg class="bi bi-bar-chart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="4" height="5" x="1" y="10" rx="1"/>
+                          <rect width="4" height="9" x="6" y="6" rx="1"/>
+                          <rect width="4" height="14" x="11" y="1" rx="1"/>
+                        </svg>
+                        </span>
+                     </label>
+                     <label onchange="check('g-2','lines');" value="lines" id="lines_chart" class="switch-btn btn btn-light">
+                       <input value="lines" type="radio" name="options" id="option_g2_2" autocomplete="off"> Lines chart
+                       <span style="margin-left: 5px">
+                         <svg class="bi bi-graph-up" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h1v16H0V0zm1 15h15v1H1v-1z"/>
+                        <path fill-rule="evenodd" d="M14.39 4.312L10.041 9.75 7 6.707l-3.646 3.647-.708-.708L7 5.293 9.959 8.25l3.65-4.563.781.624z"/>
+                        <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4h-3.5a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                      </span>
+                     </label>
+                  </div>
+                </div>
+
+                <div class="sec-title">Refine</div>
+                <div id="refine_container"></div>
+
+                <div class="sec-title">Filter</div>
+                <div id="filters_container"></div>
+
+              </div>
+
+
+
+              <div id="chart_container" class="chart-container"></div>
+
+              <script type="text/javascript">
+
+                /* BUild doms*/
+                for (var m_att in index_meta) {
+                  var filter_box = "";
+                  var l_meta_values = Array.from(index_meta[m_att]);
+                  l_meta_values = l_meta_values.sort();
+                  if (l_meta_values.length > 0) {
+                    for (var i = 0; i < l_meta_values.length; i++) {
+                      filter_box = filter_box + '<span><input class="f-checkbox" data-att="'+m_att+'" type="checkbox" id="checkbox_'+String(i)+'" value="'+l_meta_values[i]+'" checked></span><span><label for="checkbox_'+String(i)+'">'+l_meta_values[i]+'</label></span><br>';
+                    }
+                    filter_box = "<div class='m-box'><button id='"+m_att+"_btn' type='button' class='btn btn-light'>Metadata attribute: "+m_att+"</button><span class='pre' id='"+m_att+"_pre'>+</span><div id='"+m_att+"_values' class='m-box-values'>" +'<input class="f-all-checkbox" data-att="'+m_att+'" data-checked=true type="checkbox" id="all_checkbox_'+String(i)+'" checked></span><span><label class="f-all-checkbox" for="all_checkbox_'+String(i)+'">Check/Uncheck all</label><br>'+ filter_box.substring(0, filter_box.length-4)+"</div>";
+                  }
+                  document.getElementById("filters_container").innerHTML += filter_box;
+                }
+                document.getElementById("filters_container").innerHTML += "<button id='btn_filter' type='button' class='btn btn-dark'>Apply filters</button>";
+                for (var m_att in index_meta) {
+
+                   $("#"+m_att+"_btn").click(function(event) {
+                    var values_box = event.target.id.replace("_btn","_values");
+                    var pre_box = event.target.id.replace("_btn","_pre");
+                    var display_val = $("#"+values_box).css('display');
+
+                    if (display_val == "none") {
+                      document.getElementById(pre_box).innerHTML = "-";
+                      $("#"+values_box).css("display", "block");
+                    }else {
+                      if (display_val == "block") {
+                        document.getElementById(pre_box).innerHTML = "+";
+                        $("#"+values_box).css("display", "none");
+                      }
+                    }
+                  });
+                }
+
+                if (Object.keys(index_meta).length > 0) {
+                  $("#btn_filter").click(function(event) {
+                    var checked_inputs = $(".f-checkbox:checked");
+                    var index_filters = {};
+                    for (var i = 0; i < checked_inputs.length; i++) {
+                      var checked_att = checked_inputs[i].getAttribute("data-att");
+                      var checked_value = checked_inputs[i].getAttribute("value");
+                      if (!(checked_att in index_filters)) {
+                        index_filters[checked_att] = new Set();
+                      }
+                      index_filters[checked_att].add(checked_value);
+                    }
+                    filter_index = index_filters;
+                    filter();
+                    check();
+                 });
+                }
+
+                if (Object.keys(att_index).length == 0) {
+                 $("#filters_container").css("display", "none");
+                 $("#filters_container").prev().css("display", "none");
+                }else {
+                 $(".f-all-checkbox").change(function() {
+
+                   var current_val = $(this).attr('checked');
+                   var new_val = !current_val;
+                   var data_att = $(this).attr('data-att');
+                   $(".f-checkbox[data-att='"+data_att+"']").prop('checked', new_val);
+                   $(this).attr('checked',new_val);
+                 });
+                }
+
+                var str_options = "";
+                for (var topic_i = 0; topic_i < Object.keys(app_init_data).length-1; topic_i++) {
+                 str_options += "<option value='"+String(topic_i+1)+"'>Show top "+String(topic_i+1)+" topics</option>";
+                }
+                str_options = "<option value='"+String(Object.keys(app_init_data).length)+"'>Show all the topics</option>" + str_options;
+                document.getElementById("refine_container").innerHTML += "<select id='top_topics'>"+str_options+"</select>";
+
+                $("#top_topics").change(function(event) {
+                 check();
+                });
+
+                $("#btn_filter").click();
+                </script>
+                </body>
+                </html>
+        

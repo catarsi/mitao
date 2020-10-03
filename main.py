@@ -33,6 +33,10 @@ SCRIPT_PATH = "."
 if (len(sys.argv) > 1):
     SCRIPT_PATH = str(sys.argv[1])
 
+PFATHER_PID = None
+if (len(sys.argv) > 2):
+    PFATHER_PID = str(sys.argv[2])
+
 BASE_PROCESS_PATH = SCRIPT_PATH+"/src/.process-temp"
 BASE_TMP_PATH = SCRIPT_PATH+"/src/.tmp"
 BASE_CONFIG_PATH = SCRIPT_PATH+"/src/.data"
@@ -515,6 +519,6 @@ if __name__ == '__main__':
     dipam_tool = tool.Tool(CONFIG_DATA["tool"], BASE_TMP_PATH)
     dipam_data = data.Data(CONFIG_DATA["data"], BASE_TMP_PATH)
 
-    Timer(1, open_browser).start();
+    Timer(1, open_browser).start()
     app.run()
     #init_gui(app)

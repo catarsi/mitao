@@ -188,6 +188,7 @@
         },
         "t-corpus-tokenize": {
             "label": "Documents tokenizer",
+            "description": "... The stopwords filtering is applied to the original form of the term",
             "class_label": "Text-Analysis",
             "class": "TextAnalysis",
             "function": "tokenize",

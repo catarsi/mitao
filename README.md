@@ -1,14 +1,13 @@
-<img src="doc/mitao.svg" alt="drawing" width="400"/>
-
+<img src="doc/mitao_v2.svg" alt="logo" width="250"/>
 # A Mashup Interface for Text Analysis Operations
-A web application tool for mashing up automatic text analysis tools and create a customizable visual workflow. This application is linked to the [CATARSI Project](https://centri.unibo.it/dharc/en/research/projects-at-dh-arc#catarsi). It was developed using [DIPAM](https://github.com/ivanhb/dipam): A Dashboard Interface for Python-based Applications Mashup. Which has been configured for the application of text analysis methods based on popular python natural language libraries.
+An open source, user-friendly, modular, and flexible software written in Python and Javascript for performing several kinds of text analysis, and can be run locally on a machine by using any modern Web browser. Its source code and documentation is all available on this repository, and it is licensed under the ISC License.
+This application is linked to the [CATARSI Project](https://centri.unibo.it/dharc/en/research/projects-at-dh-arc#catarsi). It was developed using [DIPAM](https://github.com/ivanhb/dipam): A Dashboard Interface for Python-based Applications Mashup.
 
+<img src="doc/main_screen.png" alt="screen"/>
 
 ## Requirements
-1. Python 3.7 programming language, Download and install it from the official website -> [Click here](https://www.python.org/downloads/)
-
+1. Python 3.X programming language, Download and install it from the official website -> [Click here](https://www.python.org/downloads/)
 2. The Chrome web browser, download it -> [Click here](https://www.google.com/intl/en/chrome/)
-
 
 ## Instalation
 ### Step (1)

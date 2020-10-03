@@ -57,6 +57,7 @@ class dipam_interface {
 
         this.workflow = null;
         this.request_status_on = true;
+        this.in_loading_status = false;
 
         this.DOMS.DIAGRAM.UNDO_BTN.style["pointer-events"] = "none";
         this.DOMS.DIAGRAM.UNDO_BTN.style["opacity"] = 0.3;
@@ -1475,6 +1476,7 @@ class dipam_interface {
                 document.getElementById('list_options_trigger').click();
                 var result = e.target.result;
                 //console.log(result);
+                interface_instance.in_loading_status = true;
                 $.post( "/loadworkflow", {
                   workflow_file: result
                 }).done(function() {

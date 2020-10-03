@@ -59,3 +59,14 @@ $('.hover_bkgr_fricc').show();
 //*** Example ****//
 //vw_interface.build_info(diagram_instance.get_gen_elem('data')[0], "nodes");
 //vw_interface.click_info_nav();
+
+
+//When closing the window DIPAM shutdown
+//In case it was pagereload triggered from a /loadworkflow -> DIPAM Stay alive
+window.onbeforeunload = function (event) {
+  if (!vw_interface.in_loading_status) {
+    $.get("/shutdown").done(function() {});
+  }else {
+    vw_interface.in_loading_status = false;
+  }
+};
