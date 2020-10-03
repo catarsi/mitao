@@ -4,230 +4,250 @@
   },
   "data": {
         "d-metadata":{
-            "label": "Documents metadata",
+            "label": "Metadata document/s",
+            "description": "A file or a collection of files in JSON format which represent the metadata of another file/s having the same name.<br><br><b>Example:</b><br><i>myfile.json</i> is the metadata file of <i>myfile.txt</i>",
             "data_class": "series",
             "param": ["p-file"],
             "file_name": "docs_metadata",
+            "input_ready": true,
             "class_label": "General"
         },
         "d-gensimldamodel":{
-            "label": "Gensim LDA model",
+            "label": "LDA Topic Model",
+            "description": "Four files that defines a topic model: (1)<i>ldamodel.glda</i>; (2)<i>ldamodel.glda.expElogbeta.npy</i>; (3)<i>ldamodel.glda.id2word</i>; (4)<i>ldamodel.glda.state</i>",
             "data_class": "gensim_ldamodel",
             "param": ["p-file"],
             "file_name": "ldamodel",
-            "class_label": "LDA"
+            "input_ready": true,
+            "class_label": "Topic Modelling"
         },
         "d-dictionary-corpus":{
-            "label": "Gensim Dictionary",
+            "label": "Dictionary",
+            "description": "One file (i.e. <i>dictionary.gdict</i>) holding a mapping between words and their ids",
             "data_class": "gensim_dictionary",
             "param": ["p-file"],
             "file_name": "dictionary",
-            "class_label": "LDA"
+            "input_ready": true,
+            "class_label": "Text analysis"
         },
         "d-model-corpus":{
-            "label": "Vectorized corpus",
+            "label": "Weighted corpus",
+            "description": "One file in JSON format which represents a weighted corpus (built using a weighting algorithm, e.g. tf-idf)",
             "data_class": "series",
             "param": ["p-file"],
             "file_name": "modelled_corpus",
-            "class_label": "LDA"
+            "input_ready": true,
+            "class_label": "Text analysis"
         },
         "d-processed-corpus":{
             "label": "Tokenized corpus",
+            "description": "One file in JSON format which represents a tokenized corpus. A tokenized corpus usually does not include stopwords, and might also include only the stemmed form of the words",
             "data_class": "series",
             "param": ["p-file"],
             "file_name": "processed_corpus",
-            "class_label": "LDA"
+            "input_ready": true,
+            "class_label": "Text analysis"
         },
         "d-word-topics-table":{
-            "label": "Topic Words table",
+            "label": "Terms X Topics matrix",
+            "description": "One file in CSV format which defines the 30 terms that better characterise each topic in the topic model",
             "data_class": "table",
             "param": ["p-file"],
             "file_name": "word_topics",
-            "class_label": "LDA"
+            "input_ready": true,
+            "class_label": "Topic Modelling"
         },
         "d-doc-topics-table":{
-            "label": "Documents topics",
+            "label": "Documents X Topics matrix",
+            "description": "One file in CSV format which represents the corpus documents with their corresponding representativeness for each topic in the topic model",
             "data_class": "table",
             "param": ["p-file"],
             "file_name": "doc_topics",
-            "class_label": "LDA"
-        },
-        "d-grouped-barchart":{
-            "label": "Grouped Bar Chart",
-            "data_class": "table",
-            "param": ["p-file"],
-            "file_name": "barchart_data",
-            "class_label": "General"
+            "input_ready": true,
+            "class_label": "Topic Modelling"
         },
         "d-gen-text":{
             "label": "Textual document/s",
+            "description": "A file or a collection of files which represent general textual contents (e.g. <i>myfile.txt</i>)",
             "data_class": "text",
             "param": ["p-file"],
             "file_name": "doc",
+            "input_ready": true,
             "class_label": "General"
         },
         "d-gen-pdf":{
             "label": "PDF document/s",
+            "description": "A file or a collection of files in PDF format",
             "data_class": "pdf",
             "param": ["p-file"],
             "file_name": "pdf_doc",
+            "input_ready": true,
             "class_label": "General"
         },
         "d-coherence":{
-            "label": "LDA coherence values",
+            "label": "Topic model coherence",
+            "description": "One file in CSV format containing the coherence score of a list of Topic Models (with a different number of topics)",
             "data_class": "table",
             "param": ["p-file"],
             "file_name": "coherence",
-            "class_label": "LDA"
-        },
-        "d-perplexity":{
-            "label": "LDA perplexity value",
-            "data_class": "text",
-            "param": ["p-file"],
-            "file_name": "perplexity",
-            "class_label": "LDA"
+            "input_ready": false,
+            "class_label": "Topic Modelling"
         },
         "d-stopwords":{
-            "label": "List of stopwords",
+            "label": "Stopwords",
+            "description": "One file in CSV format containing a list of stopwords (Note: the header is not considered as stopword)",
             "data_class": "table",
             "param": ["p-file"],
             "file_name": "stopwords",
-            "class_label": "LDA"
+            "input_ready": true,
+            "class_label": "Text analysis"
         },
         "d-ldavis-html":{
-            "label": "LDAvis HTML page",
+            "label": "LDAvis",
+            "description": "One file in HTML format (i.e. <i>ldavis.html</i>) representing the LDAvis (<a href='https:\/\/github.com\/cpsievert\/LDAvis'>https:\/\/github.com\/cpsievert\/LDAvis</a>)",
             "data_class": "html",
             "param": ["p-file"],
             "file_name": "ldavis",
-            "class_label": "General"
-        },
-        "d-chartimg":{
-            "label": "A chart image",
-            "data_class": "img",
-            "param": ["p-file"],
-            "file_name": "chart",
-            "class_label": "General"
+            "input_ready": false,
+            "class_label": "Topic Modelling"
         },
         "d-chart-html":{
-            "label": "An HTML chart",
+            "label": "MTMvis",
+            "description": "One file in HTML format (i.e. <i>dynamic_chart.html</i>) representing the MTMvis. This visulization shows the corpus documents’ topic representativeness based on a metadata attribute of such documents",
             "data_class": "html",
             "param": ["p-file"],
             "file_name": "dynamic_chart",
-            "class_label": "General"
-        },
-        "d-chartlegend":{
-            "label": "A chart legend",
-            "data_class": "table",
-            "param": ["p-file"],
-            "file_name": "legend",
-            "class_label": "General"
+            "input_ready": false,
+            "class_label": "Topic Modelling"
         }
   },
   "tool": {
         "t-meta-builder": {
             "label": "Metadata generator",
-            "description": "Takes a collection of textual documents and builds a different metadata file for each given document. The metadata attributes are defined using regular expression rules applied to the original documents names.",
+            "description": "Genearates some metadata file/s for each document/s in a given collection. The metadata attributes are defined using regular expression rules to apply on the original names of the documents",
             "class": "Convert",
-            "class_label": "Converter",
+            "class_label": "General",
             "function": "meta_builder",
+            "input_ready": true,
             "param": ["p-metaregex"],
             "compatible_input": ["d-gen-text"],
             "output": ["d-metadata"]
         },
         "t-lda-coherance": {
-            "label": "LDA coherence calculator",
-            "class_label": "Text-Analysis",
+            "label": "Topic Modelling coherence score calculator",
+            "description": "Calculates the coherence values of different Topic Models (having different number of topics)",
+            "class_label": "Text analysis",
             "class": "TextAnalysis",
             "function": "calc_coherence",
+            "input_ready": true,
             "param": ["p-topic-from","p-topic-to"],
             "compatible_input": ["d-model-corpus","d-dictionary-corpus"],
             "output": ["d-coherence"]
         },
-        "t-topic-docs-view": {
-            "label": "DocsXTopics visualizer",
-            "class_label": "Terminal",
-            "class": "Terminal",
-            "param": ["p-meta-value","p-meta-type","p-meta-filter","p-chart-axis"],
-            "function": "cat_topics_barchart",
-            "compatible_input": ["d-doc-topics-table","d-metadata"],
-            "output": ["d-chart-html","d-grouped-barchart"]
-        },
         "t-topic-docs": {
-            "label": "DocsXTopics matrix builder",
-            "class_label": "Text-Analysis",
+            "label": "Documents X Topics matrix builder",
+            "description": "Builds a matrix holding the corpus documents of a topic model with their corresponding representativeness for each topic in the topic model",
+            "class_label": "Text analysis",
             "class": "TextAnalysis",
             "function": "doc_prop_topics",
+            "input_ready": true,
             "compatible_input": ["d-model-corpus","d-gensimldamodel"],
             "output": ["d-doc-topics-table"]
         },
         "t-topic-words": {
-            "label": "TermsXTopics matrix builder",
-            "class_label": "Text-Analysis",
+            "label": "Terms X Topics matrix builder",
+            "description": "Builds a matrix which contains 30 terms that better characterise each topic in the topic model.",
+            "class_label": "Text analysis",
             "class": "TextAnalysis",
             "param": ["p-numwords"],
             "function": "words_prop_topics",
+            "input_ready": true,
             "compatible_input": ["d-model-corpus","d-gensimldamodel"],
             "output": ["d-word-topics-table"]
         },
         "t-topic-ldavis": {
-            "label": "LDAvis visualizer",
+            "label": "LDAvis builder",
+            "description": "Builds the LDAvis (<a href='https:\/\/github.com\/cpsievert\/LDAvis'>https:\/\/github.com\/cpsievert\/LDAvis</a>) of a given topic model",
             "class_label": "Terminal",
             "class": "Terminal",
             "function": "ldavis",
+            "input_ready": true,
             "compatible_input": ["d-model-corpus","d-dictionary-corpus","d-gensimldamodel"],
             "output": ["d-ldavis-html"]
         },
+        "t-topic-docs-view": {
+            "label": "MTMvis builder",
+            "description": "Builds the MTMvis, a visulization that shows the corpus documents’ topic representativeness based on a metadata attribute of such documents",
+            "class_label": "Terminal",
+            "class": "Terminal",
+            "param": ["p-meta-value","p-meta-type","p-meta-filter","p-chart-axis"],
+            "function": "cat_topics_barchart",
+            "input_ready": true,
+            "compatible_input": ["d-doc-topics-table","d-metadata"],
+            "output": ["d-chart-html"]
+        },
         "t-corpus-build": {
-            "label": "Corpus builder",
-            "class_label": "Text-Analysis",
+            "label": "Dictionary and weighted corpus builder",
+            "description": "Builds a dictionary and a weighted corpus from a given tokenized corpus",
+            "class_label": "Text analysis",
             "class": "TextAnalysis",
             "function": "build_corpus",
+            "input_ready": true,
             "param": ["p-corpusmodel"],
             "compatible_input": ["d-processed-corpus"],
             "output": ["d-model-corpus","d-dictionary-corpus"]
         },
         "t-corpus-tokenize": {
-            "label": "Documents tokenizer",
-            "description": "... The stopwords filtering is applied to the original form of the term",
-            "class_label": "Text-Analysis",
+            "label": "Corpus tokenizer",
+            "description": "Builds a tokenized corpus from a given collection of documents. If a list of stopwords is provided, the tool removes such words from the tokenized corpus",
+            "class_label": "Text analysis",
             "class": "TextAnalysis",
             "function": "tokenize",
+            "input_ready": true,
             "param": ["p-defstopwords","p-deflemmatize"],
             "compatible_input": ["d-gen-text","d-stopwords"],
             "optional_input": ["d-stopwords"],
             "output": ["d-processed-corpus"]
         },
         "t-topic-lda": {
-            "label": "LDA Topic modelling calculator",
-            "class_label": "Text-Analysis",
+            "label": "Topic model builder (LDA method)",
+            "description": "Builds a LDA topic model from a given dictionary and weighted corpus",
+            "class_label": "Text analysis",
             "class": "TextAnalysis",
             "function": "lda",
+            "input_ready": true,
             "param": ["p-topic"],
             "compatible_input": ["d-model-corpus","d-dictionary-corpus"],
             "output": ["d-gensimldamodel"]
         },
         "t-filter-text": {
-            "label": "Documents Filter",
+            "label": "Text filter",
+            "description": "Filters a document/s from text values that follow a specific regular expression",
             "class": "Filter",
             "class_label": "Filter",
             "function": "filter_text",
+            "input_ready": true,
             "param": ["p-filteropt","p-filterregex"],
             "compatible_input": ["d-gen-text"],
             "output": ["d-gen-text"]
         },
         "t-save-files": {
             "label": "Saver",
+            "description": "Saves the given data and/or visulizations localy on your machine",
             "class": "Terminal",
             "class_label": "Terminal",
             "function": "save_file",
-            "compatible_input": ["d-gensimldamodel","d-grouped-barchart","d-chart-html","d-metadata","d-dictionary-corpus","d-model-corpus","d-processed-corpus","d-gen-text","d-word-topics-table","d-doc-topics-table","d-coherence","d-perplexity","d-doc-topics","d-chartimg","d-ldavis-html"],
-            "optional_input": ["d-gensimldamodel","d-grouped-barchart","d-chart-html","d-metadata","d-dictionary-corpus","d-model-corpus","d-processed-corpus","d-gen-text","d-word-topics-table","d-doc-topics-table","d-coherence","d-perplexity","d-doc-topics","d-chartimg","d-ldavis-html"]
+            "input_ready": true,
+            "compatible_input": ["d-gensimldamodel","d-chart-html","d-metadata","d-dictionary-corpus","d-model-corpus","d-processed-corpus","d-gen-text","d-word-topics-table","d-doc-topics-table","d-coherence","d-doc-topics","d-ldavis-html"],
+            "optional_input": ["d-gensimldamodel","d-chart-html","d-metadata","d-dictionary-corpus","d-model-corpus","d-processed-corpus","d-gen-text","d-word-topics-table","d-doc-topics-table","d-coherence","d-doc-topics","d-ldavis-html"]
         },
         "t-convert-pdftotext": {
-            "label": "PDF to TXT documents converter",
+            "label": "PDF to TXT converter",
+            "description": "Converts a given PDF file/s to TXT format",
             "class": "Convert",
-            "class_label": "Converter",
+            "class_label": "General",
             "function": "pdf_to_text",
+            "input_ready": true,
             "compatible_input": ["d-gen-pdf"],
             "output": ["d-gen-text"]
         }

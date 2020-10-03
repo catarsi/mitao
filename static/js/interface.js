@@ -146,11 +146,11 @@ class dipam_interface {
             case 'value':
               //is a dropdown
               this.set_dipam_temp_val(k_attribute,elem.data.value);
-              var res_elem_type = diagram_instance.get_conf_elems(elem.data.type, ['[KEY]','label','class_label']);
+              var res_elem_type = diagram_instance.get_conf_elems(elem.data.type, ['[KEY]','label','input_ready','class_label']);
               if (elem.data.type == "edge") {
-                res_elem_type = {'[KEY]': ["edge"],'label': ["Edge"],'class_label':["General"]};
+                res_elem_type = {'[KEY]': ["edge"],'label': ["Edge"],'input_ready':[true],'class_label':["General"]};
               }
-              a_dom_str = _build_a_dom("select-value", elem, k_attribute, {intro_lbl: "Type:", value: res_elem_type['[KEY]'], label: res_elem_type['label'], class_label: res_elem_type['class_label']});
+              a_dom_str = _build_a_dom("select-value", elem, k_attribute, {intro_lbl: "Type:", value: res_elem_type['[KEY]'], input_ready: res_elem_type['input_ready'], label: res_elem_type['label'], class_label: res_elem_type['class_label']});
               break;
 
             case 'param':
@@ -331,11 +331,13 @@ class dipam_interface {
                     }
 
                     if (add_it) {
-                        var selected_val = "";
-                        if (param.value[j] == dom_value) {
-                          selected_val = "selected";
+                        if (param.input_ready[j]) {
+                            var selected_val = "";
+                            if (param.value[j] == dom_value) {
+                              selected_val = "selected";
+                            }
+                            str_options = str_options + "<option data-select-target='"+a_dom_id+"' value='"+param.value[j]+"' "+selected_val+">"+param.label[j]+"</option>";
                         }
-                        str_options = str_options + "<option data-select-target='"+a_dom_id+"' value='"+param.value[j]+"' "+selected_val+">"+param.label[j]+"</option>";
                     }
 
                 };
