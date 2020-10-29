@@ -331,13 +331,19 @@ class dipam_interface {
                     }
 
                     if (add_it) {
-                        if (param.input_ready[j]) {
+                          var add_opt = is_param;
+                          if (!(add_opt)) {
+                            if (param.input_ready[j]) {
+                              add_opt = true;
+                            }
+                          }
+                          if (add_opt) {
                             var selected_val = "";
                             if (param.value[j] == dom_value) {
                               selected_val = "selected";
                             }
                             str_options = str_options + "<option data-select-target='"+a_dom_id+"' value='"+param.value[j]+"' "+selected_val+">"+param.label[j]+"</option>";
-                        }
+                          }
                     }
 
                 };

@@ -1,1 +1,1 @@
-_venv\Scripts\activate && python main.py .
+_venv\Scripts\activate && python check.py && python main.py .
