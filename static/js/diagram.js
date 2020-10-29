@@ -230,6 +230,7 @@ class dipam_diagram {
   }
 
   get_workflow_data(){
+    var diagram_instance = this;
     var workflow_to_save = {
       'diagram': this.DIAGRAM_GENERAL,
       'nodes': [],
@@ -249,20 +250,19 @@ class dipam_diagram {
     return workflow_to_save;
 
     function _normalize_data_to_save(an_elem, is_node = false) {
-      //check if there is objects also
-      //console.log(an_elem._private.data)
-      /*
-      if ("param" in an_elem._private.data) {
-        if ("p-file" in an_elem._private.data.param) {
-          for (var i = 0; i < an_elem._private.data.param["p-file"].length; i++) {
-            console.log(an_elem._private.data.param["p-file"][i].name);
+      var res_obj = an_elem._private.data;
+
+      /*adapt all parameters*/
+      if (is_node){
+        var l_of_params = Object.keys(res_obj.param);
+        var all_params = diagram_instance.CONFIG[res_obj.type][res_obj.value]["param"];
+        for (var i_p = 0; i_p < all_params.length; i_p++) {
+          var a_param = all_params[i_p];
+          if (l_of_params.indexOf(a_param) == -1){
+            res_obj.param[a_param] = null;
           }
         }
       }
-      */
-
-      //var res_obj = JSON.parse(JSON.stringify(an_elem._private.data));
-      var res_obj = an_elem._private.data;
 
       if ("workflow" in res_obj){
         delete res_obj["workflow"];
@@ -368,6 +368,7 @@ class dipam_diagram {
       a_node_data = JSON.parse(JSON.stringify(this.NODE_DATA));
     }
 
+
     var node_obj = {
       style: this.STYLE.node[n_type],
       position: { x: 0, y: 0},
@@ -395,7 +396,13 @@ class dipam_diagram {
 
     //Init the essential data: id, name, value
     if (n_type in this.CONFIG) {
-      var type_value = Object.keys(this.CONFIG[n_type])[0];
+      var type_value = null;
+      for (var k_node_key in this.CONFIG[n_type]) {
+        if (this.CONFIG[n_type][k_node_key]["input_ready"]) {
+          type_value = k_node_key
+          break;
+        }
+      }
       if (a_value != null) {
         type_value = a_value;
       }
@@ -433,13 +440,7 @@ class dipam_diagram {
                   corresponding_param_val = JSON.parse(JSON.stringify(corresponding_param.init_value));
                   break;
                 case "check-value":
-                  var check_val_list = [];
-                  for (var j = 0; j < corresponding_param.init_value.length; j++) {
-                    if(corresponding_param.init_value[j] == 1){
-                       check_val_list.push(corresponding_param.value[j]);
-                    }
-                  }
-                  corresponding_param_val = check_val_list;
+                  corresponding_param_val = corresponding_param.value;
                   break;
                 default:
               }

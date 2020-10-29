@@ -82,7 +82,7 @@ class Terminal(object):
         META_FILTER = []
         META_KEY = ""
         META_LABEL = ""
-        META_KEY_TYPE = ""
+        #META_KEY_TYPE = ""
         CHART_AXIS_TYPE = "none"
         if param != None:
             if "p-meta-filter" in param:
@@ -90,11 +90,13 @@ class Terminal(object):
             if "p-meta-value" in param:
                 META_KEY = param["p-meta-value"]
                 META_LABEL = "metadata attribute = <"+META_KEY+">"
-            if "p-meta-type" in param:
-                META_KEY_TYPE = param["p-meta-type"]
+            #if "p-meta-type" in param:
+            #    META_KEY_TYPE = param["p-meta-type"]
             if "p-chart-axis" in param:
                 if param["p-chart-axis"] == "time_series":
-                    CHART_AXIS_TYPE = "initial"
+                    for f_opt in param["p-chart-axis"]:
+                        if f_opt:
+                            CHART_AXIS_TYPE = "initial"
 
         # Process
         # -------

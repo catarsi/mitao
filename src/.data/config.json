@@ -180,7 +180,7 @@
             "description": "Builds the MTMvis, a visulization that shows the corpus documents’ topic representativeness based on a metadata attribute of such documents",
             "class_label": "Terminal",
             "class": "Terminal",
-            "param": ["p-meta-value","p-meta-type","p-meta-filter","p-chart-axis"],
+            "param": ["p-meta-value","p-chart-axis","p-meta-filter"],
             "function": "cat_topics_barchart",
             "input_ready": true,
             "compatible_input": ["d-doc-topics-table","d-metadata"],
@@ -268,33 +268,23 @@
         },
         "p-meta-value":{
           "handler": "input-text",
-          "label": "Attribute:",
-          "group": true,
+          "label": "Meta attribute to use on x-Axis:",
           "value": "",
           "placeholder": "E.G. year",
           "init_value": false
         },
-        "p-meta-type":{
-          "handler": "select-value",
-          "label": "Attribute type:",
-          "group": true,
-          "value_label": ["integer","string","list of integers","list of strings"],
-          "value": ["int","str","list::int","list::str"],
-          "init_value": "str"
-        },
         "p-meta-filter":{
           "handler": "input-text",
-          "label": "Attribute/s to use as filters:",
+          "label": "Meta attribute/s to use as filters (use <i>' && '</i> as separotor in case you want to specify more than one):",
           "value": "",
-          "placeholder": "E.G. age",
+          "placeholder": "E.G. age && location",
           "init_value": ""
         },
         "p-chart-axis":{
-          "handler": "select-value",
-          "label": "X-Axis data type:",
-          "value_label": ["None","Time series"],
-          "value": ["none","time_series"],
-          "init_value": "none"
+          "handler": "check-value",
+          "label": null,
+          "value": false,
+          "value_label": "Build a time series chart"
         },
         "p-topic-from":{
           "handler": "input-text",

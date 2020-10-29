@@ -63,6 +63,7 @@ $('.hover_bkgr_fricc').show();
 
 //When closing the window DIPAM shutdown
 //In case it was pagereload triggered from a /loadworkflow -> DIPAM Stay alive
+/*
 window.onbeforeunload = function (event) {
   if (!vw_interface.in_loading_status) {
     $.get("/shutdown").done(function() {});
@@ -70,3 +71,4 @@ window.onbeforeunload = function (event) {
     vw_interface.in_loading_status = false;
   }
 };
+*/

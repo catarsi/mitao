@@ -497,10 +497,14 @@ select, .dropdown-toggle{
 .param-att.custom-select{
   width: calc(100% - 50%);
 }
-.input-group
-input {
+.input-group input {
   width: calc(100%);
 }
+.input-group input[type="checkbox"]{
+  width: auto;
+  margin-left: 0px;
+}
+
 .input-group + .input-group{
   padding-top: 10px;
 }

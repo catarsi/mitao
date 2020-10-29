@@ -360,25 +360,21 @@ class dipam_interface {
               break;
 
           case 'check-value':
-                  var str_options = "";
-                  //console.log(param.value,dom_value);
-                  for (var j = 0; j < param.value.length; j++) {
-                      var selected_val = "";
-                      if (dom_value.indexOf(param.value[j]) != -1) {
-                        selected_val = "checked";
-                      }
-                      str_options = str_options + "<input type='checkbox' class='"+a_dom_class+" att-handler' data-select-target='"+a_dom_id+"' data-value-index='"+j+"' "+selected_val+" value='"+param.value[j]+"' >"+param.label[j]+"<br>";
-                   };
+                 var group_title = '';
+                 if (param.intro_lbl != null) {
+                   group_title = '<div class="input-group-prepend"><label class="input-group-text">'+param.intro_lbl+'</label></div>';
+                 }
 
-                    str_html = str_html + `
-                    <div class="input-group `+dom_tag+` `+group_class+`">
-                          <div class="input-group-prepend">
-                            <label class="input-group-text">`+param.intro_lbl+`</label>
-                          </div>
-                          <div data-att-value="`+k_attribute+`" data-id="`+elem.data.id+`" id="`+a_dom_id+`" class="save-value check-input-group">`+str_options+`</div>
-                    </div>
-                    `;
-                  break;
+                 var selected_val = "";
+                 if (dom_value) {
+                   selected_val = "checked";
+                 }
+                 str_html = str_html +
+                    `<div class="input-group `+dom_tag+` `+group_class+`">`+
+                    group_title +
+                    `<input `+selected_val+` type="checkbox" class="`+a_dom_class+` save-value att-handler" data-att-value="`+k_attribute+`" data-id="`+elem.data.id+`" id="`+a_dom_id+`"><label>`+param.label+`</label>
+                    </div>`;
+                 break;
 
           case 'input-text':
                 var placeholder_str = "";
@@ -601,7 +597,7 @@ class dipam_interface {
       if ('_private' in corresponding_elem) {
         corresponding_elem = corresponding_elem._private;
       }
-      console.log("corresponding_elem = ",corresponding_elem);
+      //console.log("corresponding_elem = ",corresponding_elem);
 
       switch (dom_class) {
           case 'edit-trigger':
@@ -618,7 +614,6 @@ class dipam_interface {
           case 'save-trigger':
             $(event_dom).on('click', function() {
               this.setAttribute("href","src/.data/workflow.json");
-
               var data_to_update = $.extend(true,{},interface_instance.editing("save"));
               interface_instance.reload_control_section(
                   diagram_instance.update_elem(
@@ -668,8 +663,10 @@ class dipam_interface {
           case 'input-text-trigger':
             $(event_dom).on('change', function(){
               var scrol_pos = $("#control_mid").scrollTop();
-              //console.log($(event_dom).val());
-              interface_instance.set_dipam_temp_val(this.getAttribute('data-att-value'),$(event_dom).val());
+              var att_key = this.getAttribute('data-att-value');
+              var new_val = $(event_dom).val();
+              interface_instance.set_dipam_temp_val(att_key, new_val);
+
               var data_to_update = $.extend(true,{},interface_instance.editing("save"));
               diagram_instance.update_elem(corresponding_elem.data.id, corresponding_elem.data.type, data_to_update);
               document.getElementById('save').click();
@@ -758,23 +755,18 @@ class dipam_interface {
                 });
                 break;
            case 'check-value-trigger':
-                      $(event_dom).on('click', function(){
+                  $(event_dom).on('change', function(){
                           var scrol_pos = $("#control_mid").scrollTop();
-                          var father_id = this.getAttribute('data-select-target');
-                          var check_value = this.getAttribute('value');
-                          var att_key = document.getElementById(father_id).getAttribute('data-att-value');
+                          var att_key = this.getAttribute('data-att-value');
+                          interface_instance.set_dipam_temp_val(att_key, this.checked);
 
-                          var a_list = [];
-                          var list_checked = $(".check-value-trigger:checked");
-                          for (var l = 0; l < list_checked.length; l++) {
-                            a_list.push(list_checked[l].getAttribute('value'));
-                          }
-
-                          interface_instance.set_dipam_temp_val(att_key, a_list);
-                          interface_instance.editing("save");
+                          /*Always put these lines*/
+                          var data_to_update = $.extend(true,{},interface_instance.editing("save"));
+                          diagram_instance.update_elem(corresponding_elem.data.id, corresponding_elem.data.type, data_to_update);
                           document.getElementById('save').click();
                           $("#control_mid").scrollTop(scrol_pos);
-                      });
+                          /* -- -- ---- */
+                  });
                   break;
             case 'select-file-trigger':
                   var dom_id = event_dom.getAttribute('id');
@@ -965,7 +957,7 @@ class dipam_interface {
           if ('_private' in new_elem) {
             new_elem = new_elem._private;
           }
-          this.build_info(new_elem, update_control_params);
+          this.build_info(new_elem, 'nodes', update_control_params);
         }
         this.click_info_nav();
         //this.DOMS.CONTROL.INFO_BTN.click();
@@ -1434,7 +1426,6 @@ class dipam_interface {
           document.getElementById('list_options_trigger').click();
           //interface_instance.click_save_workflow();
           var workflow_data = diagram_instance.get_workflow_data();
-          //console.log(JSON.stringify(workflow_data));
           $.post( "/saveworkflow"+"?time="+(new Date().getTime()).toString(), {
             //workflow_data: JSON.stringify(workflow_data).replace(/\\/g, "\\\\"),
             workflow_data: JSON.stringify(workflow_data),

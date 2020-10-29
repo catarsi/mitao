@@ -126,7 +126,6 @@ class TextAnalysis(object):
             if "p-corpusmodel" in param:
                 p_model = str(param["p-corpusmodel"])
 
-
         # -> Create the dictionary of words containing the number of times a word appears in the training set
         # -> Filter out tokens that appear in: (a) less than 15 documents; OR (b) more than 0.5 documents
         # -> and keep only the first 100000 most frequent tokens.
