@@ -38,22 +38,20 @@ vw_interface.set_events();
 //******************************************//
 vw_interface.build_overview(diagram_instance.get_gen_elem('diagram'));
 vw_interface.click_overview_nav();
-
-
+vw_interface.check_version();
 //******************************************//
 //********** POP Up Help **************//
 //******************************************//
 
-$(".trigger_popup_fricc").click(function(){
-       $('.hover_bkgr_fricc').show();
-});
+/*
 $('.hover_bkgr_fricc').click(function(){
         $('.hover_bkgr_fricc').hide();
 });
+*/
 $('.popupCloseButton').click(function(){
+        $('.hover_bkgr_fricc').removeClass("not-active");
         $('.hover_bkgr_fricc').hide();
 });
-$('.hover_bkgr_fricc').show();
 
 
 //*** Example ****//

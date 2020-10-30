@@ -22,6 +22,13 @@
 :disabled{
   opacity: 0.6;
 }
+.disable-elem{
+  opacity: 0.25;
+  pointer-events: none;
+}
+.to-do-style{
+  color: #ff3b3b!important;
+}
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -319,6 +326,17 @@ DIAGRAM TOP
 }
 .navbar-toggle{
   display: block;
+}
+.badge-notification{
+    position: absolute;
+    top: 25px;
+    right: 0px;
+    padding: 1px 1px;
+    border-radius: 50%;
+    background: #ff3b3b;
+    width: 20px;
+    height: 20px;
+    display: none;
 }
 #list_options{
   margin-top: 1px;

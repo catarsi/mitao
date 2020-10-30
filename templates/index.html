@@ -23,7 +23,18 @@
   </head>
 
   <body>
+
+      <div class="hover_bkgr_fricc">
+          <span class="helper"></span>
+          <div>
+              <div class="popupCloseButton">&times;</div>
+              <div class="content">
+              </div>
+          </div>
+      </div>
+
       <div id="gui">
+
         <div id="left">
           <div id="control">
             <div id="control_body"></div>
@@ -85,12 +96,15 @@
                   <svg class="bi bi-three-dots" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M3 9.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm5 0a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm5 0a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" clip-rule="evenodd"/>
                   </svg>
+                  <span id="badge_notification" class="badge-notification"></span>
                 </button>
                 <div id="list_options">
+                        <button id="btn_update_tool" type="button" value="update" class="btn btn-default">Update MITAO</button>
                         <button id="btn_save_workflow" type="button" value="save" class="btn btn-default">Save</button>
                         <a id="btn_save_workflow_a" href="/download/workflow" value="save" style="display:none;" target="_blank" download></a>
                         <button id="btn_load_workflow" type="button" value="load" class="btn btn-default">Open</button>
                         <input id="file_to_load" type="file" style="display: none;"/>
+                        <button id="btn_help_tool" type="button" value="help" class="btn btn-default">Help</button>
                         <button id="shutdown_btn" type="button" value="shutdown" class="btn btn-default">Shutdown</button>
                 </div>
 

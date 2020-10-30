@@ -24,6 +24,7 @@ class dipam_interface {
               "REMOVE_ELEM_CONTAINER": document.getElementById('remove_elem'),
           },
           "CONTROL": {
+              "GUI": document.getElementById('gui'),
               "BASE": document.getElementById('control'),
               "CONTAINER": document.getElementById('control_body'),
               //"CONTAINER_MID": document.getElementById('control_mid'),
@@ -37,6 +38,8 @@ class dipam_interface {
               "OPT_TRIGGER": document.getElementById('list_options_trigger'),
               "OPT_LIST": document.getElementById('list_options'),
               "RUN_BTN": document.getElementById('btn_run_workflow'),
+              "UPDATE_TOOL_BTN": document.getElementById('btn_update_tool'),
+              "HELP_TOOL_BTN": document.getElementById('btn_help_tool'),
               "SAVE_BTN": document.getElementById('btn_save_workflow'),
               "SAVE_BTN_DOWNLOAD": document.getElementById('btn_save_workflow_a'),
               "LOAD_BTN": document.getElementById('btn_load_workflow'),
@@ -47,6 +50,8 @@ class dipam_interface {
               "END_BLOCK": document.getElementById('end_block'),
               //extra section
               "EXTRA_CONTAINER": document.getElementById('workflow_extra'),
+              //notifications
+              "NOTE_BADGE": document.getElementById('badge_notification'),
           }
         };
 
@@ -99,6 +104,22 @@ class dipam_interface {
     }
     reset_dipam_temp_val(){
       this.temp_dipam_value = {};
+    }
+
+    check_version(){
+      var interface_instance = this;
+      $.ajax({
+        url: "/check_tool",
+        type: 'GET',
+        success: function(data) {
+              data = JSON.parse(data);
+              if (!(data["is_ready"])) {
+                interface_instance.DOMS.WORKFLOW.NOTE_BADGE.style.display = "block";
+                //$(interface_instance.DOMS.WORKFLOW.UPDATE_TOOL_BTN).toggleClass("disable-elem");
+                $(interface_instance.DOMS.WORKFLOW.UPDATE_TOOL_BTN).addClass("to-do-style");
+              }
+          }
+      });
     }
 
     //build the info panel on the left
@@ -554,7 +575,7 @@ class dipam_interface {
           }
        });
 
-       $('.open-box-trigger').on( "click", function() {
+      $('.open-box-trigger').on( "click", function() {
           var current_display_val =  $( this ).next().css( "display");
           var svg_closed = '<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/></svg>';
           var svg_open = '<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>';
@@ -569,6 +590,63 @@ class dipam_interface {
             }
           }
        });
+
+      $(interface_instance.DOMS.WORKFLOW.UPDATE_TOOL_BTN).on( "click", function() {
+
+        function __update() {
+          $('.hover_bkgr_fricc').addClass("not-active");
+          $(interface_instance.DOMS.CONTROL.GUI).addClass("disable-elem");
+          $('.hover_bkgr_fricc .content').html(`
+            <img class="mitao-logo" src="getlogo" alt="mitao">
+            <p>Updating MITAO ... <br>(This process might take several minutes. Please don't close the application)</p>
+            `);
+          $.ajax({
+            url: "/update_tool",
+            type: 'GET',
+            success: function(data) {
+                  data = JSON.parse(data);
+                  $(interface_instance.DOMS.CONTROL.GUI).removeClass("disable-elem");
+                  $('.popupCloseButton').click();
+                  console.log(data);
+                  interface_instance.DOMS.WORKFLOW.NOTE_BADGE.style.display = "none";
+                  $(interface_instance.DOMS.WORKFLOW.UPDATE_TOOL_BTN).removeClass("to-do-style");
+              }
+          });
+        }
+
+        if ($(this).hasClass("to-do-style")) {
+          $('.hover_bkgr_fricc').show();
+          __update();
+        }else {
+            $('.hover_bkgr_fricc .content').html(`
+              <img class="mitao-logo" src="getlogo" alt="mitao">
+              <p>MITAO is updated!<br>Do you want to proceed anyway?</p>
+              <button id="force_update_tool">Yes, force update anyway</button>
+            `);
+            $('.hover_bkgr_fricc').show();
+            $("#force_update_tool").on( "click", function(){
+              __update();
+            });
+        }
+      });
+
+
+
+      $(interface_instance.DOMS.WORKFLOW.HELP_TOOL_BTN).on( "click", function() {
+
+        $('.hover_bkgr_fricc .content').html(`
+          <img class="mitao-logo" src="getlogo" alt="mitao">
+          <p>This is MITAO, a Mashup Interface for Text Analysis Operations, is a new graphic-based, user friendly, open source software for performing topic modelling and other analysis on textual data.
+          It permits the definition and execution of a visual text analysis workflow. The source code and documentation is available on the MITAO Github repository. MITAO is currently licensed under the ISC License.</p>
+          <p>
+            <a href="https://doi.org/10.19245/25.05.pij.5.2.3">Check the paper on MITAO</a><br>
+            <a href="https://github.com/catarsi/mitao">Go to the git repository</a>
+          </p>
+          `);
+        $('.hover_bkgr_fricc').show();
+      });
+
+
     }
     set_control_section_events(elem){
       if ('_private' in elem) {

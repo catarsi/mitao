@@ -82,6 +82,30 @@ def shutdown():
 def status():
     return "Online\n"
 
+@app.route('/check_tool')
+def check_tool():
+    res = {"is_ready": True}
+    #Check nltk data
+    res["nltk_data"] = os.path.exists("_venv/nltk_data")
+    res["is_ready"] &= res["nltk_data"]
+    return json.dumps(res)
+
+@app.route('/update_tool')
+def update_tool():
+    res = {"res_status": ""}
+    #Check nltk data
+    if not os.path.exists("_venv/nltk_data"):
+        nltk.download("all", "_venv/nltk_data")
+        res["res_status"] = "done"
+
+    time.sleep(5)
+    return json.dumps(res)
+
+
+@app.route('/getlogo')
+def get_logo():
+    return send_file("doc/mitao_v2.svg")
+
 #example: /dipam?workflow=WW&?config=CC
 @app.route('/')
 def index():
