@@ -2,8 +2,7 @@
 __pycache__
 .ipynb_checkpoints
 _venv
-__local__config_loader
-__local__index.html
-__local__config_loader.js
 .log
 _private
+.process-temp/*
+.tmp/*
