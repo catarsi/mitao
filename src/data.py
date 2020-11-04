@@ -72,7 +72,7 @@ class Data(object):
             res = a_f.read()
             a_f.close()
         elif file_type == "file":
-            res = str(a_file.read(),'utf-8',errors='ignore')
+            res = str(a_file.stream.read(),'utf-8',errors='ignore')
         else:
             res = a_file
         return res

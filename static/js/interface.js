@@ -113,10 +113,14 @@ class dipam_interface {
         type: 'GET',
         success: function(data) {
               data = JSON.parse(data);
+              console.log(data);
               if (!(data["is_ready"])) {
                 interface_instance.DOMS.WORKFLOW.NOTE_BADGE.style.display = "block";
                 //$(interface_instance.DOMS.WORKFLOW.UPDATE_TOOL_BTN).toggleClass("disable-elem");
                 $(interface_instance.DOMS.WORKFLOW.UPDATE_TOOL_BTN).addClass("to-do-style");
+              }else {
+                interface_instance.DOMS.WORKFLOW.NOTE_BADGE.style.display = "none";
+                $(interface_instance.DOMS.WORKFLOW.UPDATE_TOOL_BTN).removeClass("to-do-style");
               }
           }
       });
@@ -593,7 +597,7 @@ class dipam_interface {
 
       $(interface_instance.DOMS.WORKFLOW.UPDATE_TOOL_BTN).on( "click", function() {
 
-        function __update() {
+        function __update(tag = "write") {
           $('.hover_bkgr_fricc').addClass("not-active");
           $(interface_instance.DOMS.CONTROL.GUI).addClass("disable-elem");
           $('.hover_bkgr_fricc .content').html(`
@@ -601,7 +605,7 @@ class dipam_interface {
             <p>Updating MITAO ... <br>(This process might take several minutes. Please don't close the application)</p>
             `);
           $.ajax({
-            url: "/update_tool",
+            url: "/update_tool/"+tag,
             type: 'GET',
             success: function(data) {
                   data = JSON.parse(data);
@@ -625,7 +629,7 @@ class dipam_interface {
             `);
             $('.hover_bkgr_fricc').show();
             $("#force_update_tool").on( "click", function(){
-              __update();
+              __update("overwrite");
             });
         }
       });
@@ -1073,7 +1077,7 @@ class dipam_interface {
     }else if (workflow_status == 'run') {
       _disable_divs(this,true,false);
       new_status = 'stop';
-      new_lbl_status = "Reset";
+      new_lbl_status = "Get back to edit";
 
     }else if (workflow_status == 'stop') {
       _disable_divs(this,false,true);
@@ -1179,56 +1183,59 @@ class dipam_interface {
       console.log("Ready again!");
     }
 
-    function _process_workflow(instance,i,terminals){
+    function _process_workflow(instance,i,terminals, pending_index = 0){
 
             var w_elem = workflow_to_process[i];
             console.log("Process: ", w_elem)
             //check if is a terminal
 
             //call the server
-            var data_to_post = _gen_form_data(w_elem);
-            //COMMENT if not SERVER TEST
-            /*
-            if (data_to_post == -1) {
-                instance.add_timeline_block(w_elem.id, w_elem.type, w_elem.name, true, "Data uploaded size limit exceeded (max 2MB)");
-                return -1
-            }
-            */
-            //---
-
+            var request_status = "done";
+            var form_data = _gen_form_data(w_elem, pending_index);
+            var data_to_post = form_data["post_data"];
+            var new_index = form_data["new_index"];
+            console.log(data_to_post, new_index);
 
             $.ajax({
               url: "/process",
+              timeout: 0, //Set your timeout value in milliseconds or 0 for unlimited
               data: data_to_post,
               processData: false,
               contentType: false,
               type: 'POST',
               success: function(data) {
-                    if (data.startsWith("Error:")) {
-                      instance.add_timeline_block(w_elem.id, w_elem.type, w_elem.name, true, data);
+                    if (data.startsWith("Success:Waiting data !")) {
+                      //process the same item again (modified version)
+                      _process_workflow(instance,i,terminals, new_index);
                     }else {
-                      instance.in_light_node(w_elem.id);
-                      instance.add_timeline_block(w_elem.id, w_elem.type, w_elem.name);
-                      //process next node
-                      if (i == workflow_to_process.length - 1) {
-                        console.log("Done All !!");
-                        instance.process_terminals(terminals);
-                        instance.DOMS.WORKFLOW.END_BLOCK.style.visibility = 'visible';
-                        instance.DOMS.WORKFLOW.RUN_BTN.innerHTML = "Process done";
-                        instance.DOMS.WORKFLOW.RUN_BTN.value = "stop";
-                      }else {
-                        if (instance.request_status_on) {
-                          _process_workflow(instance,i+1,terminals);
+                        if (data.startsWith("Error:")) {
+                          instance.add_timeline_block(w_elem.id, w_elem.type, w_elem.name, true, data);
+                        }else {
+                          instance.in_light_node(w_elem.id);
+                          instance.add_timeline_block(w_elem.id, w_elem.type, w_elem.name);
+                          //process next node
+                          if (i == workflow_to_process.length - 1) {
+                            console.log("Done All !!");
+                            instance.process_terminals(terminals);
+                            instance.DOMS.WORKFLOW.END_BLOCK.style.visibility = 'visible';
+                            instance.DOMS.WORKFLOW.RUN_BTN.innerHTML = "Get back to edit";
+                            instance.DOMS.WORKFLOW.RUN_BTN.value = "stop";
+                          }else {
+                            if (instance.request_status_on) {
+                              _process_workflow(instance,i+1,terminals);
+                            }
+                          }
                         }
-                      }
                     }
                 }
             });
 
             /*normalize the file list in a form type*/
-            function _gen_form_data(elem_data){
+            function _gen_form_data(elem_data, files_start_index = 0){
               var post_data = new FormData();
-
+              var request_status = "done";
+              var new_index = null;
+              var MAX_NUM_FILES = 500;
               /*The array and object elements should be normalized for Post*/
               /* The node data are:
                 1) The MUST-ATT: id, name, value, type
@@ -1250,16 +1257,16 @@ class dipam_interface {
                   for (var a_k in list_att) {
                     var val_of_att = list_att[a_k];
                     if (a_k == 'p-file') {
-                      Array.prototype.forEach.call(val_of_att, function(file,index) { post_data.append(a_k+'[]', file);});
-                      //COMMENT if not SERVER TEST
-                      /*
-                      var upload_buffer_count = 0;
-                      Array.prototype.forEach.call(val_of_att, function(file,index) { upload_buffer_count = upload_buffer_count + file["size"] });
-                      if (upload_buffer_count > 2000000) {
-                        return -1;
+
+                      //the maximum supported number of files
+                      Array.prototype.forEach.call(val_of_att, function(file,index) { if((index>=files_start_index) && (index-files_start_index<MAX_NUM_FILES)){post_data.append(a_k+'[]', file);} });
+
+                      // check if the posted data exceeds the maximum number of supported chars
+                      if (val_of_att.length - files_start_index > MAX_NUM_FILES){
+                        request_status = "pending";
+                        new_index = files_start_index + MAX_NUM_FILES;
                       }
-                      */
-                      //--
+
                     }else {
                       if (Array.isArray(val_of_att)) {
                         //form_data.append(a_k, JSON.stringify(w_elem[a_k]));
@@ -1276,7 +1283,8 @@ class dipam_interface {
                     }
                   }
               }
-              return post_data;
+              post_data.append("request_status", request_status);
+              return {"post_data": post_data, "new_index": new_index};
             }
       }
   }
@@ -1497,10 +1505,9 @@ class dipam_interface {
         }
     });
 
-    $( "#"+this.DOMS.WORKFLOW.SAVE_BTN.getAttribute('id')).on({
-        click: function(e) {
-          e.preventDefault();
-
+    $(this.DOMS.WORKFLOW.SAVE_BTN).on("click", function() {
+          //e.preventDefault();
+          console.log("Saving ... ");
           document.getElementById('list_options_trigger').click();
           //interface_instance.click_save_workflow();
           var workflow_data = diagram_instance.get_workflow_data();
@@ -1513,7 +1520,6 @@ class dipam_interface {
           }).done(function() {
             interface_instance.DOMS.WORKFLOW.SAVE_BTN_DOWNLOAD.click();
           });
-        }
     });
 
     $( "#"+this.DOMS.WORKFLOW.SHUTDOWN_BTN.getAttribute('id')).on({

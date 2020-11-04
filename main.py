@@ -1,8 +1,13 @@
+import sys
+#
+assert sys.version_info >= (3, 0, 0) and sys.version_info < (4, 0, 0), "Run the tool with Python 3.7"
+import pathlib
+#
+
 from pyfladesk import init_gui
 import json
 import requests
 import re
-import sys
 import csv
 import os, shutil
 import time
@@ -10,6 +15,7 @@ from os.path import basename
 from shutil import copyfile
 import zipfile
 from ast import literal_eval
+from flaskwebgui import FlaskUI #get the FlaskUI class
 
 from src import tool
 from src import data
@@ -21,8 +27,14 @@ from flask import Flask, render_template, request, json, jsonify, redirect, url_
 import webbrowser
 from threading import Timer
 
+# ----- Libraries to use on the update phase
+import nltk
+# ------------------------------------------
+
 #cache.clear()
 app = Flask(__name__)
+
+app.config['MAX_CONTENT_LENGTH'] = 500 * 1024 * 1024    # 500 Mb limit
 #app.config['DEBUG'] = True
 #app.debug = True
 app.config.update(
@@ -40,6 +52,7 @@ if (len(sys.argv) > 2):
 BASE_PROCESS_PATH = SCRIPT_PATH+"/src/.process-temp"
 BASE_TMP_PATH = SCRIPT_PATH+"/src/.tmp"
 BASE_CONFIG_PATH = SCRIPT_PATH+"/src/.data"
+BASE_VENV_PATH = SCRIPT_PATH+"/_venv"
 CONFIG_DATA = {}
 
 #Will store all the FileStorage of the 'data' nodes
@@ -57,6 +70,9 @@ FILE_TYPE["table"] = ["csv"]
 FILE_TYPE["series"] = ["json"]
 FILE_TYPE["gensim_dictionary"] = ["gdict"]
 FILE_TYPE["gensim_ldamodel"] = ["glda"]
+
+## A buffer for the POSTED data
+BUFFER = dict()
 
 #Set log
 import logging
@@ -77,7 +93,6 @@ def shutdown():
     shutdown_server()
     return 'Server shutting down...'
 
-
 @app.route('/status')
 def status():
     return "Online\n"
@@ -85,20 +100,19 @@ def status():
 @app.route('/check_tool')
 def check_tool():
     res = {"is_ready": True}
+
     #Check nltk data
-    res["nltk_data"] = os.path.exists("_venv/nltk_data")
+    res["nltk_data"] = os.path.exists(BASE_VENV_PATH+"/nltk_data")
     res["is_ready"] &= res["nltk_data"]
     return json.dumps(res)
 
-@app.route('/update_tool')
-def update_tool():
+@app.route('/update_tool/<tag>')
+def update_tool(tag):
     res = {"res_status": ""}
     #Check nltk data
-    if not os.path.exists("_venv/nltk_data"):
-        nltk.download("all", "_venv/nltk_data")
+    if not os.path.exists(BASE_VENV_PATH+"/nltk_data") or (tag == "overwrite"):
+        nltk.download("all", BASE_VENV_PATH+"/nltk_data")
         res["res_status"] = "done"
-
-    time.sleep(5)
     return json.dumps(res)
 
 
@@ -336,6 +350,7 @@ def process():
                 'type': None,
                 'value': None,
                 'name': None,
+                'request_status': None
     }
     elem_workflow_att = {}
     elem_graph_att = {}
@@ -476,16 +491,26 @@ def process():
         #The data entries in this case are the elements themselfs
         # we read directly these files and save them locally
         #add the corresponding files
-        files = None;
+        global BUFFER
+        files = None
         if 'p-file' in elem_param_att:
             files = elem_param_att['p-file']
 
+        # Check if the request status is = "pending"
+        # In this case put everything in buffer and wait all the data
         a_data = dipam_data.handle(files, elem_value, file_type = "file", param = None)
-
+        BUFFER.update(a_data[0])
+        data_class = a_data[1]
+        if elem_must_att["request_status"] == "pending":
+            print("The Buffer size now is [",len(BUFFER),"]")
+            return "Success:Waiting data !"
+        #print("Uploading [",len(BUFFER),"] files")
         corpus[elem_id] = {}
         corpus[elem_id][elem_value] = {}
-        corpus[elem_id][elem_value]["files"] = a_data[0]
-        corpus[elem_id][elem_value]["data_class"] = a_data[1]
+        corpus[elem_id][elem_value]["files"] = BUFFER
+        corpus[elem_id][elem_value]["data_class"] = data_class
+        # initialize the BUFFER again
+        BUFFER = dict()
 
     #print(posted_data["id"]," index is: " ,dipam_linker.get_elem(posted_data["id"]))9
     return "Success:Processing done !"
@@ -543,6 +568,15 @@ if __name__ == '__main__':
     dipam_tool = tool.Tool(CONFIG_DATA["tool"], BASE_TMP_PATH)
     dipam_data = data.Data(CONFIG_DATA["data"], BASE_TMP_PATH)
 
-    Timer(1, open_browser).start()
-    app.run()
+    # CHOOSE A or B
+    # --- A
+    #Timer(1, open_browser).start()
+    #app.run()
+    # --- B
+    # ----- COMMENT FOR A GUI BASED ON BROWSER
+    ui = FlaskUI(app, width=1200, height=800)
+    ui.run()
+    # -----
+
+
     #init_gui(app)

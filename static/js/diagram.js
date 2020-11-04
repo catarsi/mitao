@@ -255,11 +255,15 @@ class dipam_diagram {
       /*adapt all parameters*/
       if (is_node){
         var l_of_params = Object.keys(res_obj.param);
-        var all_params = diagram_instance.CONFIG[res_obj.type][res_obj.value]["param"];
-        for (var i_p = 0; i_p < all_params.length; i_p++) {
-          var a_param = all_params[i_p];
-          if (l_of_params.indexOf(a_param) == -1){
-            res_obj.param[a_param] = null;
+        console.log(res_obj.type,res_obj.value);
+        var all_params = diagram_instance.CONFIG[res_obj.type][res_obj.value];
+        if ("param" in all_params) {
+          all_params = all_params["param"];
+          for (var i_p = 0; i_p < all_params.length; i_p++) {
+            var a_param = all_params[i_p];
+            if (l_of_params.indexOf(a_param) == -1){
+              res_obj.param[a_param] = null;
+            }
           }
         }
       }
