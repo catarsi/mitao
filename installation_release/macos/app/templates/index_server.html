@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>catarsi-dipam</title>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+
+    <link rel=stylesheet type=text/css href="{{ url_for('.static', filename='css/bootstrap.min.css') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('.static', filename='css/index.css') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('.static', filename='css/lightbox.css') }}">
+
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>-->
+    <script src="{{ url_for('.static', filename='js/jquery2-2-4.min.js') }}"></script>
+    <script src="{{ url_for('.static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('.static', filename='cytoscape/dist/cytoscape.min.js') }}"></script>
+    <script src="{{ url_for('.static', filename='js/lodash.js') }}"></script>
+    <script src="{{ url_for('.static', filename='js/lightbox.js') }}"></script>
+
+  </head>
+
+  <body>
+    <span>
+
+
+      <div id="dipam_options" class="">
+        <div> <a class="trigger_popup_fricc">Help</a></div>
+      </div>
+      <div class="hover_bkgr_fricc">
+          <span class="helper"></span>
+          <div>
+              <div class="popupCloseButton">&times;</div>
+              <img class="mitao-logo" src="http://163.172.159.152/src/mitao/mitao.svg" alt="mitao">
+              <p>This is a demo version of MITAO: A Mashup Interface for Text Analysis Operations
+                <br />In this beta version you have a maximum data upload limit set to 2MB.
+                <br />You can download, unzip and use the following corpus to test MITAO: <a href="http://163.172.159.152/src/mitao/corpus.zip">sample corpus</a>
+                <br />Read the full <a href="http://163.172.159.152/src/mitao/mitao_doc.pdf">documentation of Mitao</a> for any help on using MITAO
+              </p>
+              <p>
+                <a href="https://github.com/catarsi/mitao">Go to the git repository</a>
+              </p>
+          </div>
+      </div>
+
+      <div id="diagram_editor">
+        <ul id="diagram_editor_nav" class="">
+          <li><button id="add_tool" type="button" class="btn btn-warning">Add Tool</button></li>
+          <li><button id="add_data" type="button" class="btn btn-info">Add Data</button></li>
+        </ul>
+
+        <ul id="diagram_editor_left_side" class="">
+          <li id="diagram_undo_redo" class="">
+            <div class="nav-btn"><a id="undo_btn" >&#8404;</a></div>
+            <div class="nav-btn"><a id="redo_btn" >&#8405;</a></div>
+          </li>
+          <li id="diagram_fit" class=""><a id="fit_btn" >&#10070;</a></li>
+          <li id="diagram_zoom" class="">
+            <div class="nav-btn"><a id="zoom_in_btn" >&#43;</a></div>
+            <div class="nav-btn"><a id="zoom_out_btn" >&#8722;</a></div>
+          </li>
+        </ul>
+      </div>
+
+      <div id="control">
+        <ul id="control_nav" class="nav control-nav">
+          <li id="nav_overview" class="nav-btn"><a id="nav_overview_a">Overview</a></li>
+          <li id="nav_info" class="nav-btn"><a id="nav_info_a">Info</a></li>
+        </ul>
+        <div id="control_body"></div>
+      </div>
+      <div id="null_div">
+      </div>
+
+    </span>
+
+    <span><div id="cy"></div></span>
+
+    <div id="cy_foot">
+      <div id="workflow_timeline">
+        <button id="btn_run_workflow" type="button" value="ready" class="btn btn-default">Run workflow</button>
+        <button id="btn_save_workflow" type="button" value="save" class="btn btn-default">Save</button>
+        <a id="btn_save_workflow_a" href="/download/workflow" value="save" style="display:none;" target="_blank" download></a>
+        <button id="btn_load_workflow" type="button" value="load" class="">Open</button>
+        <input id="file_to_load" type="file" style="display: none;"/>
+        <div id="timeline_container" class="timeline-container">
+          <div id="start_block" class="timeline-block"></div>
+          <!--<div id="timeline_text" class="timeline-block">Workflow timeline ...</div>-->
+          <div id="end_block" class="timeline-block" style="visibility: hidden;"></div>
+        </div>
+      </div>
+      <div id="workflow_extra">
+      <div>
+    </div>
+
+    <!--config file-->
+    <!--<script type="text/javascript" src="/src/js/config.json"></script>-->
+    <!--the interface class to include-->
+    <script src="{{ url_for('.static', filename='js/interface.js') }}"></script>
+    <script src="{{ url_for('.static', filename='js/diagram.js') }}"></script>
+    <!--cytoscape-->
+    <script src="{{ url_for('.static', filename='js/cytoscape-edgehandles.js') }}"></script>
+    <script src="{{ url_for('.static', filename='js/cytoscape-undo-redo.js') }}"></script>
+    <!-- The main script and the configuration loader-->
+    <!--<script src="{{ url_for('.static', filename='js/__remote__config_loader.js') }}"></script>-->
+    <script>
+    var config = "{{config}}";
+    var workflow = "{{workflow}}";
+    </script>
+    <script src="{{ url_for('.static', filename='js/main.js') }}"></script>
+
+  </body>
+
+</html>

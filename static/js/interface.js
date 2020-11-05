@@ -1198,7 +1198,7 @@ class dipam_interface {
 
             $.ajax({
               url: "/process",
-              timeout: 0, //Set your timeout value in milliseconds or 0 for unlimited
+              timeout: 0, // 24 hours (24 * 60 * 60 * 1000). Set the timeout value in milliseconds or 0 for unlimited
               data: data_to_post,
               processData: false,
               contentType: false,

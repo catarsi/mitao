@@ -1,0 +1,368 @@
+
+
+
+
+
+
+Change agents and the dissemin ation of accounting technology: Wales' basic industries, c.1750 - c.1870
+
+
+Abstract
+
+The growth of industrial activity in Britain in the eighteenth and nineteenth centuries created a demand for a new type of accounting, viz. "industrial accounting", to satisfy the changing internal information requirements of business owners/managers. Recent research into the accounting records of a number of iron companies covering this period has suggested that, despite the paucity of the contemporary British literature on industrial accounting , new accounting techniques and new ideas concerning  the potentialities of accounting were developed. Building on these advances, this paper employs the notion of "change agents" to explore the mechanism through which new techniques and ideas were disseminated within the basic metal mining and smelting  industries of Wales. Within this context, particular  attention is given  to the type of person responsible for carrying out the internal accounting function.
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+Introduction
+
+This exploratory study seeks to investigate the mechanism of accounting change by focusing on certain events within Wales' basic industries during a period - c.1750-
+c. I 870 - which saw the emergence of industrial accounting. 1 In particular, the study attempts to focus on six inter-related questions. Who established industrial accounting systems within Wales' basic industries? Who was responsible for the development of accounting systems to meet changing business requirements? What factors gave rise to the need for new and improved systems? What was the source of new knowledge? How were new techniques disseminated within and between industries? Who were the change agents implicated in this process? Theoretically, a wide range of possi ble answers to these questions exist, but owners, entrepreneurs and accountants seem the likeliest possible sources, not only for the establishment of systems, but also in the role of change agents. We will therefore examine their roles, and make some assessment of the extent to which their relative importance was linked to the growth and development of business organisations and managerial structures.
+The paper is divided into five sections. Section I considers published ideas concerning the relationship between accounting theory and practice during the period covered by this study, and draws attention to the relative lack of attention devoted to the role  played  by  "change  agents"  in  accounting's  development. Section  II  examines  the  various  views  as  to  the  nature  and   significance of accou nting change in Britain during the period studied. In sections III and IV we undertake an examination of the relationship between developments in business organisation and accounting change; section III looks at general changes in organisational structure in the basic industries of Wales, including an examination of who had responsibility for the accounting function, whilst section IV presents the specific case of the Cyfarthfa ironworks. Section V examines possible methods for disseminating accounting practices, focusing particularly on the movement of trained personnel between firms and across industrial sectors. Our concluding remarks  contain  suggestions  for  further research.
+
+I.	Change agents
+
+Much of Professor Yamey's pioneering work in the area of accounting history concerns the examination of early accounting texts, giving particular emphasis to the development of double entry bookkeeping. He fully recognises the fact that accounting thought, as enshrined in these texts, does not necessarily equate to accounting practice. In an early work, however, Yamey noted that  the  manuals "reveal striking uniformities in accounting technique, in the nature of the examples used in illustration, and in their general tone".2 On the basis of this observation, together   with   recognition   of  the  fact  that  the  texts  were  written  by  a  mix    of
+
+11
+
+ 
+ 
+
+
+
+
+businessmen, bookkeepers and teachers, Yamey concluded that "this uniformity ... gives one some confidence in generalising from the accounting texts to accounting practice" (Yamey, 1949, pp.100-1).Yamey ventured to suggest, however, that "the methods in the text books were more systematic and comprehensive than those used in practice" (1949, p.101). In a work written more than thirty years later, Yamey stated that "I suspect that knowledge of double entry [through texts] was more widespread than its practice." (Yamey, 1981, p.130)
+To help establish the relationship between accounting theory and practice, Yamey (1981) called for investigations into the development and role of accounting systems within specific British enterprises, and much recent work has endeavoured to fill this gap in our knowledge of accounting's development (for example, Boyce, 1989; Boyns and Edwards, 1995, 1996a; Edwards et al., 1990; Edwards and Newell, 1991; Edwards and Boyns, 1992; Edwards et al., 1995; Fleischman et al., 1995; Fleischman and Parker, 1990, 1991,1992; Hopper and Armstrong, 1991; Jones, 1985; McLean, 1995). These accounting and business historians have provided confirmation of a possible gulf between theory and practice, though not in the direction envisaged by Yamey . English accounting texts of the eighteenth and nineteenth century largely ignore the question of how, if at all , double entry bookkeeping might be applied to the problems facing industrial enterprises. Issues such as the development of cost calculation, the price at which internal transfers should be effected, for example, are ignored. Recent empirical research has shown that long before 1887, the year of publication of what is generally accepted to have been the first significant book in English systematically to consider such issues, namely Garcke and Fells' Factory Accounting, industrial enterprises were carrying out such practices within double entry bookkeeping systems and using the information for management decision-making purposes. Hence, we are now able to say that accounting practice at some important British enterprises was in advance of the British literature during the period covered by this  paper.
+The outputs from these researchers have also increased our knowledge of the nature of specific accounting changes, though there is still much debate as to the causes of these changes - that is, whether they were isolated events or part of a more general socio-economic change - and of their effects. According to Parker ( 1979, p.125), we must look to "change agents" and "recipients" for explanation s of differences in modem accounting practices between countries, since it is only by studying the respective roles played by these two groups that an insight can be gained into the way in which accounting thought and practice is developed, adopted and transferred. Arthur H. Niehoff (quoted in Parker, 1979, p.125) believes that the most important factors in the dissemination process from the viewpoint of "change agents" are: the methods of communication used; the kind of participation obtained from the recipient ; and the manner in which the innovation is used and adapted to the existing cultural  patterns. While from  the stand-point of the "recipients",   the
+
+12
+
+ 
+ 
+
+
+
+
+
+
+most i mportant factors are: whether they feel a need for the new thought or practice ; whether they perceive a practical benefit in adopting a change; and whether their traditional leaders are  brought  into  the  planning  and  implementation  of the process .3
+Parker's ( 1979) focus on "change agents" has chiefly been concerned with the process of disseminating accounting technology between countries (Parker, 1979), but the analytical framework suggested by him can equally be used to examine accounting developments within a single country or a particular region. However, one would expect that whilst one group of "change agents" may be more important in one time period, a different group will play a key role in another time period. Thus, in disseminating the concept of consolidated accounts during the twentieth century, international accounting firms are seen as most important (Parker, 1979, p.126). In a more recent work, Parker  has collaborated  with  Carnegie  to examine the impact of a single individual, William Butler Yaldwyn, a peripatetic accountant and author of accounting texts, in the process of transferring accounting technology to British colonies in the southern hemisphere during the  nineteenth  century (Carnegie  and  Parker, 1996).
+If accounting historians are to understand better the reasons for  the  gap between accounting theory and practice, and how business operators were able to develop practices without the aid of a relevant British literature, it is clear that they will need to investigate the process by which accounting ideas and practices are disseminated, especially the role played by the various "change agents". This is not an easy task since evidence relating to such dissemination may never have been recorded or,  where  recorded,  such  record  may  not  have  survived  the  passage of ti me. To build up a picture of the dissemination process will therefore require painstaking research, and may  need  to rely as much  on circumstantial  evidence as on  "hard facts".
+This paper, through seeking to identify some of the major  developments in accou nting among certain enterprises operating in Wales' basic  industries, is intended as a first step in such an investigation. Our focus and methodological framework will be the role of specific individuals, including entrepreneurs and bookkeepers , as "change agents" in generating accounting developments. In this respect, we are again responding to a call from Yamey , this time for more research into the backgrou nds and careers of the individuals implicated in the accounting process. As Yamey put it ( 1981, p . 131), "a history of accounting ... without some knowledge of the actors - those for whom as well as those  by  whom  the records were kept - must be rather anaemic and thin". By examining Yamey's "actors", we hope to provide some insights into the means by which accounting ideas  and practices may have  been  disseminated  within  this economically  significant region of  Britain  during  a period  which  encompassed  the country's  industrial revolution.
+
+
+
+13
+
+ 
+ 
+l•iiitHhiNQ History NS Vot 1. No 1 - 1996
+
+
+II.	Accounting change in Britain, c.1750-c.1870
+
+Pollard (I968, pp.246-8) has argued that the accounting techniques available to industrialists during the industrial revolution period had developed along three distinct routes: out of the master and steward system (that is, charge and discharge accounting); out of merchant accounting; and out of the putti ng-out system. Accounting developments are seen to have largely evolved through "the practical needs of the firms concerned, innovating as they went along, normally without knowledge of similar forward probings elsewhere. Mostly, there was in any case no qualified accountant, and the entrepreneur kept his own books, as the need arose." (Pollard, 1968, p.251) Pollard conti nues (1968, pp.251-2) :
+These, then, were the raw materials out of which the new industrialist had to build his own accounting system - three systems based on widely different needs, and on a different logic, and none of them dealing with some of his most pressing problems. The response of the industrialist to this challenge,  or in other words, the development of accounting as a tool of industrial management in this period, was patchy and uneven. As in the field of management in its other aspects, there was no tradition , no body of doctrine, no literature worthy of the name developed to unify or even up practices in different parts of the country or in different industries. Each firm progressed at its own speed , neighbouring firms might be decades apart in their development, and generalization  is, therefore, virtually impossible.
+The remainder  of  the chapter  on  "Accounting  and  Management"  during  the i ndustrial   revolution   explores  four  developments.  The  first  is  the  adoption   of periodic  accounts,  so that  "book-keeping  assumes  the  colouring  of  being  partly  a tool  of  management  as well  as a system  of  reckoning " (1968, p.253).  The second development  -  order  and  regularity  -  was  stressed  as  a  method  of  dealing  with increased  amounts  of  detail,  a  workforce  too  large  to  be  supervised  directly,  the need  to  preserve  liquidity  and  to discover theft  and  embezzlement  by  staff  ( 1968, pp.254-6). These aims are considered  by  Pollard  to have  been  of  relatively  minor i mportance,  however,  compared  with  the  third  and  fourth  developments,  namely the use of ex ante "partial" costing to aid management decisions and the calculation of profitability  by  departments or commodities ( I968, pp.257-61 ).
+Pollard notes that the last two developments had two things in common : "they were  based  on  some  pre-existi ng  mercantile  practice,  and  they  solved   some i mmediate practical problem." (1968, p.261) In marked contrast, finding a solution to the problem of developing a satisfactory overall cost and revenue statement remained unsolved, not because of any lack of effort devoted to the issue but chiefly because of the difficulty of achieving "reliable cost (or profit or liquidity) accounts" ( 1968, p.264). Pollard argues that improvements i n "overall management accounting" were minimal due to three factors (I 968, p.264 ): the absence of accountancy   tradition   and  knowledge   within   industry ;  the  small  number of
+
+
+
+ 
+ 
+
+
+
+
+
+
+accountants available; and the inability of industrial accountants  to  deal  with the main new factor involved in cost calculations  -  the  relatively  large  quantities of fixed  capital.
+One  of  the   more   systematic   investigations   of   accounting 's  development covering the industrial revolution period  in Britain was undertaken  by Haydn Jones ( 1985), whose  examination  of  Welsh  industrial  concerns  between  1700 and  1830 contains  evidence   which   suggests  that  some  of  Pollard's  generalisations   were perhaps too pessimistic. For example, Jones observes that "in many  cases steps had been  taken  in  the  1790's to  put  the  accounting  function  on  a  more  reliable  and independent  basis",  and that by  the  1820s "many of the larger firms had appointed 'accountants'" (1985,  p.89).  Jones concludes ( 1985, p.193):
+By the 1830's we have seen knowledge of accounting practice long since acquired by the proprietors and their agents being applied  to industrial and other firms by specialists in the form of works managers  and "accountants". The accountants themselves were acquiring or had acquired a very good technical understanding of the operations of the business and, although primruily concerned with keeping records of anything and everything which could be counted and measured and identified , they seemed to be thinking also of how best to compare the results of these measurements in order to indicate profitability. They appear to be searching and groping around for keys to unlock their minds so as to discover the meaning and purpose of their measurements.
+Amongst developments which Jones identifies as having occurred by the 1830s were the use of pro-formas, with printed headings. In some cases, for example at the Mona Mine, Anglesey from the 1830s through to at least 1859, these were bound in "ledger-type" books and served as sources of statistical data (Jones, 1985, pp.259-60) . Indeed , as Edwards has pointed out (1989, p.315):
+What is clear from Jones's thesis is that early Welsh industrialists, operating in far less literate times, went to considerable lengths in the attempt to assemble figures, and make observations, designed to achieve the most effective use of scarce resources.
+More recent research by the accounting historians noted earlier, coupled with the findings of Jones, suggests that there was a greater advancement of accounting knowledge and technique during the industrial revolution than Pollard had thought. This new body of research enables us to probe beyond Pollard's analysis and to consider an issue of crucial importance in understanding accounting  change, namely how accou nting techniques were developed within individual  firms  and how, if at all, they were disseminated between firms within particular industries, or between firms in different industries. Given the  emphasis  Pollard  places  on pragmatic explanations for the unevenness of accounting developments, the failure to consider this issue is somewhat surprising, particularly since the relationship between  accou nting change and changes in  organisational  structure and  functioning
+
+15
+
+ 
+ 
+f•jii•i'l,OGA History  NS Vol 1. No 1• 1996
+
+
+are important factors explaining management change. Thus an understanding of the nature and causes of developments in organisational structure, the mechanisms by which accou nting ideas and techniques were disseminated, and the interrelationshi p between these factors, are all important if accounting historians are to make valid generalisations about the origins  and  development  of  industrial  accounting methods.4  We  tum  our attention  to these  matters  in  section III.
+
+Ill. Organisational structures  and accounting responsibility, c.1750-
+c.1870
+
+Industrial activity in Wales prior to 1750 essentially comprised mining non-ferrous metals such as lead and copper and the smelting activities associated therewith. Developments in copper smelting after 1750 remained significant in both the Welsh and British context, but of longer-lasting and greater significance was to be the establishment of a chain of coke-fired iron-smelting works along the northern rim of the south Wales coalfield in the hundred years between 1750 and 1 850. This development, initially centered on Merthyr Tydfil but eventually spreading more widely, resulted in south Wales becoming the largest iron-making centre in Britain during the 1830s and 1840s, accounting for 40 per cent of British pig-iron production (Boyns et al., 1980). Works such  as  those  at  Cyfarthfa  and  Dowlais came to be known world-wide. As in copper smelting, a number of different occupational groups were instrumental in the establishment of these ironworks: ironmasters and iron merchants from areas elsewhere in Britain with  an established iron tradition, for example, Shropshire; small traders from areas closely associated with south Wales; and bankers and financiers with knowledge of the area  or acquainted with those already involved in the iron trade (Atkinson and Baber, 1987, p.49). Having secured their initial positions in south Wales, many ironmasters then contributed further to the growth of the industry by involving  themselves  in other, often joint, ventures to create new works. It is  clear  (Atkinson  and  Baber, 1987, p.51) that merchant capital, together with finance  from  solicitors  and  bankers , played an important role in the development of the industry, once again suggesting that individuals with merchanting and financial backgrounds may have influenced the  choice  of  organisational  structures  and  accounting practices.
+South Wales ironworks such as Dowlais and Cyfarthfa developed into large­ scale businesses, necessitating complex organisational structu res. In part, such businesses made use of the organisational arrangement developed within the charcoal-based iron industry during the seventeenth and eighteenth centuries. This consisted of scattered, small-scale, and sometimes independently  run,  blast furnaces, forges and rolling mills. Evans ( 1993, p.55) has suggested that the development of complex managerial structures within the eighteenth century iron industry   reflected   the  ownership  pattern.   Evans  notes  that  investors   were  often
+
+
+16
+
+ 
+ 
+
+
+
+
+
+
+involved in other business ventures, and speculates that many investors may not even have visited their properties. Even where owners "maintained a close personal involvement in the conduct of business, the tendency of the British iron industry to coalesce into great regional partnerships, each controlling a number of disparate sites, enforced the trend toward a specialized managerial ethos" (l993, p.55). At least one such regional partnership in England is known to have utilised a double entry bookkeeping system capable of providing information for management purposes from 1690 (Edwards and Boyns, 1992).
+In south Wales, where iron manufacture  began  to emerge during  the second half of the eighteenth century, a range of managerial structures can be found. The industry, at this time, comprised numerous partnerships, often operating a single furnace or small group of furnaces, or alternatively focusing on mills or forges. Many partnerships were short-lived, though certain individuals  and  families gradually emerged at the head of increasingly integrated works comprising not only furnaces, forges and mills, but also coal and iron ore mines. This process is clearly discernible at Cyfarthfa and Dowlais where the Crawshay and Guest families played key roles, if not initially, certainly from the late eighteenth century and throughout the first half of the nineteenth century. Despite this similarity, Cyfarthfa and Dowlais reflected two opposite poles of managerial practice. Whereas Dowlais relied heavily on kinship ties for its managers and agents, Cyfarthfa - because the Crawshays did not have the long-established links in iron-making enjoyed by the Guests - had to seek far and wide to recruit individuals for key managerial posts. Indeed, the difficulty of finding adequately skilled personnel explains why Richard Crawshay dismissed the works manager in 1791 and took over direct personal supervision of the works. However, even where proprietors took control in this manner and remained in residence, detailed supervision of a rapidly growing range of operations increasingly became less feasible.5 By the early nineteenth century, proprietorial supervision of the main works was typically  supplemented  by a "network of subordinate agents" to co-ordinate complex productive processes (Evans,   1993, p.56).6
+It is our contention that, within these increasingly large and complex organisations and managerial structures, accounting played a key role. We argue elsewhere (Boyns and Edwards, 1996b; see also Edwards et al., 1995) that the main motivation for accounting innovation in Britain was not to enable the control of labour, as some have argued was a growing preoccupation in the US context (Hoskin and Macve, 1988, 1994), but to aid the provision of performance indicators considered relevant for a range of routine and strategic business decisions. We argue, below, that within these freewheeling and ever changing business structures, entrepreneurs played a key role in devising accounting structures, while the "phalanx of managers and clerks" (Evans, 1993, p.85) required to coordinate and control operations were the source of accounting innovations and the conduit for technology transfer as they moved between one firm and another.
+17
+
+ 
+ 
+fj.i3j•jl\,\tGO History NS Vol 1. No 1 • 1996
+
+
+
+Responsibility and roles of accountants in relation to the accounting function7
+In a few cases, such as that of Gilbert Gilpin, the clerk of the Bersham ironworks in north Wales between 1786 and 1796, we know that a specific individual was responsible for keeping the accounts (Edwards, 1980). In many cases,  however, even some cases where the content of the accounting system and how it developed over time are known in detail, knowledge of who  was responsible  for implementing the system and effecting changes therein is far from clear.8 In yet other  cases, evidence, although mainly of a circumstantial nature, may point to a  specific person. Such is the case at Dowlais, in the mid 1850s, when William Jenkins, the newly appointed accountant, seems to have been responsible, together with the managing trustee, G.T. Clark, for clarifying the accounting system and upgradi ng the use  made of it.9
+For the period covered by this study there are two, inter-related problems in identifying the roles of individuals and  their  degree of responsibility  in  relation  to the accounting system. The first problem is the lack of a precise knowledge of the managerial structure of particular enterprises, which is itself partly a reflection  of the second problem,  namely  the inconsistent  and  indeterminate  use of terminology in describing  the role  of  individuals.
+Whilst the distinctive nature of particular industries may  explain  why enterprises in different sectors may not exhibit the same managerial structure, one might expect a greater similarity amongst firms in the same industry. Thus, despite Richard Crawshay's "titanic ego", "his force of personality" and his desire to take complete charge of the largest works in south Wales at the end of the eighteenth century, control was effected, as at other major ironworks, only with the assistance of numerous managers and agents (Evans, 1993, p.66). The exact function of such agents, however, is not particularly clear, the picture being complicated  by  an apparent inconsistency in the use of terminology, a somewhat i ronic feature of an industry within which "management" is considered to have become an established function at an early date. In some cases, key terms might be used interchangeably whilst on other occasions they would appear to indicate a difference of function. Thus there is some evidence to suggest that, in the earlier part of our study, terms such as "clerk" and "agent" were used interchangeably to denote a departmental manager. Evans ( 1993, p.67), for example, notes that ironmasters, when advertising for managerial staff, would usually ask for an "agent" or a "clerk", though sometimes for a "manager". By the end of our period of study, however, the term "clerk" was increasingly equated with any type of office/clerical worker, including book.keeper  or cashier. to
+At Dowlais, the preferred term for top, salaried managerial  personnel  in the early part of the nineteenth century was agent, though the list of agents for 1841-46 also included more lowly personnel such as office clerks and bookkeepers. By the middle  decades of the nineteenth  century,  however,  an additional  group, called sub-
+
+t8
+ 
+
+
+
+
+
+
+agents, was separately identified. Concurrently with the identification of this extra tier of management, new terminology was employed to describe the role of certain individuals. Sometimes this was in addition to existing terms, occasionally replacing them, and sometimes to reflect the creation of new positions. Of relevance in the context of this paper is the use of the term "accountant", at Dowlais, in the list of agents for 1841-46, when the term was used to describe the function performed by James Walkinshaw . The circumstances of Walkinshaw 's appointment, in 1841, are not clear, but he was possibly the first specialist appointment to fulfill this role.
+Lack of any reference to an accountant before 1841 supports the idea that Sir Josiah John Guest kept the accounts himself. 11 Sir John was certainly in charge of the office and sales from 1813, whilst others managed the works, and he seems to have been well-versed in accounting methods. Indeed, in 1834, Lady Charlotte noted in her diary that Sir John was going to teach her how to make up the books, although she does not appear to have relished a task which became increasingly onerous, and towards the end of the decade "resi gned" only to be recalled on her husband's insistence (for how long it is not recorded). With the company's affairs increasing rapidly in scale, it is possible that Walkinshaw was brought to relieve Sir John and Lady Charlotte of the burden  of  accounting  (Guest  and  John,  1989, p.131).
+The term accountant was also used to describe the role of Walkinshaw's successors, commencing with William Jenkins in 1856. Walkinshaw's salary in 1841 was £200 p.a. compared with the general manager's salary of £750, and he was jointly, with three others, the third highest paid employee at Dowlais (GRO DID G A, 1855-6, f.486). By 1856 Walkinshaw's salary had increased to £350 p.a. plus house and taxes (only the general manager and the forge and mill manager receiving a larger amount), a sum three times that paid to a "principal clerk" and up to seven times as much as some clerks (GRO DID G A, 1855-6, f.487). 12
+The appointment of an accountant did not necessarily imply sole responsibility for the accounting system in place or for effecting changes therein. At most of the works investigated there is evidence of a mixed responsibility for the accounts. Whilst being the direct responsibility of a separate bookkeeper or accountant, the accounts were nevertheless generally under the supervisory control of the owner/proprietor or the chief manager. Thus at Cyfarthfa, prior to the dissolution of the partnership with James Cockshutt and William Stevens in J 791, Richard Crawshay shared joint responsibility for the accounts with Robert Thompson, although the latter is described in the surviving company records as bookkeeper. The fact that managers and agents might have direct responsibility for bookkeeping is illustrated by the following advertisement for a colliery agent which appeared in the Welsh daily newspaper (Cambrian, 3 June 1826, quoted in Jones, 1985, p.149, fn.41):
+
+
+19
+
+ 
+ 
+l 'iiill'ill@ History   NS Vol 1, No t •1996
+
+
+... a person in all respects competent to superintend the above-ground business of an extensive colliery. Able to keep the books . A knowledge of steam engines, dialling and mapping would be very desirable though not essentially necessary.
+In this case, therefore, an ability to keep the books was considered more essential than certain technical skills relating to surveying. Unfortunately, the size of the colliery concerned is unknown but, if it was not large, then the agent may also have been the sole managerial figure.
+Equating responsibility with the exact position in the managerial structure is therefore difficult. The evidence presented by Jones, however, suggests a variety of practices . At the lead mines of Daniel Peck in Flint, for example, which were sold to the Company of Mine Adventurers in June 1707, Jones records that Peck employed a bookkeeper at a salary of £30 p.a. Although Peck appears to have been knowledgeable of accounting matters, since he offered to audit the Company of Mine Adventurers' accounts following their acquisition of his mines, the importance of the bookkeeper's role in the enterprise is reflected in a salary which was fifty per cent higher than those of the agent responsible for weighing ore in the mountains and the smelting house agent, and three times the level of the salary paid to the agent managing the carriage and the agent for the refining house and red lead works (Jones, 1985, pp.15-8, and ch.I fn.27). Later in the eighteenth century, however, Jones (1985, p.242, fn.4) notes the comment of Lord Byng that Sir Herbert Mackworth has "glass houses and collieries in other counties ... and [was] keeping all his own accounts".
+It is in relation to business operations connected with landed estates in the late eighteenth and early nineteenth centuries, however, that we possibly know most about the role of various personnel in relation to the accounting function. Jones points out that to regularise and keep their affairs in order, landowners would employ a steward who he describes as "an overlooker, a cashier, a book-keeper, a clerk, one on the side of authority and order" (1985, p.175). The steward was therefore the key figure in industrial enterprises operated, wholly or partly, by landowners (Jones, 1985, p.175):
+Like their other landed estate brethren they [the landowners] looked to their chief stewards or agents for progress reports on their interests and it was these agents who became expert in the book-keeping art and who were to delegate responsibilities to the new breed of specialists called accountants.
+Thus at the Mona Mine, Anglesey , the chief agent of Lord Anglesey, Sanderson, was in charge of appointing accountants such as Hunt and Beer who were responsible for keeping the records of the mine (Jones, 1985, ch. I, fn.27). An interesting feature of the Mona Mine archive is that it contains, in the notebook of Thomas Beer, a set of "Hints", written by Sanderson in 1802, detailing the functions of the accountant (Mona Mine MSS 3552, quoted in Jones, 1985, p.182):
+
+
+20
+
+ 
+ 
+
+
+
+
+
+
+The Accounts and other papers of the Concern from the earliest to the latest period being placed in his hands, and such information otherwise collected , either by an immediate personal visit to the several Departments of the  Mine, or by correspondence with the local Agents, as may give him a good insight into the whole, it will be his object to place his employer on the footing with regard to Capital which will be pointed out by the respective  proportions he may hold in each Concern. He will then consider a plan for establishing an intercourse by correspondence or, otherwise, with the Managing Partner and Acting Agents: but as this will follow upon his commission to act for his Employer, and the objects of such correspondence being clearly understood, it may be only necessary to define, in some degree the extent of employment to which this may lead . Once a year, at leat. he should visit each Depaitment: examine the processes  of Mining and Smelting in all their modes:  endeavour to understand the nature and extent of expence : and in what manner Miner and Smelter are mutually checks upon each other in respect of quantities of metal as calculated by the assay, and the actual production of the metal from the same quantities of ores in the Smelting Dept .
+
+The Accounts, and other Papers, both local and general should be open to his inspection. Those that are kept at the distant Departments will come before him on the annual visit: in fact, every Account or Document calculated to show the expences and state of the Concern in all its ramifications  should be laid  open to his view and no difficulties whatsoever shou Id be allowed to exist against the execution of this part of his  duty.
+Even prior to the issuing of these "Hints", the quality of the bookkeeping at Mona appears to have been fit for its intended purpose. Thus Pascoe Grenfell, jr. , in a letter written in September 1788 noted that "Mr. Hunt 's books are perfectly regular as to the general system of Book-keeping, and I see no necessity whatever for having a new sett made over again" (quoted in Jones, 1985, p.177). Thomas Beer, who held the position of accountant at the mine during the 1820s and 1830s, and who, in Jones' judgment, kept the books with great care and attention (1985, p.249), also offered advice on the method to be adopted regarding the Mona Mine Company's accounting relationship with its proprietors (Jones, 1985, p.179). Further, in 1834, Beer made suggestions as to a new management structure and a "new system" emphasising measures for checking stores and wages and preventing abuse and fraud (Jones, 1985, p.250).
+Writing in 1985, Jones considered that the system of account keeping and audit in operation at the Mona Mine Company i n the late eighteenth and early nineteenth centuries "was not ty pical of the manner in which such matters were attended to in all industrial concerns of the day" (1985, p. 251). Surveying Jones's findings four years later, Edwards pointed out ( 1989, p.314) that Mona represented, at the time of writing, one of the three earliest known examples of a determined attempt made to achieve integration of cost and financial records - the other two being Cyfarthfa (1791) and the Charlton (cotton) Mills (1810). Since then additional  examples  have  been  added  - Staveley  (1690), Carron  (1790s) 13 and
+
+21
+
+ 
+ 
+t4i3•1'hiM1 History   NS Vol 1, No 1- 1996
+
+
+Dowlais (by the mid-nineteenth century). In depth studies such as these should enable   us   to  gain   a  clearer   picture   of  the   role  and  responsibility   of   various i ndividuals, proprietors, stewards, agents, bookkeepers, accountants, for the accounting system within early industrial firms. They may enable  us  to  flesh out some aspects of the development of accounting and suggest some possible avenues by which accounting and bookkeeping ideas and techniques may have evolved and been disseminated. Towards this end, the next section examines more fully the introduction of the double entry system at the Cyfarthfa Works, whilst section V focuses on the possible influence of personnel movement within and between businesses.
+
+IV.	The introduction of double entry bookkeeping at Cyfarthfa
+
+According to Jones ( 1985, p.127), the Cyfarthfa accounting system in the 1790s represents "our first opportunity to look at eighteenth-century double entry accounts on such a scale for so vast (comparatively) an organisation". The  system is considered to have been based on "some kind of logical internal office system of keeping certain ty pes of accounts permanently classified together ..." (Jones, 1985,
+p.1 28), and remained in place u ntil at least the middle of the nineteenth century. Within it, there was an emphasis on allocating the majority of costs to activity or production centres (Jones, 1985, pp.137-8) and in this and other ways the Cyfarthfa system exhibits elements of similarity with those found at other early British iron smelting businesses (Boy ns and Edwards, 1995, I996a; Edwards and Boy ns, 1992; Edwards et al., 1996; Fleischman and Parker, 1990). Most notably it included cost calculation within a double-entry system and, although the system developed over time, it also exhibited a large element of continuity .14 But what were the origins of the system? Why was it adopted, and who was responsible for its establishment? How was it used?
+During the early years of Cyfarthfa' s life, between the late  1760s  and  the 1780s, the furnace and forge/mill operations were separately  controlled  and operated at different times by a variety of partnerships, until eventually all parts of the works came u nder Crawshay's sole control in 1791. It is therefore possible that the accounting system utilised from 1791 and described by Jones was inherited by Richard Crawshay. 15 Indeed, one of Crawshay's partners, James Cockshutt,  had been under-manager to David Tanner, from whom Crawshay acquired the lease of the Cyfarthfa forge and mill in 1786.16 Crawshay and his partners also took a lease of the Cyfarthfa furnace on I January 1787, following the death of Anthony Bacon w ho, together with his fellow Whitehaven merchant,  William  Brownrigg, had founded it in 1765 (Evans, I 990a, p.xi-xii) . Given his background as a London iron merchant, together with our knowledge of the close i nterest shown by Crawshay in accounting  matters,  it  is  reasonable  to  conclude  that  he  was  most  probabl y well
+
+
+22
+
+ 
+ 
+
+
+
+
+
+
+acquainted with double entry bookkeeping, though he certainly had no direct knowledge of iron manufacture prior to his connection with Cyfarthfa. On the formation of the partnership or shortly afterwards, Robert Thompson, the younger brother of William Thompson, a partner in Crawshay's  London  House  iron merchants business, was appointed specifically to keep the books at Cyfarthfa (Evans, 1993, pp.63-4). Under Cockshutt as manager and Robert Thompson as bookkeeper, Cyfarthfa was not particularly successful in the late 1780s, as the result of poor management, weak accounting control and problems encountered when introducing  the new  puddling  process  for manufacturing  bar iron.
+Crawshay became increasingly concerned with the conduct of operations under Cockshutt and Thompson. For Crawshay, order and regularity were a precondition for efficient operation, something which, in his eyes, could only be achieved by the establishment of and steadfast adherence to clear rules (see GwRO,
+2.	167 fo.47, R. Crawshay to J. Cockshutt, 30 July 1789, quoted in Evans, 1993, pp.64-5). The problem with Cockshutt was not his ability as a mechanic, but rather his:
+... want of System in visiting to effect the Mining branch & the  Smelting Furnaces  & lastly keeping the other Setts of  Workmen  to performance  of  yield
+& quantity of Labour subject to produce the quantity of well-finish'd Iron for Creation of Profitt adequate to the Sum we have advanced . (GwRO, 02. 167 fo.87, R. Crawshay to W. Stevens, January 1791, quoted in Evans, 1993, p.64)
+The problems were not, however, confined to manufacturing operations. Thus, on 17 March 1788, for example, Crawshay wrote to Thompson complaining that "the Sheet containing Ballances very imperfectly stated ... in future by attention to your accounts we shall find less difficulty in Ballancing the Books" (17 March 1788, quoted in Jones, 1985, p.121). The following year, on 8 October, Crawshay again complained, this time to Cockshutt, that (quoted in Jones, 1985, p.121):
+I am very much disappointed in Mr. Thompson - I know he has some common sense if he would but use it and he was placed for the purpose of keeping our accounts regular, my mind is so distressed by your bad management that I can neither write, read, or think of the Concern with any degree of patience.
+Crawshay therefore sent his son, William, to Cyfarthfa with the main object of establishing a system for keeping accounts and executing orders quickly and accurately and ensuring the managers adhered to it (14 Oct. 1789, Memorandum for William Crawshay into Wales, quoted in Jones, 1985, p.121). By February 1790, Crawshay was still dissatisfied and informed Cockshutt that "We want a man of business in our Concerns - at present there's not one among you." (25 February 1790, quoted in Jones, 1985, p.122)
+With Crawshay's concern over the quality of the management increasing, and Stevens's wish to be relieved from his obligations, the  partnership  was  dissolved with  effect  from  22  January   1791.  "Stevens  gratefully  withdrew;  Cockshutt  was
+
+23
+
+ 
+ 
+t'iii•l'hl@•j History NS Vol 1, No t • 1996
+
+
+peremptori ly dismissed as manager; [and] Crawshay assumed control at Cyfarthfa" (Evans, l 990a, p.xvi). Despite his complicity i n the poor management up to 1791, Robert Thompson was not dismissed by Crawshay, and left Cyfarthfa in 1792 to take up a post as agent at Dowlais.17 These developments, together with the fact that the first surviving ledger for Cyfarthfa commences at the beginning of 1791, suggest that a new set of account books was  commenced  following  Crawshay taking sole control of the business. The possibility that a double entry bookkeeping system was in use before this time cannot be ruled out, and it may have been either inherited from a previous partnership or introduced by either Thompson or William Crawshay, following his visit to the works. In view of Richard Crawshay's dissatisfaction with the accounting function, however, the more plausi ble explanation is that the new system was  inaugurated  by  him  or,  at  least,  bore his clear imprint, reflecting his strong merchant  backgrou nd  (Jones,  1985,  p.127).  If this is so, it suggests that practices developed in relation to merchanting could be readily adapted by people with the requisite skills to the circumstances of industrial acti vity.
+In Jones's estimation (1985, p.130), "those operating the system were well versed i n its mechanics". Such people would therefore have been well placed to take their skills elsewhere and influence accounting systems at other concerns both within and outside the iron industry. To examine the extent to which such movement may have been a significant factor in disseminating accounti ng techniques, the following section presents evidence relating to the movement of personnel within and between firms. It should be pointed out, however, that detailed knowledge of personnel movement does not always tie in neatly with our knowledge of the accounting systems. Thus we know little of t he movement of personnel to and from Cyfarthfa from the 1790s, despite knowing a great deal about its accounting system. In contrast, we know little of the Dowlais accounting system at the beginning of the nineteenth century, but know substantially more about personnel movements at that company.
+
+V.	Dissemination of accounting techniques: the role of personnel
+
+An examination of the careers of some of those responsible for  overseeing  or operating the accounting function in south Wales iron enterprises clearly indicates a great deal of movement between tasks and works.  Individuals  from  older established iron-making districts were a major source of ideas and skills, initially, as too were those from coal mining districts, since most of the south Wales ironworks were, if not from thei r establishment then certainly by the end of the eighteenth  century,  substantially , if  not  wholly,  vertically  integrated  (Boy ns et al., 1 980). Whilst examples can be found of individuals working their way u p  within firms  and  gi ving  long  service,  the  evidence  suggests  a  large-scale  movement of
+
+
+24
+
+ 
+ 
+
+
+
+
+
+
+people between firms as a means of improving their status within the managerial hierarchy. Given the importance of south Wales within the British iron industry in the 1830s and 1840s, it is not altogether surprising to find it was a training ground for managers and skilled personnel for the whole industry, and particularl y the newly developing iron producing areas, during the second and third quarters of the nineteenth century. Dowlais, as the largest and, for much of the period, the technically most advanced works, was a particularl y important source of key personnel, though this has not always been seen as beneficial for the development of the British steel industry in the last quarter of the nineteenth century (Webb, 1991 ; Wengenroth , 1994).
+As noted above, many of those who founded or ran the major ironworks in south Wales in the late eighteenth century came  from  one of  two  main  groups; they were either merchants or ironmasters from other regions. At Dowlais, it was only after the Guests, a family with a strong tradition of iron-making at Broseley, became involved at Dowlai s that  the  company's  fortunes  improved . The  first of the line, John Guest, was originally contracted to manage the Dowlais furnace in 1767 but, by the time of his death in 1785, he had acquired a two-sixteenths share in the furnace. His son Thomas, who had assisted his father in his last years, took over as manager until 1792 when Robert Thompson , formerly bookkeeper at Cyfarthfa, was engaged to manage the works. When Thompson's contract ended in 1799, Thomas Guest again took charge. Following Thomas' s death in 1807 his son, Josiah John, became joint manager and, by  1813, sole manager. Described as a "man of great mental capacities, a good mathematician, and a thorough man of business  ..."  (obituary   in  the  Gentleman's Magazine, quoted  in  Wilkins,   1867,
+p.187), Josiah John Guest concentrated his attention on managing the office and sales, whilst John Evans jr . managed the mine workings and furnaces and his brother, Thomas Evans, the mills. John and Thomas were the sons of John Evans sr., a native of Staffordshire who had initially come to Wales in the late eighteenth century to manage the Melingriffith works and the Caerphilly furnace. He later moved to the Ebbw Vale ironworks, before coming to Dowlais as manager in the early nineteenth century.
+Whilst details of the careers of works owners, owner/managers and managers are fairly well documented, this is unfortunately less true of clerks, accountants and bookkeepers. One important dynasty of managers and bookkeepers in the Welsh iron industry during the eighteenth century, of which we have some knowledge, was the Gilpin family. Thomas Gilpin was bookkeeper at the Penydarren Works, Merthyr Tydfil, in the 1790s. According to Evans ( 1993, pp.56-7):
+His father was Mark Gilpin (d.1804), for many years the chief clerk at Coalbrook<lale, but by birth a Cumbrian . In his native region the various branches of the Gilpin family had long been engaged in industrial affairs. Gilpins were serving as stewards  to the  Lowthers, the great  coal  magnates   of
+
+25
+
+ 
+ 
+C•iiinlHl!N•jHistory   NS Vol 1, No 1•1996
+
+
+Cumberland, as early as the 1690s. Another Gilpin, Benjamin, accompanied the ironmaster Isaac Wilkinson (later to be a pioneer of the Merthyr iron industry) from Furness to the coke furnace at Bersham in Denbighshire in the 1750s. Benjamin's son, Gilbert Gilpin, born at Bersham in 1766, was in turn the chief clerk to John Wilkinson, Isaac's formidable elder son.
+As "Ostensible Clark at the Works", with responsibility for the accounts, Gilbert Gilpin was the chief aide of John Wilkinson at Bersham when his iron empire was at its most far-flung and prosperous between 1786 and June 1796 (for fuller details see Edwards, 1980). An inveterate letter writer, Gilbert communicated with many leading individuals engaged in the iron trade and, as such, may have played an important role in the dissemination of information and knowledge relating to the trade.
+Indeed, letter writing and generally maintaining contacts with former places of employment, appear to have played important roles in the nineteenth century iron industry. Thus William and Richard Wood, 18 whilst managers of various works belonging to the British Iron Company during the 1830s and 1840s, maintained a detailed correspondence with former associates at Dowlais, 19 as did others, both before and after, as indicated by the Dowlais letterbooks. One example of such contact which extends beyond our period is that of William Jenkins. Born c.1825, Jenkins joined Dowlais at around the age of ten and worked his way up through the organisation over the next 34 years (Warren, 1990, p.35). Details of his early career are unknown, but he was a clerk in the coal department by the early 1840s. His salary, which was £40 p.a. between 1841 and 1843, had more than doubled to £90 by 1846, possibly reflecting a rapid increase in responsibility (GRO DID G E2/43/2). By March 1855, when he was employed as "Principal Clerk" in the forge and mill department, then managed by William Menelaus, his salary had risen to £120 p.a., increasing to £140 by March 1856, with a house provided rent­ free (GRO DID G A, 1855-6 f.487). Jenkins figured centrally in key managerial changes effected by G.T. Clark on taking over control as managing trustee following the death of Sir Josiah John Guest in 1852 and the re-marriage of his widow in 1855. William Menelaus was appointed company manager and William Jenkins elevated to the post of company accountant.
+Although Jenkins inherited an accounting system which incorporated cost calculation within a double-entry frameworks (Boyns and Edwards, 1996a), it is clear that he devoted much effort to making the system more responsive to the needs of Clark and Menelaus. From 1860 the annual accounts were accompanied by a lengthy report setting out and analysing the company's progress. In this Jenkins made heavy use of comparative accounting data to provide, inter alia, detailed explanations for variations in costs and profits. The practice of preparing annual reports continued after Jenkins' departure in 1869 to take up the post of general  manager  of the Consett  Iron  Company's  works  in  north-east  England.
+
+
+26
+
+ 
+ 
+
+
+
+
+
+
+There Jenkins began to produce a similar, though less lengthy, annual report, the first appearing in August 1870. Since Consett already operated an accounting system whose essential features paralleled those at Dowlais, namely cost calculation within a double-entry framework, Jenkins does not appear to have initiated any radical revisions of the Consett system. It is clear from subsequent events, however, that he gave careful consideration to the form and content of the accounting system. Jenkins's first annual report makes clear his dissatisfaction with the practice, recently introduced at Consett, of effecting internal transfers of products between departments at figures above cost and, within two years of his arrival, the half-yearly cost accounts were placed on the cost basis (Boyns and Edwards, 1995).20
+
+Concluding remarks
+
+Although our study may not allow us to identify precise answers to the six inter­ related questions posed in the introduction,  it  has  enabled  some narrowi ng of the field for further research. Possi ble change agents such as legislation and the accounting literature can be ruled out for the period with which we have been concerned. At this time, there was no general legislation stimulating accounting change, and none of  the  companies  discussed  were  incorporated through statutes which might have imposed obligations in this area. The accounting literature, with concentration on external accounting, was of little assistance to firms in matters of internal accounting. The most likely change agents therefore were proprietors and their agents, and the movement of such individuals, both within and between industries, aided the process of dissemination of accounting techniques.
+Jones has suggested that industrial  bookkeeping  and  accou nting techniques had their origins in the experience and knowledge that proprietors and their agents brought with them to their new businesses ( 1985, p.193). The case of Crawshay at Cyfarthfa and Sanderson at Mona lend support to this view. Elsewhere, specific evidence is much less easy to discover. Movement of managerial personnel within the south Wales iron industry during the period studied was significant, including that which occurred amongst clerks, agents, managers and bookkeepers. It is therefore a strong possibility that these groups acted as significant "change agents", transmitting accounting ideas and techniques  between  firms  and industries.
+In the view of Pollard ( 1968, p.252), the lack of an industrial accounting literature in Britain during the period studied is considered to have prevented a unification and an evening up of accounting practices across firms, industries and throughout the country. However, this seems unduly pessimistic, since it seems reasonable  to ask  why  the literature  should  be thought  of  as the only, or
+
+
+27
+
+ 
+ 
+t•iii•l'hi@ History NS Vol 1, No t • 1996
+
+
+even the main, means of achieving these ends. The iron industry, as elsewhere, was characterised by pragmatism, not only in accounting techniques but also in manufacturing methods: "The British iron industry in this period [the late eighteenth century] is well known for its strongly empirical approach and for the lack of published scientific works on ironmaking technique" (Riden, 1992,  p.38). In this light, the absence of an early industrial accounting literature seems unsurprising, particularly when it is recognised that those operating or responsible for accounting systems were fully occupied and therefore unlikely to have devoted their precious time to writing texts describing such systems. Hence probably the most significant way in which ideas and techniques were disseminated was through on-the-job experience and the movement of personnel between firms and industries.21
+The line of argument is, perhaps, consistent with the lack of attention paid to patenting this technology. Whereas new techniques of manufacture were often patented, the only known example of an accounting method being patented in Britain22 is Edward T. Jones's "English system of book-keeping, by single or double-entry ..." (1796).23 This may reflect the relative unimportance, real or perceived, of accounting methods compared  with  manufacturing  techniques. However, it is more likely to reflect either a recognition of the fact that knowledge of basic accounting methods,  such  as  double-entry  bookkeeping,  was  so widespread  that  any  attempt  to establish  a patent  right  would  almost  certainly end i n   failure,24   or   that   techniques   of   industrial   accounting   were   so  diverse  and i ndividualistic  that no economic gain would accrue to anyone attempting to patent a particular method. Jones patented his system, of course, in an endeavor to ensure a   "just"  return   for  his  supposed   skill  and   initiative.   In  a  similar   vein,  where i ronmasters used patents, normally it was not to prevent others using the new techniques,  but  to ensure that  payment  was  made to them  for their  use.
+Individuals such as Gilbert Gilpin, who were  inveterate  letter  writers,  also seem to have played an important role in disseminating information throughout the iron trade and his "papers are evidence of the extent to which a geographically dispersed trade was bound together, however, imperfectly, by a single, distinctive 'corporate culture"' (Evans, I 990b, p.30). This often involved the establishment of regional price-fixing cartels and, although these cou ld frequently break up  i n acrimony, and some ironmasters  were at loggerheads  with one another from time to ti me, Gilpin's letters indicate clearly that ironmasters were "a grou p united by common economic purpose, linked by ties of kinshi p, involved in shared financial and marketing circuits, and bound by a high regard for the protocols of the trade" (Evans, l 990b, p.36). It is probably significant to note, therefore, that in  most respects ironmasters were perfectly happy to exchange knowledge and information. Both they and their managers seem to have freely exchanged information with thei r cou nterparts  in  other  parts  of  the  country,  welcomed  numerous  visitors  to  thei r
+
+28
+
+ 
+ 
+Boyns I.Edwards: Change agents and dissemination of accounting technology
+
+
+
+
+
+works and allowed them to record key information, including physical measurements of blast furnaces, water wheels, etc.25
+With secrecy not an issue of immediate concern, there was no obvious barrier to accounting methods being  disseminated  in  one or more of  the  following  ways: by suitably skilled managers, clerks, accountants, bookkeepers and agents moving between firms; by secondments of personnel from one firm to another; and by ironmasters discussing such issues and exchanging ideas amongst themselves. Kinship might have provided an additional stimulus for the latter arrangement. For example, Wilkins has noted that Anthony Bacon and John Guest, both Englishmen, often met. Moreover that, in this early phase of the development of the south Wales iron industry , living in a strange place and isolated from friends, this was a natural arrangement (Wilkins, 1867, p.152). Unfortunately, Wilkins did not record whether they  discussed  bookkeeping  or accounting  issues'
+Despite Pollard's pessimistic  pronouncements  almost  thirty  years  ago, the new emerging view is that industrial accounting techniques did develop during the industrial revolution . We remain relatively ignorant of the mechanism through which accounting practices were developed and dispersed, however, and whether innovation occurred in response to an economic or busi ness need, and/or whether they were part of wider contextual forces. Possible methods  by  which  new accounting  ideas  and  techniques   may  have  been  disseminated   within  the   basic i ndustries of Wales have been examined above, but there  is  much  more investigative explanatory work to be done before the relative importance of the mechanisms explored in this paper  can  be judged.  More  research  is  required into the role within businesses of the industrial revolution period of accountants, bookkeepers, clerks, agents, and the like. We need to know  how  they  influenced,  if at all, the accounting methods in use and whether or not their movement between firms was a major route by which techniques were disseminated . Such knowledge may provide an explanation for the advanced nature of accounting practice in some British firms in the early nineteenth century, compared with other countries, say France (Boyns et al., 1995; 1996), despite the absence of an industrial accounting literature. If new techniques were developed and learnt on-the-job,  and disseminated by the interchange of information and the movement of personnel, then this would explain to some extent not only the absence of  an  industrial accounting literature but also why a study of the literature need not be an accurate guide to accounting  practice  in this,  or perhaps  any,  period.
+
+Notes
+
+1 . The basic industries were the mining and smelting of metals, for example, lead , copper and iron. For most of the period covered by this paper, coal mining i n Wales was largely a subsidiary industry to metal smelting and is not therefore given any particular emphasis. For an examination of the development of cost accounting   in
+
+29
+
+ 
+ 
+fii3i•jij,i@1 History NS Vot 1, No 1- 1996
+
+
+
+the south Wales coal industry following the rapid growth of the coal trade from the middle  decades  of  the  nineteenth  century,  see Boyns (1993).
+2.	Studies of plagiarism include Yamey ( 1979).
+3.	The mechanism for technology transfer is also examined by Jeremy ( 1991).
+4.	Fu rthermore, without a detailed exami nation of these issues,  our  understanding of how and why particular techniques came  to  be  significant  whereas  others  did not will remain severely deficient.
+5.	In the 1790s, Cyfarthfa employed more than 400 men and boys (Jones, 1985, p.1 1 8).
+6.	In general, these key subordi nates were not ironworkers, but smiths, masons or carpenters. The Dowlais list of sub-agents for October 1856 (GRO DID G E4/3) also lists master finers and master puddlers, as well as overlookers , overmen,  foremen and quality inspectors.
+7.	We use the term "accountant" to cover all individuals implicated in the provision of accounti ng information , broadly defined. The precise significance attached  to the term "accountant" has of course changed over time (Kirkham and Loft , 1993: Parker 1994, pp.73-4).
+8.	This is the case, for example, with the Staveley enterprise between 1690 and 1900 (Edwards and Boyns, 1992; Edwards et al., 1996).
+9.	Having taken over as company accountant from James Walkinshaw i n 1856, Jenkins abandoned innovations i n the method of profit calculation introduced by his predecessor , post-1848 ,  and  charged  all  outgoings  against  revenue  (Jones,  1978; Ed wards and Baber, 1979, pp.142-5). Although seemingly concerned with preserving existing systems, Jenkins noted i n his first annual report to the managing trustee G.T. Clark, in August 1860, that he was making alterations to the books in order to make clearer and simpler the transactions of  the company.  Jenkins  also noted that this process was taking some time, but that i mprovements were slowly occurring (GRO DID G E311 712).
+10.	It is of some interest to note that the term "clerk " was still in use in Britai n, at the end of the nineteenth century , to describe a qualified accou ntant working for, as opposed to serving as a partner in, a firm of public accountants.
+1 1 . One might imagine that this was not an u ncommon situation i n earlier times in view of the fact (Yamey, 1975, p.xxii) that businessmen  were  often  authors  of bookkeeping  texts.
+12.	The sum was £ I 00 p.a. more than that paid to the engineer but £50 p.a. less than that paid to the forge and mill manager, and a massive £950 p.a. less than that paid to the general manager.
+13.	Though Fleischman and Parker ( 1990, p.220) acknowledge the fact that "there is insufficient evidence to claim that anything like a mature integration was achieved".
+14.	At  the  Staveley  enterprise, a great deal  of  continuity  in  the  accou nting  system can be discerned over a period  of more than two centuries, from  1690 to  1900 (Edwards and  Boyns,  1992; Edwards  et al.,  1996).
+15.	Another example of an accou nting system span ning differing busi nesses consecutively operati ng a particular enterprise is that of the Derwent and Consett Iron companies which operated the Consett ironworks (Boyns and Edwards , 1995).
+16.	The thi rd partner was another London merchant, William Stevens.
+
+30
+
+ 
+ 
+
+
+
+
+
+
+17.	Thompson was appointed manager of the Dowlais works for a seven year period.
+His contract  was  not  renewed  when  it came to an end.
+18.	The Wood fami ly represents another Cumbrian-south Wales managerial link. Charles Wood moved to Merthyr in 1766 at the behest of his brother-in -law, William Brownrigg, to oversee the building of a furnace and forge at Cyfarthfa, remaining as agent until his death in 1774. Charles's son, William Wood (b.1757), was a clerk at Cyfarthfa before switching his allegiance to Penydarren in the early 1790s, later becoming the manager of the Dowlais Company's  Cardiff  Yard in 1805. Charles Wood's step-son, George Lyndon, followed a similar course. The half-brothers, Wood and Lyndon , both had sons who followed them into the iron trade, including the William Wood mentioned in the text. William Wood was born at Merthyr in 1793 and, having been employed in various managerial capacities at Dowlais, was later recruited by the British Iron Company, the first joint-stock speculation in the British iron industry following the repeal of the Bubble Act in 1825 (Evans, 1993, pp.58-9).
+1 9. The subjects discussed included : the movement of men without permission; whether or not businesses had workmen surplus to requirements who might be willing to move between works; the current state of operation and output of the furnaces i n the region; and requests for licenses to use patents (for fu rther information see Edwards, 1983, pp.108-9).
+20. The company's auditors continued to produce two sets of  profit  figures, one based on transfers at cost, which allocated profit  only  to  those  departments  which interfaced with the market, and a second  which  calculated  departmental  profits  on the basis of transfer prices linked to the selling price of coke (Boyns and Edwards. 1995).
+21 . For  further discussion  of  the  issues associated  with  learning-by-doing,  see Polanyi ( 1958).
+22.	Taylor and Turley ( 1985) pointed out that, although accounting is a technology, it is different from productive technologies in that it is  not  embedded  in  marketable capital goods and is largely non-proprietary . Thus, in general, it cannot be controlled and sold through patents, licenses or contractual agreements.
+23.	Since Jones's system was fundamentally different from the double-entry method espoused by most accounting texts, the patent authorities  would  have  been  more likely to recognise its distinctive features. It is not clear how Jones's patent could be made effective, however ,  since  policing  the  use  of  his  system  wou ld  have  been di fficult if not almost impossible.
+24.	A modern-day analogy that springs to mind is that of preventing the infringement of copyright laws relating to such items as computer software and tape recordings.
+25.	The Crawshay letters, for example, indicate that in the late 1780s the Cyfarthfa managers had been sent on visits to the most advanced works but had failed to learn any lasting lessons. Crawshay therefore arranged for a stream of English and Scottish ironmasters and technicians to visit Cyfarthfa and advise on policy (GwRO
+02. 162, f.52, "Memorandum for William Crawshay into Wales",  14  October 1789).
+
+
+
+31
+
+ 
+ 
+i•ji3-jii,jfD71 History NS Vol 1, No 1- 1996
+
+
+

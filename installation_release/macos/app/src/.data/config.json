@@ -1,0 +1,361 @@
+{
+  "diagram": {
+    "param": ["p-gendescription"]
+  },
+  "data": {
+        "d-metadata":{
+            "label": "Metadata document/s",
+            "description": "A file or a collection of files in JSON format which represent the metadata of another file/s having the same name.<br><br><b>Example:</b><br><i>myfile.json</i> is the metadata file of <i>myfile.txt</i>",
+            "data_class": "series",
+            "param": ["p-file"],
+            "file_name": "docs_metadata",
+            "input_ready": true,
+            "class_label": "General"
+        },
+        "d-gensimldamodel":{
+            "label": "LDA Topic Model",
+            "description": "Four files that defines a topic model: (1)<i>ldamodel.glda</i>; (2)<i>ldamodel.glda.expElogbeta.npy</i>; (3)<i>ldamodel.glda.id2word</i>; (4)<i>ldamodel.glda.state</i>",
+            "data_class": "gensim_ldamodel",
+            "param": ["p-file"],
+            "file_name": "ldamodel",
+            "input_ready": true,
+            "class_label": "Topic Modelling"
+        },
+        "d-dictionary-corpus":{
+            "label": "Dictionary",
+            "description": "One file (i.e. <i>dictionary.gdict</i>) holding a mapping between words and their ids",
+            "data_class": "gensim_dictionary",
+            "param": ["p-file"],
+            "file_name": "dictionary",
+            "input_ready": true,
+            "class_label": "Text analysis"
+        },
+        "d-model-corpus":{
+            "label": "Weighted corpus",
+            "description": "One file in JSON format which represents a weighted corpus (built using a weighting algorithm, e.g. tf-idf)",
+            "data_class": "series",
+            "param": ["p-file"],
+            "file_name": "modelled_corpus",
+            "input_ready": true,
+            "class_label": "Text analysis"
+        },
+        "d-processed-corpus":{
+            "label": "Tokenized corpus",
+            "description": "One file in JSON format which represents a tokenized corpus. A tokenized corpus usually does not include stopwords, and might also include only the stemmed form of the words",
+            "data_class": "series",
+            "param": ["p-file"],
+            "file_name": "processed_corpus",
+            "input_ready": true,
+            "class_label": "Text analysis"
+        },
+        "d-word-topics-table":{
+            "label": "Terms X Topics matrix",
+            "description": "One file in CSV format which defines the 30 terms that better characterise each topic in the topic model",
+            "data_class": "table",
+            "param": ["p-file"],
+            "file_name": "word_topics",
+            "input_ready": true,
+            "class_label": "Topic Modelling"
+        },
+        "d-doc-topics-table":{
+            "label": "Documents X Topics matrix",
+            "description": "One file in CSV format which represents the corpus documents with their corresponding representativeness for each topic in the topic model",
+            "data_class": "table",
+            "param": ["p-file"],
+            "file_name": "doc_topics",
+            "input_ready": true,
+            "class_label": "Topic Modelling"
+        },
+        "d-gen-text":{
+            "label": "Textual document/s",
+            "description": "A file or a collection of files which represent general textual contents (e.g. <i>myfile.txt</i>)",
+            "data_class": "text",
+            "param": ["p-file"],
+            "file_name": "doc",
+            "input_ready": true,
+            "class_label": "General"
+        },
+        "d-gen-pdf":{
+            "label": "PDF document/s",
+            "description": "A file or a collection of files in PDF format",
+            "data_class": "pdf",
+            "param": ["p-file"],
+            "file_name": "pdf_doc",
+            "input_ready": true,
+            "class_label": "General"
+        },
+        "d-coherence":{
+            "label": "Topic model coherence",
+            "description": "One file in CSV format containing the coherence score of a list of Topic Models (with a different number of topics)",
+            "data_class": "table",
+            "param": ["p-file"],
+            "file_name": "coherence",
+            "input_ready": false,
+            "class_label": "Topic Modelling"
+        },
+        "d-stopwords":{
+            "label": "Stopwords",
+            "description": "One file in CSV format containing a list of stopwords (Note: the header is not considered as stopword)",
+            "data_class": "table",
+            "param": ["p-file"],
+            "file_name": "stopwords",
+            "input_ready": true,
+            "class_label": "Text analysis"
+        },
+        "d-ldavis-html":{
+            "label": "LDAvis",
+            "description": "One file in HTML format (i.e. <i>ldavis.html</i>) representing the LDAvis (<a href='https:\/\/github.com\/cpsievert\/LDAvis'>https:\/\/github.com\/cpsievert\/LDAvis</a>)",
+            "data_class": "html",
+            "param": ["p-file"],
+            "file_name": "ldavis",
+            "input_ready": false,
+            "class_label": "Topic Modelling"
+        },
+        "d-chart-html":{
+            "label": "MTMvis",
+            "description": "One file in HTML format (i.e. <i>dynamic_chart.html</i>) representing the MTMvis. This visulization shows the corpus documents’ topic representativeness based on a metadata attribute of such documents",
+            "data_class": "html",
+            "param": ["p-file"],
+            "file_name": "dynamic_chart",
+            "input_ready": false,
+            "class_label": "Topic Modelling"
+        }
+  },
+  "tool": {
+        "t-meta-builder": {
+            "label": "Metadata generator",
+            "description": "Genearates some metadata file/s for each document/s in a given collection. The metadata attributes are defined using regular expression rules to apply on the original names of the documents",
+            "class": "Convert",
+            "class_label": "General",
+            "function": "meta_builder",
+            "input_ready": true,
+            "param": ["p-metaregex"],
+            "compatible_input": ["d-gen-text"],
+            "output": ["d-metadata"]
+        },
+        "t-lda-coherance": {
+            "label": "Topic Modelling coherence score calculator",
+            "description": "Calculates the coherence values of different Topic Models (having different number of topics)",
+            "class_label": "Text analysis",
+            "class": "TextAnalysis",
+            "function": "calc_coherence",
+            "input_ready": true,
+            "param": ["p-topic-from","p-topic-to"],
+            "compatible_input": ["d-model-corpus","d-dictionary-corpus"],
+            "output": ["d-coherence"]
+        },
+        "t-topic-docs": {
+            "label": "Documents X Topics matrix builder",
+            "description": "Builds a matrix holding the corpus documents of a topic model with their corresponding representativeness for each topic in the topic model",
+            "class_label": "Text analysis",
+            "class": "TextAnalysis",
+            "function": "doc_prop_topics",
+            "input_ready": true,
+            "compatible_input": ["d-model-corpus","d-gensimldamodel"],
+            "output": ["d-doc-topics-table"]
+        },
+        "t-topic-words": {
+            "label": "Terms X Topics matrix builder",
+            "description": "Builds a matrix which contains 30 terms that better characterise each topic in the topic model.",
+            "class_label": "Text analysis",
+            "class": "TextAnalysis",
+            "param": ["p-numwords"],
+            "function": "words_prop_topics",
+            "input_ready": true,
+            "compatible_input": ["d-model-corpus","d-gensimldamodel"],
+            "output": ["d-word-topics-table"]
+        },
+        "t-topic-ldavis": {
+            "label": "LDAvis builder",
+            "description": "Builds the LDAvis (<a href='https:\/\/github.com\/cpsievert\/LDAvis'>https:\/\/github.com\/cpsievert\/LDAvis</a>) of a given topic model",
+            "class_label": "Terminal",
+            "class": "Terminal",
+            "function": "ldavis",
+            "input_ready": true,
+            "compatible_input": ["d-model-corpus","d-dictionary-corpus","d-gensimldamodel"],
+            "output": ["d-ldavis-html"]
+        },
+        "t-topic-docs-view": {
+            "label": "MTMvis builder",
+            "description": "Builds the MTMvis, a visulization that shows the corpus documents’ topic representativeness based on a metadata attribute of such documents",
+            "class_label": "Terminal",
+            "class": "Terminal",
+            "param": ["p-meta-value","p-chart-axis","p-meta-filter"],
+            "function": "cat_topics_barchart",
+            "input_ready": true,
+            "compatible_input": ["d-doc-topics-table","d-metadata"],
+            "output": ["d-chart-html"]
+        },
+        "t-corpus-build": {
+            "label": "Dictionary and weighted corpus builder",
+            "description": "Builds a dictionary and a weighted corpus from a given tokenized corpus",
+            "class_label": "Text analysis",
+            "class": "TextAnalysis",
+            "function": "build_corpus",
+            "input_ready": true,
+            "param": ["p-corpusmodel"],
+            "compatible_input": ["d-processed-corpus"],
+            "output": ["d-model-corpus","d-dictionary-corpus"]
+        },
+        "t-corpus-tokenize": {
+            "label": "Corpus tokenizer",
+            "description": "Builds a tokenized corpus from a given collection of documents. If a list of stopwords is provided, the tool removes such words from the tokenized corpus",
+            "class_label": "Text analysis",
+            "class": "TextAnalysis",
+            "function": "tokenize",
+            "input_ready": true,
+            "param": ["p-defstopwords","p-deflemmatize"],
+            "compatible_input": ["d-gen-text","d-stopwords"],
+            "optional_input": ["d-stopwords"],
+            "output": ["d-processed-corpus"]
+        },
+        "t-topic-lda": {
+            "label": "Topic model builder (LDA method)",
+            "description": "Builds a LDA topic model from a given dictionary and weighted corpus",
+            "class_label": "Text analysis",
+            "class": "TextAnalysis",
+            "function": "lda",
+            "input_ready": true,
+            "param": ["p-topic"],
+            "compatible_input": ["d-model-corpus","d-dictionary-corpus"],
+            "output": ["d-gensimldamodel"]
+        },
+        "t-filter-text": {
+            "label": "Text filter",
+            "description": "Filters a document/s from text values that follow a specific regular expression",
+            "class": "Filter",
+            "class_label": "Filter",
+            "function": "filter_text",
+            "input_ready": true,
+            "param": ["p-filteropt","p-filterregex"],
+            "compatible_input": ["d-gen-text"],
+            "output": ["d-gen-text"]
+        },
+        "t-save-files": {
+            "label": "Saver",
+            "description": "Saves the given data and/or visulizations localy on your machine",
+            "class": "Terminal",
+            "class_label": "Terminal",
+            "function": "save_file",
+            "input_ready": true,
+            "compatible_input": ["d-gensimldamodel","d-chart-html","d-metadata","d-dictionary-corpus","d-model-corpus","d-processed-corpus","d-gen-text","d-word-topics-table","d-doc-topics-table","d-coherence","d-doc-topics","d-ldavis-html"],
+            "optional_input": ["d-gensimldamodel","d-chart-html","d-metadata","d-dictionary-corpus","d-model-corpus","d-processed-corpus","d-gen-text","d-word-topics-table","d-doc-topics-table","d-coherence","d-doc-topics","d-ldavis-html"]
+        },
+        "t-convert-pdftotext": {
+            "label": "PDF to TXT converter",
+            "description": "Converts a given PDF file/s to TXT format",
+            "class": "Convert",
+            "class_label": "General",
+            "function": "pdf_to_text",
+            "input_ready": true,
+            "compatible_input": ["d-gen-pdf"],
+            "output": ["d-gen-text"]
+        }
+  },
+  "param": {
+        "p-gendescription":{
+          "handler": "input-text-large",
+          "label": "Brief description:",
+          "value": "",
+          "placeholder": "E.G. This is my first Diagram with MITAO and I am so proud of it!",
+          "init_value": ""
+        },
+        "p-file":{
+          "handler": "select-file",
+          "label": "File/s or Directory:",
+          "value": {},
+          "init_value": {}
+        },
+        "p-meta-value":{
+          "handler": "input-text",
+          "label": "Meta attribute to use on x-Axis:",
+          "value": "",
+          "placeholder": "E.G. year",
+          "init_value": false
+        },
+        "p-meta-filter":{
+          "handler": "input-text",
+          "label": "Meta attribute/s to use as filters (use <i>' && '</i> as separotor in case you want to specify more than one):",
+          "value": "",
+          "placeholder": "E.G. age && location",
+          "init_value": ""
+        },
+        "p-chart-axis":{
+          "handler": "check-value",
+          "label": null,
+          "value": false,
+          "value_label": "Build a time series chart"
+        },
+        "p-topic-from":{
+          "handler": "input-text",
+          "label": "Start from (number of topics):",
+          "value": "1",
+          "placeholder": "E.G. 5",
+          "init_value": 1
+        },
+        "p-topic-to":{
+          "handler": "input-text",
+          "label": "Stop at (number of topics):",
+          "value": "1",
+          "placeholder": "E.G. 10",
+          "init_value": 1
+        },
+        "p-topic":{
+          "handler": "input-text",
+          "label": "Number of topics:",
+          "value": "2",
+          "placeholder": "E.G. 5",
+          "init_value": 2
+        },
+        "p-numwords":{
+          "handler": "select-value",
+          "label": "Number of words:",
+          "value_label": ["10","15","20","25","30","40","50"],
+          "value": [10,15,20,25,30,40,50],
+          "init_value": 10
+        },
+        "p-filteropt":{
+          "handler": "check-value",
+          "label": "Filter and remove:",
+          "value_label": ["Dates","References","Header"],
+          "value": ["dates","references","header"],
+          "init_value": [0,0,0]
+        },
+        "p-filterregex":{
+          "handler": "input-text",
+          "label": "Specific text <p> (Regular expressions supported, try it on <a target=&quot;_blank&quot; href=https://regex101.com>the online demo</a>) </p>",
+          "value": "",
+          "placeholder": "E.G. ^(.*) bye",
+          "init_value": ""
+        },
+        "p-metaregex":{
+          "handler": "input-text-group",
+          "label": "",
+          "value_label": ["Attribute","Type","Regular expression"],
+          "value": ["att","type","regex"],
+          "placeholder": ["E.G. age","E.G. string | integer | list(string,;)","E.G. _age=(.*)_"],
+          "init_value": [["att","type","regex"]]
+        },
+        "p-defstopwords":{
+          "handler": "select-value",
+          "label": "Stop words:",
+          "value_label": ["None","Arabic","Azerbaijani","Danish","Dutch","English","Finnish","French","German","Greek","Hungarian","Indonesian","Italian","Kazakh","Nepali","Norwegian","Portuguese","Romanian","Russian","Spanish","Swedish","Turkish"],
+          "value": ["none","arabic","azerbaijani","danish","dutch","english","finnish","french","german","greek","hungarian","indonesian","italian","kazakh","nepali","norwegian","portuguese","romanian","russian","spanish","swedish","turkish"],
+          "init_value": "none"
+        },
+        "p-deflemmatize":{
+          "handler": "select-value",
+          "label": "Lemmatize:",
+          "value_label": ["None","Danish","Dutch","English","French","German","Hungarian","Italian","Norwegian","Portuguese","Romanian","Russian","Spanish","Swedish"],
+          "value": ["none","danish","dutch","english","finnish","french","german","hungarian","italian","norwegian","porter","portuguese","romanian","russian","spanish","swedish"],
+          "init_value": "none"
+        },
+        "p-corpusmodel":{
+          "handler": "select-value",
+          "label": "Corpus model:",
+          "value_label": ["Bag of words","TFIDF"],
+          "value": ["bag_of_words","tfidf"],
+          "init_value": "Bag of words"
+        }
+  }
+}

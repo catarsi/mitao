@@ -4,7 +4,6 @@ assert sys.version_info >= (3, 0, 0) and sys.version_info < (4, 0, 0), "Run the 
 import pathlib
 #
 
-from pyfladesk import init_gui
 import json
 import requests
 import re
@@ -127,7 +126,7 @@ def index():
     if workflow_path == None:
         workflow_path = BASE_CONFIG_PATH+"/workflow.json"
     workflow_data = json.dumps(json.load(open(workflow_path)))
-    return render_template('index.html', workflow=workflow_data, config=json.dumps(CONFIG_DATA))
+    return render_template('index.html', workflow=workflow_data, config=json.dumps(CONFIG_DATA), port=5000, type="window")
 
 @app.route('/upload', methods = ['POST'])
 def upload():
@@ -559,6 +558,9 @@ def open_browser():
         webbrowser.open(dipam_url)
         return("Default browser")
 
+def is_flask_active():
+    response = os.system("ping -c 1 -p 5000 127.0.0.1")
+    return response == 0
 
 if __name__ == '__main__':
     #app.config['TEMPLATES_AUTO_RELOAD'] = True
@@ -577,6 +579,4 @@ if __name__ == '__main__':
     ui = FlaskUI(app, width=1200, height=800)
     ui.run()
     # -----
-
-
-    #init_gui(app)
+    # REMEMBER TO CHANGE the parameters to pass using the call app.route('/') call: A = browser, B = window
