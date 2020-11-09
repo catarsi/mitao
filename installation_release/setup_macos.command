@@ -34,5 +34,7 @@ deactivate
 #cat $BASEDIR/app/run_macos_appify.sh | sh $BASEDIR/app/private_appify.sh $BASEDIR "mitao"
 #cp -a $BASEDIR/app/. $BASEDIR/mitao.app/Contents/MacOS/
 cp -a $BASEDIR/app/Mitao.app $BASEDIR
+mkdir -p $BASEDIR/app/src/.log
+touch $BASEDIR/app/src/.log/all.log
 
 echo MITAO has been successfully installed !!
