@@ -64,3 +64,4 @@ Werkzeug
 whichcraft
 zipfile2
 zipp
+waitress
