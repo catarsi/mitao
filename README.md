@@ -28,8 +28,8 @@ This application is linked to CATARSI (https://centri.unibo.it/dharc/en/research
 ```cd mitao```  
 
 * Enter the following commands in order to install all the libraries needed.  
-```python3 -m pip install -r requirements.txt```
-```python3 -m nltk.downloader all```
+  * ```python3 -m pip install -r requirements.txt```  
+  * ```python3 -m nltk.downloader all```
 
 ---
 
