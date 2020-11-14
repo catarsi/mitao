@@ -9,12 +9,12 @@ This application is linked to CATARSI (https://centri.unibo.it/dharc/en/research
 * Python 3.X programming language, Download and install it from the official website -> [Click here](https://www.python.org/downloads/)
 * The Chrome web browser, download it -> [Click here](https://www.google.com/intl/en/chrome/)
 
-## Instalation
+## Install and run Mitao
+
 ### Step (1): open a Shell
 * On **Windows**: **_Command Prompt_**
 * On **Mac**: **_Terminal_**
 * On **Linux**: **_Terminal_** or **_Console_**
-
 
 ---
 
