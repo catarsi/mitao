@@ -2,7 +2,6 @@
 __pycache__
 .ipynb_checkpoints
 _venv
-.log
 _private
 .process-temp/*
 .tmp/*
