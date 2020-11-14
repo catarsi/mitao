@@ -3,6 +3,25 @@
   <head>
     <title>MITAO</title>
 
+    <script>
+      var port = "{{port}}";
+      var listening_port = parseInt(port) + 1;
+      var type = "{{type}}";
+      if (type == "window"){
+        document.addEventListener('DOMContentLoaded', function() {
+            var url = 'http://127.0.0.1:'+listening_port.toString()+'/GUI-is-still-open';
+            //fetch(url, { mode: 'no-cors'});
+            setInterval(function(){ fetch(url, { mode: 'no-cors'});}, 1500)();
+        });
+      }else {
+        //document.cookie = "userloggedin=true";
+        window.addEventListener('beforeunload', function (e) {
+          //$.get("/shutdown").done(function() {});
+          $.get("/shutdown").done(function() {});
+        });
+      }
+    </script>
+
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
 
     <link rel=stylesheet type=text/css href="{{ url_for('.static', filename='css/bootstrap.min.css') }}">
@@ -141,19 +160,6 @@
     <script src="{{ url_for('.static', filename='js/cytoscape-undo-redo.js') }}"></script>
     <!-- The main script and the configuration loader-->
     <!--<script src="{{ url_for('.static', filename='js/__remote__config_loader.js') }}"></script>-->
-    <script>
-      var port = "{{port}}";
-      var listening_port = parseInt(port) + 1;
-      var type = "{{type}}";
-      if (type == "window"){
-        document.addEventListener('DOMContentLoaded', function() {
-            var url = 'http://127.0.0.1:'+listening_port.toString()+'/GUI-is-still-open';
-            fetch(url, { mode: 'no-cors'});
-            setInterval(function(){ fetch(url, { mode: 'no-cors'});}, 2000)();
-
-        });
-      }
-    </script>
     <script>
     var config = "{{config}}";
     var workflow = "{{workflow}}";

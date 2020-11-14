@@ -6,3 +6,5 @@ _venv
 _private
 .process-temp/*
 .tmp/*
+__local__*
+_release

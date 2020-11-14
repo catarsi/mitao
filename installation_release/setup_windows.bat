@@ -1,1 +1,0 @@
-py -3 -m venv app\_venv && app\_venv\Scripts\activate && echo "Installing the required python libraries ..." && pip install -r requirements.txt && pip list && echo "INSTALLATION DONE !" && deactivate && COPY app\run_windows.bat mitao.bat

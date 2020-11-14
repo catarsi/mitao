@@ -14,7 +14,9 @@ from os.path import basename
 from shutil import copyfile
 import zipfile
 from ast import literal_eval
-from flaskwebgui import FlaskUI #get the FlaskUI class
+
+#from flaskwebgui import FlaskUI #get the FlaskUI class
+from lib.flaskwebgui import FlaskUI
 
 from src import tool
 from src import data
@@ -126,7 +128,7 @@ def index():
     if workflow_path == None:
         workflow_path = BASE_CONFIG_PATH+"/workflow.json"
     workflow_data = json.dumps(json.load(open(workflow_path)))
-    return render_template('index.html', workflow=workflow_data, config=json.dumps(CONFIG_DATA), port=5000, type="window")
+    return render_template('index.html', workflow=workflow_data, config=json.dumps(CONFIG_DATA), port=5000, type="browser")
 
 @app.route('/upload', methods = ['POST'])
 def upload():
@@ -515,48 +517,8 @@ def process():
     return "Success:Processing done !"
 
 def open_browser():
-    dipam_url = "http://127.0.0.1:5000/"
-    browser_path = [
-        "chrome",
-        "google-chrome",
-        "chromium",
-        "chromium-browser",
-        'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
-    ]
-
-    def rec_open(url,index):
-        if index >= len(browser_path):
-            return False
-
-        try:
-            browse = webbrowser.get(browser_path[index]).open(dipam_url)
-        except Exception as e:
-            browse = False
-        if not browse:
-            rec_open(url,index + 1)
-        else:
-            return True
-
-        return True
-
-    def search_chrome_in_windows(a_root):
-        dir_path = os.path.dirname(a_root)
-        for root, dirs, files in os.walk(dir_path):
-            for file in files:
-                if file.startswith('chrome.exe'):
-                    return root+'/'+str(file)
-        return False
-
-    if not rec_open(dipam_url,0):
-        system_root = os.path.abspath(os.sep)
-        if(system_root != "/"):
-            browser_path_win = search_chrome_in_windows(system_root)
-            if browser_path_win != False:
-                webbrowser.get(browser_path_win+" %s").open(dipam_url)
-                return(browser_path_win)
-
-        webbrowser.open(dipam_url)
-        return("Default browser")
+    _url = "http://127.0.0.1:5000/"
+    webbrowser.open_new(_url)
 
 def is_flask_active():
     response = os.system("ping -c 1 -p 5000 127.0.0.1")
@@ -572,11 +534,11 @@ if __name__ == '__main__':
 
     # CHOOSE A or B
     # --- A
-    #Timer(1, open_browser).start()
-    #app.run()
+    Timer(1, open_browser).start()
+    app.run()
     # --- B
     # ----- COMMENT FOR A GUI BASED ON BROWSER
-    ui = FlaskUI(app, width=1200, height=800)
-    ui.run()
+    #ui = FlaskUI(app, width=1200, height=800)
+    #ui.run()
     # -----
     # REMEMBER TO CHANGE the parameters to pass using the call app.route('/') call: A = browser, B = window
