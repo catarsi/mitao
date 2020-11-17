@@ -1525,8 +1525,7 @@ class dipam_interface {
     $( "#"+this.DOMS.WORKFLOW.SHUTDOWN_BTN.getAttribute('id')).on({
         click: function(e) {
           e.preventDefault();
-          document.getElementById('list_options_trigger').click();
-          $.get("/shutdown").done(function() {
+          $.get("/shutdown").always(function() {
             window.close();
           });
         }

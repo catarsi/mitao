@@ -8,7 +8,7 @@ import json
 import requests
 import re
 import csv
-import os, shutil
+import os, signal, shutil
 import time
 from os.path import basename
 from shutil import copyfile
@@ -83,15 +83,21 @@ log_file.truncate(0)
 log_file.close()
 logging.basicConfig(filename=BASE_LOG_PATH+'/all.log', format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
-def shutdown_server():
-    func = request.environ.get('werkzeug.server.shutdown')
-    if func is None:
-        raise RuntimeError('Not running with the Werkzeug Server')
-    func()
-
 @app.route('/shutdown')
 def shutdown():
-    shutdown_server()
+    #OPTION 1
+    #def shutdown_server():
+    #    func = request.environ.get('werkzeug.server.shutdown')
+    #    if func is None:
+    #        raise RuntimeError('Not running with the Werkzeug Server')
+    #    func()
+    #shutdown_server()
+
+    #OPTION 2
+    pid = os.getpid()
+    print("killing",pid)
+    os.kill(pid, signal.SIGTERM) #or signal.SIGKILL
+
     return 'Server shutting down...'
 
 @app.route('/status')
@@ -534,11 +540,11 @@ if __name__ == '__main__':
 
     # CHOOSE A or B
     # --- A
-    Timer(1, open_browser).start()
-    app.run()
+    #Timer(1, open_browser).start()
+    #app.run()
     # --- B
     # ----- COMMENT FOR A GUI BASED ON BROWSER
-    #ui = FlaskUI(app, width=1200, height=800)
-    #ui.run()
+    ui = FlaskUI(app, width=1200, height=800)
+    ui.run()
     # -----
     # REMEMBER TO CHANGE the parameters to pass using the call app.route('/') call: A = browser, B = window

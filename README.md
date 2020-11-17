@@ -35,6 +35,3 @@ This application is linked to CATARSI (https://centri.unibo.it/dharc/en/research
 
 ### Step (4): run Mitao
 * ```python3 main.py .```
-
-**Note: if the browser doesn't show automatically, then open it manually and enter the following URL: [http://127.0.0.1:5000](http://127.0.0.1:5000/).
-We recommend the use of [Chrome](https://www.google.com/intl/en/chrome/)**
