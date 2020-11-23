@@ -1,56 +1,41 @@
-2020-11-23 22:09:50,046 : INFO :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2020-11-23 22:09:50,537 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:50] "[37mGET / HTTP/1.1[0m" 200 -
-2020-11-23 22:09:50,603 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:50] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
-2020-11-23 22:09:50,605 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2020-11-23 22:09:50,606 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:50] "[36mGET /static/css/release.css HTTP/1.1[0m" 304 -
-2020-11-23 22:09:50,607 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:50] "[36mGET /static/css/lightbox.css HTTP/1.1[0m" 304 -
-2020-11-23 22:09:50,610 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:50] "[36mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 304 -
-2020-11-23 22:09:50,616 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:50] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
-2020-11-23 22:09:50,618 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:50] "[36mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 304 -
-2020-11-23 22:09:50,623 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:50] "[36mGET /static/js/lodash.js HTTP/1.1[0m" 304 -
-2020-11-23 22:09:50,624 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:50] "[36mGET /static/js/lightbox.js HTTP/1.1[0m" 304 -
-2020-11-23 22:09:50,626 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:50] "[36mGET /static/js/interface.js HTTP/1.1[0m" 304 -
-2020-11-23 22:09:50,633 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:50] "[36mGET /static/js/diagram.js HTTP/1.1[0m" 304 -
-2020-11-23 22:09:50,635 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:50] "[36mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 304 -
-2020-11-23 22:09:50,636 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:50] "[36mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 304 -
-2020-11-23 22:09:50,636 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:50] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
-2020-11-23 22:09:51,074 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:51] "[36mGET /static/images/prev.png HTTP/1.1[0m" 304 -
-2020-11-23 22:09:51,075 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:51] "[36mGET /static/images/next.png HTTP/1.1[0m" 304 -
-2020-11-23 22:09:51,076 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:51] "[36mGET /static/images/loading.gif HTTP/1.1[0m" 304 -
-2020-11-23 22:09:51,077 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:51] "[36mGET /static/images/close.png HTTP/1.1[0m" 304 -
-2020-11-23 22:09:57,116 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:57] "[37mPOST /loadworkflow HTTP/1.1[0m" 200 -
-2020-11-23 22:09:57,127 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:57] "[37mGET / HTTP/1.1[0m" 200 -
-2020-11-23 22:09:57,155 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:57] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2020-11-23 22:09:57,172 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:57] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
-2020-11-23 22:09:57,177 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:57] "[36mGET /static/css/release.css HTTP/1.1[0m" 304 -
-2020-11-23 22:09:57,181 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:57] "[36mGET /static/css/lightbox.css HTTP/1.1[0m" 304 -
-2020-11-23 22:09:57,184 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:57] "[36mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 304 -
-2020-11-23 22:09:57,188 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:57] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
-2020-11-23 22:09:57,195 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:57] "[36mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 304 -
-2020-11-23 22:09:57,198 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:57] "[36mGET /static/js/lodash.js HTTP/1.1[0m" 304 -
-2020-11-23 22:09:57,201 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:57] "[36mGET /static/js/lightbox.js HTTP/1.1[0m" 304 -
-2020-11-23 22:09:57,205 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:57] "[36mGET /static/js/interface.js HTTP/1.1[0m" 304 -
-2020-11-23 22:09:57,209 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:57] "[36mGET /static/js/diagram.js HTTP/1.1[0m" 304 -
-2020-11-23 22:09:57,210 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:57] "[36mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 304 -
-2020-11-23 22:09:57,211 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:57] "[36mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 304 -
-2020-11-23 22:09:57,212 : INFO : 127.0.0.1 - - [23/Nov/2020 22:09:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
-2020-11-23 22:10:06,381 : INFO : 127.0.0.1 - - [23/Nov/2020 22:10:06] "[37mPOST /loadworkflow HTTP/1.1[0m" 200 -
-2020-11-23 22:10:06,393 : INFO : 127.0.0.1 - - [23/Nov/2020 22:10:06] "[37mGET / HTTP/1.1[0m" 200 -
-2020-11-23 22:10:06,428 : INFO : 127.0.0.1 - - [23/Nov/2020 22:10:06] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2020-11-23 22:10:06,457 : INFO : 127.0.0.1 - - [23/Nov/2020 22:10:06] "[36mGET /static/css/index.css HTTP/1.1[0m" 304 -
-2020-11-23 22:10:06,461 : INFO : 127.0.0.1 - - [23/Nov/2020 22:10:06] "[36mGET /static/css/release.css HTTP/1.1[0m" 304 -
-2020-11-23 22:10:06,464 : INFO : 127.0.0.1 - - [23/Nov/2020 22:10:06] "[36mGET /static/css/lightbox.css HTTP/1.1[0m" 304 -
-2020-11-23 22:10:06,467 : INFO : 127.0.0.1 - - [23/Nov/2020 22:10:06] "[36mGET /static/js/jquery2-2-4.min.js HTTP/1.1[0m" 304 -
-2020-11-23 22:10:06,471 : INFO : 127.0.0.1 - - [23/Nov/2020 22:10:06] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
-2020-11-23 22:10:06,477 : INFO : 127.0.0.1 - - [23/Nov/2020 22:10:06] "[36mGET /static/cytoscape/dist/cytoscape.min.js HTTP/1.1[0m" 304 -
-2020-11-23 22:10:06,480 : INFO : 127.0.0.1 - - [23/Nov/2020 22:10:06] "[36mGET /static/js/lodash.js HTTP/1.1[0m" 304 -
-2020-11-23 22:10:06,482 : INFO : 127.0.0.1 - - [23/Nov/2020 22:10:06] "[36mGET /static/js/lightbox.js HTTP/1.1[0m" 304 -
-2020-11-23 22:10:06,486 : INFO : 127.0.0.1 - - [23/Nov/2020 22:10:06] "[36mGET /static/js/interface.js HTTP/1.1[0m" 304 -
-2020-11-23 22:10:06,491 : INFO : 127.0.0.1 - - [23/Nov/2020 22:10:06] "[36mGET /static/js/diagram.js HTTP/1.1[0m" 304 -
-2020-11-23 22:10:06,495 : INFO : 127.0.0.1 - - [23/Nov/2020 22:10:06] "[36mGET /static/js/cytoscape-edgehandles.js HTTP/1.1[0m" 304 -
-2020-11-23 22:10:06,499 : INFO : 127.0.0.1 - - [23/Nov/2020 22:10:06] "[36mGET /static/js/cytoscape-undo-redo.js HTTP/1.1[0m" 304 -
-2020-11-23 22:10:06,502 : INFO : 127.0.0.1 - - [23/Nov/2020 22:10:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
-2020-11-23 22:10:06,582 : INFO : 127.0.0.1 - - [23/Nov/2020 22:10:06] "[36mGET /static/images/prev.png HTTP/1.1[0m" 304 -
-2020-11-23 22:10:06,585 : INFO : 127.0.0.1 - - [23/Nov/2020 22:10:06] "[36mGET /static/images/next.png HTTP/1.1[0m" 304 -
-2020-11-23 22:10:06,586 : INFO : 127.0.0.1 - - [23/Nov/2020 22:10:06] "[36mGET /static/images/close.png HTTP/1.1[0m" 304 -
-2020-11-23 22:10:06,587 : INFO : 127.0.0.1 - - [23/Nov/2020 22:10:06] "[36mGET /static/images/loading.gif HTTP/1.1[0m" 304 -
+2020-11-23 23:00:08,799 : INFO : topic #2 (0.200): 0.026*"string" + 0.026*"processing" + 0.025*"musical" + 0.024*"issues" + 0.024*"some" + 0.024*"this" + 0.024*"paper" + 0.024*"discussed" + 0.023*"problems" + 0.023*"cause"
+2020-11-23 23:00:08,799 : INFO : topic #3 (0.200): 0.052*"processing" + 0.051*"string" + 0.036*"problems" + 0.036*"some" + 0.036*"paper" + 0.036*"issues" + 0.036*"this" + 0.035*"musical" + 0.020*"techniques" + 0.020*"provide"
+2020-11-23 23:00:08,799 : INFO : topic #4 (0.200): 0.025*"string" + 0.025*"this" + 0.025*"musical" + 0.025*"processing" + 0.025*"issues" + 0.024*"paper" + 0.024*"problems" + 0.024*"some" + 0.024*"discussed" + 0.023*"possible"
+2020-11-23 23:00:08,799 : INFO : topic diff=0.244952, rho=0.577302
+2020-11-23 23:00:08,800 : INFO : -4.773 per-word bound, 27.3 perplexity estimate based on a held-out corpus of 1 documents with 53 words
+2020-11-23 23:00:08,800 : INFO : PROGRESS: pass 3, dispatched chunk #0 = documents up to #1/1, outstanding queue size 1
+2020-11-23 23:00:08,806 : INFO : topic #0 (0.200): 0.027*"string" + 0.025*"processing" + 0.025*"this" + 0.025*"musical" + 0.024*"some" + 0.024*"problems" + 0.024*"paper" + 0.024*"issues" + 0.023*"music" + 0.023*"solutions"
+2020-11-23 23:00:08,806 : INFO : topic #1 (0.200): 0.023*"string" + 0.023*"musical" + 0.023*"issues" + 0.023*"this" + 0.023*"paper" + 0.023*"problems" + 0.023*"processing" + 0.023*"rather" + 0.023*"number" + 0.023*"music"
+2020-11-23 23:00:08,807 : INFO : topic #2 (0.200): 0.025*"string" + 0.025*"processing" + 0.024*"musical" + 0.024*"issues" + 0.024*"some" + 0.024*"this" + 0.023*"paper" + 0.023*"discussed" + 0.023*"problems" + 0.023*"cause"
+2020-11-23 23:00:08,807 : INFO : topic #3 (0.200): 0.052*"processing" + 0.052*"string" + 0.036*"problems" + 0.036*"some" + 0.036*"paper" + 0.036*"issues" + 0.036*"this" + 0.036*"musical" + 0.020*"techniques" + 0.020*"provide"
+2020-11-23 23:00:08,807 : INFO : topic #4 (0.200): 0.024*"string" + 0.024*"this" + 0.024*"musical" + 0.024*"processing" + 0.024*"issues" + 0.024*"paper" + 0.024*"problems" + 0.023*"some" + 0.023*"discussed" + 0.023*"possible"
+2020-11-23 23:00:08,807 : INFO : topic diff=0.111763, rho=0.499969
+2020-11-23 23:00:08,811 : INFO : -4.763 per-word bound, 27.1 perplexity estimate based on a held-out corpus of 1 documents with 53 words
+2020-11-23 23:00:08,811 : INFO : PROGRESS: pass 4, dispatched chunk #0 = documents up to #1/1, outstanding queue size 1
+2020-11-23 23:00:08,816 : INFO : topic #0 (0.200): 0.026*"string" + 0.024*"processing" + 0.024*"this" + 0.024*"musical" + 0.024*"some" + 0.024*"problems" + 0.024*"paper" + 0.024*"issues" + 0.023*"music" + 0.023*"solutions"
+2020-11-23 23:00:08,816 : INFO : topic #1 (0.200): 0.023*"string" + 0.023*"musical" + 0.023*"issues" + 0.023*"this" + 0.023*"paper" + 0.023*"rather" + 0.023*"problems" + 0.023*"number" + 0.023*"music" + 0.023*"processing"
+2020-11-23 23:00:08,816 : INFO : topic #2 (0.200): 0.024*"string" + 0.024*"processing" + 0.024*"musical" + 0.024*"issues" + 0.024*"some" + 0.023*"this" + 0.023*"paper" + 0.023*"discussed" + 0.023*"problems" + 0.023*"cause"
+2020-11-23 23:00:08,816 : INFO : topic #3 (0.200): 0.052*"processing" + 0.052*"string" + 0.036*"problems" + 0.036*"some" + 0.036*"paper" + 0.036*"issues" + 0.036*"this" + 0.036*"musical" + 0.020*"techniques" + 0.020*"provide"
+2020-11-23 23:00:08,817 : INFO : topic #4 (0.200): 0.024*"string" + 0.024*"this" + 0.024*"musical" + 0.024*"processing" + 0.024*"issues" + 0.024*"paper" + 0.023*"problems" + 0.023*"some" + 0.023*"discussed" + 0.023*"possible"
+2020-11-23 23:00:08,817 : INFO : topic diff=0.055343, rho=0.447191
+2020-11-23 23:00:08,818 : INFO : -4.760 per-word bound, 27.1 perplexity estimate based on a held-out corpus of 1 documents with 53 words
+2020-11-23 23:00:08,834 : INFO : saving LdaState object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state, separately None
+2020-11-23 23:00:08,835 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state
+2020-11-23 23:00:08,835 : INFO : saving LdaMulticore object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda, separately ['expElogbeta', 'sstats']
+2020-11-23 23:00:08,835 : INFO : storing np array 'expElogbeta' to /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.expElogbeta.npy
+2020-11-23 23:00:08,836 : INFO : not storing attribute dispatcher
+2020-11-23 23:00:08,836 : INFO : not storing attribute state
+2020-11-23 23:00:08,836 : INFO : not storing attribute id2word
+2020-11-23 23:00:08,837 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda
+2020-11-23 23:00:08,838 : INFO : 127.0.0.1 - - [23/Nov/2020 23:00:08] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-11-23 23:00:08,844 : INFO : loading LdaModel object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda
+2020-11-23 23:00:08,845 : INFO : loading expElogbeta from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.expElogbeta.npy with mmap=None
+2020-11-23 23:00:08,845 : INFO : setting ignored attribute dispatcher to None
+2020-11-23 23:00:08,845 : INFO : setting ignored attribute state to None
+2020-11-23 23:00:08,845 : INFO : setting ignored attribute id2word to None
+2020-11-23 23:00:08,846 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda
+2020-11-23 23:00:08,846 : INFO : loading LdaState object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state
+2020-11-23 23:00:08,846 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state
+2020-11-23 23:00:08,850 : INFO : 127.0.0.1 - - [23/Nov/2020 23:00:08] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-11-23 23:00:08,869 : INFO : 127.0.0.1 - - [23/Nov/2020 23:00:08] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-11-23 23:00:08,888 : INFO : 127.0.0.1 - - [23/Nov/2020 23:00:08] "[37mPOST /process HTTP/1.1[0m" 200 -

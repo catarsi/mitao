@@ -1,186 +1,4 @@
-import numpy as np
-import pandas as pd
-import plotly.graph_objects as go
-import plotly.express as px
-from collections import defaultdict
-from collections import OrderedDict
-import re
-import json
 
-import matplotlib
-matplotlib.use('Agg')
-
-# Plotting tools
-import pyLDAvis
-import pyLDAvis.gensim  # don't skip this
-import matplotlib.pyplot as plt
-
-class Terminal(object):
-
-    def __init__(self, base_tmp_path_base):
-        self.PALETTE = ["#0377a8","#fc6f5f","#e2ce71","#ad7947","#e97947","#5cb991","#ffadcb","#b46ddc"]
-        self.MY_DPI = 80
-        self.base_tmp_path = base_tmp_path_base
-        pass
-
-    def ldavis(self, input_files, param, tool_id):
-
-        data_to_return = {"data":{}}
-        ok_to_process = False
-
-        # Check the tool needs
-        # -----
-        if "d-model-corpus" in input_files and "d-dictionary-corpus" in input_files and "d-gensimldamodel" in input_files:
-            ok_to_process = len(input_files["d-model-corpus"]) and len(input_files["d-dictionary-corpus"]) and len(input_files["d-gensimldamodel"])
-
-        if not ok_to_process:
-            res_err = {"data":{}}
-            res_err["data"]["error"] = "Input data missing!"
-            return res_err
-
-        corpus = []
-        for file_k in input_files["d-model-corpus"]:
-            for d in input_files["d-model-corpus"][file_k]:
-                corpus.append(d["value"])
-
-        dictionary = None
-        for file_k in input_files["d-dictionary-corpus"]:
-            dictionary = input_files["d-dictionary-corpus"][file_k]
-
-        ldamodel = None
-        for file_k in input_files["d-gensimldamodel"]:
-            ldamodel = input_files["d-gensimldamodel"][file_k]
-
-        # Params
-        # -----
-        # NO PARAMS
-        vis = pyLDAvis.gensim.prepare(ldamodel, corpus, dictionary, sort_topics=False)
-        html_str = pyLDAvis.prepared_data_to_html(vis)
-        data_to_return["data"]["d-ldavis-html"] = {"ldavis": html_str}
-        return data_to_return
-
-    def cat_topics_barchart(self, input_files, param, tool_id):
-        data_to_return = {"data":{}}
-
-        # Pre
-        # -------
-        # Check Restrictions
-        ok_to_process = ("d-doc-topics-table" in input_files) and (len(input_files["d-doc-topics-table"]) == 1)
-        ok_to_process = ok_to_process and (("d-metadata" in input_files) and (len(input_files["d-metadata"]) > 0))
-        if not ok_to_process:
-            data_to_return["data"]["error"] = "unexpected or missing input!"
-            return data_to_return
-
-        # Read inputs
-        inputs = {"meta_docs": {}, "docs_topics": {}}
-        for file_k in input_files["d-metadata"]:
-            inputs["meta_docs"][file_k] =  input_files["d-metadata"][file_k]
-        for file_k in input_files["d-doc-topics-table"]:
-            inputs["docs_topics"] =  input_files["d-doc-topics-table"][file_k]
-
-        # Params
-        META_FILTER = []
-        META_KEY = ""
-        META_LABEL = ""
-        #META_KEY_TYPE = ""
-        CHART_AXIS_TYPE = "none"
-        if param != None:
-            if "p-meta-filter" in param:
-                META_FILTER = [a.strip() for a in param["p-meta-filter"].split(",")]
-            if "p-meta-value" in param:
-                META_KEY = param["p-meta-value"]
-                META_LABEL = "metadata attribute = <"+META_KEY+">"
-            #if "p-meta-type" in param:
-            #    META_KEY_TYPE = param["p-meta-type"]
-            if "p-chart-axis" in param:
-                if param["p-chart-axis"] == "time_series":
-                    for f_opt in param["p-chart-axis"]:
-                        if f_opt:
-                            CHART_AXIS_TYPE = "initial"
-
-        # Process
-        # -------
-        # 0) Prepare HTML template
-        html_layout = ""
-
-        # 1) Read and process the inputs
-        def get_column_name_for_max_values_of(row,df):
-            return df.loc[:,df.loc[row] == df.loc[row].max()].columns.tolist()
-
-        def clean_file_name(f_path):
-            clean_index = f_path
-            #Remove extension
-            for i in reversed(range(len(clean_index))):
-                if clean_index[i] == ".":
-                    clean_index = clean_index[:i]
-                    break
-            #Remove path to file
-            for i in reversed(range(len(clean_index))):
-                if "/" in clean_index[i] or "\\" in clean_index[i]:
-                    clean_index = clean_index[i+1:]
-                    break
-            return clean_index
-
-        mydf = pd.DataFrame.from_records(inputs["docs_topics"][1:])
-        mydf.columns = inputs["docs_topics"][0]
-        mydf = mydf.set_index(inputs["docs_topics"][0][0])
-        dict_topics = dict((el,[]) for el in mydf.columns)
-
-        # for each topic we create a list of all the documents which have it as top score
-        index_files = set()
-        for index,row in mydf.iterrows():
-            for t_k in get_column_name_for_max_values_of(index,mydf):
-                #remove all the path of the file and the file extension (i.e. "txt")
-                clean_index = clean_file_name(str(index))
-                dict_topics[t_k].append(clean_index)
-                index_files.add(clean_index)
-
-        print("Inputs:",inputs)
-        print("Index files:",index_files)
-        meta = {}
-        meta_index = {}
-        meta_x_values = set()
-        for f_name in inputs["meta_docs"]:
-            #remove all the path of the file and the file extension (i.e. "json")
-            clean_index = clean_file_name(str(f_name))
-            print(clean_index)
-            if clean_index in index_files:
-                meta[clean_index] = inputs["meta_docs"][f_name]
-                for a_meta_k in inputs["meta_docs"][f_name]:
-                    a_meta_k_val = inputs["meta_docs"][f_name][a_meta_k]
-                    a_data_type = str(type(a_meta_k_val))
-                    if "list" in a_data_type:
-                        inner_type = "string"
-                        if len(a_meta_k_val) > 0:
-                            inner_type = str(type(a_meta_k_val[0]))
-                            if "str" in inner_type:
-                                inner_type = "string"
-                            elif "int" in inner_type:
-                                inner_type = "integer"
-                        meta_index[a_meta_k] = "list("+inner_type+")"
-                        l = [a_val for a_val in a_meta_k_val]
-                        a_meta_k_val = l
-                    elif "str" in a_data_type:
-                        meta_index[a_meta_k] = "string"
-                        a_meta_k_val = [a_meta_k_val]
-                    elif "int" in a_data_type:
-                        meta_index[a_meta_k] = "integer"
-                        a_meta_k_val = [a_meta_k_val]
-
-                    if a_meta_k == META_KEY:
-                        meta_x_values.update(a_meta_k_val)
-
-        meta_x_values = list(meta_x_values)
-        meta_x_values.sort()
-
-        print(meta_x_values)
-
-        filter_meta = dict()
-        for m in meta_index:
-            if m in META_FILTER:
-                filter_meta[m] = meta_index[m]
-
-        html_template = """
         <!DOCTYPE html>
         <html>
           <head>
@@ -238,7 +56,7 @@ class Terminal(object):
                           margin-bottom: 5px;
                         }
                         #lines_chart{
-                          display: """+CHART_AXIS_TYPE+""";
+                          display: none;
                         }
 
                         #filters_container{
@@ -299,14 +117,27 @@ class Terminal(object):
                 <script type="text/javascript">
 
                 /*FROM MITAO*/
-                var app_init_data = """+json.dumps(dict_topics, indent = 4)+""";
-                var app_meta = """+json.dumps(meta, indent = 4)+""";
-                var att_index = """+json.dumps(filter_meta, indent = 4)+""";
+                var app_init_data = {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [
+        "10.2307_30204837"
+    ],
+    "5": []
+};
+                var app_meta = {
+    "10.2307_30204837": {
+        "date": "2001",
+        "keywords": null
+    }
+};
+                var att_index = {};
 
                 /*FROM MITAO*/
-                var app_x_att = \""""+META_KEY+"""\";
-                var app_x_att_type = \""""+meta_index[META_KEY]+"""\";
-                var app_x_data = """+json.dumps(meta_x_values)+""";
+                var app_x_att = "date";
+                var app_x_att_type = "string";
+                var app_x_data = ["2001"];
 
                 /*------------*/
         /*------------*/
@@ -771,26 +602,4 @@ class Terminal(object):
                 </script>
                 </body>
                 </html>
-        """
-
-        f_name = str(tool_id)+'_chart_('+str(META_KEY)+')'
-        #data_to_return["data"]["d-grouped-barchart"] = {f_name+'_data': barchart_data}
-        data_to_return["data"]["d-chart-html"] = {f_name+'_view': html_template}
-        return data_to_return
-
-    def save_file(self, input_files, param, tool_id):
-        data_to_return = {"data":{}}
-
-        # NO RESTRICTIONS  Takes any input
-
-        #Build data here
-        res_docs = {}
-        for a_data_value in input_files:
-            if a_data_value in res_docs:
-                a_data_value = "(copy)_"+a_data_value
-            res_docs[a_data_value] = {}
-            for file_k in input_files[a_data_value]:
-                res_docs[a_data_value][file_k] = input_files[a_data_value][file_k]
-
-        data_to_return["data"] = res_docs
-        return data_to_return
+        
