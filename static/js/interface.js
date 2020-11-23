@@ -1562,8 +1562,9 @@ class dipam_interface {
                 $.post( "/loadworkflow", {
                   workflow_file: result
                 }).done(function() {
-                  //$.get("/");
+                  window.removeEventListener("beforeunload", beforeunload_fun);
                   location.reload();
+                  window.addEventListener('beforeunload',beforeunload_fun);
                 });
             };
           }

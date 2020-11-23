@@ -111,19 +111,22 @@ class Terminal(object):
         mydf.columns = inputs["docs_topics"][0]
         mydf = mydf.set_index(inputs["docs_topics"][0][0])
         dict_topics = dict((el,[]) for el in mydf.columns)
-        index_files = []
+
         # for each topic we create a list of all the documents which have it as top score
+        index_files = []
         for index,row in mydf.iterrows():
             for t_k in get_column_name_for_max_values_of(index,mydf):
                 clean_index = re.sub(r'^.*?\/', '', str(index))
                 dict_topics[t_k].append(clean_index)
                 index_files.append(clean_index)
 
+        print(index_files,dict_topics,inputs)
         meta = {}
         meta_index = {}
         meta_x_values = set()
         for f_name in inputs["meta_docs"]:
             k_meta = re.sub(r'^.*?\/', '', str(f_name)).replace(".json","")
+            print(k_meta)
             if k_meta in index_files:
                 meta[k_meta] = inputs["meta_docs"][f_name]
                 for a_meta_k in inputs["meta_docs"][f_name]:
@@ -152,6 +155,8 @@ class Terminal(object):
 
         meta_x_values = list(meta_x_values)
         meta_x_values.sort()
+
+        print(meta_x_values)
 
         filter_meta = dict()
         for m in meta_index:

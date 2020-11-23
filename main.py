@@ -1,6 +1,6 @@
 import sys
 #
-assert sys.version_info >= (3, 0, 0) and sys.version_info < (4, 0, 0), "Run the tool with Python 3.7"
+assert sys.version_info >= (3, 0, 0) and sys.version_info < (4, 0, 0), "Run the tool with Python 3"
 import pathlib
 #
 

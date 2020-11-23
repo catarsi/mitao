@@ -1,4 +1,3 @@
-
 //load json files
 //var workflow = JSON.parse(decode_json(workflow));
 
@@ -8,6 +7,13 @@ var workflow = JSON.parse(decode_json(workflow));
 var config = JSON.parse(decode_json(config));
 //console.log("Config:",config);
 //console.log("Workflow:",workflow);
+
+var is_release = false;
+/* COMMENT IF NOT A RELEASE: Start */
+is_release = true;
+/* COMMENT IF NOT A RELEASE: End */
+
+var check_updates = !(is_release)
 
 function decode_json(text){
   //var msg = decodeURIComponent(text.replace(/\+/g, '%20')+'');
@@ -38,7 +44,9 @@ vw_interface.set_events();
 //******************************************//
 vw_interface.build_overview(diagram_instance.get_gen_elem('diagram'));
 vw_interface.click_overview_nav();
-vw_interface.check_version();
+if (check_updates) {
+  vw_interface.check_version();
+}
 //******************************************//
 //********** POP Up Help **************//
 //******************************************//

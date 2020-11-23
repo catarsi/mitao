@@ -19,19 +19,35 @@ This application is linked to CATARSI (https://centri.unibo.it/dharc/en/research
 ---
 
 ### Step (2): download Mitao
-* ```git clone https://github.com/catarsi/mitao.git```   
+```git clone https://github.com/catarsi/mitao.git```   
 
 ---
 
-### Step (3): install the modules needed
-* Get inside the root directory:
-```cd mitao```  
+### Step (3): Installation
 
-* Enter the following commands in order to install all the libraries needed.  
-  * ```python3 -m pip install -r requirements.txt```  
-  * ```python3 -m nltk.downloader all```
+```cd mitao```   
+___
+
+On Mac/Linux: ```python3 -m venv _venv```  
+On Windows: ```py -3 -m venv _venv```
+___
+
+On Mac/Linux: ```. _venv/bin/activate```  
+On Windows: ```_venv\Scripts\activate```
+___
+
+```pip install -r requirements.txt```  
+___
+```python -m nltk.downloader all```
+__
+```deactivate```
+
 
 ---
 
-### Step (4): run Mitao
-* ```python3 main.py .```
+### Step (4): Running Mitao
+
+On Mac/Linux: ```. _venv/bin/activate```  
+On Windows: ```_venv\Scripts\activate```
+___
+```python main.py .```

@@ -7,6 +7,7 @@
 
     <link rel=stylesheet type=text/css href="{{ url_for('.static', filename='css/bootstrap.min.css') }}">
     <link rel=stylesheet type=text/css href="{{ url_for('.static', filename='css/index.css') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('.static', filename='css/release.css') }}">
     <link rel=stylesheet type=text/css href="{{ url_for('.static', filename='css/lightbox.css') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -32,14 +33,14 @@
         });
       }
 
-
-      window.addEventListener('beforeunload', function (e) {
-          e.preventDefault();
-          //e.returnValue = '';
-          $.get("/shutdown").always(function() {
-            window.close();
-          });
-      });
+      function beforeunload_fun(e) {
+        console.log("Closing!");
+        e.preventDefault();
+        $.get("/shutdown").always(function() {
+          window.close();
+        });
+      }
+      window.addEventListener('beforeunload', beforeunload_fun);
 
     </script>
 

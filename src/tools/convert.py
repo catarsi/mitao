@@ -67,7 +67,7 @@ class Convert(object):
                 found_elem = re.findall(row_index["regex"], f_name)
                 if "list" in row_index["type"]:
                     att_type = row_index["type"]
-                    att_type_val = re.findall("list\((.*)\)", att_type)
+                    att_type_val = re.findall(r'list\((.*)\)', att_type)
                     if len(att_type_val) > 0:
                         att_type_parts = att_type_val[0].split(",")
                         data_type = att_type_parts[0]
