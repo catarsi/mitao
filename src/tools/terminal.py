@@ -116,7 +116,7 @@ class Terminal(object):
                     break
             #Remove path to file
             for i in reversed(range(len(clean_index))):
-                if "/" in clean_index[i] or "\\" in clean_index[i]:
+                if "/" in clean_index[i] or "\ "[0] in clean_index[i]:
                     clean_index = clean_index[i+1:]
                     break
             return clean_index
