@@ -29,6 +29,21 @@ class Convert(object):
         return data_to_return
 
     def meta_builder(self, input_files, param, tool_id):
+
+        def clean_file_name(f_path):
+            clean_index = f_path
+            #Remove extension
+            for i in reversed(range(len(clean_index))):
+                if clean_index[i] == ".":
+                    clean_index = clean_index[:i]
+                    break
+            #Remove path to file
+            for i in reversed(range(len(clean_index))):
+                if "/" in clean_index[i] or "\ "[0] in clean_index[i]:
+                    clean_index = clean_index[i+1:]
+                    break
+            return clean_index
+
         data_to_return = {"data":{}}
 
         # Pre
@@ -78,7 +93,7 @@ class Convert(object):
                     if len(found_elem) > 0:
                         meta_dict[row_index["att"]] = found_elem[0]
 
-            docs_meta[f_name] = meta_dict
+            docs_meta[clean_file_name(f_name)] = meta_dict
 
 
         data_to_return["data"]["d-metadata"] = docs_meta
