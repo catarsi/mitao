@@ -135,15 +135,15 @@ class Terminal(object):
                 dict_topics[t_k].append(clean_index)
                 index_files.add(clean_index)
 
-        print("Inputs:",inputs)
-        print("Index files:",index_files)
+        #print("Inputs:",inputs)
+        #print("Index files:",index_files)
         meta = {}
         meta_index = {}
         meta_x_values = set()
         for f_name in inputs["meta_docs"]:
             #remove all the path of the file and the file extension (i.e. "json")
             clean_index = clean_file_name(str(f_name))
-            print(clean_index)
+            #print(clean_index)
             if clean_index in index_files:
                 meta[clean_index] = inputs["meta_docs"][f_name]
                 for a_meta_k in inputs["meta_docs"][f_name]:
@@ -172,8 +172,6 @@ class Terminal(object):
 
         meta_x_values = list(meta_x_values)
         meta_x_values.sort()
-
-        print(meta_x_values)
 
         filter_meta = dict()
         for m in meta_index:

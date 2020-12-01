@@ -95,10 +95,19 @@
         },
         "d-stopwords":{
             "label": "Stopwords",
-            "description": "One file in CSV format containing a list of stopwords (Note: the header is not considered as stopword)",
+            "description": "One file in CSV format containing a list of stopwords (Note: the file shouldn't include a header)",
             "data_class": "table",
             "param": ["p-file"],
             "file_name": "stopwords",
+            "input_ready": true,
+            "class_label": "Text analysis"
+        },
+        "d-tokens":{
+            "label": "Tokens",
+            "description": "One file in CSV format containing a list of ad-hoc defined tokens. Each token is a collection of minimum 2 words, e.g. 'Great Britain' or 'second world war'. (Note: the file shouldn't include a header)",
+            "data_class": "table",
+            "param": ["p-file"],
+            "file_name": "tokens",
             "input_ready": true,
             "class_label": "Text analysis"
         },
@@ -205,8 +214,8 @@
             "function": "tokenize",
             "input_ready": true,
             "param": ["p-defstopwords","p-deflemmatize"],
-            "compatible_input": ["d-gen-text","d-stopwords"],
-            "optional_input": ["d-stopwords"],
+            "compatible_input": ["d-gen-text","d-stopwords","d-tokens"],
+            "optional_input": ["d-stopwords","d-tokens"],
             "output": ["d-processed-corpus"]
         },
         "t-topic-lda": {

@@ -1,71 +1,53 @@
-2020-11-25 16:18:30,903 : INFO : topic #0 (0.333): 0.003*"holocaust" + 0.002*"archiv" + 0.002*"ehri" + 0.002*"workshop" + 0.002*"blockchain" + 0.002*"read" + 0.002*"digit" + 0.002*"research" + 0.002*"document" + 0.002*"onlin"
-2020-11-25 16:18:30,903 : INFO : topic #1 (0.333): 0.002*"relationship" + 0.002*"model" + 0.002*"knowledg" + 0.002*"process" + 0.002*"metaphor" + 0.002*"data" + 0.002*"literari" + 0.002*"analysi" + 0.002*"ontolog" + 0.002*"read"
-2020-11-25 16:18:30,903 : INFO : topic #2 (0.333): 0.002*"visual" + 0.002*"human" + 0.002*"confer" + 0.002*"line" + 0.002*"research" + 0.002*"project" + 0.002*"encod" + 0.002*"terminolog" + 0.002*"gender" + 0.002*"societi"
-2020-11-25 16:18:30,903 : INFO : topic diff=1.264956, rho=1.000000
-2020-11-25 16:18:30,932 : INFO : -8.754 per-word bound, 431.7 perplexity estimate based on a held-out corpus of 51 documents with 340 words
-2020-11-25 16:18:30,933 : INFO : PROGRESS: pass 1, dispatched chunk #0 = documents up to #51/51, outstanding queue size 1
-2020-11-25 16:18:30,953 : INFO : topic #0 (0.333): 0.003*"holocaust" + 0.003*"archiv" + 0.003*"ehri" + 0.002*"blockchain" + 0.002*"workshop" + 0.002*"research" + 0.002*"access" + 0.002*"digit" + 0.002*"onlin" + 0.002*"oral"
-2020-11-25 16:18:30,953 : INFO : topic #1 (0.333): 0.002*"knowledg" + 0.002*"read" + 0.002*"model" + 0.002*"relationship" + 0.002*"italian" + 0.002*"dant" + 0.002*"ontolog" + 0.002*"process" + 0.002*"work" + 0.002*"literari"
-2020-11-25 16:18:30,953 : INFO : topic #2 (0.333): 0.002*"visual" + 0.002*"human" + 0.002*"confer" + 0.002*"line" + 0.002*"project" + 0.002*"research" + 0.002*"terminolog" + 0.002*"societi" + 0.002*"gender" + 0.002*"specif"
-2020-11-25 16:18:30,953 : INFO : topic diff=0.105744, rho=0.702642
-2020-11-25 16:18:30,978 : INFO : -8.700 per-word bound, 415.9 perplexity estimate based on a held-out corpus of 51 documents with 340 words
-2020-11-25 16:18:30,978 : INFO : PROGRESS: pass 2, dispatched chunk #0 = documents up to #51/51, outstanding queue size 1
-2020-11-25 16:18:30,993 : INFO : topic #0 (0.333): 0.003*"holocaust" + 0.003*"archiv" + 0.003*"ehri" + 0.003*"blockchain" + 0.002*"workshop" + 0.002*"access" + 0.002*"research" + 0.002*"best" + 0.002*"oral" + 0.002*"share"
-2020-11-25 16:18:30,993 : INFO : topic #1 (0.333): 0.003*"read" + 0.003*"knowledg" + 0.002*"model" + 0.002*"relationship" + 0.002*"italian" + 0.002*"dant" + 0.002*"ontolog" + 0.002*"work" + 0.002*"process" + 0.002*"victim"
-2020-11-25 16:18:30,993 : INFO : topic #2 (0.333): 0.002*"visual" + 0.002*"confer" + 0.002*"human" + 0.002*"line" + 0.002*"project" + 0.002*"societi" + 0.002*"terminolog" + 0.002*"research" + 0.002*"gender" + 0.002*"specif"
-2020-11-25 16:18:30,993 : INFO : topic diff=0.034268, rho=0.574912
-2020-11-25 16:18:31,018 : INFO : -8.693 per-word bound, 413.7 perplexity estimate based on a held-out corpus of 51 documents with 340 words
-2020-11-25 16:18:31,018 : INFO : PROGRESS: pass 3, dispatched chunk #0 = documents up to #51/51, outstanding queue size 1
-2020-11-25 16:18:31,033 : INFO : topic #0 (0.333): 0.003*"holocaust" + 0.003*"archiv" + 0.003*"ehri" + 0.003*"blockchain" + 0.002*"workshop" + 0.002*"access" + 0.002*"research" + 0.002*"best" + 0.002*"oral" + 0.002*"share"
-2020-11-25 16:18:31,033 : INFO : topic #1 (0.333): 0.003*"read" + 0.003*"knowledg" + 0.002*"model" + 0.002*"relationship" + 0.002*"italian" + 0.002*"dant" + 0.002*"ontolog" + 0.002*"work" + 0.002*"process" + 0.002*"victim"
-2020-11-25 16:18:31,033 : INFO : topic #2 (0.333): 0.002*"visual" + 0.002*"confer" + 0.002*"human" + 0.002*"line" + 0.002*"project" + 0.002*"societi" + 0.002*"terminolog" + 0.002*"research" + 0.002*"gender" + 0.002*"specif"
-2020-11-25 16:18:31,033 : INFO : topic diff=0.013375, rho=0.498414
-2020-11-25 16:18:31,057 : INFO : -8.691 per-word bound, 413.3 perplexity estimate based on a held-out corpus of 51 documents with 340 words
-2020-11-25 16:18:31,058 : INFO : PROGRESS: pass 4, dispatched chunk #0 = documents up to #51/51, outstanding queue size 1
-2020-11-25 16:18:31,072 : INFO : topic #0 (0.333): 0.003*"holocaust" + 0.003*"archiv" + 0.003*"ehri" + 0.003*"blockchain" + 0.002*"workshop" + 0.002*"access" + 0.002*"research" + 0.002*"best" + 0.002*"share" + 0.002*"oral"
-2020-11-25 16:18:31,072 : INFO : topic #1 (0.333): 0.003*"read" + 0.003*"knowledg" + 0.002*"model" + 0.002*"relationship" + 0.002*"italian" + 0.002*"dant" + 0.002*"ontolog" + 0.002*"work" + 0.002*"victim" + 0.002*"process"
-2020-11-25 16:18:31,072 : INFO : topic #2 (0.333): 0.002*"visual" + 0.002*"confer" + 0.002*"human" + 0.002*"line" + 0.002*"project" + 0.002*"societi" + 0.002*"terminolog" + 0.002*"research" + 0.002*"gender" + 0.002*"specif"
-2020-11-25 16:18:31,072 : INFO : topic diff=0.006218, rho=0.446078
-2020-11-25 16:18:31,097 : INFO : -8.691 per-word bound, 413.2 perplexity estimate based on a held-out corpus of 51 documents with 340 words
-2020-11-25 16:18:31,111 : INFO : saving LdaState object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state, separately None
-2020-11-25 16:18:31,112 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state
-2020-11-25 16:18:31,113 : INFO : saving LdaMulticore object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda, separately ['expElogbeta', 'sstats']
-2020-11-25 16:18:31,113 : INFO : storing np array 'expElogbeta' to /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.expElogbeta.npy
-2020-11-25 16:18:31,113 : INFO : not storing attribute dispatcher
-2020-11-25 16:18:31,113 : INFO : not storing attribute id2word
-2020-11-25 16:18:31,114 : INFO : not storing attribute state
-2020-11-25 16:18:31,114 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda
-2020-11-25 16:18:31,115 : INFO : 127.0.0.1 - - [25/Nov/2020 16:18:31] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-11-25 16:18:31,121 : INFO : loading LdaModel object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda
-2020-11-25 16:18:31,122 : INFO : loading expElogbeta from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.expElogbeta.npy with mmap=None
-2020-11-25 16:18:31,122 : INFO : setting ignored attribute dispatcher to None
-2020-11-25 16:18:31,122 : INFO : setting ignored attribute id2word to None
-2020-11-25 16:18:31,123 : INFO : setting ignored attribute state to None
-2020-11-25 16:18:31,123 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda
-2020-11-25 16:18:31,123 : INFO : loading LdaState object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state
-2020-11-25 16:18:31,123 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state
-2020-11-25 16:18:31,141 : INFO : 127.0.0.1 - - [25/Nov/2020 16:18:31] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-11-25 16:18:31,146 : INFO : loading LdaModel object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda
-2020-11-25 16:18:31,147 : INFO : loading expElogbeta from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.expElogbeta.npy with mmap=None
-2020-11-25 16:18:31,147 : INFO : setting ignored attribute dispatcher to None
-2020-11-25 16:18:31,148 : INFO : setting ignored attribute id2word to None
-2020-11-25 16:18:31,148 : INFO : setting ignored attribute state to None
-2020-11-25 16:18:31,148 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda
-2020-11-25 16:18:31,148 : INFO : loading LdaState object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state
-2020-11-25 16:18:31,148 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state
-2020-11-25 16:18:31,155 : INFO : 127.0.0.1 - - [25/Nov/2020 16:18:31] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-11-25 16:18:31,178 : INFO : loading LdaModel object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda
-2020-11-25 16:18:31,179 : INFO : loading expElogbeta from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.expElogbeta.npy with mmap=None
-2020-11-25 16:18:31,179 : INFO : setting ignored attribute dispatcher to None
-2020-11-25 16:18:31,180 : INFO : setting ignored attribute id2word to None
-2020-11-25 16:18:31,180 : INFO : setting ignored attribute state to None
-2020-11-25 16:18:31,180 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda
-2020-11-25 16:18:31,180 : INFO : loading LdaState object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state
-2020-11-25 16:18:31,180 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state
-2020-11-25 16:18:31,427 : INFO : 127.0.0.1 - - [25/Nov/2020 16:18:31] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-11-25 16:18:31,440 : INFO : 127.0.0.1 - - [25/Nov/2020 16:18:31] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-11-25 16:18:31,470 : INFO : 127.0.0.1 - - [25/Nov/2020 16:18:31] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-11-25 16:18:31,554 : INFO : 127.0.0.1 - - [25/Nov/2020 16:18:31] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-11-25 16:18:31,561 : INFO : 127.0.0.1 - - [25/Nov/2020 16:18:31] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-11-25 16:18:31,597 : INFO : 127.0.0.1 - - [25/Nov/2020 16:18:31] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-11-25 16:18:34,647 : INFO : 127.0.0.1 - - [25/Nov/2020 16:18:34] "[37mGET /download/t-0006?time=1606317511602 HTTP/1.1[0m" 200 -
+2020-12-01 10:56:57,501 : INFO : -8.032 per-word bound, 261.8 perplexity estimate based on a held-out corpus of 10 documents with 33136 words
+2020-12-01 10:56:57,501 : INFO : PROGRESS: pass 1, dispatched chunk #0 = documents up to #10/10, outstanding queue size 1
+2020-12-01 10:56:57,529 : INFO : topic #0 (0.200): 0.017*"account" + 0.015*"histori" + 0.014*"histor" + 0.014*"historian" + 0.008*"past" + 0.008*"research" + 0.007*"event" + 0.006*"scholar" + 0.005*"evid" + 0.005*"accounting history"
+2020-12-01 10:56:57,529 : INFO : topic #1 (0.200): 0.021*"account" + 0.006*"profession" + 0.005*"also" + 0.005*"trade" + 0.005*"peddi" + 0.005*"manag" + 0.004*"profess" + 0.004*"record" + 0.004*"domesday" + 0.004*"societi"
+2020-12-01 10:56:57,529 : INFO : topic #2 (0.200): 0.024*"account" + 0.008*"cost" + 0.005*"manag" + 0.005*"product" + 0.005*"zealand" + 0.005*"domesday" + 0.004*"develop" + 0.004*"use" + 0.004*"make" + 0.004*"profess"
+2020-12-01 10:56:57,529 : INFO : topic #3 (0.200): 0.014*"account" + 0.008*"peddi" + 0.007*"profession" + 0.006*"member" + 0.004*"also" + 0.004*"public" + 0.004*"societi" + 0.004*"profess" + 0.003*"cornelius" + 0.003*"ibid"
+2020-12-01 10:56:57,529 : INFO : topic #4 (0.200): 0.014*"account" + 0.003*"profession" + 0.003*"cost" + 0.003*"research" + 0.002*"past" + 0.002*"centuri" + 0.002*"historian" + 0.002*"histori" + 0.002*"histor" + 0.002*"evid"
+2020-12-01 10:56:57,530 : INFO : topic diff=0.803956, rho=0.706225
+2020-12-01 10:56:57,591 : INFO : -7.735 per-word bound, 213.1 perplexity estimate based on a held-out corpus of 10 documents with 33136 words
+2020-12-01 10:56:57,591 : INFO : PROGRESS: pass 2, dispatched chunk #0 = documents up to #10/10, outstanding queue size 1
+2020-12-01 10:56:57,634 : INFO : topic #0 (0.200): 0.018*"histori" + 0.017*"account" + 0.017*"histor" + 0.016*"historian" + 0.010*"past" + 0.009*"research" + 0.009*"event" + 0.007*"scholar" + 0.006*"accounting history" + 0.006*"evid"
+2020-12-01 10:56:57,634 : INFO : topic #1 (0.200): 0.021*"account" + 0.007*"profession" + 0.005*"also" + 0.005*"profess" + 0.005*"trade" + 0.005*"peddi" + 0.005*"domesday" + 0.004*"manag" + 0.004*"record" + 0.004*"would"
+2020-12-01 10:56:57,634 : INFO : topic #2 (0.200): 0.024*"account" + 0.008*"cost" + 0.006*"manag" + 0.005*"product" + 0.005*"zealand" + 0.005*"develop" + 0.005*"industri" + 0.004*"use" + 0.004*"centuri" + 0.004*"work"
+2020-12-01 10:56:57,635 : INFO : topic #3 (0.200): 0.011*"peddi" + 0.010*"account" + 0.008*"member" + 0.008*"profession" + 0.005*"public" + 0.005*"ibid" + 0.005*"societi" + 0.005*"cornelius" + 0.004*"also" + 0.004*"conduct"
+2020-12-01 10:56:57,635 : INFO : topic #4 (0.200): 0.009*"account" + 0.002*"profession" + 0.002*"cost" + 0.002*"research" + 0.002*"past" + 0.002*"centuri" + 0.002*"historian" + 0.002*"histori" + 0.002*"histor" + 0.002*"evid"
+2020-12-01 10:56:57,635 : INFO : topic diff=0.427625, rho=0.576870
+2020-12-01 10:56:57,687 : INFO : -7.641 per-word bound, 199.6 perplexity estimate based on a held-out corpus of 10 documents with 33136 words
+2020-12-01 10:56:57,687 : INFO : PROGRESS: pass 3, dispatched chunk #0 = documents up to #10/10, outstanding queue size 1
+2020-12-01 10:56:57,711 : INFO : topic #0 (0.200): 0.019*"histori" + 0.018*"histor" + 0.017*"historian" + 0.017*"account" + 0.011*"past" + 0.009*"research" + 0.009*"event" + 0.007*"scholar" + 0.007*"accounting history" + 0.006*"critic"
+2020-12-01 10:56:57,711 : INFO : topic #1 (0.200): 0.020*"account" + 0.007*"profession" + 0.006*"domesday" + 0.006*"profess" + 0.006*"also" + 0.005*"trade" + 0.004*"peddi" + 0.004*"record" + 0.004*"would" + 0.004*"societi"
+2020-12-01 10:56:57,711 : INFO : topic #2 (0.200): 0.025*"account" + 0.009*"cost" + 0.007*"manag" + 0.006*"industri" + 0.005*"develop" + 0.005*"product" + 0.005*"zealand" + 0.005*"work" + 0.005*"centuri" + 0.005*"use"
+2020-12-01 10:56:57,711 : INFO : topic #3 (0.200): 0.015*"peddi" + 0.009*"member" + 0.008*"profession" + 0.008*"account" + 0.006*"cornelius" + 0.006*"ibid" + 0.006*"public" + 0.006*"societi" + 0.005*"conduct" + 0.004*"edinburgh"
+2020-12-01 10:56:57,711 : INFO : topic #4 (0.200): 0.006*"account" + 0.001*"profession" + 0.001*"cost" + 0.001*"research" + 0.001*"past" + 0.001*"centuri" + 0.001*"historian" + 0.001*"histori" + 0.001*"histor" + 0.001*"evid"
+2020-12-01 10:56:57,711 : INFO : topic diff=0.289658, rho=0.499688
+2020-12-01 10:56:57,767 : INFO : -7.585 per-word bound, 192.0 perplexity estimate based on a held-out corpus of 10 documents with 33136 words
+2020-12-01 10:56:57,768 : INFO : PROGRESS: pass 4, dispatched chunk #0 = documents up to #10/10, outstanding queue size 1
+2020-12-01 10:56:57,795 : INFO : topic #0 (0.200): 0.019*"histori" + 0.018*"histor" + 0.018*"historian" + 0.017*"account" + 0.012*"past" + 0.010*"research" + 0.009*"event" + 0.008*"accounting history" + 0.008*"scholar" + 0.006*"critic"
+2020-12-01 10:56:57,795 : INFO : topic #1 (0.200): 0.020*"account" + 0.008*"profession" + 0.007*"domesday" + 0.006*"profess" + 0.006*"also" + 0.005*"trade" + 0.004*"record" + 0.004*"would" + 0.004*"status" + 0.004*"peddi"
+2020-12-01 10:56:57,795 : INFO : topic #2 (0.200): 0.026*"account" + 0.009*"cost" + 0.007*"manag" + 0.006*"industri" + 0.006*"develop" + 0.005*"zealand" + 0.005*"product" + 0.005*"work" + 0.005*"centuri" + 0.004*"use"
+2020-12-01 10:56:57,795 : INFO : topic #3 (0.200): 0.019*"peddi" + 0.011*"member" + 0.009*"cornelius" + 0.008*"profession" + 0.008*"ibid" + 0.007*"public" + 0.007*"societi" + 0.006*"account" + 0.006*"conduct" + 0.005*"edinburgh"
+2020-12-01 10:56:57,795 : INFO : topic #4 (0.200): 0.004*"account" + 0.001*"profession" + 0.001*"cost" + 0.001*"research" + 0.001*"past" + 0.001*"centuri" + 0.001*"historian" + 0.001*"histori" + 0.001*"histor" + 0.001*"evid"
+2020-12-01 10:56:57,795 : INFO : topic diff=0.204707, rho=0.446990
+2020-12-01 10:56:57,843 : INFO : -7.557 per-word bound, 188.3 perplexity estimate based on a held-out corpus of 10 documents with 33136 words
+2020-12-01 10:56:57,857 : INFO : saving LdaState object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state, separately None
+2020-12-01 10:56:57,858 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state
+2020-12-01 10:56:57,860 : INFO : saving LdaMulticore object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda, separately ['expElogbeta', 'sstats']
+2020-12-01 10:56:57,860 : INFO : storing np array 'expElogbeta' to /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.expElogbeta.npy
+2020-12-01 10:56:57,861 : INFO : not storing attribute state
+2020-12-01 10:56:57,861 : INFO : not storing attribute id2word
+2020-12-01 10:56:57,861 : INFO : not storing attribute dispatcher
+2020-12-01 10:56:57,862 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda
+2020-12-01 10:56:57,863 : INFO : 127.0.0.1 - - [01/Dec/2020 10:56:57] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-12-01 10:56:57,869 : INFO : loading LdaModel object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda
+2020-12-01 10:56:57,870 : INFO : loading expElogbeta from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.expElogbeta.npy with mmap=None
+2020-12-01 10:56:57,870 : INFO : setting ignored attribute state to None
+2020-12-01 10:56:57,870 : INFO : setting ignored attribute id2word to None
+2020-12-01 10:56:57,871 : INFO : setting ignored attribute dispatcher to None
+2020-12-01 10:56:57,871 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda
+2020-12-01 10:56:57,871 : INFO : loading LdaState object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state
+2020-12-01 10:56:57,871 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state
+2020-12-01 10:56:57,885 : INFO : 127.0.0.1 - - [01/Dec/2020 10:56:57] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-12-01 10:56:57,899 : INFO : 127.0.0.1 - - [01/Dec/2020 10:56:57] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-12-01 10:57:01,359 : INFO : 127.0.0.1 - - [01/Dec/2020 10:57:01] "[37mGET /download/t-0003?time=1606816617901 HTTP/1.1[0m" 200 -

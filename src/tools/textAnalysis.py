@@ -54,39 +54,104 @@ class TextAnalysis(object):
         docs_df = pd.DataFrame.from_dict(documents, orient='index', columns=["content"])
 
 
-        def read_stopwords_data(obj_data):
+        def read_csv_rows(obj_data):
             res = []
             for file_name in obj_data:
-                for index,a_tab in enumerate(obj_data[file_name]):
-                    if index != 0:
-                        for row in a_tab:
-                            res.append(row)
+                for a_row in obj_data[file_name]:
+                    for a_val in a_row:
+                        #normalize and append
+                        a_val = a_val.lower()
+                        a_val = a_val.strip()
+                        res.append(a_val)
             return res
 
         stopwords_data = set()
         if "d-stopwords" in input_files:
             if len(input_files["d-stopwords"]) > 0:
                 for f in input_files["d-stopwords"]:
-                    stopwords_data = stopwords_data.union(set(read_stopwords_data(input_files["d-stopwords"])))
+                    stopwords_data = stopwords_data.union(set(read_csv_rows(input_files["d-stopwords"])))
+
+        tokens_data = set()
+        if "d-tokens" in input_files:
+            if len(input_files["d-tokens"]) > 0:
+                for f in input_files["d-tokens"]:
+                    tokens_data = tokens_data.union(set(read_csv_rows(input_files["d-tokens"])))
 
         if p_stopwords != "none":
             stopwords_data = stopwords_data.union(set(stopwords.words(p_stopwords)))
 
         def lemmatize_stemming(text,lang):
-            stemmer = SnowballStemmer(lang)
-            return stemmer.stem(WordNetLemmatizer().lemmatize(text, pos='v'))
+            #lemmatize only if the token includes one word
+            if (" " not in text) and ("-" not in text):
+                stemmer = SnowballStemmer(lang)
+                return stemmer.stem(WordNetLemmatizer().lemmatize(text, pos='v'))
+            else:
+                return text
 
-        def preprocess(text):
+        def adhoc_tokens_list(l_token):
+            if len(l_token) == 1:
+                token = l_token[0]
+                if "-" in token:
+                    new_l = []
+                    for elem in token.split("-"):
+                        if elem != "":
+                            new_l.append(elem)
+                    return adhoc_tokens_list(new_l)
+                elif " " in token:
+                    new_l = []
+                    for elem in token.split(" "):
+                        if elem != "":
+                            new_l.append(elem)
+                    return adhoc_tokens_list(new_l)
+                else:
+                    return l_token
+            else:
+                mid = len(l_token)//2
+                return adhoc_tokens_list(l_token[:mid]) + adhoc_tokens_list(l_token[mid:])
+
+
+        def update_tokenlist(org_token_l, adhoc_token_l, adhoc_token):
+            index = 0
+            res = []
+            while (len(org_token_l) - index) >= len(adhoc_token_l):
+                part_of_org = org_token_l[index:index+len(adhoc_token_l)]
+                if adhoc_token_l == part_of_org:
+                    #res += part_of_org + [adhoc_token] #in case i want to include the single words
+                    res.append(adhoc_token) #in case i want to include only the adhoc token
+                    index += len(adhoc_token_l)
+                else:
+                    res.append(org_token_l[index])
+                    index += 1
+            res += org_token_l[index:]
+            return res
+
+        # giving a text this function
+        # (1) creates a list with all the single words ;
+        #(2) includes the ad-hoc defined tokens;
+        #(3) lemmatizes and removes the stopwords
+        def tokenize_text(text):
             result = []
+            #add the automatic detected tokens
             for token in gensim.utils.simple_preprocess(text):
+                result.append(token)
+
+            #add the ad-hoc tokens
+            for ad_hoc_token in tokens_data:
+                adhoc_token_l = adhoc_tokens_list([ad_hoc_token])
+                result = update_tokenlist(result, adhoc_token_l, ad_hoc_token)
+
+            #remove stopwords and create lemmatize form
+            clean_result = []
+            for token in result:
                 if token not in stopwords_data and len(token) > 3:
                     if p_lemmatize_lang != "none":
-                        result.append(lemmatize_stemming(token,p_lemmatize_lang))
+                        clean_result.append(lemmatize_stemming(token,p_lemmatize_lang))
                     else:
-                        result.append(token)
-            return result
+                        clean_result.append(token)
 
-        processed_docs = docs_df['content'].map(preprocess)
+            return clean_result
+
+        processed_docs = docs_df['content'].map(tokenize_text)
         processed_docs_ldict = []
         for k,doc in processed_docs.items():
             processed_docs_ldict.append({"index":k,"value":doc})
