@@ -4,6 +4,8 @@ __pycache__
 _venv
 _private
 src/.process-temp/*
+!src/.process-temp/.gitkeep
 src/.tmp/*
+!src/.tmp/.gitkeep
 __local__*
 _release
