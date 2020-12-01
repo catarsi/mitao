@@ -1,53 +1,59 @@
-2020-12-01 10:56:57,501 : INFO : -8.032 per-word bound, 261.8 perplexity estimate based on a held-out corpus of 10 documents with 33136 words
-2020-12-01 10:56:57,501 : INFO : PROGRESS: pass 1, dispatched chunk #0 = documents up to #10/10, outstanding queue size 1
-2020-12-01 10:56:57,529 : INFO : topic #0 (0.200): 0.017*"account" + 0.015*"histori" + 0.014*"histor" + 0.014*"historian" + 0.008*"past" + 0.008*"research" + 0.007*"event" + 0.006*"scholar" + 0.005*"evid" + 0.005*"accounting history"
-2020-12-01 10:56:57,529 : INFO : topic #1 (0.200): 0.021*"account" + 0.006*"profession" + 0.005*"also" + 0.005*"trade" + 0.005*"peddi" + 0.005*"manag" + 0.004*"profess" + 0.004*"record" + 0.004*"domesday" + 0.004*"societi"
-2020-12-01 10:56:57,529 : INFO : topic #2 (0.200): 0.024*"account" + 0.008*"cost" + 0.005*"manag" + 0.005*"product" + 0.005*"zealand" + 0.005*"domesday" + 0.004*"develop" + 0.004*"use" + 0.004*"make" + 0.004*"profess"
-2020-12-01 10:56:57,529 : INFO : topic #3 (0.200): 0.014*"account" + 0.008*"peddi" + 0.007*"profession" + 0.006*"member" + 0.004*"also" + 0.004*"public" + 0.004*"societi" + 0.004*"profess" + 0.003*"cornelius" + 0.003*"ibid"
-2020-12-01 10:56:57,529 : INFO : topic #4 (0.200): 0.014*"account" + 0.003*"profession" + 0.003*"cost" + 0.003*"research" + 0.002*"past" + 0.002*"centuri" + 0.002*"historian" + 0.002*"histori" + 0.002*"histor" + 0.002*"evid"
-2020-12-01 10:56:57,530 : INFO : topic diff=0.803956, rho=0.706225
-2020-12-01 10:56:57,591 : INFO : -7.735 per-word bound, 213.1 perplexity estimate based on a held-out corpus of 10 documents with 33136 words
-2020-12-01 10:56:57,591 : INFO : PROGRESS: pass 2, dispatched chunk #0 = documents up to #10/10, outstanding queue size 1
-2020-12-01 10:56:57,634 : INFO : topic #0 (0.200): 0.018*"histori" + 0.017*"account" + 0.017*"histor" + 0.016*"historian" + 0.010*"past" + 0.009*"research" + 0.009*"event" + 0.007*"scholar" + 0.006*"accounting history" + 0.006*"evid"
-2020-12-01 10:56:57,634 : INFO : topic #1 (0.200): 0.021*"account" + 0.007*"profession" + 0.005*"also" + 0.005*"profess" + 0.005*"trade" + 0.005*"peddi" + 0.005*"domesday" + 0.004*"manag" + 0.004*"record" + 0.004*"would"
-2020-12-01 10:56:57,634 : INFO : topic #2 (0.200): 0.024*"account" + 0.008*"cost" + 0.006*"manag" + 0.005*"product" + 0.005*"zealand" + 0.005*"develop" + 0.005*"industri" + 0.004*"use" + 0.004*"centuri" + 0.004*"work"
-2020-12-01 10:56:57,635 : INFO : topic #3 (0.200): 0.011*"peddi" + 0.010*"account" + 0.008*"member" + 0.008*"profession" + 0.005*"public" + 0.005*"ibid" + 0.005*"societi" + 0.005*"cornelius" + 0.004*"also" + 0.004*"conduct"
-2020-12-01 10:56:57,635 : INFO : topic #4 (0.200): 0.009*"account" + 0.002*"profession" + 0.002*"cost" + 0.002*"research" + 0.002*"past" + 0.002*"centuri" + 0.002*"historian" + 0.002*"histori" + 0.002*"histor" + 0.002*"evid"
-2020-12-01 10:56:57,635 : INFO : topic diff=0.427625, rho=0.576870
-2020-12-01 10:56:57,687 : INFO : -7.641 per-word bound, 199.6 perplexity estimate based on a held-out corpus of 10 documents with 33136 words
-2020-12-01 10:56:57,687 : INFO : PROGRESS: pass 3, dispatched chunk #0 = documents up to #10/10, outstanding queue size 1
-2020-12-01 10:56:57,711 : INFO : topic #0 (0.200): 0.019*"histori" + 0.018*"histor" + 0.017*"historian" + 0.017*"account" + 0.011*"past" + 0.009*"research" + 0.009*"event" + 0.007*"scholar" + 0.007*"accounting history" + 0.006*"critic"
-2020-12-01 10:56:57,711 : INFO : topic #1 (0.200): 0.020*"account" + 0.007*"profession" + 0.006*"domesday" + 0.006*"profess" + 0.006*"also" + 0.005*"trade" + 0.004*"peddi" + 0.004*"record" + 0.004*"would" + 0.004*"societi"
-2020-12-01 10:56:57,711 : INFO : topic #2 (0.200): 0.025*"account" + 0.009*"cost" + 0.007*"manag" + 0.006*"industri" + 0.005*"develop" + 0.005*"product" + 0.005*"zealand" + 0.005*"work" + 0.005*"centuri" + 0.005*"use"
-2020-12-01 10:56:57,711 : INFO : topic #3 (0.200): 0.015*"peddi" + 0.009*"member" + 0.008*"profession" + 0.008*"account" + 0.006*"cornelius" + 0.006*"ibid" + 0.006*"public" + 0.006*"societi" + 0.005*"conduct" + 0.004*"edinburgh"
-2020-12-01 10:56:57,711 : INFO : topic #4 (0.200): 0.006*"account" + 0.001*"profession" + 0.001*"cost" + 0.001*"research" + 0.001*"past" + 0.001*"centuri" + 0.001*"historian" + 0.001*"histori" + 0.001*"histor" + 0.001*"evid"
-2020-12-01 10:56:57,711 : INFO : topic diff=0.289658, rho=0.499688
-2020-12-01 10:56:57,767 : INFO : -7.585 per-word bound, 192.0 perplexity estimate based on a held-out corpus of 10 documents with 33136 words
-2020-12-01 10:56:57,768 : INFO : PROGRESS: pass 4, dispatched chunk #0 = documents up to #10/10, outstanding queue size 1
-2020-12-01 10:56:57,795 : INFO : topic #0 (0.200): 0.019*"histori" + 0.018*"histor" + 0.018*"historian" + 0.017*"account" + 0.012*"past" + 0.010*"research" + 0.009*"event" + 0.008*"accounting history" + 0.008*"scholar" + 0.006*"critic"
-2020-12-01 10:56:57,795 : INFO : topic #1 (0.200): 0.020*"account" + 0.008*"profession" + 0.007*"domesday" + 0.006*"profess" + 0.006*"also" + 0.005*"trade" + 0.004*"record" + 0.004*"would" + 0.004*"status" + 0.004*"peddi"
-2020-12-01 10:56:57,795 : INFO : topic #2 (0.200): 0.026*"account" + 0.009*"cost" + 0.007*"manag" + 0.006*"industri" + 0.006*"develop" + 0.005*"zealand" + 0.005*"product" + 0.005*"work" + 0.005*"centuri" + 0.004*"use"
-2020-12-01 10:56:57,795 : INFO : topic #3 (0.200): 0.019*"peddi" + 0.011*"member" + 0.009*"cornelius" + 0.008*"profession" + 0.008*"ibid" + 0.007*"public" + 0.007*"societi" + 0.006*"account" + 0.006*"conduct" + 0.005*"edinburgh"
-2020-12-01 10:56:57,795 : INFO : topic #4 (0.200): 0.004*"account" + 0.001*"profession" + 0.001*"cost" + 0.001*"research" + 0.001*"past" + 0.001*"centuri" + 0.001*"historian" + 0.001*"histori" + 0.001*"histor" + 0.001*"evid"
-2020-12-01 10:56:57,795 : INFO : topic diff=0.204707, rho=0.446990
-2020-12-01 10:56:57,843 : INFO : -7.557 per-word bound, 188.3 perplexity estimate based on a held-out corpus of 10 documents with 33136 words
-2020-12-01 10:56:57,857 : INFO : saving LdaState object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state, separately None
-2020-12-01 10:56:57,858 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state
-2020-12-01 10:56:57,860 : INFO : saving LdaMulticore object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda, separately ['expElogbeta', 'sstats']
-2020-12-01 10:56:57,860 : INFO : storing np array 'expElogbeta' to /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.expElogbeta.npy
-2020-12-01 10:56:57,861 : INFO : not storing attribute state
-2020-12-01 10:56:57,861 : INFO : not storing attribute id2word
-2020-12-01 10:56:57,861 : INFO : not storing attribute dispatcher
-2020-12-01 10:56:57,862 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda
-2020-12-01 10:56:57,863 : INFO : 127.0.0.1 - - [01/Dec/2020 10:56:57] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-12-01 10:56:57,869 : INFO : loading LdaModel object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda
-2020-12-01 10:56:57,870 : INFO : loading expElogbeta from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.expElogbeta.npy with mmap=None
-2020-12-01 10:56:57,870 : INFO : setting ignored attribute state to None
-2020-12-01 10:56:57,870 : INFO : setting ignored attribute id2word to None
-2020-12-01 10:56:57,871 : INFO : setting ignored attribute dispatcher to None
-2020-12-01 10:56:57,871 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda
-2020-12-01 10:56:57,871 : INFO : loading LdaState object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state
-2020-12-01 10:56:57,871 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state
-2020-12-01 10:56:57,885 : INFO : 127.0.0.1 - - [01/Dec/2020 10:56:57] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-12-01 10:56:57,899 : INFO : 127.0.0.1 - - [01/Dec/2020 10:56:57] "[37mPOST /process HTTP/1.1[0m" 200 -
-2020-12-01 10:57:01,359 : INFO : 127.0.0.1 - - [01/Dec/2020 10:57:01] "[37mGET /download/t-0003?time=1606816617901 HTTP/1.1[0m" 200 -
+2020-12-01 12:07:01,364 : INFO : topic #0 (0.200): 0.021*"account" + 0.006*"cost" + 0.006*"profess" + 0.005*"also" + 0.005*"profession" + 0.004*"histori" + 0.004*"societi" + 0.004*"manag" + 0.004*"institut" + 0.003*"member"
+2020-12-01 12:07:01,364 : INFO : topic #1 (0.200): 0.022*"account" + 0.005*"cost" + 0.005*"domesday" + 0.004*"histori" + 0.004*"profession" + 0.004*"historian" + 0.004*"manag" + 0.004*"trade" + 0.004*"histor" + 0.003*"year"
+2020-12-01 12:07:01,364 : INFO : topic #2 (0.200): 0.019*"account" + 0.005*"use" + 0.005*"also" + 0.005*"histori" + 0.005*"cost" + 0.004*"profession" + 0.004*"manag" + 0.004*"research" + 0.004*"histor" + 0.004*"record"
+2020-12-01 12:07:01,365 : INFO : topic #3 (0.200): 0.023*"account" + 0.005*"domesday" + 0.005*"profess" + 0.004*"profession" + 0.004*"manag" + 0.003*"provid" + 0.003*"also" + 0.003*"status" + 0.003*"make" + 0.003*"develop"
+2020-12-01 12:07:01,365 : INFO : topic #4 (0.200): 0.017*"account" + 0.005*"manag" + 0.004*"system" + 0.004*"work" + 0.004*"industri" + 0.004*"peddi" + 0.004*"domesday" + 0.004*"practic" + 0.004*"profession" + 0.004*"also"
+2020-12-01 12:07:01,365 : INFO : topic diff=1.742072, rho=1.000000
+2020-12-01 12:07:01,422 : INFO : -8.029 per-word bound, 261.3 perplexity estimate based on a held-out corpus of 10 documents with 33136 words
+2020-12-01 12:07:01,422 : INFO : PROGRESS: pass 1, dispatched chunk #0 = documents up to #10/10, outstanding queue size 1
+2020-12-01 12:07:01,451 : INFO : topic #0 (0.200): 0.023*"account" + 0.009*"cost" + 0.009*"profession" + 0.008*"peddi" + 0.008*"member" + 0.008*"institut" + 0.007*"zealand" + 0.007*"societi" + 0.007*"profess" + 0.006*"also"
+2020-12-01 12:07:01,451 : INFO : topic #1 (0.200): 0.018*"account" + 0.008*"histori" + 0.008*"historian" + 0.007*"histor" + 0.007*"trade" + 0.005*"research" + 0.004*"cost" + 0.004*"manag" + 0.004*"event" + 0.004*"past"
+2020-12-01 12:07:01,451 : INFO : topic #2 (0.200): 0.013*"account" + 0.007*"product" + 0.007*"use" + 0.006*"sing" + 0.005*"ying" + 0.005*"hsing" + 0.004*"manag" + 0.004*"cost" + 0.004*"histori" + 0.004*"make"
+2020-12-01 12:07:01,451 : INFO : topic #3 (0.200): 0.024*"account" + 0.012*"domesday" + 0.008*"profess" + 0.007*"profession" + 0.005*"land" + 0.005*"status" + 0.005*"also" + 0.004*"william" + 0.004*"provid" + 0.004*"knowledg"
+2020-12-01 12:07:01,451 : INFO : topic #4 (0.200): 0.024*"account" + 0.008*"industri" + 0.008*"manag" + 0.007*"system" + 0.006*"develop" + 0.006*"agent" + 0.005*"work" + 0.005*"iron" + 0.005*"practic" + 0.005*"jone"
+2020-12-01 12:07:01,451 : INFO : topic diff=1.074266, rho=0.706225
+2020-12-01 12:07:01,494 : INFO : -7.569 per-word bound, 189.9 perplexity estimate based on a held-out corpus of 10 documents with 33136 words
+2020-12-01 12:07:01,494 : INFO : PROGRESS: pass 2, dispatched chunk #0 = documents up to #10/10, outstanding queue size 1
+2020-12-01 12:07:01,521 : INFO : topic #0 (0.200): 0.022*"account" + 0.011*"peddi" + 0.010*"profession" + 0.009*"cost" + 0.009*"member" + 0.008*"institut" + 0.008*"zealand" + 0.007*"societi" + 0.006*"public" + 0.006*"also"
+2020-12-01 12:07:01,522 : INFO : topic #1 (0.200): 0.017*"account" + 0.010*"histori" + 0.009*"histor" + 0.009*"historian" + 0.008*"trade" + 0.005*"past" + 0.005*"research" + 0.005*"manag" + 0.005*"event" + 0.005*"post"
+2020-12-01 12:07:01,522 : INFO : topic #2 (0.200): 0.010*"account" + 0.009*"product" + 0.008*"sing" + 0.008*"use" + 0.007*"ying" + 0.007*"hsing" + 0.005*"calcul" + 0.005*"centuri" + 0.005*"make" + 0.004*"agricultur"
+2020-12-01 12:07:01,522 : INFO : topic #3 (0.200): 0.025*"account" + 0.014*"domesday" + 0.009*"profess" + 0.008*"profession" + 0.006*"land" + 0.005*"status" + 0.005*"also" + 0.004*"knowledg" + 0.004*"william" + 0.004*"research"
+2020-12-01 12:07:01,522 : INFO : topic #4 (0.200): 0.027*"account" + 0.010*"industri" + 0.009*"manag" + 0.008*"system" + 0.007*"develop" + 0.007*"agent" + 0.006*"iron" + 0.006*"work" + 0.006*"jone" + 0.005*"chang"
+2020-12-01 12:07:01,522 : INFO : topic diff=0.584172, rho=0.576870
+2020-12-01 12:07:01,566 : INFO : -7.458 per-word bound, 175.8 perplexity estimate based on a held-out corpus of 10 documents with 33136 words
+2020-12-01 12:07:01,566 : INFO : PROGRESS: pass 3, dispatched chunk #0 = documents up to #10/10, outstanding queue size 1
+2020-12-01 12:07:01,588 : INFO : topic #0 (0.200): 0.022*"account" + 0.012*"peddi" + 0.010*"profession" + 0.009*"cost" + 0.009*"member" + 0.009*"institut" + 0.008*"zealand" + 0.008*"societi" + 0.007*"public" + 0.006*"also"
+2020-12-01 12:07:01,589 : INFO : topic #1 (0.200): 0.016*"account" + 0.011*"histori" + 0.010*"histor" + 0.009*"historian" + 0.009*"trade" + 0.006*"past" + 0.005*"research" + 0.005*"manag" + 0.005*"event" + 0.005*"post"
+2020-12-01 12:07:01,589 : INFO : topic #2 (0.200): 0.010*"product" + 0.010*"sing" + 0.008*"ying" + 0.008*"account" + 0.008*"use" + 0.008*"hsing" + 0.006*"calcul" + 0.005*"centuri" + 0.005*"agricultur" + 0.005*"catti"
+2020-12-01 12:07:01,589 : INFO : topic #3 (0.200): 0.025*"account" + 0.014*"domesday" + 0.009*"profess" + 0.008*"profession" + 0.006*"land" + 0.006*"status" + 0.005*"also" + 0.005*"knowledg" + 0.004*"william" + 0.004*"research"
+2020-12-01 12:07:01,589 : INFO : topic #4 (0.200): 0.028*"account" + 0.011*"industri" + 0.010*"manag" + 0.008*"system" + 0.007*"develop" + 0.007*"agent" + 0.006*"iron" + 0.006*"jone" + 0.006*"work" + 0.006*"chang"
+2020-12-01 12:07:01,589 : INFO : topic diff=0.321730, rho=0.499688
+2020-12-01 12:07:01,638 : INFO : -7.425 per-word bound, 171.8 perplexity estimate based on a held-out corpus of 10 documents with 33136 words
+2020-12-01 12:07:01,638 : INFO : PROGRESS: pass 4, dispatched chunk #0 = documents up to #10/10, outstanding queue size 1
+2020-12-01 12:07:01,665 : INFO : topic #0 (0.200): 0.022*"account" + 0.013*"peddi" + 0.010*"profession" + 0.010*"member" + 0.010*"cost" + 0.009*"institut" + 0.008*"zealand" + 0.008*"societi" + 0.007*"public" + 0.006*"also"
+2020-12-01 12:07:01,666 : INFO : topic #1 (0.200): 0.016*"account" + 0.011*"histori" + 0.010*"histor" + 0.010*"historian" + 0.009*"trade" + 0.006*"past" + 0.005*"research" + 0.005*"manag" + 0.005*"event" + 0.005*"post"
+2020-12-01 12:07:01,666 : INFO : topic #2 (0.200): 0.011*"product" + 0.010*"sing" + 0.009*"ying" + 0.009*"hsing" + 0.008*"use" + 0.007*"account" + 0.007*"calcul" + 0.006*"centuri" + 0.005*"agricultur" + 0.005*"catti"
+2020-12-01 12:07:01,666 : INFO : topic #3 (0.200): 0.025*"account" + 0.014*"domesday" + 0.009*"profess" + 0.008*"profession" + 0.006*"land" + 0.006*"status" + 0.005*"also" + 0.005*"knowledg" + 0.005*"william" + 0.004*"research"
+2020-12-01 12:07:01,666 : INFO : topic #4 (0.200): 0.029*"account" + 0.011*"industri" + 0.010*"manag" + 0.008*"system" + 0.008*"develop" + 0.007*"agent" + 0.006*"iron" + 0.006*"jone" + 0.006*"work" + 0.006*"chang"
+2020-12-01 12:07:01,666 : INFO : topic diff=0.190524, rho=0.446990
+2020-12-01 12:07:01,709 : INFO : -7.411 per-word bound, 170.2 perplexity estimate based on a held-out corpus of 10 documents with 33136 words
+2020-12-01 12:07:01,724 : INFO : saving LdaState object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state, separately None
+2020-12-01 12:07:01,725 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state
+2020-12-01 12:07:01,727 : INFO : saving LdaMulticore object under /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda, separately ['expElogbeta', 'sstats']
+2020-12-01 12:07:01,727 : INFO : storing np array 'expElogbeta' to /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.expElogbeta.npy
+2020-12-01 12:07:01,732 : INFO : not storing attribute id2word
+2020-12-01 12:07:01,732 : INFO : not storing attribute dispatcher
+2020-12-01 12:07:01,732 : INFO : not storing attribute state
+2020-12-01 12:07:01,732 : INFO : saved /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda
+2020-12-01 12:07:01,734 : INFO : 127.0.0.1 - - [01/Dec/2020 12:07:01] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-12-01 12:07:01,742 : INFO : loading LdaModel object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda
+2020-12-01 12:07:01,743 : INFO : loading expElogbeta from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.expElogbeta.npy with mmap=None
+2020-12-01 12:07:01,744 : INFO : setting ignored attribute id2word to None
+2020-12-01 12:07:01,744 : INFO : setting ignored attribute dispatcher to None
+2020-12-01 12:07:01,745 : INFO : setting ignored attribute state to None
+2020-12-01 12:07:01,745 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda
+2020-12-01 12:07:01,745 : INFO : loading LdaState object from /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state
+2020-12-01 12:07:01,746 : INFO : loaded /Users/ivan.heibi/ivanhb.edu/catarsi/project/mitao/src/.process-temp/t-0004/ldamodel.glda.state
+2020-12-01 12:07:01,760 : INFO : 127.0.0.1 - - [01/Dec/2020 12:07:01] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-12-01 12:07:01,774 : INFO : 127.0.0.1 - - [01/Dec/2020 12:07:01] "[37mPOST /process HTTP/1.1[0m" 200 -
+2020-12-01 17:46:56,289 : INFO : 127.0.0.1 - - [01/Dec/2020 17:46:56] "[37mGET /shutdown HTTP/1.1[0m" 200 -
