@@ -3,7 +3,7 @@ __pycache__
 .ipynb_checkpoints
 _venv
 _private
-.process-temp/*
-.tmp/*
+src/.process-temp/*
+src/.tmp/*
 __local__*
 _release
