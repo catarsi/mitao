@@ -18,6 +18,7 @@ This application is linked to CATARSI([https://centri.unibo.it/dharc/en/research
 1. Open your Console/Terminal and type `./setup.sh` to run the installation of Mitao; wait to the end of the installation.
 2. Once the installation is done, you will find the file `Mitao.sh` on the main folder (the directory containing the `setup.sh` file).
 3. Type `./Mitao.sh` to run Mitao.
+**Note: running the above scripts might return a "Permission denied" error. In this case you must call the scripts using `sudo`. e.g. `sudo ./setup.sh` or `sudo bash ./setup.sh`**
 
 ### MacOS
 1. [Download the last version of Mitao for MacOS](https://archive.org/download/mitao2/mitao_v2_macos.zip)
