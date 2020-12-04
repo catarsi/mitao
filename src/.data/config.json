@@ -277,16 +277,16 @@
         },
         "p-meta-value":{
           "handler": "input-text",
-          "label": "Meta attribute to use on x-Axis:",
+          "label": "Meta attribute to use on the x-Axis:",
           "value": "",
           "placeholder": "E.G. year",
           "init_value": false
         },
         "p-meta-filter":{
           "handler": "input-text",
-          "label": "Meta attribute/s to use as filters (use <i>' && '</i> as separotor in case you want to specify more than one):",
+          "label": "Meta attribute/s to use as filters (use a comma followed by a space character (i.e. &quot;<i>, </i>&quot;) as a separator in case you want to specify more than one meta attribute):",
           "value": "",
-          "placeholder": "E.G. age && location",
+          "placeholder": "E.G. age, location, type",
           "init_value": ""
         },
         "p-chart-axis":{

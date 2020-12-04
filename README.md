@@ -14,21 +14,21 @@ This application is linked to CATARSI([https://centri.unibo.it/dharc/en/research
 ## Install and run Mitao
 
 ### Linux
-1. [Download the last version of Mitao for Linux](https://archive.org/download/mitao2/mitao_v2_linux.zip)
+1. [Download the last version of Mitao for Linux](https://archive.org/download/mitao2/mitao_v2.0.1_linux.zip)
 1. Open your Console/Terminal and type `./setup.sh` to run the installation of Mitao; wait to the end of the installation.
 2. Once the installation is done, you will find the file `Mitao.sh` on the main folder (the directory containing the `setup.sh` file).
 3. Type `./Mitao.sh` to run Mitao.<br>
 **Note: running the above scripts might return a "Permission denied" error. In this case you must call the scripts using `sudo`. e.g. `sudo ./setup.sh` or `sudo bash ./setup.sh`**
 
 ### MacOS
-1. [Download the last version of Mitao for MacOS](https://archive.org/download/mitao2/mitao_v2_macos.zip)
+1. [Download the last version of Mitao for MacOS](https://archive.org/download/mitao2/mitao_v2.0.1_macos.zip)
 1. Double click on the `setup` file; a terminal will appear and some required modules/libraries will be installed; wait to the end of the installation.
 2. Once the installation is done, you will find the application `Mitao` on the main folder (the directory containing the `setup` file).
 3. Copy->paste the `Mitao` application on your `/application` folder (or any other desired folder).<br>**DON'T drop->drag/cut->paste**
 4. Run Mitao by double clicking on the `Mitao` application (the one you have copied).
 
 ### Windows
-1. [Download the last version of Mitao for Windows](https://archive.org/download/mitao2/mitao_v2_windows.zip)
+1. [Download the last version of Mitao for Windows](https://archive.org/download/mitao2/mitao_v2.0.1_windows.zip)
 1. Double click on the `setup` file; the command prompt window will appear and the required modules/libraries will be installed; wait to the end of the installation.
 2. Once the installation is done, you will find the file `Mitao` on the main folder (the directory containing the `setup` file).
 3. Run Mitao by double clicking on the `Mitao` application (the one you have copied).<br>

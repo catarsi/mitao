@@ -86,7 +86,7 @@ class Terminal(object):
         CHART_AXIS_TYPE = "none"
         if param != None:
             if "p-meta-filter" in param:
-                META_FILTER = [a.strip() for a in param["p-meta-filter"].split(",")]
+                META_FILTER = [a.strip() for a in param["p-meta-filter"].split(", ")]
             if "p-meta-value" in param:
                 META_KEY = param["p-meta-value"]
                 META_LABEL = "metadata attribute = <"+META_KEY+">"
