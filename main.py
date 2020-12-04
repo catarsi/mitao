@@ -309,7 +309,7 @@ def process():
         write_on_file = False
         #build string according to file type
         if file_type == "table":
-            with open(path, "w", newline="") as f:
+            with open(path, "w", encoding='utf-8', newline="") as f:
                 csv.writer(f).writerows(file_value)
 
         elif file_type == "gensim_dictionary":

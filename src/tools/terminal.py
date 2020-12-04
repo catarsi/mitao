@@ -93,10 +93,8 @@ class Terminal(object):
             #if "p-meta-type" in param:
             #    META_KEY_TYPE = param["p-meta-type"]
             if "p-chart-axis" in param:
-                if param["p-chart-axis"] == "time_series":
-                    for f_opt in param["p-chart-axis"]:
-                        if f_opt:
-                            CHART_AXIS_TYPE = "initial"
+                if param["p-chart-axis"] == "true":
+                    CHART_AXIS_TYPE = "initial"
 
         # Process
         # -------

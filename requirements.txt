@@ -28,7 +28,7 @@ matplotlib
 more-itertools
 nltk
 numexpr
-numpy
+numpy==1.19.3
 osnap
 packaging
 pandas

@@ -107,7 +107,7 @@ body {
 #right{
   position:absolute;
   left: 350px;
-  min-width: 800px;
+  min-width: 900px;
   width: 65%;
 }
 
@@ -190,7 +190,7 @@ DIAGRAM TOP
 }
 
 #diagram_editor{
-  min-width: 800px;
+  min-width: 850px;
   min-height: 40px;
   vertical-align: bottom;
 }
@@ -232,7 +232,7 @@ DIAGRAM TOP
 
 #diagram_view{
   margin-top: 10px;
-  width: 30%;
+  width: 300px;
   min-width: 300px;
   vertical-align: bottom;
   display: inline-block;
@@ -283,8 +283,10 @@ DIAGRAM TOP
 }
 
 #general{
+  position: relative;
   display: inline-block;
-  min-width: 400px;
+  width: 450px;
+  max-width: 450px;
   float: right;
   text-align:right;
 }
@@ -292,6 +294,7 @@ DIAGRAM TOP
   font-size: 13pt;
 }
 #general .comp{
+  height:45px;
   font-size: 12pt;
   vertical-align: bottom;
 }
@@ -299,7 +302,7 @@ DIAGRAM TOP
   background-color: var(--bg-color);
   border: none;
   color: black;
-  height:45px;
+  width: 40px;
   border: solid 1px lightgray;
 }
 #general .comp#list_options_trigger:hover{
@@ -311,11 +314,11 @@ DIAGRAM TOP
   border: solid 1px lightgray;
   color: black;
   height:45px;
-  width: 180px;
+  width: 150px;
 }
 #general button#btn_run_workflow svg{
-  width: 20%;
-  height: 80%;
+  width: 25px;
+  height: 25px;
   padding-right: 5px;
   vertical-align: top;
 }
@@ -392,7 +395,7 @@ DIAGRAM TOP
   height: var(--cy-height);
   z-index: 999;
   width: 100%;
-  min-width: 800px;
+  min-width: 850px;
   background-color: var(--bg-boxes);
 }
 
