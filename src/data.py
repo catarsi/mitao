@@ -96,7 +96,7 @@ class Data(object):
             filepath = open(path, 'rb')
             interpreter = PDFPageInterpreter(manager, device)
 
-            for page in PDFPage.get_pages(filepath, check_extractable=True):
+            for page in PDFPage.get_pages(filepath, check_extractable=False):
                 interpreter.process_page(page)
 
             text = retstr.getvalue()

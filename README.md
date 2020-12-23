@@ -22,14 +22,25 @@ This application is linked to CATARSI([https://centri.unibo.it/dharc/en/research
 
 ### MacOS
 1. [Download the last version of Mitao for MacOS](https://archive.org/download/mitao2/mitao_v2.0.1_macos.zip)
-1. Double click on the `setup` file; a terminal will appear and some required modules/libraries will be installed; wait to the end of the installation.
-2. Once the installation is done, you will find the application `Mitao` on the main folder (the directory containing the `setup` file).
-3. Copy->paste the `Mitao` application on your `/application` folder (or any other desired folder).<br>**DON'T drop->drag/cut->paste**
-4. Run Mitao by double clicking on the `Mitao` application (the one you have copied).
+2. Double click on the `setup` file; a terminal will appear and some required modules/libraries will be installed; wait to the end of the installation.
+3. Once the installation is done, you will find the application `Mitao` on the main folder (the directory containing the `setup` file).
+4. Copy->paste the `Mitao` application on your `/application` folder (or any other desired folder).<br>**DON'T drop->drag/cut->paste**
+5. Run Mitao by double clicking on the `Mitao` application (the one you have copied).
+
+----
+**Note:** In case you get an **access previlages error** when double clicking the `setup` file, then follow these instructions:
+
+1. using Finder navigate and select the root directory (the one containing the `setup` file and all the other files)
+2. from the upper menu of Finder select: *Finder -> Services -> New Terminal at Folder.
+<img src="doc/macos_doc_open_doc_terminal.png" alt="screen"/> 
+3. from the Terminal window type ```chmod 777 setup.command``` 
+4. close the Terminal window and double click again the `setup` file
+
+----
 
 ### Windows
 1. [Download the last version of Mitao for Windows](https://archive.org/download/mitao2/mitao_v2.0.1_windows.zip)
 1. Double click on the `setup` file; the command prompt window will appear and the required modules/libraries will be installed; wait to the end of the installation.
 2. Once the installation is done, you will find the file `Mitao` on the main folder (the directory containing the `setup` file).
-3. Run Mitao by double clicking on the `Mitao` application (the one you have copied).<br>
+3. Run Mitao by double clicking on the `Mitao` file.<br>
 **Note: when running Mitao the command prompt window will appear; on some Windows versions this window will automatically close once Mitao is closed. If this is not the case you can close it manually after closing Mitao.**

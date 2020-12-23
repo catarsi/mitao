@@ -283,12 +283,10 @@ DIAGRAM TOP
 }
 
 #general{
-  position: relative;
+  position: absolute;
+  right: 10px;
   display: inline-block;
-  width: 450px;
-  max-width: 450px;
-  float: right;
-  text-align:right;
+  margin-top: 3px;
 }
 #general button{
   font-size: 13pt;
@@ -383,7 +381,7 @@ DIAGRAM TOP
 #gui_middle{
   width: 100%;
   padding: 10px;
-  padding-top: 1px;
+  padding-top: 2px;
   padding-bottom: 2px;
 }
 
