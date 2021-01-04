@@ -205,12 +205,12 @@ DIAGRAM TOP
   border: var(--tool-color);
   background-color: var(--tool-color);
   color: white;
-  font-weight: 340;
+  font-weight: 340pt;
   height:45px;
 }
 #diagram_elems button svg{
-  width: 25%;
-  height: 80%;
+  width: 25pt;
+  height: 70%;
   padding-right: 5px;
   vertical-align: top;
 }
@@ -222,7 +222,7 @@ DIAGRAM TOP
   border: var(--data-color);
   background-color: var(--data-color);
   color: white;
-  font-weight: 340;
+  font-weight: 340pt;
   height:45px;
 }
 #diagram_elems button#add_data:hover{
