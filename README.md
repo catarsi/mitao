@@ -15,7 +15,7 @@ This application is linked to CATARSI ([https://centri.unibo.it/dharc/en/researc
 **Before starting the installation of Mitao make sure all the requirements have been successfully installed**
 
 ## Linux
-1. [Download the last version of Mitao for Linux](https://archive.org/download/mitao2/mitao_v2.0.1_linux.zip) and unzip the downloaded archive.
+1. [Download the last version of Mitao for Linux](https://archive.org/download/mitao2/mitao_v2.1_linux.zip) and unzip the downloaded archive.
 1. Open your Console/Terminal and type `./setup.sh` to run the installation of Mitao; wait to the end of the installation.
 2. Once the installation is done, you will find the file <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> Mitao.sh</i> on the main folder (the directory containing the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup.sh</i> file).
 3. Type `./Mitao.sh` to run Mitao.
@@ -27,7 +27,7 @@ This application is linked to CATARSI ([https://centri.unibo.it/dharc/en/researc
 <br>
 
 ## MacOS
-1. [Download the last version of Mitao for MacOS](https://archive.org/download/mitao2/mitao_v2.0.1_macos.zip) and unzip the downloaded archive.
+1. [Download the last version of Mitao for MacOS](https://archive.org/download/mitao2/mitao_v2.1_macos.zip) and unzip the downloaded archive.
 1. Double click on the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup</i>  file; a terminal will appear and the required modules/libraries will be installed; wait to the end of the installation.
 2. Once the installation is done, you will find the application  <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> Mitao</i> on the main folder (the directory containing the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup</i> file).
 3. *Copy->Paste* the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> Mitao</i> application on your <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-folder"> /application</i> folder (or any other desired folder).<br><b style="color:#ff9a00">Warning:</b> only a <i style="padding: 3px; background-color: #F2F2F2">Copy->Paste</i> operation must be performed. Don't <i style="padding: 3px; background-color: #F2F2F2">Drop->Drag</i> or <i style="padding: 3px; background-color: #F2F2F2">Cut->Paste</i> the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> Mitao</i> application
@@ -46,7 +46,7 @@ This application is linked to CATARSI ([https://centri.unibo.it/dharc/en/researc
 <br>
 
 ## Windows
-1. [Download the last version of Mitao for Windows](https://archive.org/download/mitao2/mitao_v2.0.1_windows.zip) and unzip the downloaded archive.
+1. [Download the last version of Mitao for Windows](https://archive.org/download/mitao2/mitao_v2.1_windows.zip) and unzip the downloaded archive.
 1. Double click on the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup</i> file; the command prompt window will appear and the required modules/libraries will be installed; wait to the end of the installation.
 2. Once the installation is done, you will find the file <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> Mitao</i> on the main folder (the directory containing the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup</i> file).
 3. Run Mitao by double clicking on the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> Mitao</i> file.<br>
@@ -56,4 +56,4 @@ This application is linked to CATARSI ([https://centri.unibo.it/dharc/en/researc
 
 * <b style="color:#339900	">General:</b> When running Mitao the command prompt window will appear; on some Windows versions this window will automatically close once Mitao is closed. If this is not the case, you can close it manually after closing Mitao.  
 * <b style="color:#ff0000	">Error:</b> if a **Permission Denied** error message appears when double clicking the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup</i> or the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> Mitao</i> file, then right click on the corresponding file and select the *run as adminstrator* option.
-* <b style="color:#ff0000	">Error:</b> In case you get the following error message during the installation of MITAO: **"error: Microsoft Visual C++ 14.0 is required"**. Then to fix this problem please follow the instructions given at [https://medium.com/@jacky_ttt/day060-fix-error-microsoft-visual-c-14-0-is-required-629413e798cd](https://medium.com/@jacky_ttt/day060-fix-error-microsoft-visual-c-14-0-is-required-629413e798cd) 
+* <b style="color:#ff0000	">Error:</b> In case you get the following error message during the installation of MITAO: **"error: Microsoft Visual C++ 14.0 is required"**. Then to fix this problem please follow the instructions given at [https://medium.com/@jacky_ttt/day060-fix-error-microsoft-visual-c-14-0-is-required-629413e798cd](https://medium.com/@jacky_ttt/day060-fix-error-microsoft-visual-c-14-0-is-required-629413e798cd)
