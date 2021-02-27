@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" crossorigin="anonymous">
 
-#<img src="doc/mitao_logo.png" alt="logo" width="250"/>
+<img src="doc/mitao_logo.png" alt="logo" width="250"/>
 
 MITAO, a Mashup Interface for Text Analysis Operations, is an open source, user-friendly, modular, and flexible software written in Python and Javascript for performing several kinds of text analysis, and can be run locally on a machine by using any modern Web browser. Its source code and documentation is all available on its <i style="padding: 3px; background-color: #F2F2F2" class="fab fa-github"> <a href="https://github.com/catarsi/mitao">Github repository</a></i>. It is licensed under the ISC License. The last release of Mitao is available at [https://archive.org/details/mitao_v2](https://archive.org/details/mitao_v2). Each release makes available Mitao for Linux, MacOS and Windows.
 
@@ -40,7 +40,7 @@ This application is linked to CATARSI ([https://centri.unibo.it/dharc/en/researc
 	1. using Finder navigate and select the root directory (the one containing the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup</i> file and all the other files)
 	2. from the upper menu of Finder select: *Finder -> Services -> New Terminal at Folder*.
 <img src="doc/macos_doc_open_doc_terminal.png" alt="screen"/>
-	3. from the Terminal window type ```chmod 777 setup.command```
+	3. from the Terminal window type ```chmod 777 *```
 	4. close the Terminal window and double click again the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup</i> file
 
 <br>
