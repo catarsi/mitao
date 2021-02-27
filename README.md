@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" crossorigin="anonymous">
 
-<img src="doc/mitao_logo.png" alt="logo" width="250"/>
+<img src="doc/mitao_logo_(white_bg).png" alt="logo" width="250"/>
 
 MITAO, a Mashup Interface for Text Analysis Operations, is an open source, user-friendly, modular, and flexible software written in Python and Javascript for performing several kinds of text analysis, and can be run locally on a machine by using any modern Web browser. Its source code and documentation is all available on its <i style="padding: 3px; background-color: #F2F2F2" class="fab fa-github"> <a href="https://github.com/catarsi/mitao">Github repository</a></i>. It is licensed under the ISC License. The last release of Mitao is available at [https://archive.org/details/mitao_v2](https://archive.org/details/mitao_v2). Each release makes available Mitao for Linux, MacOS and Windows.
 
