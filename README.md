@@ -2,7 +2,7 @@
 
 <img src="doc/mitao_logo_(white_bg).png" alt="logo" width="250"/>
 
-MITAO, a Mashup Interface for Text Analysis Operations, is an open source, user-friendly, modular, and flexible software written in Python and Javascript for performing several kinds of text analysis, and can be run locally on a machine by using any modern Web browser. Its source code and documentation is all available on its <i style="padding: 3px; background-color: #F2F2F2" class="fab fa-github"> <a href="https://github.com/catarsi/mitao">Github repository</a></i>. It is licensed under the ISC License. The last release of Mitao is available at [https://archive.org/details/mitao_v2](https://archive.org/details/mitao_v2). Each release makes available Mitao for Linux, MacOS and Windows.
+MITAO, a Mashup Interface for Text Analysis Operations, is an open source, user-friendly, modular, and flexible software written in Python and Javascript for performing several kinds of text analysis, and can be run locally on a machine by using any modern Web browser. Its source code and documentation is all available on its <i style="padding: 3px; background-color: #F2F2F2" class="fab fa-github"> <a href="https://github.com/catarsi/mitao">Github repository</a></i>. It is licensed under the ISC License. The last release of Mitao is available at [https://archive.org/details/mitao2](https://archive.org/details/mitao2). Each release makes available Mitao for Linux, MacOS and Windows.
 
 This application is linked to CATARSI ([https://centri.unibo.it/dharc/en/research/projects-at-dh-arc#catarsi](https://centri.unibo.it/dharc/en/research/projects-at-dh-arc#catarsi)). It was developed using DIPAM  ([https://github.com/ivanhb/dipam](https://github.com/ivanhb/dipam)): A Dashboard Interface for Python-based Applications Mashup.
 <img src="doc/mitao_screenshot.png" alt="screen"/>  
@@ -27,7 +27,7 @@ This application is linked to CATARSI ([https://centri.unibo.it/dharc/en/researc
 <br>
 
 ## MacOS
-1. [Download the last version of Mitao for MacOS](https://archive.org/download/mitao2/mitao_v2.1_macos.zip) and unzip the downloaded archive.
+1. [Download the last version of Mitao for MacOS](https://archive.org/download/mitao2/mitao_v2.1.1_macos.zip) and unzip the downloaded archive.
 1. Double click on the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup</i>  file; a terminal will appear and the required modules/libraries will be installed; wait to the end of the installation.
 2. Once the installation is done, you will find the application  <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> Mitao</i> on the main folder (the directory containing the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup</i> file).
 3. *Copy->Paste* the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> Mitao</i> application on your <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-folder"> /application</i> folder (or any other desired folder).<br><b style="color:#ff9a00">Warning:</b> only a <i style="padding: 3px; background-color: #F2F2F2">Copy->Paste</i> operation must be performed. Don't <i style="padding: 3px; background-color: #F2F2F2">Drop->Drag</i> or <i style="padding: 3px; background-color: #F2F2F2">Cut->Paste</i> the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> Mitao</i> application
