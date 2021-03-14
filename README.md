@@ -17,43 +17,33 @@ This application is linked to CATARSI ([https://centri.unibo.it/dharc/en/researc
 ## Linux
 1. [Download the last version of Mitao for Linux](https://archive.org/download/mitao2/mitao_v2.1_linux.zip) and unzip the downloaded archive.
 1. Open your Console/Terminal and type `./setup.sh` to run the installation of Mitao; wait to the end of the installation.
-2. Once the installation is done, you will find the file <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> Mitao.sh</i> on the main folder (the directory containing the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup.sh</i> file).
+
+> if a **Permission Denied** error message appears when running the **setup.sh** file, then you need to call the scripts using `sudo`. e.g. `sudo ./setup.sh` or `sudo bash ./setup.sh`
+
+2. Once the installation is done, you will find the file **Mitao.sh** on the main folder (the directory containing the **setup.sh** file).
 3. Type `./Mitao.sh` to run Mitao.
 
----
-#### Notes
-* <b style="color:#ff0000	">Error:</b> if a **Permission Denied** error message appears when running the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup.sh</i> file, then you need to call the scripts using `sudo`. e.g. `sudo ./setup.sh` or `sudo bash ./setup.sh`
-
-<br>
-
 ## MacOS
-1. [Download the last version of Mitao for MacOS](https://archive.org/download/mitao2/mitao_v2.1.1_macos.zip) and unzip the downloaded archive.
-1. Double click on the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup</i>  file; a terminal will appear and the required modules/libraries will be installed; wait to the end of the installation.
-2. Once the installation is done, you will find the application  <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> Mitao</i> on the main folder (the directory containing the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup</i> file).
-3. *Copy->Paste* the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> Mitao</i> application on your <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-folder"> /application</i> folder (or any other desired folder).<br><b style="color:#ff9a00">Warning:</b> only a <i style="padding: 3px; background-color: #F2F2F2">Copy->Paste</i> operation must be performed. Don't <i style="padding: 3px; background-color: #F2F2F2">Drop->Drag</i> or <i style="padding: 3px; background-color: #F2F2F2">Cut->Paste</i> the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> Mitao</i> application
-4. Run Mitao by double clicking on the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> Mitao</i> application (the one you have copied).
+1. [Download the last version of Mitao for MacOS](https://archive.org/download/mitao2/mitao_v2.1.1_macos.zip) and extract the the content of the archive. A folder with the name ***mitao\_{VERSION}\_macos*** should appear.
+2. Right click on the folder ***mitao\_{VERSION}\_macos*** and select **copy**
+3. Open the **Terminal** application
+> Terminal is an application. You will find it in Applications - Utilities - Terminal. One keyboard shortcut for opening it (or any other app) is Command + Spacebar then type the app's name.
 
-----
-#### Notes
-* <b style="color:#ff0000	">Error:</b> In case you get an **access previlages error** when double clicking the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup</i> file, then follow these instructions:
-
-	1. using Finder navigate and select the root directory (the one containing the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup</i> file and all the other files)
-	2. from the upper menu of Finder select: *Finder -> Services -> New Terminal at Folder*.
-<img src="doc/macos_doc_open_doc_terminal.png" alt="screen"/>
-	3. from the Terminal window type ```chmod 777 *```
-	4. close the Terminal window and double click again the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup</i> file
-
-<br>
+4. Type the command `cd` followed by a **space**, then right click and select **paste**; the command on the Terminal should be something like this: `cd /THE/PATH/TO/mitao\_{VERSION}\_macos`. Press enter.
+5. Type the command `chmod 777 *` and press enter; you can close the Terminal window now  
+6. Go back to your ***mitao\_{VERSION}\_macos*** folder and **double click** the ***setup*** file; a Terminal window will appear and the installation should start; wait to the end of the installation.
+> macOS might block and exit the installation with an error: **unidentified developer**; in this case you must allow macOS to open the application anyway (usually this is done from **System preferences -> Security & Privacy -> General**). <br>**Note: this issue might appear more than once during the installation; do the same operation for each occasion** 
+7. Once the installation is done, you will find the application **Mitao** on the main folder (i.e. ***mitao_{VERSION}_macos***).
+8. **Copy->Paste** the **Mitao** application on your **/application** folder (or any other desired folder).<br> **Note: only a Copy->Paste operation must be done. DON'T Drop->Drag or Cut->Paste the Mitao application**
+4. Run Mitao by double clicking on the **Mitao** application (the one you have copied).
 
 ## Windows
 1. [Download the last version of Mitao for Windows](https://archive.org/download/mitao2/mitao_v2.1_windows.zip) and unzip the downloaded archive.
-1. Double click on the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup</i> file; the command prompt window will appear and the required modules/libraries will be installed; wait to the end of the installation.
-2. Once the installation is done, you will find the file <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> Mitao</i> on the main folder (the directory containing the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup</i> file).
-3. Run Mitao by double clicking on the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> Mitao</i> file.<br>
+2. Double click on the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup</i> file; the command prompt window will appear and the required modules/libraries will be installed; wait to the end of the installation.  
+> * if a **Permission Denied** error message appears when double clicking the **setup** or the **Mitao** file, then right click on the corresponding file and select the ***run as adminstrator*** option.
+* In case you get the following error message during the installation of MITAO: **"error: Microsoft Visual C++ 14.0 is required"**, then follow the instructions given at [https://medium.com/@jacky_ttt/day060-fix-error-microsoft-visual-c-14-0-is-required-629413e798cd](https://medium.com/@jacky_ttt/day060-fix-error-microsoft-visual-c-14-0-is-required-629413e798cd)
 
-----
-#### Notes
+3. Once the installation is done, you will find the file **Mitao** on the main folder (the directory containing the **setup** file).
+4. Run Mitao by double clicking on the **Mitao** file.  
 
-* <b style="color:#339900	">General:</b> When running Mitao the command prompt window will appear; on some Windows versions this window will automatically close once Mitao is closed. If this is not the case, you can close it manually after closing Mitao.  
-* <b style="color:#ff0000	">Error:</b> if a **Permission Denied** error message appears when double clicking the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup</i> or the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> Mitao</i> file, then right click on the corresponding file and select the *run as adminstrator* option.
-* <b style="color:#ff0000	">Error:</b> In case you get the following error message during the installation of MITAO: **"error: Microsoft Visual C++ 14.0 is required"**. Then to fix this problem please follow the instructions given at [https://medium.com/@jacky_ttt/day060-fix-error-microsoft-visual-c-14-0-is-required-629413e798cd](https://medium.com/@jacky_ttt/day060-fix-error-microsoft-visual-c-14-0-is-required-629413e798cd)
+> When running Mitao the command prompt window will appear; on some Windows versions this window will automatically close once Mitao is closed. If this is not the case, you can close it manually after closing Mitao.  
