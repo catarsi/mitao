@@ -33,6 +33,12 @@ This application is linked to CATARSI ([https://centri.unibo.it/dharc/en/researc
 5. Type the command `chmod 777 *` and press enter; you can close the Terminal window now  
 6. Go back to your ***mitao\_{VERSION}\_macos*** folder and **double click** the ***setup*** file; a Terminal window will appear and the installation should start; wait to the end of the installation.
 > macOS might block and exit the installation with an error: **unidentified developer**; in this case you must allow macOS to open the application anyway (usually this is done from **System preferences -> Security & Privacy -> General**). <br>**Note: this issue might appear more than once during the installation; do the same operation for each occasion** 
+
+> in some cases the installation might stop with this error: **xcrun: error: invalid active developer ...** To handle this error you must:
+>  * Open the Terminal and type: `xcode-select --install`
+>  * A dialog box appears, you must click on the **install** button and accept the terms so that the download and installation will start
+>  * Close the terminal once the installation is done
+
 7. Once the installation is done, you will find the application **Mitao** on the main folder (i.e. ***mitao_{VERSION}_macos***).
 8. **Copy->Paste** the **Mitao** application on your **/application** folder (or any other desired folder).<br> **Note: only a Copy->Paste operation must be done. DON'T Drop->Drag or Cut->Paste the Mitao application**
 4. Run Mitao by double clicking on the **Mitao** application (the one you have copied).
@@ -40,8 +46,9 @@ This application is linked to CATARSI ([https://centri.unibo.it/dharc/en/researc
 ## Windows
 1. [Download the last version of Mitao for Windows](https://archive.org/download/mitao2/mitao_v2.1_windows.zip) and unzip the downloaded archive.
 2. Double click on the <i style="padding: 3px; background-color: #F2F2F2" class="fas fa-file"> setup</i> file; the command prompt window will appear and the required modules/libraries will be installed; wait to the end of the installation.  
-> * if a **Permission Denied** error message appears when double clicking the **setup** or the **Mitao** file, then right click on the corresponding file and select the ***run as adminstrator*** option.
-* In case you get the following error message during the installation of MITAO: **"error: Microsoft Visual C++ 14.0 is required"**, then follow the instructions given at [https://medium.com/@jacky_ttt/day060-fix-error-microsoft-visual-c-14-0-is-required-629413e798cd](https://medium.com/@jacky_ttt/day060-fix-error-microsoft-visual-c-14-0-is-required-629413e798cd)
+> if a **Permission Denied** error message appears when double clicking the **setup** or the **Mitao** file, then right click on the corresponding file and select the ***run as adminstrator*** option.  
+
+> In case you get the following error message during the installation of MITAO: **"error: Microsoft Visual C++ 14.0 is required"**, then follow the instructions given at [https://medium.com/@jacky_ttt/day060-fix-error-microsoft-visual-c-14-0-is-required-629413e798cd](https://medium.com/@jacky_ttt/day060-fix-error-microsoft-visual-c-14-0-is-required-629413e798cd)
 
 3. Once the installation is done, you will find the file **Mitao** on the main folder (the directory containing the **setup** file).
 4. Run Mitao by double clicking on the **Mitao** file.  
