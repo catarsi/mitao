@@ -1,23 +1,153 @@
 import re
+import pandas as pd
 
 class Convert(object):
 
     def __init__(self):
         pass
 
+    def meta_builder_from_tab(self, input_files, param, tool_id):
+
+        # INPUTS and PARAMETERS
+        # ---------------
+        ## Check the input
+        ## TAB_FILE is a dictionary;
+        ## the key is the name of the table file; the value is the table itself in a matrix format (list of lists)
+        TAB_FILE = None
+        if "d-gen-table"in input_files:
+            if len(input_files["d-gen-table"]) > 1:
+                return {"data":{"error": "only one table should be given as input"}}
+            elif len(input_files["d-gen-table"]) == 0:
+                return {"data":{"error": "a table must be given as input"}}
+            else:
+                TAB_FILE = list(input_files["d-gen-table"].items())[0]
+        if TAB_FILE == None:
+            return {"data":{"error": "a table must be given as input"}}
+
+        # Get data and Parameters
+        ATT_ID = None
+        ATT_CONTENT = []
+        if param != None:
+            if "p-tab-att-id" in param:
+                ATT_ID = str(param["p-tab-att-id"])
+            if "p-tab-atts-content" in param:
+                ATT_CONTENT = str(param["p-tab-atts-content"]).split(", ")
+
+        if ATT_ID == None:
+            return {"data":{"error": "the column used as id must be specified"}}
+        if len(ATT_CONTENT) == 0:
+            return {"data":{"error": "the columns used as meta attributes must be specified"}}
+
+
+        # MAIN BODY OF THE TOOL
+        # ---------------
+
+        ## Functions
+        def tab_to_meta(table_matrix, att_id, atts_content):
+
+            df_table = pd.DataFrame(table_matrix[1:], columns = table_matrix[0])
+            atts_content.insert(0,att_id)
+            if len(set(table_matrix[0]).intersection(set(atts_content))) != len(atts_content):
+                return {"error": "the column names are incorrect"}
+
+            sub_df = df_table[atts_content]
+            documents = dict()
+            for row in sub_df.values:
+
+                # Get the content
+                json_content = {}
+                f_name = str(row[0])
+                meta_atts = atts_content[1:]
+                for i,val in enumerate(row[1:]):
+                    json_content[meta_atts[i]] = val
+
+                documents[f_name] = json_content
+
+            print(documents)
+            return {"d-metadata": documents}
+
+        #Define the set of documents
+        documents_to_return = tab_to_meta(TAB_FILE[1],ATT_ID,ATT_CONTENT)
+        return {"data": documents_to_return}
+
+
+    def doc_builder(self, input_files, param, tool_id):
+
+        # INPUTS and PARAMETERS
+        # ---------------
+
+        ## Check the input
+        ## TAB_FILE is a dictionary;
+        ## the key is the name of the table file; the value is the table itself in a matrix format (list of lists)
+        TAB_FILE = None
+        if "d-gen-table"in input_files:
+            if len(input_files["d-gen-table"]) > 1:
+                return {"data":{"error": "only one table should be given as input"}}
+            elif len(input_files["d-gen-table"]) == 0:
+                return {"data":{"error": "a table must be given as input"}}
+            else:
+                TAB_FILE = list(input_files["d-gen-table"].items())[0]
+        if TAB_FILE == None:
+            return {"data":{"error": "a table must be given as input"}}
+
+        # Get data and Parameters
+        ATT_ID = None
+        ATT_CONTENT = []
+        if param != None:
+            if "p-tab-att-id" in param:
+                ATT_ID = str(param["p-tab-att-id"])
+            if "p-tab-atts-content" in param:
+                ATT_CONTENT = str(param["p-tab-atts-content"]).split(", ")
+
+        if ATT_ID == None:
+            return {"data":{"error": "the column used as id must be specified"}}
+        if len(ATT_CONTENT) == 0:
+            return {"data":{"error": "the columns used for the content must be specified"}}
+
+        # MAIN BODY OF THE TOOL
+        # ---------------
+
+        ## Functions
+        def tab_to_docs(table_matrix, att_id, atts_content, exclude_empty = True, lowercase = True, separator = " ", file_extension=".txt"):
+
+            df_table = pd.DataFrame(table_matrix[1:], columns = table_matrix[0])
+            atts_content.insert(0,att_id)
+            if len(set(table_matrix[0]).intersection(set(atts_content))) != len(atts_content):
+                return {"error": "the column names are incorrect"}
+
+            sub_df = df_table[atts_content]
+            documents = dict()
+            for row in sub_df.values:
+
+                # Get the content
+                str_content = ""
+                for val in row[1:]:
+                    str_val = str(val).strip()
+                    if lowercase:
+                        str_val = str_val.lower()
+                    if str_val != "NaN" and str_val != "nan" and str_val != "":
+                        str_content += str(val) + str(separator)
+
+                if len(str_content) >= len(separator):
+                    str_content = str_content[:-len(separator)]
+
+                if str_content != "" and exclude_empty:
+                    f_name = str(row[0])
+                    documents[row[0]] = str_content
+
+            return {"d-gen-text": documents}
+
+        #Define the set of documents
+        documents_to_return = tab_to_docs(TAB_FILE[1],ATT_ID,ATT_CONTENT)
+        return {"data": documents_to_return}
+
     def pdf_to_text(self, input_files, param, tool_id):
         data_to_return = {"data":{}}
 
         # Check Restrictions
-        ok_to_process = False
         if "d-gen-pdf" in input_files:
-            if len(input_files["d-gen-pdf"]):
-                ok_to_process = True
-
-        if not ok_to_process:
-            res_err = {"data":{}}
-            res_err["data"]["error"]= "Input data missing!"
-            return res_err
+            if len(input_files["d-gen-pdf"]) == 0:
+                return {"data":{"error": "input data missing"}}
 
         #Define the set of documents
         documents = {}
@@ -39,7 +169,7 @@ class Convert(object):
                     break
             #Remove path to file
             for i in reversed(range(len(clean_index))):
-                if "/" in clean_index[i] or "\ "[0] in clean_index[i]:
+                if "/" in clean_index[i] or "\\ "[0] in clean_index[i]:
                     clean_index = clean_index[i+1:]
                     break
             return clean_index

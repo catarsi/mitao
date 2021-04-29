@@ -27,6 +27,22 @@ class Data(object):
         else:
             return None
 
+    # The data types handled are:
+    # path
+    # file
+    # img
+    # html_file
+    # pdf
+    # gensim_dictionary
+    # gensim_ldamodel
+    # table
+
+    # text
+    # Internal: a dictionary – <key>: is the name of the file; <value>: a string
+    # File System: a list of files in TXT format
+
+    # html
+    # series
     def handle(self, files_list, data_value, file_type = "file", param = None):
         list_docs_obj = {}
         data_class = None
@@ -134,7 +150,12 @@ class Data(object):
     def process_json(self, an_input):
         return json.loads(an_input)
 
+    # Returns a Matrix (list of lists)
+    # First row is the header (as it is in the original file)
+    # all the other rows are the records of the table
+    # ex: [[name,age,country],["james","Donald","Italy"]]
     def process_table(self,a_file, file_type, with_header = True):
+        #separator ='\t' if 'tsv' in a_file else ','
         a_pd = pd.read_csv(a_file)
         #matrix = a_pd.values.tolist()
         matrix = [a_pd.columns.values.tolist()] + a_pd.values.tolist()

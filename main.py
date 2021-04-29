@@ -468,10 +468,11 @@ def process():
             input_files,
             elem_param_att
         )
-        #print("Output: ",data_entries)
+        print("Output: ",data_entries)
 
         #check if there were errors
         if "error" in data_entries:
+            print("An error have occurred:",data_entries)
             return "Error: "+str(data_entries["error"])
 
 

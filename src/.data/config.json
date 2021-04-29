@@ -66,6 +66,15 @@
             "input_ready": true,
             "class_label": "Topic Modelling"
         },
+        "d-gen-table":{
+            "label": "Table in CSV format",
+            "description": "A file or a collection of files in CSV format which represent a table/s",
+            "data_class": "table",
+            "param": ["p-file"],
+            "file_name": "tab",
+            "input_ready": true,
+            "class_label": "General"
+        },
         "d-gen-text":{
             "label": "Textual document/s",
             "description": "A file or a collection of files which represent general textual contents (e.g. <i>myfile.txt</i>)",
@@ -131,9 +140,31 @@
         }
   },
   "tool": {
+        "t-meta-builder-from-tab": {
+            "label": "Metadata generator (from a table)",
+            "description": "Genearates a collection of metadata files (in JSON format) based on a given table (in CSV format)",
+            "class": "Convert",
+            "class_label": "General",
+            "function": "meta_builder_from_tab",
+            "input_ready": true,
+            "param": ["p-tab-att-id","p-tab-atts-content"],
+            "compatible_input": ["d-gen-table"],
+            "output": ["d-metadata"]
+        },
+        "t-doc-builder": {
+            "label": "Documents generator (from a table)",
+            "description": "Genearates a collection of documents starting from a table in CSV format. The name of the documents and their contents are taken from the table. Each row in the table will represent a document.",
+            "class": "Convert",
+            "class_label": "General",
+            "function": "doc_builder",
+            "input_ready": true,
+            "param": ["p-tab-att-id","p-tab-atts-content"],
+            "compatible_input": ["d-gen-table"],
+            "output": ["d-gen-text"]
+        },
         "t-meta-builder": {
-            "label": "Metadata generator",
-            "description": "Genearates some metadata file/s for each document/s in a given collection. The metadata attributes are defined using regular expression rules to apply on the original names of the documents",
+            "label": "Metadata generator (from a collection of documents)",
+            "description": "Genearates a collection of metadata files (in JSON) based on a given collection of documents. The metadata attributes are defined using regular expression rules to apply on the original names of the documents",
             "class": "Convert",
             "class_label": "General",
             "function": "meta_builder",
@@ -247,8 +278,8 @@
             "class_label": "Terminal",
             "function": "save_file",
             "input_ready": true,
-            "compatible_input": ["d-gensimldamodel","d-chart-html","d-metadata","d-dictionary-corpus","d-model-corpus","d-processed-corpus","d-gen-text","d-word-topics-table","d-doc-topics-table","d-coherence","d-doc-topics","d-ldavis-html"],
-            "optional_input": ["d-gensimldamodel","d-chart-html","d-metadata","d-dictionary-corpus","d-model-corpus","d-processed-corpus","d-gen-text","d-word-topics-table","d-doc-topics-table","d-coherence","d-doc-topics","d-ldavis-html"]
+            "compatible_input": ["d-gensimldamodel","d-chart-html","d-metadata","d-dictionary-corpus","d-model-corpus","d-processed-corpus","d-gen-text","d-gen-table","d-word-topics-table","d-doc-topics-table","d-coherence","d-doc-topics","d-ldavis-html"],
+            "optional_input": ["d-gensimldamodel","d-chart-html","d-metadata","d-dictionary-corpus","d-model-corpus","d-processed-corpus","d-gen-text","d-gen-table","d-word-topics-table","d-doc-topics-table","d-coherence","d-doc-topics","d-ldavis-html"]
         },
         "t-convert-pdftotext": {
             "label": "PDF to TXT converter",
@@ -262,6 +293,20 @@
         }
   },
   "param": {
+        "p-tab-att-id":{
+          "handler": "input-text",
+          "label": "The column used as identifier:",
+          "value": "",
+          "placeholder": "E.G. record_id",
+          "init_value": false
+        },
+        "p-tab-atts-content":{
+          "handler": "input-text",
+          "label": "The columns to include in the file/s (use &quot;<i>, </i>&quot; as separator for multi columns):",
+          "value": "",
+          "placeholder": "E.G. abstract, title ",
+          "init_value": false
+        },
         "p-gendescription":{
           "handler": "input-text-large",
           "label": "Brief description:",
