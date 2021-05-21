@@ -12,7 +12,7 @@ This application is linked to CATARSI ([https://centri.unibo.it/dharc/en/researc
 * The **Chrome web browser**, download it -> [Click here](https://www.google.com/intl/en/chrome/)
 
 # Installing and running Mitao
-**Before starting the installation of Mitao make sure all the requirements have been successfully installed**
+**Before starting the installation of Mitao make sure all the requirements have been successfully installed and you have at least 5GB of empty space available on you local machine**
 
 ## Linux
 1. [Download the last version of Mitao for Linux](https://archive.org/download/mitao2/mitao_v2.1_linux.zip) and unzip the downloaded archive.
@@ -24,7 +24,7 @@ This application is linked to CATARSI ([https://centri.unibo.it/dharc/en/researc
 3. Type `./Mitao.sh` to run Mitao.
 
 ## MacOS
-1. [Download the last version of Mitao for MacOS](https://archive.org/download/mitao2/mitao_v2.1.1_macos.zip) and extract the the content of the archive. A folder with the name ***mitao\_{VERSION}\_macos*** should appear.
+1. [Download the last version of Mitao for MacOS](https://archive.org/download/mitao2/mitao_v2.1.2_macos.zip) and extract the the content of the archive. A folder with the name ***mitao\_{VERSION}\_macos*** should appear.
 2. Right click on the folder ***mitao\_{VERSION}\_macos*** and select **copy**
 3. Open the **Terminal** application
 > Terminal is an application. You will find it in Applications - Utilities - Terminal. One keyboard shortcut for opening it (or any other app) is Command + Spacebar then type the app's name.
@@ -40,8 +40,8 @@ This application is linked to CATARSI ([https://centri.unibo.it/dharc/en/researc
 >  * Close the terminal once the installation is done
 
 7. Once the installation is done, you will find the application **Mitao** on the main folder (i.e. ***mitao_{VERSION}_macos***).
-8. **Copy->Paste** the **Mitao** application on your **/application** folder (or any other desired folder).<br> **Note: only a Copy->Paste operation must be done. DON'T Drop->Drag or Cut->Paste the Mitao application**
-4. Run Mitao by double clicking on the **Mitao** application (the one you have copied).
+8. **Copy->Paste** the **Mitao** application on your **/application** folder (or any other desired folder). Once you do this, you can also delete the original extracted folder, i.e. ***mitao\_{VERSION}\_macos***.<br> **Note: only a Copy->Paste operation must be done. DON'T Drop->Drag or Cut->Paste the Mitao application**
+9. Run Mitao by double clicking on the **Mitao** application (the one you have copied). 
 
 ## Windows
 1. [Download the last version of Mitao for Windows](https://archive.org/download/mitao2/mitao_v2.1_windows.zip) and unzip the downloaded archive.
