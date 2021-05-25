@@ -27,6 +27,7 @@ Before starting the installation of Mitao make sure:
 3. Type `./Mitao.sh` to run Mitao.
 
 ## MacOS
+> **The following instructions might not work for the Mac machines with the M1 chip. We are working on handling these issues in the upcoming versions of MITAO** 
 1. [Download the last version of Mitao for MacOS](https://archive.org/download/mitao2/mitao_v2.1.2_macos.zip) and extract the the content of the archive. A folder with the name ***mitao\_{VERSION}\_macos*** should appear.
 2. Right click on the folder ***mitao\_{VERSION}\_macos*** and select **copy**
 3. Open the **Terminal** application
