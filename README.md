@@ -18,7 +18,7 @@ Before starting the installation of Mitao make sure:
 * **Your internet connection is on, during the whole installation procedure**
 
 ## Linux
-1. [Download the last version of Mitao for Linux](https://archive.org/download/mitao2/mitao_v2.1_linux.zip) and unzip the downloaded archive.
+1. [Download the last version of Mitao for Linux](https://archive.org/download/mitao2/mitao_v2.1.2_linux.zip) and unzip the downloaded archive.
 1. Open your Console/Terminal and type `./setup.sh` to run the installation of Mitao; wait to the end of the installation.
 
 > if a **Permission Denied** error message appears when running the **setup.sh** file, then you need to call the scripts using `sudo`. e.g. `sudo ./setup.sh` or `sudo bash ./setup.sh`
