@@ -13,9 +13,9 @@ This application is linked to CATARSI ([https://centri.unibo.it/dharc/en/researc
 
 # Installing and running Mitao
 Before starting the installation of Mitao make sure: 
-* **all the requirements have been successfully installed**  
-* **you have at least 5GB of empty space available on you local machine**
-* **you have your internet connection on during the whole installation procedure**
+* **All the requirements have been successfully installed**  
+* **Your local machine has at least 5GB of empty space available**
+* **Your internet connection is on, during the whole installation procedure**
 
 ## Linux
 1. [Download the last version of Mitao for Linux](https://archive.org/download/mitao2/mitao_v2.1_linux.zip) and unzip the downloaded archive.
