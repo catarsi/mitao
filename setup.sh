@@ -14,5 +14,6 @@ source mitaovenv_py3_9/bin/activate
 cd ../../
 echo "Installing the requirements ..."
 pip install -r requirements.txt
+mv src/setup/mitao.sh .
 echo "MITAO has been successfully installed !!"
 deactivate
