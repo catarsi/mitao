@@ -15,5 +15,7 @@ cd ../../
 echo "Installing the requirements ..."
 pip install -r requirements.txt
 mv src/setup/mitao.sh .
+mkdir src/.process-temp
+mkdir src/.tmp
 echo "MITAO has been successfully installed !!"
 deactivate
