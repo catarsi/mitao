@@ -29,7 +29,7 @@ macholib==1.14
 MarkupSafe==1.1.1
 matplotlib==3.3.3
 more-itertools==8.6.0
-nltk==3.5
+nltk==3.6.6
 numexpr==2.7.1
 numpy==1.19.3
 osnap==0.3.1
