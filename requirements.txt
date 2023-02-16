@@ -67,7 +67,7 @@ toml==0.10.2
 tqdm==4.52.0
 urllib3==1.26.2
 wcwidth==0.2.5
-Werkzeug==1.0.1
+Werkzeug==2.2.3
 whichcraft==0.6.1
 zipfile2==0.0.12
 zipp==3.4.0
