@@ -17,6 +17,13 @@ Before starting the installation of Mitao make sure:
 * **Your local machine has at least 5GB of empty space available**
 * **Your internet connection is on, during the whole installation procedure**
 
+## From Github
+1. Clone/Download this repository
+2. Open your Console/Terminal and type `sudo sh setup.sh` to run the installation of Mitao; wait to the end of the installation. NOTE: the process requires your system password to run and complete the installation (it might ask for your password again during the installation).
+3. Once the installation is done, you will find the file **Mitao.sh** on the main folder (the directory containing the **setup.sh** file).
+4. Type `./Mitao.sh` to run Mitao.
+
+
 ## Linux
 1. [Download the last version of Mitao for Linux](https://archive.org/download/mitao2/mitao_v2.1.2_linux.zip) and unzip the downloaded archive.
 1. Open your Console/Terminal and type `./setup.sh` to run the installation of Mitao; wait to the end of the installation.
